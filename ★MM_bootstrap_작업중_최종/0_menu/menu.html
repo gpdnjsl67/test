@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METAMKT</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> <!-- 폰트 -->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="https://kit.fontawesome.com/fa8d36e7e1.js" crossorigin="anonymous"></script> <!-- 아이콘 -->
+    <script src="../js/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="flex-box-01">
+            <nav>
+                <a href="./menu.html" class="logo-img"><img src="./logo.png" alt="logo"></a>
+                <ul class="menu-list">
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-clipboard-list"></i>
+                            <span>CPA광고관리</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <span>API광고관리</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-chart-pie"></i>
+                            <span>DB관리</span>
+                        </a>
+                    </li>
+                    <li class="include-sub-menus">
+                        <a href="#">
+                            <i class="fa-solid fa-laptop"></i>
+                            <span>관리자 페이지 <i class="fa-solid fa-angle-down sub-menus-arrow"></i></span>
+                        </a>
+                        <ul class="sub-menus">
+                            <li><a href="#">이벤트페이지 관리</a></li>
+                            <li><a href="#">매체 관리</a></li>
+                            <li><a href="#">광고주 관리</a></li>
+                            <li><a href="#">충전금 관리</a></li>
+                            <li><a href="#">CPA 광고 관리</a></li>
+                            <li><a href="#">월별정산서 관리</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div> <!-- flex-box-01 -->
+
+        <div class="flex-box-02">
+            <header>
+                <div class="menu-box">
+                    <div class="menu-left">
+                        <a href="#" class="menu-btn"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                    <div class="menu-right">
+                        <a href="#">마이페이지</a>
+                        <a href="#">고객문의</a>
+                        <a href="#" class="login-btn menu-r-btn">LOGIN</a>
+                        <a href="#" class="logout-btn menu-r-btn">LOGOUT</a>
+                    </div>
+                </div>
+            </header>
+            
+            <div id="contents-container">
+                <div class="overlay"></div>
+                <div class="grid">
+                    <div class="contents-top">
+                        <div class="title">
+                            <h1>Title</h1>
+                            <span class="sub-tit">sub title</span>
+                        </div>
+        
+                        <div class="calendar">
+                            <a href="#" class="prev-cal"><i class="fa-solid fa-caret-left"></i></a>
+                            <a href="#" id="reportrange">
+                                <span>2022.01.01 - 2022.06.01</span>
+                            </a>
+                            <a href="#" class="next-cal"><i class="fa-solid fa-caret-right"></i></a>
+                            <a href="#" class="btn-cal"><i class="fa-solid fa-calendar-days"></i></a>
+                        </div>
+                    </div> <!-- contents-top -->
+                    <!------------ 여기까지 메뉴(좌측, 상단) ------------>
+        
+                    <div class="contents-main">
+                        <!-- 원하는 컨텐츠 -->
+                    </div> <!-- contents-main -->
+                </div> <!-- grid -->
+            </div> <!-- contents-container -->
+        </div> <!-- flex-box-02 -->
+    </div> <!-- wrap -->
+
+    <script>
+        // 햄버거버튼 클릭 시 메뉴 효과
+        function menuEffect() {
+            let leftMenu = document.querySelector('.flex-box-01');
+            let menuBtn = document.querySelector('.menu-btn');
+            let nav = document.querySelector('nav');
+    
+            menuBtn.addEventListener('click', function() {
+                leftMenu.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+        }
+        menuEffect();
+
+        // 좌측 하위메뉴 슬라이드
+        function subMenusToggle() {
+            $('ul.sub-menus').slideUp();
+            $('li.include-sub-menus a').on('click', function() {
+                $('ul.sub-menus').slideToggle();
+                $('.sub-menus-arrow').toggleClass('active');
+            });
+        }
+        subMenusToggle();
+    </script>
+</body>
+</html>

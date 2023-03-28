@@ -1,0 +1,273 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 10px;
+  color: #212121;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-transition: 0.5s top;
+  transition: 0.5s top;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* 그리드 */
+.grid {
+  margin: 0 auto;
+  width: 90%;
+}
+
+/* ====== 여기까지 reset ====== */
+.wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrap .flex-box-01 {
+  /* 좌측 메뉴 start */
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #343a40;
+  -webkit-transition: 0.5s -webkit-box-flex;
+  transition: 0.5s -webkit-box-flex;
+  transition: 0.5s flex;
+  transition: 0.5s flex, 0.5s -webkit-box-flex, 0.5s -ms-flex;
+}
+
+.wrap .flex-box-01.active {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+}
+
+.wrap .flex-box-01 nav {
+  -webkit-transition: 0.5s margin-left;
+  transition: 0.5s margin-left;
+}
+
+.wrap .flex-box-01 nav.active {
+  margin-left: -100vw;
+}
+
+.wrap .flex-box-01 nav .logo-img {
+  margin: 20px 0;
+  display: block;
+  text-align: center;
+}
+
+.wrap .flex-box-01 nav .logo-img img {
+  width: 180px;
+}
+
+.wrap .flex-box-01 nav ul.menu-list {
+  margin-top: 50px;
+}
+
+.wrap .flex-box-01 nav ul.menu-list li:hover {
+  background-color: #4271d9;
+}
+
+.wrap .flex-box-01 nav ul.menu-list li a {
+  padding: 15px 0;
+  padding-left: 15%;
+  width: 100%;
+}
+
+.wrap .flex-box-01 nav ul.menu-list li a i {
+  padding-right: 7px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.wrap .flex-box-01 nav ul.menu-list li a span {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.wrap .flex-box-01 nav ul.menu-list li a span .sub-menus-arrow {
+  width: 9.75px;
+  font-size: 1.3rem;
+  margin-left: 40px;
+  -webkit-transition: 0.3s -webkit-transform;
+  transition: 0.3s -webkit-transform;
+  transition: 0.3s transform;
+  transition: 0.3s transform, 0.3s -webkit-transform;
+  font-size: 1.3rem;
+}
+
+.wrap .flex-box-01 nav ul.menu-list li a span .sub-menus-arrow.active {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.wrap .flex-box-01 nav ul.menu-list li ul.sub-menus li a {
+  padding: 0;
+  padding: 8px 0;
+  padding-left: 28%;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.wrap .flex-box-01 nav ul.menu-list li ul.sub-menus li a:hover {
+  background-color: #1e4eb8;
+}
+
+.wrap .flex-box-02 {
+  /* 상단 메뉴 start */
+  -webkit-box-flex: 7;
+      -ms-flex: 7;
+          flex: 7;
+  background-color: #f8f9fa;
+}
+
+.wrap .flex-box-02 header .menu-box {
+  padding: 10px 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #4271d9;
+}
+
+.wrap .flex-box-02 header .menu-box .menu-left a.menu-btn i {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.wrap .flex-box-02 header .menu-box .menu-right a {
+  padding: 0 1.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.wrap .flex-box-02 header .menu-box .menu-right a:last-child {
+  padding-right: 0;
+}
+
+.wrap .flex-box-02 header .menu-box .menu-right a.menu-r-btn {
+  padding: 3px 10px;
+  border: 1px solid #fff;
+  border-radius: 2rem;
+}
+
+.wrap .flex-box-02 header .menu-box .menu-right a.menu-r-btn:hover {
+  color: #4271d9;
+  background-color: #eaf1ff;
+}
+
+.wrap .flex-box-02 header .menu-box .menu-right a.login-btn {
+  display: none;
+}
+
+.wrap .flex-box-02 #contents-container {
+  position: relative;
+  padding-bottom: 200px;
+  background-color: #f8f9fa;
+  /* 광고주, 매체, 이벤트 구분 start */
+  /* 모달창 start */
+}
+
+.wrap .flex-box-02 #contents-container .contents-top {
+  /* 컨텐츠 상단 (h1, 캘린더) */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-top: 50px;
+}
+
+.wrap .flex-box-02 #contents-container .contents-top .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.wrap .flex-box-02 #contents-container .contents-top .title h1 {
+  font-size: 40px;
+  font-weight: 500;
+  color: #4271d9;
+}
+
+.wrap .flex-box-02 #contents-container .contents-top .sub-tit {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.wrap .flex-box-02 #contents-container .contents-top .calendar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.wrap .flex-box-02 #contents-container .contents-top .calendar a {
+  padding: 7px 10px;
+  border: 1px solid #e2e6ed;
+  background-color: #fff;
+}
+
+.wrap .flex-box-02 #contents-container .contents-top .calendar a#reportrange {
+  padding: 5px 10px;
+  border-left: 0;
+  border-right: 0;
+}
+
+.wrap .flex-box-02 #contents-container .contents-top .calendar a.btn-cal {
+  border: none;
+  background-color: #4271d9;
+}
+
+.wrap .flex-box-02 #contents-container .contents-top .calendar a.btn-cal i {
+  color: #fff;
+}
+
+.wrap .flex-box-02 #contents-container .contents-top .calendar a i {
+  font-size: 1.5rem;
+}
+
+.wrap .flex-box-02 #contents-container .contents-top .calendar a span {
+  font-size: 1.3rem;
+}

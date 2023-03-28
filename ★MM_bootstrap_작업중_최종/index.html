@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> <!-- 폰트 -->
+    <link rel="stylesheet" href="./index.css">
+
+    <script src="./js/jquery.min.js" type="text/javascript"></script>
+    <!-- <script src="./js/jquery-sortable.js" type="text/javascript"></script> -->
+    <script src="https://kit.fontawesome.com/fa8d36e7e1.js" crossorigin="anonymous"></script> <!-- 아이콘 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script> -->
+</head>
+<body style="background-color: #eee;">
+<div class="overlay"></div>
+<div class="exp-wrap">
+    <a href="javascript:void(0);" class="top-btn">↑</a>
+
+    <!-- input="text" -->
+    <span class="boot-title">&lt;input="text"&gt;</span>
+    <div class="exp-box">
+
+        <!-- input-text -->
+        <div class="exp-cont">
+            <input type="text" class="input-text d-block width-200px" placeholder="내용을 입력해 주세요.">
+        </div>
+
+        <!-- input-text disabled -->
+        <div class="exp-cont">
+            <input type="text" class="input-text d-block width-200px" placeholder="disabled" disabled>
+        </div>
+
+        <!-- text-onoff -->
+        <div class="exp-cont">
+            <div class="text-onoff">
+                <input type="text" class="input-text width-200px" placeholder="" disabled>
+                <a href="javascript:void(0);" class="text-edit-btn ml-10" onclick="editBtnFocusOnOff(this)"><i class="fa-solid fa-pencil icon-btn-small"></i></a>
+            </div>
+        </div>
+            
+        <!-- text-btn-set -->
+        <div class="exp-cont">
+            <div class="text-btn-set width-500px mb-5">
+                <input type="text" class="input-text" placeholder="">
+                <a href="javascript:void(0);" class="btn-primary d-inline-block">text</a>
+            </div>
+            <span class="d-block small-text">※ Lorem ipsum dolor sit amet consectetur</span>
+        </div>
+
+        <!-- direct-typing-text -->
+        <div class="exp-cont">
+            <label class="direct-typing-text width-250px"><span>직접입력</span><input type="text" onfocus="focusF(this);" onblur="blueF(this);"></label>
+        </div>
+
+        <!-- login-text -->
+        <div class="exp-cont">
+            <label class="login-text width-250px">
+                <span><i class="fa-solid fa-user icon-btn-medium"></i></span><input type="text" onfocus="focusF(this);" onblur="blueF(this);">
+            </label>
+        </div>
+    </div>
+
+    <!-- input="checkbox" -->
+    <span class="boot-title">&lt;input="checkbox"&gt;</span>
+    <div class="exp-box">
+
+        <!-- checkbox-btn-primary -->
+        <div class="exp-cont">
+            <label><input type="checkbox" class="checkbox-btn-primary" value="" checked><span class="fs-13 c-ltgray-1">text1</span></label>
+            <label><input type="checkbox" class="checkbox-btn-primary" value=""><span class="fs-13 c-ltgray-1">text2</span></label>
+        </div>
+        
+        <!-- checkbox-btn-sq -->
+        <div class="exp-cont">
+            <label class="checkbox-btn-sq"><input type="checkbox" value="" checked><span>text1</span></label>
+            <label class="checkbox-btn-sq"><input type="checkbox" value=""><span>text2</span></label>
+        </div>
+
+        <!-- checkbox-btn-img -->
+        <div class="exp-cont">
+            <label class="checkbox-btn-img"><input type="checkbox" value=""><img src="./images/01_auto_off.jpg" alt="" onclick="checkboxImgF(this);"></label>
+            <label class="checkbox-btn-img"><input type="checkbox" value=""><img src="./images/01_auto_off.jpg" alt="" onclick="checkboxImgF(this);"></label>
+        </div>
+    </div>
+
+    <!-- input="radio" -->
+    <span class="boot-title">&lt;input="radio"&gt;</span>
+    <div class="exp-box">
+
+        <!-- radio-btn-primary -->
+        <div class="exp-cont">
+            <label class="radio-btn-primary"><input type="radio" name="text1" value="" checked><span class="fs-13 c-ltgray-1">text1</span></label>
+            <label class="radio-btn-primary"><input type="radio" name="text1" value=""><span class="fs-13 c-ltgray-1">text2</span></label>
+        </div>
+
+        <!-- radio-btn-sq -->
+        <div class="exp-cont">
+            <label class="radio-btn-sq"><input type="radio" name="text2" value="" checked><span>text1</span></label>
+            <label class="radio-btn-sq"><input type="radio" name="text2" value=""><span>text2</span></label>
+        </div>
+
+        <div class="exp-cont">
+            <label class="radio-btn-img"><input type="radio" name="text3" value=""><img src="./images/DB창/01.png" alt=""></label>
+            <label class="radio-btn-img"><input type="radio" name="text3" value=""><img src="./images/DB창/02.png" alt=""></label>
+        </div>
+
+        <div class="exp-cont">
+            <div class="radio-btn-img-text">
+                <label>
+                    <div class="d-flex flex-ai-center flex-jc-center">
+                        <input type="radio" name="text4" value="" class=""><span class="ml-5 fs-14 c-ltgray-1">신청현황</span>
+                    </div>
+                    <img src="./images/DB창/01.png" alt="" class="mb-5">
+                </label>
+                <label>
+                    <div class="d-flex flex-ai-center flex-jc-center">
+                        <input type="radio" name="text4" value="" class=""><span class="ml-5 fs-14 c-ltgray-1">신청현황</span>
+                    </div>
+                    <img src="./images/DB창/01.png" alt="" class="mb-5">
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- a button -->
+    <span class="boot-title">&lt;a button&gt;</span>
+    <div class="exp-box">
+
+        <!-- btn-primary -->
+        <div class="exp-cont">
+            <a href="javascript:void(0);" class="btn-primary">text</a>
+        </div>
+
+        <!-- small-btn -->
+        <div class="exp-cont">
+            <a href="javascript:void(0);" class="btn-primary width-40px more-btn-slide"><i class="fa-solid fa-angle-down icon-btn-medium"></i></a>
+        </div>
+
+        <!-- a-btn-logo-change -->
+        <div class="exp-cont">
+            <a href="javascript:void(0);" class="a-btn-logo-change" onclick="logoOnOff(this);"><img src="./images/facebook_on.png" alt=""></a>
+        </div>
+    </div>
+
+    <!-- button type="submit" -->
+    <span class="boot-title">&lt;button type="submit"&gt;</span>
+    <div class="exp-box">
+
+        <!-- submit-btn blue -->
+        <div class="exp-cont">
+            <button type="submit" class="submit-btn width-500px blue">Blue Button</button>
+        </div>
+
+        <!-- submit-btn gray -->
+        <div class="exp-cont">
+            <button type="submit" class="submit-btn width-500px gray">Gray Button</button>
+        </div>
+    </div>
+
+    <!-- textarea -->
+    <span class="boot-title">&lt;textarea&gt;</span>
+    <div class="exp-box">
+        <!-- textarea -->
+        <div class="exp-cont">
+            <textarea id="" class="textarea d-block width-500px" placeholder="내용을 입력해 주세요."></textarea>
+        </div>
+
+        <!-- textarea disabled -->
+        <div class="exp-cont">
+            <textarea id="" class="textarea d-block width-500px" placeholder="내용을 입력해 주세요." disabled></textarea>
+        </div>
+
+        <!-- textarea-box -->
+        <div class="exp-cont">
+            <div class="textarea-box width-500px">
+                <span class="textarea-title">Title</span>
+                <textarea id="" class="textarea scroll-bar-primary" placeholder="내용을 입력해 주세요."></textarea>
+            </div>
+        </div>
+    </div>
+    <!-- bar graph -->
+    <span class="boot-title c-yellow">&lt;bar graph&gt;</span>
+    <div class="exp-box">
+        <!-- bar graph -->
+        <div class="exp-cont">
+            <div class="bar-graph width-280px">
+                <span class="graph-bg"></span>
+                <span class="graph-bottom width-50per"></span>
+            </div>
+        </div>
+
+        <!-- bar graph -->
+        <div class="exp-cont">
+            <div class="graph-top-txt width-280px d-flex flex-jc-sb mb-10">
+                <span>목표대비 50%</span>
+                <span>20,000 / 30,000</span>
+            </div>
+            <div class="bar-graph width-280px">
+                <span class="graph-bg"></span>
+                <span class="graph-bottom width-50per bg-graph-gradient"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- scrollbar -->
+    <span class="boot-title">&lt;scrollbar&gt;</span>
+    <div class="exp-box">
+
+        <!-- scroll-bar-primary -->
+        <div class="exp-cont">
+            <p class="scroll-bar-primary" style="padding:10px; width: 250px; height: 150px; border: 1px solid #212121; color: #505050;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quo necessitatibus ipsa quisquam qui nulla incidunt tempore nobis, voluptatibus cumque ipsum eaque tenetur sapiente, obcaecati modi, eius vero? Beatae, enim?
+            </p>
+        </div>
+
+        <!-- scroll-bar -->
+        <div class="exp-cont">
+            <div class="scroll-bar-left-border">
+                <ul class="scroll-bar-primary scroll-bar-left-circle height-175px">
+                    <li>
+                        <div>
+                            <span class="history-on-off">종료</span>
+                            <span class="history-txt">수익 -120,000</span>
+                        </div>
+                        <div>
+                            <span class="history-writer">시스템</span>
+                            <span class="history-date">2022.06.01 16:25:43</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="history-on-off">활성</span>
+                            <span class="history-txt">00시 재 활성화</span>
+                        </div>
+                        <div>
+                            <span class="history-writer">시스템</span>
+                            <span class="history-date">2022.06.01 16:25:43</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="history-on-off">종료</span>
+                            <span class="history-txt">예산 456,456 → 345,234</span>
+                        </div>
+                        <div>
+                            <span class="history-writer">시스템</span>
+                            <span class="history-date">2022.06.01 16:25:43</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="history-on-off">활성</span>
+                            <span class="history-txt">00시 재 활성화</span>
+                        </div>
+                        <div>
+                            <span class="history-writer">시스템</span>
+                            <span class="history-date">2022.06.01 16:25:43</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="history-on-off">종료</span>
+                            <span class="history-txt">예산 456,456 → 345,234</span>
+                        </div>
+                        <div>
+                            <span class="history-writer">시스템</span>
+                            <span class="history-date">2022.06.01 16:25:43</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="history-on-off">종료</span>
+                            <span class="history-txt">예산 456,456 → 345,234</span>
+                        </div>
+                        <div>
+                            <span class="history-writer">시스템</span>
+                            <span class="history-date">2022.06.01 16:25:43</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- icon button -->
+    <span class="boot-title">&lt;icon button&gt;</span>
+    <div class="exp-box">
+        <div class="exp-cont">
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-pencil icon-btn-small"></i></a>
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-pencil icon-btn-medium"></i></a>
+        </div>
+
+        <div class="exp-cont">
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-circle-plus icon-btn-small"></i></a>
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-circle-plus icon-btn-medium"></i></a>
+        </div>
+
+        <div class="exp-cont">
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-chart-simple icon-btn-small"></i></a>
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-chart-simple icon-btn-medium"></i></a>
+        </div>
+
+        <div class="exp-cont">
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-file-pen icon-btn-small"></i></a>
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-file-pen icon-btn-medium"></i></a>
+        </div>
+
+        <div class="exp-cont">
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-upload icon-btn-small"></i></a>
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-upload icon-btn-medium"></i></a>
+        </div>
+
+        <div class="exp-cont">
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-x icon-btn-small"></i></a>
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-x icon-btn-medium"></i></a>
+        </div>
+
+        <div class="exp-cont">
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-file-arrow-down icon-btn-small"></i></a>
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-file-arrow-down icon-btn-medium"></i></a>
+        </div>
+
+        <div class="exp-cont">
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-angle-down icon-btn-small"></i></a>
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-angle-down icon-btn-medium"></i></a>
+        </div>
+
+        <div class="exp-cont">
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-folder-open foler-icon icon-btn-small"></i></a>
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-folder-open foler-icon icon-btn-medium"></i></a>
+        </div>
+
+        <div class="exp-cont">
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-print icon-btn-small"></i></a>
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-print icon-btn-medium"></i></a>
+        </div>
+
+        <div class="exp-cont">
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-user icon-btn-small"></i></a>
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-user icon-btn-medium"></i></a>
+        </div>
+
+        <div class="exp-cont">
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-image-portrait icon-btn-small"></i></a>
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-image-portrait icon-btn-medium"></i></a>
+        </div>
+
+        <div class="exp-cont">
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-lock icon-btn-small"></i></a>
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-lock icon-btn-medium"></i></a>
+        </div>
+
+        <div class="exp-cont">
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-envelope icon-btn-small"></i></a>
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-envelope icon-btn-medium"></i></a>
+        </div>
+
+        <div class="exp-cont">
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-mobile-screen-button icon-btn-small"></i></a>
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-mobile-screen-button icon-btn-medium"></i></a>
+        </div>
+
+        <div class="exp-cont">
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-piggy-bank icon-btn-small"></i></a>
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-piggy-bank icon-btn-medium"></i></a>
+        </div>
+
+        <div class="exp-cont">
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-circle-xmark icon-btn-small"></i></a>
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-circle-xmark icon-btn-medium"></i></a>
+        </div>
+
+        <div class="exp-cont">
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-bars icon-btn-small"></i></a>
+            <a class="" href="javascript:void(0);"><i class="fa-solid fa-bars icon-btn-medium"></i></a>
+        </div>
+
+        <div class="exp-cont">
+            <div class="btn-with-txt" style="width:20.25px;">
+                <a class="" href="javascript:void(0);"><i class="fa-solid fa-piggy-bank icon-btn-medium"></i></a>
+                <span class="small-text">text</span>
+            </div>
+
+            <div class="btn-with-txt" style="width:34.91px;">
+                <a class="" href="javascript:void(0);"><i class="fa-solid fa-piggy-bank icon-btn-medium"></i></a>
+                <span class="small-text">texttext</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- toggle switch button -->
+    <span class="boot-title">&lt;toggle switch button&gt;</span>
+    <div class="exp-box">
+        <div class="exp-cont">
+            <label class="toggle-switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+
+    <!-- item box -->
+    <span class="boot-title">&lt;item box&gt;</span>
+    <div class="exp-box">
+        <div class="exp-cont">
+            <div class="item-box-wrap grid-temp-3">
+                <div class="item-box">
+                    <div class="item-box-tit" onclick="itemBoxUpDown(this);">
+                        <a href="javascript:void(0);" class="arrow-btn-slide">
+                            <span class="">Title</span>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                    </div>
+                    <ul class="item-list-1 scroll-bar-primary">
+                        <li>
+                            <label>
+                                <div class="item-box-name">
+                                    <input type="checkbox" class="checkbox-btn-primary">
+                                    <span>text</span>
+                                </div>
+                                <span class="item-box-num">11</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <div class="item-box-name">
+                                    <input type="checkbox" class="checkbox-btn-primary">
+                                    <span>text</span>
+                                </div>
+                                <span class="item-box-num">11</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <div class="item-box-name">
+                                    <input type="checkbox" class="checkbox-btn-primary">
+                                    <span>text</span>
+                                </div>
+                                <span class="item-box-num">11</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <div class="item-box-name">
+                                    <input type="checkbox" class="checkbox-btn-primary">
+                                    <span>text</span>
+                                </div>
+                                <span class="item-box-num">11</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <div class="item-box-name">
+                                    <input type="checkbox" class="checkbox-btn-primary">
+                                    <span>text</span>
+                                </div>
+                                <span class="item-box-num">11</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <div class="item-box-name">
+                                    <input type="checkbox" class="checkbox-btn-primary">
+                                    <span>text</span>
+                                </div>
+                                <span class="item-box-num">11</span>
+                            </label>
+                        </li>
+                    </ul> <!-- item-list-1 -->
+                </div> <!-- item-box -->
+                
+                <div class="item-box">
+                    <div class="item-box-tit">
+                        <a href="javascript:void(0);" class="right-btn">
+                            <span class="">Title</span>
+                            <i class="fa-solid fa-pencil icon-btn-small"></i>
+                        </a>
+                    </div>
+                    <div class="grid-list padding-20">
+                        <ul>
+                            <li>
+                                <span class="left-title">아이디</span>
+                                <span>admin</span>
+                            </li>
+                            <li>
+                                <span class="left-title">이름</span>
+                                <span>admin</span>
+                            </li>
+                            <li>
+                                <span class="left-title">전화번호</span>
+                                <span>01023132423</span>
+                            </li>
+                        </ul>
+                    </div> <!-- grid-list -->
+                </div> <!-- item-box -->
+                
+                <div class="item-box">
+                    <div class="graph-tit">
+                        <span>Title</span>
+                        <span class="graph-box-data">1,234</span>
+                    </div>
+                    <ul class="graph-list">
+                        <li>
+                            <span class="graph-sub-tit">text</span>
+                            <div class="bar-graph width-100per">
+                                <span class="graph-bg"></span>
+                                <span class="graph-bottom width-50per"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="graph-sub-tit">text</span>
+                            <div class="bar-graph width-100per">
+                                <span class="graph-bg"></span>
+                                <span class="graph-bottom width-50per"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="graph-sub-tit">text</span>
+                            <div class="bar-graph width-100per">
+                                <span class="graph-bg"></span>
+                                <span class="graph-bottom width-50per"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div> <!-- item-box -->
+            </div> <!-- item-box-wrap -->
+        </div>
+
+        <div class="exp-cont">
+            <div class="item-box-wrap grid-temp-1-2">
+                <div class="item-box">
+                    <div class="item-box-tit" onclick="itemBoxUpDown(this);">
+                        <a href="javascript:void(0);" class="arrow-btn-slide">
+                            <span class="">Title</span>
+                            <i class="fa-solid fa-angle-down "></i>
+                        </a>
+                    </div>
+                    <ul class="item-list-1 scroll-bar-primary">
+                        <li>
+                            <label>
+                                <div class="item-box-name">
+                                    <input type="checkbox" class="checkbox-btn-primary">
+                                    <span>text</span>
+                                </div>
+                                <span class="item-box-num">11</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <div class="item-box-name">
+                                    <input type="checkbox" class="checkbox-btn-primary">
+                                    <span>text</span>
+                                </div>
+                                <span class="item-box-num">11</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <div class="item-box-name">
+                                    <input type="checkbox" class="checkbox-btn-primary">
+                                    <span>text</span>
+                                </div>
+                                <span class="item-box-num">11</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <div class="item-box-name">
+                                    <input type="checkbox" class="checkbox-btn-primary">
+                                    <span>text</span>
+                                </div>
+                                <span class="item-box-num">11</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <div class="item-box-name">
+                                    <input type="checkbox" class="checkbox-btn-primary">
+                                    <span>text</span>
+                                </div>
+                                <span class="item-box-num">11</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <div class="item-box-name">
+                                    <input type="checkbox" class="checkbox-btn-primary">
+                                    <span>text</span>
+                                </div>
+                                <span class="item-box-num">11</span>
+                            </label>
+                        </li>
+                    </ul> <!-- item-list-1 -->
+                </div> <!-- item-box -->
+                <div class="item-box flex-2">
+                    <div class="item-box-tit">
+                        <a href="javascript:void(0);" class="right-btn">
+                            <span class="">Title</span>
+                            <i class="fa-solid fa-pencil icon-btn-small"></i>
+                        </a>
+                    </div>
+                    <div class="grid-container padding-20">
+                        <div class="grid-list">
+                            <ul class="width-50per">
+                                <li>
+                                    <span class="left-title">아이디</span>
+                                    <span>admin</span>
+                                </li>
+                                <li>
+                                    <span class="left-title">이름</span>
+                                    <span>admin</span>
+                                </li>
+                                <li>
+                                    <span class="left-title">전화번호</span>
+                                    <span>01023132423</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="grid-list">
+                            <ul class="width-50per">
+                                <li>
+                                    <span class="left-title">아이디</span>
+                                    <span>admin</span>
+                                </li>
+                                <li>
+                                    <span class="left-title">이름</span>
+                                    <span>admin</span>
+                                </li>
+                                <li>
+                                    <span class="left-title">전화번호</span>
+                                    <span>01023132423</span>
+                                </li>
+                            </ul>
+                    </div>
+                    </div> <!-- grid-list -->
+                </div> <!-- item-box -->
+            </div> <!-- item-box-wrap -->
+        </div>
+    </div>
+
+    <!-- card box -->
+    <span class="boot-title">&lt;card box&gt;</span>
+    <div class="exp-box">
+        <div class="exp-cont">
+            <div class="card-box-wrap">
+                <div class="card-box">
+                    <div class="card-top-txt">
+                        <span class="card-big-tit">text</span>
+                        <span class="card-big-data">1,234</span>
+                    </div>
+                    <div class="card-bottom-txt">
+                        <span class="card-small-tit">text</span>
+                        <span class="card-small-data">1,234,567</span>
+                    </div>
+                </div> <!-- card-box -->
+                <div class="card-box">
+                    <div class="card-top-txt">
+                        <span class="card-big-tit">text</span>
+                        <span class="card-big-data c-minus-orange">-1,234</span>
+                    </div>
+                    <div class="card-bottom-txt">
+                        <span class="card-small-tit">text</span>
+                        <span class="card-small-data">1,234,567</span>
+                    </div>
+                </div> <!-- card-box -->
+                <div class="card-box">
+                    <div class="card-top-txt">
+                        <span class="card-big-tit">text</span>
+                        <span class="card-big-data">1,234</span>
+                    </div>
+                    <div class="card-bottom-txt">
+                        <span class="card-small-tit">text</span>
+                        <span class="card-small-data c-minus-orange">-1,234,567</span>
+                    </div>
+                </div> <!-- card-box -->
+                <div class="card-box">
+                    <div class="card-top-txt">
+                        <span class="card-big-tit">text</span>
+                        <span class="card-big-data c-minus-orange">-1,234</span>
+                    </div>
+                    <div class="card-bottom-txt">
+                        <span class="card-small-tit">text</span>
+                        <span class="card-small-data c-minus-orange">-1,234,567</span>
+                    </div>
+                </div> <!-- card-box -->
+            </div> <!-- card-box-wrap -->
+        </div>
+    </div>
+
+    <!-- select -->
+    <span class="boot-title">&lt;select&gt;</span>
+    <div class="exp-box">
+        <div class="exp-cont">
+            <label>
+                <select class="select">
+                    <option value="text1">text1</option>
+                    <option value="text2">text2</option>
+                </select>
+            </label>
+        </div>
+        <div class="exp-cont">
+            <label>
+                <select class="select" disabled>
+                    <option value="text1">text1</option>
+                    <option value="text2">text2</option>
+                </select>
+            </label>
+        </div>
+        <div class="exp-cont">
+            <label class="direct-select width-250px">
+                <span>text</span>
+                <select class="select" onfocus="focusF(this);" onblur="blueF(this);">
+                    <option value="">text1</option>
+                    <option value="">text2</option>
+                    <option value="">text3</option>
+                </select>
+            </label>
+        </div>
+        <div class="exp-cont">
+            <label>
+                <div class="select-btn-set width-250px">
+                    <select class="select">
+                        <option value="text1">text1</option>
+                        <option value="text2">text2</option>
+                    </select>
+                    <a href="javascript:void(0);" class="btn-primary width-40px more-btn-slide"><i class="fa-solid fa-angle-down icon-btn-medium"></i></a>
+                </div>
+            </label>
+        </div>
+        <div class="exp-cont">
+            <label>
+                <div class="select-btn-set grid-temp-1-75px-40px">
+                    <select class="select">
+                        <option value="text1">text1</option>
+                        <option value="text2">text2</option>
+                    </select>
+                    <a href="javascript:void(0);" class="btn-primary more-btn-slide"><i class="fa-solid fa-angle-down icon-btn-medium"></i></a>
+                    <a href="javascript:void(0);" class="btn-primary width-40px more-btn-slide"><i class="fa-solid fa-angle-down icon-btn-medium"></i></a>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <!-- search bar -->
+    <span class="boot-title">&lt;search bar&gt;</span>
+    <div class="exp-box">
+        <div class="exp-cont">
+            <input class="search" type="search" placeholder="Search...">
+        </div>
+        <div class="exp-cont">
+            <input class="search" type="search" placeholder="disabled" disabled>
+        </div>
+    </div>
+
+    <!-- calendar -->
+    <span class="boot-title c-yellow">&lt;calendar&gt;</span>
+    <div class="exp-box">
+        <div class="exp-cont">
+            <div class="calendar">
+                <a href="#" class="prev-cal"><i class="fa-solid fa-caret-left"></i></a>
+                <a href="#" id="reportrange">
+                    <span>2022.01.01 - 2022.06.01</span>
+                </a>
+                <a href="#" class="next-cal"><i class="fa-solid fa-caret-right"></i></a>
+                <a href="#" class="btn-cal"><i class="fa-solid fa-calendar-days"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- file-upload -->
+    <span class="boot-title c-yellow">&lt;file-upload&gt;</span>
+    <div class="exp-box">
+        <div class="exp-cont">
+            <div class="upload-file">
+                <input type="file" id="" class="file" onchange="fileDownload(this);"> 
+                <input class="upload-name" value="파일선택" disabled>
+                <label for="file" class="btn-primary">불러오기</label> 
+                <span class="d-block mt-5 small-text">※ text</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <span class="boot-title">&lt;modal&gt;</span>
+    <div class="exp-box">
+        <div class="exp-cont">
+            <a class="" href="javascript:void(0);" onclick="modalOpen(0,this);"><i class="fa-solid fa-pencil icon-btn-medium"></i></a>
+
+            <div class="overlay"></div>
+            <div class="item-box-wrap modal mg-center">
+                <div class="modal-item-box border-none">
+                    <div class="item-box-tit modal-top">
+                        <span class="">Title</span>
+                        <a href="javascript:void(0);" class="close-btn" onclick="modalClose(0,this);"><i class="fa-solid fa-x icon-btn-medium"></i></a>
+                    </div>
+                    <div class="item-list-3">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br> Blanditiis sapiente, aut quam fugiat quis aliquid dicta esse quidem ipsa quo hic, a rem itaque, animi quibusdam eum iure. Quis, sunt.<br>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br> Blanditiis sapiente, aut quam fugiat quis aliquid dicta esse quidem ipsa quo hic, a rem itaque, animi quibusdam eum iure. Quis, sunt.<br>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br> Blanditiis sapiente, aut quam fugiat quis aliquid dicta esse quidem ipsa quo hic, a rem itaque, animi quibusdam eum iure. Quis, sunt.<br>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br> Blanditiis sapiente, aut quam fugiat quis aliquid dicta esse quidem ipsa quo hic, a rem itaque, animi quibusdam eum iure. Quis, sunt.<br>
+                    </div> <!-- item-list-3 -->
+                    <div class="modal-bottom-1">
+                        <div class="modal-bottom-btn">
+                            <a href="#">입력 완료</a>
+                        </div>
+                    </div> <!-- modal-bottom -->
+                </div> <!-- item-box -->
+            </div> <!-- item-box-wrap -->
+        </div>
+        <div class="exp-cont">
+            <a class="" href="javascript:void(0);" onclick="modalOpen(1,this);"><i class="fa-solid fa-pencil icon-btn-medium"></i></a>
+            
+            <div class="overlay"></div>
+            <div class="item-box-wrap modal mg-center">
+                <div class="modal-item-box border-none">
+                    <div class="item-box-tit modal-top">
+                        <span class="">Title</span>
+                        <a href="javascript:void(0);" class="close-btn" onclick="modalClose(1,this);"><i class="fa-solid fa-x icon-btn-medium"></i></a>
+                    </div>
+                    <div class="item-list-3 d-block scroll-bar-primary height-70vh">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br> Blanditiis sapiente, aut quam fugiat quis aliquid dicta esse quidem ipsa quo hic, a rem itaque, animi quibusdam eum iure. Quis, sunt.<br><br><br><br><br>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br> Blanditiis sapiente, aut quam fugiat quis aliquid dicta esse quidem ipsa quo hic, a rem itaque, animi quibusdam eum iure. Quis, sunt.<br><br><br><br><br>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br> Blanditiis sapiente, aut quam fugiat quis aliquid dicta esse quidem ipsa quo hic, a rem itaque, animi quibusdam eum iure. Quis, sunt.<br><br><br><br><br>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br> Blanditiis sapiente, aut quam fugiat quis aliquid dicta esse quidem ipsa quo hic, a rem itaque, animi quibusdam eum iure. Quis, sunt.<br><br><br><br><br>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br> Blanditiis sapiente, aut quam fugiat quis aliquid dicta esse quidem ipsa quo hic, a rem itaque, animi quibusdam eum iure. Quis, sunt.<br><br><br><br><br>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br> Blanditiis sapiente, aut quam fugiat quis aliquid dicta esse quidem ipsa quo hic, a rem itaque, animi quibusdam eum iure. Quis, sunt.<br><br><br><br><br>
+                        quam fugiat quis aliquid dicta esse quidem ipsa quo hic, a rem itaque, animi quibusdam eum iure. Quis, sunt.
+                    </div> <!-- item-list-3 -->
+                    <div class="modal-bottom-3">
+                        <div class="modal-bottom-btn">
+                            <a href="#"><span>&lt; 이전고객</span></a>
+                            <a href="#"><span>입력 완료</span></a>
+                            <a href="#"><span>다음고객 &gt;</span></a>
+                        </div>
+                    </div> <!-- modal-bottom -->
+                </div> <!-- item-box -->
+            </div> <!-- item-box-wrap -->
+        </div>
+    </div>
+
+    <!-- Table-1 -->
+    <span class="boot-title">&lt;Table-1&gt;</span>
+    <div class="exp-box">
+        <div class="exp-cont">
+            <div class="table-container left-color-bar grid mt-50">
+                <div class="table-top">
+                    <div class="table-top-btn">
+                        <a class="" href="javascript:void(0);"><i class="fa-solid fa-circle-plus icon-btn-medium"></i></a>
+                    </div>
+                    <input class="search width-280px" type="search" placeholder="Search...">
+                </div> <!-- table-top -->
+
+                <table class="table" cellspacing="0" cellpadding="0">
+                    <colgroup>
+                        <col>
+                    </colgroup>
+                    <thead> <!-- 11 -->
+                        <tr>
+                            <th>text</th>
+                            <th colspan="2">text</th>
+                            <th>text</th>
+                            <th>text</th>
+                            <th>text</th>
+                            <th>text</th>
+                            <th>text</th>
+                            <th>text</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tb-blue">
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                        </tr>
+                        <tr class="tb-orange">
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                        </tr>
+                        <tr class="tb-red">
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="table-bottom">
+                    <div class="showing-page-box">
+                        <div>
+                            <label>
+                                <select class="select">
+                                    <option value="5">5</option>
+                                    <option value="10" selected="">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="25">25</option>
+                                </select>
+                            </label>
+                        </div>
+                        <span class="dataTable-info">entries per page Showing 1 to 10 of 100 entries</span>
+                    </div> <!-- showing-page-box -->
+
+                    <nav class="table-nav">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">Previous</span>
+                                </a>
+                            </li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div> <!-- table-container -->
+        </div>
+    </div>
+
+    <!-- Table-2 -->
+    <span class="boot-title">&lt;Table-2&gt;</span>
+    <div class="exp-box">
+        <div class="exp-cont">
+            <div class="table-container grid">
+                <div class="table-top">
+                    <ul class="table-summary-box">
+                        <li>
+                            <span class="summary-text-top">인정</span>
+                            <span class="summary-text-bottom">1234</span>
+                        </li>
+                        <li>
+                            <span class="summary-text-top">중복</span>
+                            <span class="summary-text-bottom">1234</span>
+                        </li>
+                        <li>
+                            <span class="summary-text-top">성별불량</span>
+                            <span class="summary-text-bottom">1234</span>
+                        </li>
+                        <li>
+                            <span class="summary-text-top">번호불량</span>
+                            <span class="summary-text-bottom">1234</span>
+                        </li>
+                        <li>
+                            <span class="summary-text-top">테스트</span>
+                            <span class="summary-text-bottom">1234</span>
+                        </li>
+                        <li>
+                            <span class="summary-text-top">콜불량</span>
+                            <span class="summary-text-bottom">1234</span>
+                        </li>
+                        <li>
+                            <span class="summary-text-top">이름불량</span>
+                            <span class="summary-text-bottom">1234</span>
+                        </li>
+                        <li>
+                            <span class="summary-text-top">지역불량</span>
+                            <span class="summary-text-bottom">1234</span>
+                        </li>
+                        <li>
+                            <span class="summary-text-top">업체불량</span>
+                            <span class="summary-text-bottom">1234</span>
+                        </li>
+                        <li>
+                            <span class="summary-text-top">본인아님</span>
+                            <span class="summary-text-bottom">1234</span>
+                        </li>
+                        <li>
+                            <span class="summary-text-top">확인</span>
+                            <span class="summary-text-bottom">1234</span>
+                        </li>
+                    </ul> <!-- table-summary-box -->
+                    <input class="search width-280px" type="search" placeholder="Search...">
+                </div> <!-- table-top -->
+
+                <table class="table" cellspacing="0" cellpadding="0">
+                    <colgroup>
+                        <col>
+                    </colgroup>
+                    <thead> <!-- 11 -->
+                        <tr>
+                            <th>text</th>
+                            <th colspan="2">text</th>
+                            <th>text</th>
+                            <th>text</th>
+                            <th>text</th>
+                            <th>text</th>
+                            <th>text</th>
+                            <th>text</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tb-blue">
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                        </tr>
+                        <tr class="tb-orange">
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                        </tr>
+                        <tr class="tb-red">
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="table-bottom">
+                    <div class="showing-page-box">
+                        <div>
+                            <label>
+                                <select class="select">
+                                    <option value="5">5</option>
+                                    <option value="10" selected="">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="25">25</option>
+                                </select>
+                            </label>
+                        </div>
+                        <span class="dataTable-info">entries per page Showing 1 to 10 of 100 entries</span>
+                    </div> <!-- showing-page-box -->
+
+                    <nav class="table-nav">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">Previous</span>
+                                </a>
+                            </li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div> <!-- table-container -->
+        </div>
+    </div>
+
+        <!-- Table-3 -->
+        <span class="boot-title">&lt;Table-3&gt;</span>
+        <div class="exp-box">
+        <div class="exp-cont">
+            <div class="table-container grid">
+                <div class="table-top">
+                    <span class="d-block fs-13 c-ltgray-1 fw-500">Title</span>
+                    <input class="search width-280px" type="search" placeholder="Search...">
+                </div> <!-- table-top -->
+
+                <table class="table" cellspacing="0" cellpadding="0">
+                    <colgroup>
+                        <col>
+                    </colgroup>
+                    <thead> <!-- 11 -->
+                        <tr>
+                            <th>text</th>
+                            <th colspan="2">text</th>
+                            <th>text</th>
+                            <th>text</th>
+                            <th>text</th>
+                            <th>text</th>
+                            <th>text</th>
+                            <th>text</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tb-blue">
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                        </tr>
+                        <tr class="tb-orange">
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                        </tr>
+                        <tr class="tb-red">
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                                <span class="small-text d-block">text</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="table-bottom">
+                    <div class="showing-page-box">
+                        <div>
+                            <label>
+                                <select class="select">
+                                    <option value="5">5</option>
+                                    <option value="10" selected="">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="25">25</option>
+                                </select>
+                            </label>
+                        </div>
+                        <span class="dataTable-info">entries per page Showing 1 to 10 of 100 entries</span>
+                    </div> <!-- showing-page-box -->
+
+                    <nav class="table-nav">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">Previous</span>
+                                </a>
+                            </li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div> <!-- table-container -->
+        </div>
+    </div>
+
+    <!-- Table-4 -->
+    <span class="boot-title">&lt;Table-4&gt;</span>
+    <div class="exp-box">
+        <div class="exp-cont">
+            <div class="table-container grid">
+                <div class="table-top flex-jc-end">
+                    <input class="search width-280px" type="search" placeholder="Search...">
+                </div> <!-- table-top -->
+
+                <table class="table" cellspacing="0" cellpadding="0">
+                    <colgroup>
+                        <col width="14.785%">
+                        <col width="14.785%">
+                        <col width="14.785%">
+                        <col width="14.785%">
+                        <col width="14.785%">
+                        <col width="14.785%">
+                        <col width="14.785%">
+                    </colgroup>
+                    <thead> <!-- 11 -->
+                        <tr>
+                            <th class="t-align-left">text</th>
+                            <th class="t-align-left">text</th>
+                            <th class="t-align-left">text</th>
+                            <th class="t-align-left">text</th>
+                            <th class="t-align-left">text</th>
+                            <th class="t-align-left">text</th>
+                            <th class="t-align-left">text</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tb-blue">
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                            </td>
+                            <td>
+                                <span class="fs-13 d-block">text</span>
+                            </td>
+                            <td>
+                                <input type="text" class="input-text d-block mb-10" placeholder="내용을 입력해 주세요.">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="table-bottom">
+                    <div class="showing-page-box">
+                        <div>
+                            <label>
+                                <select class="select">
+                                    <option value="5">5</option>
+                                    <option value="10" selected="">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="25">25</option>
+                                </select>
+                            </label>
+                        </div>
+                        <span class="dataTable-info">entries per page Showing 1 to 10 of 100 entries</span>
+                    </div> <!-- showing-page-box -->
+
+                    <nav class="table-nav">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">Previous</span>
+                                </a>
+                            </li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div> <!-- table-container -->
+        </div>
+    </div>
+
+    <!-- tab menu -->
+    <span class="boot-title">&lt;tab menu&gt;</span>
+    <div class="exp-box">
+        <div class="exp-cont">
+            <div class="tab-menu">
+                <ul class="tabs">
+                    <li class="tab-link current" data-tab="tab-1">설정</li>
+                    <li class="tab-link" data-tab="tab-2">유효성</li>
+                    <li class="tab-link" data-tab="tab-3">필수값</li>
+                    <li class="tab-link" data-tab="tab-4">페이지</li>
+                    <li class="tab-link" data-tab="tab-5">땡큐페이지</li>
+                    <li class="tab-link" data-tab="tab-6">HTML/CSS</li>
+                </ul>
+    
+                <div class="tab-contents">
+                    <div id="tab-1" class="tab-content current">
+                        <div class="grid-list">
+                            <ul>
+                                <li>
+                                    <span class="left-title">광고주</span>
+                                    <span><input type="text" class="input-text d-block width-100per" placeholder="내용을 입력해 주세요."></span>
+                                </li>
+                                <li>
+                                    <span class="left-title">랜딩주소</span>
+                                    <span><input type="text" class="input-text d-block width-100per" placeholder="내용을 입력해 주세요."></span>
+                                </li>
+                                <li>
+                                    <span class="left-title">매체</span>
+                                    <span><input type="text" class="input-text d-block width-100per" placeholder="내용을 입력해 주세요."></span>
+                                </li>
+                                <li>
+                                    <span class="left-title">이벤트 구분</span>
+                                    <span><input type="text" class="input-text d-block width-100per" placeholder="내용을 입력해 주세요."></span>
+                                </li>
+                                <li>
+                                    <span class="left-title">랜딩 구분</span>
+                                    <span>
+                                        <label>
+                                            <select class="select width-280px">
+                                                <option value="text1">text1</option>
+                                                <option value="text2">text2</option>
+                                            </select>
+                                        </label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="left-title">성별</span>
+                                    <span>
+                                        <label class="radio-btn-sq"><input type="radio" name="text1" value=""><span>text1</span></label>
+                                        <label class="radio-btn-sq"><input type="radio" name="text1" value=""><span>text1</span></label>
+                                        <label class="radio-btn-sq"><input type="radio" name="text1" value=""><span>text1</span></label>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div> <!-- grid-list -->
+                    </div>
+                    <div id="tab-2" class="tab-content">
+                        <div class="grid-list">
+                            <ul>
+                                <li>
+                                    <span class="left-title">아이디</span>
+                                    <div class="border-primary padding-20 width-900px">
+                                        <div class="d-flex flex-jc-sb flex-ai-center mb-15">
+                                            <span class="d-block fs-13 c-ltgray-1 fw-500">Title</span>
+                                            <input class="search width-280px" type="search" placeholder="Search...">
+                                        </div>
+                                        <div class="text-btn-set blacklist-text-box">
+                                            <input type="text" class="input-text" placeholder="">
+                                            <a href="javascript:void(0);" class="btn-primary blacklist-send-btn d-inline-block mb-5">text</a>
+                                        </div>
+                                        <ul class="blacklist mt-10">
+                                            <li>
+                                                <div class="left-section">
+                                                    <span class="blacklist-num fs-13 c-ltgray-1">01012345678</span>
+                                                </div>
+                                                <div class="right-section">
+                                                    <a class="" href="javascript:void(0);"><i class="fa-solid fa-circle-xmark icon-btn-small"></i></a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="left-section">
+                                                    <span class="fs-13 c-ltgray-1">01012345678</span>
+                                                </div>
+                                                <div class="right-section">
+                                                    <label class="radio-btn-sq"><input type="radio" name="text1" value=""><span>text2</span></label>
+                                                    <label class="radio-btn-sq ml-5"><input type="radio" name="text1" value=""><span>text2</span></label>
+                                                    <label class="radio-btn-sq ml-5"><input type="radio" name="text1" value=""><span>text2</span></label>
+                                                    <a class="ml-5" href="javascript:void(0);"><i class="fa-solid fa-circle-xmark icon-btn-small"></i></a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> <!-- grid-list -->
+                    </div>
+                    <div id="tab-3" class="tab-content">
+                        contents 3
+                    </div>
+                    <div id="tab-4" class="tab-content">
+                        contents 4
+                    </div>
+                    <div id="tab-5" class="tab-content">
+                        contents 5
+                    </div>
+                    <div id="tab-6" class="tab-content">
+                        contents 6
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- list-1 -->
+    <span class="boot-title c-yellow">&lt;list-1&gt;</span>
+    <div class="exp-box">
+        <div class="exp-cont">
+            <div class="p-relative">
+                <a class="modal-open-btn" href="javascript:void(0);"><i class="fa-solid fa-circle-plus icon-btn-big"></i></a>
+                <ul class="event-modal border-primary padding-20 width-180px p-absolute bg-white shadow-2">
+                    <li class="mb-10">
+                        <a href="javascript:void(0);" class="d-flex flex-ai-center">
+                            <img src="./images/01_DB.png" alt="" class="mr-10">
+                            <span class="fs-15 c-ltgray-1">text</span>
+                        </a>
+                    </li>
+                    <li class="mb-10">
+                        <a href="javascript:void(0);" class="d-flex flex-ai-center">
+                            <img src="./images/01_DB.png" alt="" class="mr-10">
+                            <span class="fs-15 c-ltgray-1">text</span>
+                        </a>
+                    </li>
+                    <li class="mb-10">
+                        <a href="javascript:void(0);" class="d-flex flex-ai-center">
+                            <img src="./images/01_DB.png" alt="" class="mr-10">
+                            <span class="fs-15 c-ltgray-1">text</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="javascript:void(0);" class="d-flex flex-ai-center">
+                            <img src="./images/01_DB.png" alt="" class="mr-10">
+                            <span class="fs-15 c-ltgray-1">text</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="mt-10" id="example1">
+                <li class="list-group-item mb-10 border-only">
+                    <div class="d-flex flex-ai-center flex-jc-sb padding-20">
+                        <div class="left-section">
+                            <a class="mr-40" href="javascript:void(0);"><i class="fa-solid fa-bars icon-btn-medium"></i></a>
+                            <div class="d-flex flex-ai-center">
+                                <img src="./images/02_image.png" alt="" class="mr-5">
+                                <span class="fs-15 c-ltgray-1">이미지</span>
+                            </div>
+                        </div>
+                        <div class="right-section">
+                            <a href="javascript:void(0);" class="btn-primary mr-5 apply-btn" style="display
+                            :none;">반영하기</a>
+                            <a href="javascript:void(0);" class="btn-primary mr-5">삭제</a>
+                            <a href="javascript:void(0);" class="btn-primary width-40px more-btn-slide" onclick="clickBtnSlide(this);"><i class="fa-solid fa-angle-down icon-btn-medium"></i></a>
+                        </div>
+                    </div>
+                    <div class="border-top" style="display: none;">
+                        <ul class="grid-list padding-20">
+                            <li>
+                                <span class="left-title">파일첨부</span>
+                                <div class="upload-file">
+                                    <input type="file" id="" class="file" onchange="fileDownload(this);"> 
+                                    <input class="upload-name width-100per" value="파일선택" disabled>
+                                    <label for="file" class="btn-primary">불러오기</label> 
+                                    <span class="d-block small-text"><span class="text-in-circle mr-5 fs-10 fw-300 c-white">URL</span>http://static.metamarketing.co.kr/v_222/event_main_01.jpg</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-group-item mb-10 border-only">
+                    <div class="d-flex flex-ai-center flex-jc-sb padding-20">
+                        <div class="left-section">
+                            <a class="mr-40" href="javascript:void(0);"><i class="fa-solid fa-bars icon-btn-medium"></i></a>
+                            <div class="d-flex flex-ai-center">
+                                <img src="./images/02_image.png" alt="" class="mr-5">
+                                <span class="fs-15 c-ltgray-1">이미지</span>
+                            </div>
+                        </div>
+                        <div class="right-section">
+                            <a href="javascript:void(0);" class="btn-primary mr-5 apply-btn" style="display
+                            :none;">반영하기</a>
+                            <a href="javascript:void(0);" class="btn-primary mr-5">삭제</a>
+                            <a href="javascript:void(0);" class="btn-primary width-40px more-btn-slide" onclick="clickBtnSlide(this);"><i class="fa-solid fa-angle-down icon-btn-medium"></i></a>
+                        </div>
+                    </div>
+                    <div class="border-top" style="display: none;">
+                        <ul class="grid-list padding-20">
+                            <li>
+                                <span class="left-title">파일첨부</span>
+                                <div class="upload-file">
+                                    <input type="file" id="" class="file" onchange="fileDownload(this);"> 
+                                    <input class="upload-name width-100per" value="파일선택" disabled>
+                                    <label for="file" class="btn-primary">불러오기</label> 
+                                    <span class="d-block small-text"><span class="text-in-circle mr-5 fs-10 fw-300 c-white">URL</span>http://static.metamarketing.co.kr/v_222/event_main_01.jpg</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div> <!-- exp-box -->
+</div>
+
+<script src="./js/main.js" type="text/javascript"></script>
+
+</body>
+</html>
