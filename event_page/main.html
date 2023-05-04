@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트페이지관리</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> <!-- 폰트 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./menu/css/menu.css">
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./css/sub.css">
+
+    <script src="./js/jquery.min.js" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/fa8d36e7e1.js" crossorigin="anonymous"></script> <!-- 아이콘 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="flex-box-01">
+            <nav>
+                <a href="./menu.html" class="logo-img"><img src="./images/logo.png" alt="logo"></a>
+                <ul class="menu-list">
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-clipboard-list"></i>
+                            <span>CPA광고관리</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <span>API광고관리</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-chart-pie"></i>
+                            <span>DB관리</span>
+                        </a>
+                    </li>
+                    <li class="include-sub-menus">
+                        <a href="#">
+                            <i class="fa-solid fa-laptop"></i>
+                            <span>관리자 페이지 <i class="fa-solid fa-angle-down sub-menus-arrow"></i></span>
+                        </a>
+                        <ul class="sub-menus">
+                            <li><a href="#">이벤트페이지 관리</a></li>
+                            <li><a href="#">매체 관리</a></li>
+                            <li><a href="#">광고주 관리</a></li>
+                            <li><a href="#">충전금 관리</a></li>
+                            <li><a href="#">CPA 광고 관리</a></li>
+                            <li><a href="#">월별정산서 관리</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div> <!-- flex-box-01 -->
+
+        <div class="flex-box-02">
+            <header>
+                <div class="menu-box">
+                    <div class="menu-left">
+                        <a href="#" class="menu-btn"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                    <div class="menu-right">
+                        <a href="#">마이페이지</a>
+                        <a href="#">고객문의</a>
+                        <a href="#" class="login-btn menu-r-btn">LOGIN</a>
+                        <a href="#" class="logout-btn menu-r-btn">LOGOUT</a>
+                    </div>
+                </div>
+            </header>
+            
+            <div id="contents-container">
+                <div class="overlay"></div>
+                <div class="grid">
+                    <div class="contents-top">
+                        <div class="mb-50 d-flex ai-center jc-sb width-100per">
+                            <div class="title">
+                                <h1>이벤트 페이지 관리</h1>
+                                <span class="sub-tit">sub title</span>
+                            </div>
+                            <div>
+                                <a href="#" class="btn-primary border-primary mr-5 bg-white">취소</a>
+                                <a href="#" class="btn-primary border-primary mr-5 bg-white">복사하기</a>
+                                <a href="#" class="btn-primary border-primary bg-primary c-white">저장하기</a>
+                            </div>
+                        </div>
+                    </div> <!-- contents-top -->
+                    <!------------ 여기까지 메뉴(좌측, 상단) ------------>
+        
+                    <div class="contents-main">
+                        <div class="d-grid grid-temp-2-1 grid-gap-10px min-height">
+                            <div class="tab-menu">
+                                <ul class="tabs">
+                                    <li class="tab-link current" data-tab="tab-1">설정</li>
+                                    <li class="tab-link" data-tab="tab-2">유효성</li>
+                                    <li class="tab-link" data-tab="tab-3">필수값</li>
+                                    <li class="tab-link" data-tab="tab-4">스크립트</li>
+                                    <li class="tab-link" data-tab="tab-5">HTML/CSS</li>
+                                    <li class="tab-link" data-tab="tab-6">땡큐페이지</li>
+                                </ul>
+                    
+                                <div class="tab-contents bg-white box-padding min-height">
+                                    <div id="tab-1" class="tab-content current"> <!-- 설정 -->
+                                        <ul class="grid-list">
+                                            <li>
+                                                <span class="left-title">광고주</span>
+                                                <div><input type="text" class="input-text d-block width-100per" placeholder="광고주명을 입력해 주세요."></div>
+                                            </li>
+                                            <li>
+                                                <span class="left-title">랜딩 주소</span>
+                                                <div><input type="text" class="input-text d-block width-100per" placeholder=""></div>
+                                            </li>
+                                            <li class="p-relative">
+                                                <div class="left-title d-flex">
+                                                    <span>매체</span>
+                                                    <a class="add-media-btn ml-5" href="javascript:void(0);"><i class="fa-solid fa-circle-plus icon-btn-medium"></i></a>
+                                                </div>
+                                                <div class="media-search-row">
+                                                    <div class="media-search d-grid grid-gap-5px">
+                                                        <input class="search bg-ltgray-1 width-100per" type="text" placeholder="매체를 입력하세요.">                        
+                                                        <input type="text" class="input-text" placeholder="">
+                                                        <a href="javascript:void(0);" class="btn-primary width-40px media-del-btn" onclick="delMedia(this);"><i class="fa-solid fa-x icon-btn-small"></i></a>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="media-list border-primary padding-10 p-absolute bg-white">
+                                                    <ul>
+                                                        <li class="media-item"><span class="name">GDN</span></li>
+                                                        <li class="media-item"><span class="name">페이스북</span></li>
+                                                        <li class="media-item"><span class="name">틱톡</span></li>
+                                                        <li class="media-item"><span class="name">당근마켓</span></li>
+                                                        <li class="media-item"><span class="name">카카오광고</span></li>
+                                                        <li class="media-item"><span class="name">타불라</span></li>
+                                                    </ul>
+                                                </div> -->
+                                            </li>
+                                            <li>
+                                                <span class="left-title">이벤트 구분</span>
+                                                <div><input type="text" class="input-text d-block width-100per" placeholder="이벤트 구분을 입력해 주세요."></div>    
+                                            </li>
+                                            <li>
+                                                <span class="left-title">DB단가</span>
+                                                <div><input type="text" class="input-text d-block width-100per" placeholder="DB단가를 입력해 주세요."></div>    
+                                            </li>
+                                            <li>
+                                                <span class="left-title">브라우저 제목(타이틀)</span>
+                                                <div><input type="text" class="input-text d-block width-100per" placeholder="타이틀을 입력해 주세요."></div>    
+                                            </li>
+                                            <li>
+                                                <span class="left-title">랜딩 구분</span>
+                                                <div>
+                                                    <select class="select width-200px">
+                                                        <option value="일반">일반</option>
+                                                        <option value="잠재고객">잠재고객</option>
+                                                        <option value="엑셀업로드">엑셀업로드</option>
+                                                        <option value="API수신">API수신</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="left-title">키워드</span>
+                                                <div><input type="text" class="input-text d-block width-100per" placeholder="콤마로 구분 ex) 키워드1, 키워드2 ..."></div>
+                                            </li>
+                                            <li>
+                                                <span class="left-title">설명</span>
+                                                <div><input type="text" class="input-text d-block width-100per" placeholder="이벤트를 구체적으로 설명해 주세요. (약 40자 내외, 최대 100자 이내) "></div>
+                                            </li>
+                                        </ul>
+                                    </div> <!-- tab-1 -->
+                                    
+                                    <div id="tab-2" class="tab-content"> <!-- 유효성 -->
+                                        <ul class="grid-list">
+                                            <li>
+                                                <span class="left-title">성별</span>
+                                                <div>
+                                                    <label class="radio-btn-sq"><input type="radio" name="gender" value="무관"><span>무관</span></label>
+                                                    <label class="radio-btn-sq"><input type="radio" name="gender" value="남"><span>남</span></label>
+                                                    <label class="radio-btn-sq"><input type="radio" name="gender" value="여"><span>여</span></label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="left-title">나이</span>
+                                                <div>
+                                                    <div>
+                                                        <input type="text" class="input-text width-200px" maxlength="2" placeholder="" value="페이스북" disabled>
+                                                        <input type="text" class="input-text width-75px t-align-center" maxlength="2" placeholder="최소 나이">
+                                                        <span>~</span>
+                                                        <input type="text" class="input-text width-75px t-align-center" maxlength="2" placeholder="최대 나이">
+                                                    </div>
+                                                    <div>
+                                                        <input type="text" class="input-text width-200px mt-5" maxlength="2" placeholder="" value="GDN" disabled>
+                                                        <input type="text" class="input-text width-75px t-align-center" maxlength="2" placeholder="최소 나이">
+                                                        <span>~</span>
+                                                        <input type="text" class="input-text width-75px t-align-center" maxlength="2" placeholder="최대 나이">
+                                                    </div>
+                                                    <div>
+                                                        <input type="text" class="input-text width-200px mt-5" maxlength="2" placeholder="" value="틱톡" disabled>
+                                                        <input type="text" class="input-text width-75px t-align-center" maxlength="2" placeholder="최소 나이">
+                                                        <span>~</span>
+                                                        <input type="text" class="input-text width-75px t-align-center" maxlength="2" placeholder="최대 나이">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="left-title">중복기간</span>
+                                                <div>
+                                                    <label class="radio-btn-sq"><input type="radio" name="overlappedTerm" value="전체"><span>전체</span></label>
+                                                    <label class="radio-btn-sq"><input type="radio" name="overlappedTerm" value="1일"><span>1일</span></label>
+                                                    <label class="radio-btn-sq"><input type="radio" name="overlappedTerm" value="1주일"><span>1주일</span></label>
+                                                    <label class="radio-btn-sq"><input type="radio" name="overlappedTerm" value="1개월"><span>1개월</span></label>
+                                                    <label class="radio-btn-sq"><input type="radio" name="overlappedTerm" value="6개월"><span>6개월</span></label>
+                                                    <span class="small-text d-block mt-5">※ 변경 이후 시점의 DB부터 적용됩니다.</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="left-title">전화번호 중복</span>
+                                                <div>
+                                                    <select class="select width-200px">
+                                                        <option value="미사용">미사용</option>
+                                                        <option value="사용">사용</option>
+                                                    </select>
+                                                    <span class="small-text d-block mt-5">※  변경이후 시점의 DB부터 적용됩니다.</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="left-title">사전중복 체크</span>
+                                                <div>
+                                                    <select class="select width-100per">
+                                                        <option value="">사전 중복 체크 안함</option>
+                                                        <option value="">동일 랜딩 내의 이름과 연락처 중복 여부</option>
+                                                        <option value="">동일 광고주 내의 이름과 연락처 중복 여부</option>
+                                                        <option value="">동일 광고주와 매체 내의 이름과 연락처 중복 여부</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="left-title">전화번호 차단</span>
+                                                <div class="border-primary padding-20">
+                                                    <div class="d-flex jc-sb ai-center mb-15">
+                                                        <span class="d-block fs-13 c-ltgray-1 fw-500">허용/차단 추가 (<span class="bl-tel-counting"></span>)</span>
+                                                        <input class="search width-280px" type="search" placeholder="Search...">
+                                                    </div>
+                                                    <div class="text-btn-set blacklist-text-box">
+                                                        <input type="text" class="input-text blacklist-tel-input" maxlength="11" placeholder="">
+                                                        <a href="javascript:void(0);" class="blacklist-add-btn-tel btn-primary d-inline-block mb-5">추가</a>
+                                                    </div>
+                                                    <ul class="blacklist blacklist-tels mt-10 scroll-bar-primary"></ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="left-title">아이피 차단</span>
+                                                <div class="border-primary padding-20">
+                                                    <div class="d-flex jc-sb ai-center mb-15">
+                                                        <span class="d-block fs-13 c-ltgray-1 fw-500">허용/차단 추가 (<span class="bl-ip-counting"></span>)</span>
+                                                        <input class="search width-280px" type="search" placeholder="Search...">
+                                                    </div>
+                                                    <div class="text-btn-set blacklist-text-box">
+                                                        <input type="text" class="input-text blacklist-ip-input" placeholder="">
+                                                        <a href="javascript:void(0);" class="blacklist-add-btn-ip btn-primary d-inline-block mb-5">추가</a>
+                                                    </div>
+                                                    <ul class="blacklist blacklist-ips mt-10 scroll-bar-primary"></ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div> <!-- tab-2 -->
+
+                                    <div id="tab-3" class="tab-content"> <!-- 필수값 -->
+                                        <ul class="grid-list border-bottom pb-50">
+                                            <li>
+                                                <span class="left-title">수집목적</span>
+                                                <input type="text" class="input-text d-block width-100per" placeholder="수집목적을 입력해 주세요.">
+                                            </li>
+                                            <li>
+                                                <span class="left-title">수집항목</span>
+                                                <input type="text" class="input-text d-block width-100per" value="이름,나이,연락처,설문">
+                                            </li>
+                                            <li>
+                                                <span class="left-title">사용여부</span>
+                                                <div>
+                                                    <select class="select width-200px">
+                                                        <option value="사용">사용</option>
+                                                        <option value="미사용">미사용</option>
+                                                    </select>
+                                                    <span class="small-text d-block mt-5">※ 광고주가 사용 중지로 되어있을 경우 랜딩은 노출되지 않습니다.</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="left-title">랜딩 고정값</span>
+                                                <div>
+                                                    <select class="select width-200px">
+                                                        <option value="개별설정 안함">개별설정 안함</option>
+                                                        <option value="지점">지점</option>
+                                                    </select>
+                                                    <input type="text" class="input-text width-200px" placeholder="">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul class="grid-list pt-50">
+                                            <li>
+                                                <span class="left-title">외부연동 사용여부</span>
+                                                <div>
+                                                    <select class="select width-200px" id="interlock-status">
+                                                        <option value="사용">사용</option>
+                                                        <option value="미사용">미사용</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                            <li class="d-block">
+                                                <ul class="width-100per">
+                                                    <li class="d-block mb-10 border-primary">
+                                                        <div class="padding-20 width-100per d-flex ai-center jc-sb">
+                                                            <div class="left-section">
+                                                                <span class="fs-15 c-ltgray-1">페이스북</span>
+                                                            </div>
+                                                            <div class="right-section">
+                                                                <a href="javascript:void(0);" class="btn-primary width-40px more-btn-slide" data-target="toggle-element-1"><i class="fa-solid fa-angle-down icon-btn-medium"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grid-container padding-20 border-top" id="toggle-element-1" style="display: none;">
+                                                            <div class="grid-list">
+                                                                <ul class="width-50per">
+                                                                    <li>
+                                                                        <span class="left-title">파트너아이디</span>
+                                                                        <input type="text" class="input-text width-200px" placeholder="파트너아이디">
+                                                                    </li>
+                                                                    <li>
+                                                                        <span class="left-title">파트너명</span>
+                                                                        <input type="text" class="input-text width-200px" placeholder="파트너명">
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="grid-list">
+                                                                <ul class="width-50per">
+                                                                    <li>
+                                                                        <span class="left-title">지면코드</span>
+                                                                        <input type="text" class="input-text width-200px" placeholder="지면코드">
+                                                                    </li>
+                                                                    <li>
+                                                                        <span class="left-title">지면명</span>
+                                                                        <input type="text" class="input-text width-200px" placeholder="지면명">
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div> <!-- grid-list -->
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="d-block">
+                                                <ul class="width-100per">
+                                                    <li class="d-block mb-10 border-primary">
+                                                        <div class="padding-20 width-100per d-flex ai-center jc-sb">
+                                                            <div class="left-section">
+                                                                <span class="fs-15 c-ltgray-1">GDN</span>
+                                                            </div>
+                                                            <div class="right-section">
+                                                                <a href="javascript:void(0);" class="btn-primary width-40px more-btn-slide" data-target="toggle-element-2"><i class="fa-solid fa-angle-down icon-btn-medium"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grid-container padding-20 border-top" id="toggle-element-2" style="display: none;">
+                                                            <ul class="grid-list width-50per">
+                                                                <li>
+                                                                    <span class="left-title">파트너아이디</span>
+                                                                    <input type="text" class="input-text width-200px" placeholder="파트너아이디">
+                                                                </li>
+                                                                <li>
+                                                                    <span class="left-title">파트너명</span>
+                                                                    <input type="text" class="input-text width-200px" placeholder="파트너명">
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="grid-list width-50per">
+                                                                <li>
+                                                                    <span class="left-title">지면코드</span>
+                                                                    <input type="text" class="input-text width-200px" placeholder="지면코드">
+                                                                </li>
+                                                                <li>
+                                                                    <span class="left-title">지면명</span>
+                                                                    <input type="text" class="input-text width-200px" placeholder="지면명">
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div> <!-- tab-3 -->
+
+                                    <div id="tab-4" class="tab-content"> <!-- 스크립트 -->
+                                        <ul class="width-100per">
+                                            <li class="d-block mb-10 border-primary">
+                                                <div class="padding-20 width-100per d-flex ai-center jc-sb">
+                                                    <div class="left-section">
+                                                        <span class="fs-15 c-ltgray-1">페이스북</span>
+                                                    </div>
+                                                    <div class="right-section">
+                                                        <a href="javascript:void(0);" class="btn-primary width-40px more-btn-slide" data-target="toggle-element-10"><i class="fa-solid fa-angle-down icon-btn-medium"></i></a>
+                                                    </div>
+                                                </div>
+                                                <ul class="grid-list padding-20 border-top" id="toggle-element-10" style="display: none;">
+                                                    <li>
+                                                        <span class="left-title">페이스북 Pixel ID</span>
+                                                        <input type="text" class="input-text d-block width-100per" placeholder="페이스북 픽셀ID를 입력해 주세요.">
+                                                    </li>
+                                                </ul> <!-- grid-list -->
+                                            </li>
+                                            <li class="d-block mb-10 border-primary">
+                                                <div class="padding-20 width-100per d-flex ai-center jc-sb">
+                                                    <div class="left-section">
+                                                        <span class="fs-15 c-ltgray-1">GDN</span>
+                                                    </div>
+                                                    <div class="right-section">
+                                                        <a href="javascript:void(0);" class="btn-primary width-40px more-btn-slide" data-target="toggle-element-11"><i class="fa-solid fa-angle-down icon-btn-medium"></i></a>
+                                                    </div>
+                                                </div>
+                                                <ul class="grid-list padding-20 border-top" id="toggle-element-11" style="display: none;">
+                                                    <li>
+                                                        <span class="left-title">View Script</span>
+                                                        <textarea id="" class="textarea d-block height-150px" placeholder="View Script 소스를 입력해 주세요."></textarea>
+                                                    </li>
+                                                    <li>
+                                                        <span class="left-title">Complete Script</span>
+                                                        <textarea id="" class="textarea d-block height-150px" placeholder="Complete Script 소스를 입력해 주세요."></textarea>
+                                                    </li>
+                                                </ul> <!-- grid-list -->
+                                            </li>
+                                        </ul>
+                                    </div> <!-- tab-4 -->
+
+                                    <div id="tab-5" class="tab-content"> <!-- HTML/CSS -->
+                                        <div class="d-flex jc-sb mb-10">
+                                            <div class="left-section"><span class="fs-13 c-ltgray-1">HTML</span></div>
+                                            <div class="right-section">
+                                                <a class="mr-20" href="javascript:void(0);"><i class="fa-solid fa-pencil icon-btn-small"></i></a>
+                                                <a href="javascript:void(0);" class="btn-primary">반영하기</a>
+                                            </div>
+                                        </div>
+                                        <div class="html-section border-only height-300px scroll-bar-primary pr-5"></div>
+
+                                        <div class="d-flex jc-sb mt-20 mb-10">
+                                            <div class="left-section"><span class="fs-13 c-ltgray-1">CSS</span></div>
+                                            <div class="right-section">
+                                                <a class="mr-20" href="javascript:void(0);"><i class="fa-solid fa-pencil icon-btn-small"></i></a>
+                                                <a href="javascript:void(0);" class="btn-primary">반영하기</a>
+                                            </div>
+                                        </div>
+                                        <div class="css-section border-only height-300px scroll-bar-primary pr-5"></div>
+                                    </div> <!-- tab-5 -->
+
+                                    <div id="tab-6" class="tab-content"> <!-- 땡큐페이지 -->
+                                        <ul class="grid-list">
+                                            <li>
+                                                <span class="left-title">연결</span>
+                                                <div>
+                                                    <select class="select width-200px">
+                                                        <option value="연결">연결</option>
+                                                        <option value="URL 연결">URL 연결</option>
+                                                        <option value="신규 생성">신규 생성</option>
+                                                        <option value="카카오굿닥">카카오굿닥</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="left-title">URL</span>
+                                                <div class="text-btn-set">
+                                                    <input type="text" class="input-text" placeholder="">
+                                                    <a href="javascript:void(0);" class="btn-primary d-inline-block">확인</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="left-title">문구</span>
+                                                <div><input type="text" class="input-text d-block width-100per" placeholder="" value="등록해 주셔서 감사합니다! 개별적으로 연락드리겠습니다."></div>
+                                            </li>
+                                            <li>
+                                                <span class="left-title">버튼명</span>
+                                                <div><input type="text" class="input-text d-block width-100per" placeholder="" value="확인"></div>
+                                            </li>
+                                            <li>
+                                                <span class="left-title">버튼 컬러</span>
+                                                <div><input type="text" class="input-text d-block width-100per" placeholder="ex) #0585c4"></div>    
+                                            </li>
+                                            <li>
+                                                <span class="left-title">텍스트 컬러</span>
+                                                <div><input type="text" class="input-text d-block width-100per" placeholder="ex) #0585c4"></div>    
+                                            </li>
+                                        </ul>
+                                    </div> <!-- tab-6 -->
+                                </div> <!-- tab-contents -->
+                            </div>
+
+                            <div class="preview p-relative"> <!-- 미리보기 -->
+                                <span class="tab-link d-block bg-white current">미리보기</span>
+                                <a href="https://event.metamarketing.co.kr/2" class="preview-open p-absolute c-ltgray-1 fs-13 p-abs-right-0" target="_blank">새창열기</a>
+                                <div class="bg-white border-only box-padding min-height"></div>
+                            </div>
+                        </div>
+                    </div> <!-- contents-main -->
+                </div> <!-- grid -->
+            </div> <!-- contents-container -->
+        </div> <!-- flex-box-02 -->
+    </div> <!-- wrap -->
+
+    <script src="./js/main.js" type="text/javascript"></script>
+    <script src="./js/sub.js" type="text/javascript"></script>
+    <script src="./menu/menu.js" type="text/javascript"></script>
+</body>
+</html>
