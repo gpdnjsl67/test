@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/* example */
+.top-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    display: none;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 100%;
+    font-size: 23px;
+    font-weight: 700;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    color: #fff;
+    background-color: #111;
+}
+
+.top-btn:hover {
+    bottom: 47px;
+}
+
+.exp-wrap {
+    margin: 20px auto;
+    width: 90%;
+}
+
+.exp-box {
+    margin-bottom: 50px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background-color: #fff;
+}
+
+.exp-box.active {
+    display: none;
+}
+
+.exp-box xmp {
+    /* display: none; */
+    margin: 20px 0;
+    padding: 20px;
+    width: auto;
+    cursor: pointer;
+    font-size: 11px;
+    letter-spacing: 1px;
+    border-left: 3px solid rgb(146, 146, 146);
+    border-radius: 0 10px 10px 0;
+    background-color: #ebebeb;
+}
+
+.exp-box xmp:hover {
+    background-color: #e6e6e6;
+}
+
+.exp-box .exp-cont {
+    margin: 20px 0 40px;
+}
+
+.exp-box .exp-cont:last-child {
+    margin-bottom: 0;
+}
+
+.exp-cont + .more-btn {
+    padding: 2px 5px;
+    cursor: pointer;
+    font-size: 13px;
+    background-color: #eee;
+}
+
+.boot-title {
+    display: block;
+    margin-top: 10px;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 800;
+    border-radius: 15px 15px 0 0;
+    color: #fff;
+    background-color: #111;
+}
+
+.boot-title:hover {
+    opacity: 0.9;
+}
