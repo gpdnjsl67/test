@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/fa8d36e7e1.js" crossorigin="anonymous"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.marquee.min.js"></script>
+    <title>flavo</title>
+</head>
+<body>
+    <div id="wrap">
+        <div class="bg-green">
+            <div class="container">
+                <header class="header">
+                    <div class="header__menu-bar">
+                        <div class="header__logo">flavo</div>
+                        <nav class="nav">
+                            <ul class="nav__list">
+                                <li class="nav__item"><a href="#" class="nav__link">SHOP</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">OUR STORY</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">CONTACT US</a></li>
+                            </ul>
+                        </nav>
+                        <a href="#" class="header__basket-btn"><i class="fa-solid fa-basket-shopping" style="color: #000;"></i></a>
+                    </div>
+                </header>
+                <article class="top-article">
+                    <div class="top-article__text-area">
+                        <span class="top-article__title top-article__item">DISCOVER<br>NEW<br>TASTES</span>
+                        <span class="top-article__desc top-article__item">Original spice blends suitable for both home and professional cooking</span>
+                        <a href="#" class="top-article__link">SHOP ALL PRODUCT</a>
+                    </div>
+                    <img src="./images/main_banner.jpg" alt="" class="top-article__main-img">
+                </article>
+            </div>
+        </div>
+
+        <div class="rolling-banner">
+            <div class="container">
+                <div class="marquee-wrap">
+                    <span>
+                        PASSION INTENSITY SWEETNESS 🍒 PASSION INTENSITY SWEETNESS 🍒 PASSION INTENSITY SWEETNESS 🍒 PASSION INTENSITY SWEETNESS 🍒
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <main class="main">
+            <div class="container">
+                <ul class="product-list">
+                    <li class="product-list__item">
+                        <div class="product-list__title"><span data-text="COSINESS">COSINESS</span></div>
+
+                        
+                        <div class="product-list__img">
+                            <img src="./images/melonsoda.png" alt="">
+                        </div>
+                        <div class="product-list__conuting-box">
+                            <span>-</span>
+                            <span>1</span>
+                            <span>+</span>
+                        </div>
+                        <a href="#" class="product-list__btn-cart">ADD TO CART - $18</a>
+                    </li>
+                    <li class="product-list__item">
+                        <div class="product-list__title"><span data-text="INTENSITY">INTENSITY</span></div>
+                        <div class="product-list__img">
+                            <img src="./images/cupcake.png" alt="">
+                        </div>
+                        <div class="product-list__conuting-box">
+                            <span>-</span>
+                            <span>1</span>
+                            <span>+</span>
+                        </div>
+                        <a href="#" class="product-list__btn-cart">ADD TO CART - $18</a>
+                    </li>
+                    <li class="product-list__item">
+                        <div class="product-list__title"><span data-text="PASSION">PASSION</span></div>
+
+                        <div class="product-list__img">
+                            <img src="./images/pancake.png" alt="">
+                        </div>
+                        <div class="product-list__conuting-box">
+                            <span>-</span>
+                            <span>1</span>
+                            <span>+</span>
+                        </div>
+                        <a href="#" class="product-list__btn-cart">ADD TO CART - $18</a>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('.marquee-wrap').marquee({
+                speed: 200, // 속도
+                gap: 50, // 간격
+                delayBeforeStart: 0, // 시작 delay값
+                direction: 'left', // 방향
+                duplicated: true, // 선택 영역 복제
+                pauseOnHover: true // hover시 일시중지 여부
+            });
+        });
+    </script>
+</body>
+</html>

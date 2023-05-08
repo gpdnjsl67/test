@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: 0;
+          box-sizing: 0;
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+}
