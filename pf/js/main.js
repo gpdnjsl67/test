@@ -100,3 +100,10 @@ plusBtns.forEach(function(btn) {
         document.getElementById(productId + '-quantity').textContent = quantity; // 변경된 수량 출력
     });
 });
+
+// 페이지 오픈 시 메뉴바 효과
+let menuBar = document.querySelector('.header__menu-bar');
+setInterval(function() {
+
+    menuBar.classList.add('active');
+}, 500);

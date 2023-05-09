@@ -1,6 +1,17 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
 @import "reset.scss";
 
+body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
 
 .container {
     margin: 0 auto;
@@ -28,9 +39,17 @@
         justify-content: space-between;
         margin: 0 auto;
         padding: 10px 40px;
-
+        opacity: 0;
         border-radius: $border-radius-main;
         background-color: $color-yellow;
+
+        transform: translateY(-20px);
+        transition: .5s all;
+
+        &.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     &__logo {
@@ -73,11 +92,6 @@
         overflow: hidden;
 
         span {
-            // display: inline-block;
-            // line-height: 1em;
-            // font-size: 90px;
-            // font-weight: 800;
-
             display: block;
             font-size: 90px;
             font-weight: 800;
@@ -118,6 +132,16 @@
         width: 100%;
         word-spacing: 1.5em;
         overflow: hidden;
+
+        &__txt {
+            font-size: 13px;
+            font-style: italic;
+            font-family: 'Merriweather', serif;
+
+            // &:hover {
+            //     font-weight: 600;
+            // }
+        }
     }
 }
 
