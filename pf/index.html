@@ -13,6 +13,8 @@
     <script src="https://kit.fontawesome.com/fa8d36e7e1.js" crossorigin="anonymous"></script>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/jquery.marquee.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <title>flavo</title>
 </head>
 <body>
@@ -31,10 +33,14 @@
                         </nav>
                         <a href="#" class="header__basket-btn"><i class="fa-solid fa-basket-shopping" style="color: #000;"></i></a>
                     </div>
+                    <div></div>
                 </header>
                 <article class="top-article">
                     <div class="top-article__text-area">
-                        <span class="top-article__title top-article__item">DISCOVER<br>NEW<br>TASTES</span>
+                        <div class="top-article__title top-article__item"><span>DISCOVER</span></div>
+                        <div class="top-article__title top-article__item"><span>NEW</span></div>
+                        <div class="top-article__title top-article__item"><span>TASTES</span></div>
+
                         <span class="top-article__desc top-article__item">Original spice blends suitable for both home and professional cooking</span>
                         <a href="#" class="top-article__link">SHOP ALL PRODUCT</a>
                     </div>
@@ -54,53 +60,57 @@
         </div>
 
         <main class="main">
-            <div class="container">
-                <ul class="product-list">
-                    <li class="product-list__item">
-                        <div class="product-list__title"><span data-text="COSINESS">COSINESS</span></div>
+            <ul class="product-list container">
+                <li class="product-list__item">
+                    <div class="product-list__title"><span data-text="COSINESS">COSINESS</span></div>
+                    <div class="product-list__img">
+                        <img src="./images/melonsoda.png" alt="">
+                    </div>
+                    <div class="conuting-box">
+                        <span class="conuting-box__btn--substract conuting-box__btn" data-product-id="product-1">-</span>
+                        <span class="conuting-box__num" id="product-1-quantity">1</span>
+                        <span class="conuting-box__btn--add conuting-box__btn" data-product-id="product-1">+</span>
+                    </div>
+                    <a href="javascript:void(0);" class="product-list__btn-cart">ADD TO CART - $18</a>
+                </li>
+                <li class="product-list__item">
+                    <div class="product-list__title"><span data-text="INTENSITY">INTENSITY</span></div>
+                    <div class="product-list__img">
+                        <img src="./images/cupcake.png" alt="">
+                    </div>
+                    <div class="conuting-box">
+                        <span class="conuting-box__btn--substract conuting-box__btn" data-product-id="product-2">-</span>
+                        <span class="conuting-box__num" id="product-2-quantity">1</span>
+                        <span class="conuting-box__btn--add conuting-box__btn" data-product-id="product-2">+</span>
+                    </div>
+                    <a href="javascript:void(0);" class="product-list__btn-cart">ADD TO CART - $18</a>
+                </li>
+                <li class="product-list__item">
+                    <div class="product-list__title"><span data-text="PASSION">PASSION</span></div>
 
-                        
-                        <div class="product-list__img">
-                            <img src="./images/melonsoda.png" alt="">
-                        </div>
-                        <div class="product-list__conuting-box">
-                            <span>-</span>
-                            <span>1</span>
-                            <span>+</span>
-                        </div>
-                        <a href="#" class="product-list__btn-cart">ADD TO CART - $18</a>
-                    </li>
-                    <li class="product-list__item">
-                        <div class="product-list__title"><span data-text="INTENSITY">INTENSITY</span></div>
-                        <div class="product-list__img">
-                            <img src="./images/cupcake.png" alt="">
-                        </div>
-                        <div class="product-list__conuting-box">
-                            <span>-</span>
-                            <span>1</span>
-                            <span>+</span>
-                        </div>
-                        <a href="#" class="product-list__btn-cart">ADD TO CART - $18</a>
-                    </li>
-                    <li class="product-list__item">
-                        <div class="product-list__title"><span data-text="PASSION">PASSION</span></div>
-
-                        <div class="product-list__img">
-                            <img src="./images/pancake.png" alt="">
-                        </div>
-                        <div class="product-list__conuting-box">
-                            <span>-</span>
-                            <span>1</span>
-                            <span>+</span>
-                        </div>
-                        <a href="#" class="product-list__btn-cart">ADD TO CART - $18</a>
-                    </li>
-                </ul>
-            </div>
+                    <div class="product-list__img">
+                        <img src="./images/pancake.png" alt="">
+                    </div>
+                    <div class="conuting-box">
+                        <span class="conuting-box__btn--substract conuting-box__btn" data-product-id="product-3">-</span>
+                        <span class="conuting-box__num" id="product-3-quantity">1</span>
+                        <span class="conuting-box__btn--add conuting-box__btn" data-product-id="product-3">+</span>
+                    </div>
+                    <a href="javascript:void(0);" class="product-list__btn-cart">ADD TO CART - $18</a>
+                </li>
+            </ul>
         </main>
     </div>
 
+    <script src="./js/main.js"></script>
     <script>
+        let tl = gsap.timeline({delay: 0.5});
+        tl.to('.top-article__title span', {
+            duration:0.5,
+            y:0,
+            stagger: 0.5
+        }, 0.2);
+
         $(document).ready(function(){
             $('.marquee-wrap').marquee({
                 speed: 200, // 속도

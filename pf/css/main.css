@@ -1,9 +1,10 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: 0;
-          box-sizing: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Kanit", sans-serif;
   font-weight: 300;
 }
@@ -33,14 +34,14 @@ a {
 }
 
 .header {
-  padding-top: 20px;
-}
-
-.header__logo {
-  font-family: "EB Garamond", serif;
-  font-style: italic;
-  font-weight: 600;
-  font-size: 25px;
+  z-index: 1;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  max-width: 1400px;
 }
 
 .header__menu-bar {
@@ -59,6 +60,13 @@ a {
   background-color: #ffecc0;
 }
 
+.header__logo {
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 25px;
+}
+
 .header .nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -70,7 +78,7 @@ a {
 }
 
 .top-article {
-  padding: 50px 0;
+  padding: 100px 0 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,6 +102,15 @@ a {
   line-height: 1em;
   font-size: 90px;
   font-weight: 800;
+  overflow: hidden;
+}
+
+.top-article__title span {
+  display: block;
+  font-size: 90px;
+  font-weight: 800;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 .top-article__desc {
@@ -150,6 +167,40 @@ a {
   text-align: center;
   border: 1px solid #000;
   border-radius: 50px;
+  -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+  transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s, background-color 0.3s;
+  transition: box-shadow 0.3s, background-color 0.3s, -webkit-box-shadow 0.3s;
+}
+
+.main .product-list__item:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+  background-color: #97a75530;
+  -webkit-animation: vibration .1s;
+          animation: vibration .1s;
+}
+
+@-webkit-keyframes vibration {
+  from {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  to {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+}
+
+@keyframes vibration {
+  from {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  to {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
 }
 
 .main .product-list__title {
@@ -194,7 +245,7 @@ a {
   width: 100%;
 }
 
-.main .product-list__conuting-box {
+.main .product-list .conuting-box {
   margin: 0 auto 10px;
   padding: 10px 20px;
   display: -webkit-box;
@@ -208,12 +259,66 @@ a {
   border-radius: 50px;
 }
 
+.main .product-list .conuting-box__btn {
+  cursor: pointer;
+  -webkit-transition: 0.5s -webkit-transform;
+  transition: 0.5s -webkit-transform;
+  transition: 0.5s transform;
+  transition: 0.5s transform, 0.5s -webkit-transform;
+}
+
+.main .product-list .conuting-box__btn:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  font-weight: 600;
+}
+
 .main .product-list__btn-cart {
+  position: relative;
   margin: 0 auto;
   padding: 10px 20px;
   width: 80%;
   text-align: center;
+  overflow: hidden;
   border-radius: 50px;
   color: #ffecc0;
   background-color: #000;
+  -webkit-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
+}
+
+.main .product-list__btn-cart::before {
+  content: "❤️";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 100%;
+  width: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0 50px 50px 0;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+  -webkit-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
+}
+
+.main .product-list__btn-cart:hover {
+  text-indent: 30px;
+}
+
+.main .product-list__btn-cart:hover::before {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  text-indent: 0;
 }

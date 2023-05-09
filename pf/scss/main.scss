@@ -1,4 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
 @import "reset.scss";
+
 
 .container {
     margin: 0 auto;
@@ -12,14 +14,13 @@
 
 // header
 .header {
-    padding-top: 20px;
-
-    &__logo {
-        font-family: $font-logo;
-        font-style: italic;
-        font-weight: 600;
-        font-size: 25px;
-    }
+    z-index: 1;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1400px;
 
     &__menu-bar {
         display: flex;
@@ -27,8 +28,16 @@
         justify-content: space-between;
         margin: 0 auto;
         padding: 10px 40px;
+
         border-radius: $border-radius-main;
         background-color: $color-yellow;
+    }
+
+    &__logo {
+        font-family: $font-logo;
+        font-style: italic;
+        font-weight: 600;
+        font-size: 25px;
     }
 
     .nav {
@@ -44,7 +53,7 @@
 
 // top-article
 .top-article {
-    padding: 50px 0;
+    padding: 100px 0 50px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -61,6 +70,19 @@
         line-height: 1em;
         font-size: 90px;
         font-weight: 800;
+        overflow: hidden;
+
+        span {
+            // display: inline-block;
+            // line-height: 1em;
+            // font-size: 90px;
+            // font-weight: 800;
+
+            display: block;
+            font-size: 90px;
+            font-weight: 800;
+            transform: translateY(100%);
+        }
     }
 
     &__desc {
@@ -113,7 +135,23 @@
             text-align: center;
             border: 1px solid $color-black;
             border-radius: $border-radius-main;
+            transition: box-shadow 0.3s, background-color 0.3s;
+            
+            &:hover {
+                box-shadow: rgba($color-black, 0.3) 0px 3px 8px;
+                background-color: #97a75530;
+                animation: vibration .1s;
+            }
         }
+
+        @keyframes vibration {
+            from {
+              transform: rotate(1deg);
+            }
+            to {
+              transform: rotate(-1deg);
+            }
+          }
 
         &__title {
             padding: 4px 0;
@@ -157,7 +195,7 @@
             }
         }
 
-        &__conuting-box {
+        .conuting-box {
             margin: 0 auto 10px;
             padding: 10px 20px;
             display: flex;
@@ -165,18 +203,55 @@
             width: 80%;
             border: 1px solid $color-black;
             border-radius: $border-radius-main;
+            
+            &__btn {
+                cursor: pointer;
+                transition: 0.5s transform;
+
+                &:hover {
+                    transform: scale(1.5);
+                    font-weight: 600;
+                }
+            }
         }
 
         &__btn-cart {
+            position: relative;
             margin: 0 auto;
             padding: 10px 20px;
             width: 80%;
             text-align: center;
+            overflow: hidden;
             border-radius: $border-radius-main;
             color: $color-yellow;
             background-color: $color-black;
+            transition: all 0.2s linear 0s;
+
+            &::before {
+                content: "❤️";
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 0;
+                left: 0px;
+                height: 100%;
+                width: 50px;
+                background-color: rgba($color-white,0.2);
+                border-radius: 0 50px 50px 0;
+                transform: scale(0,1);
+                transform-origin: left center;
+                transition: all 0.2s linear 0s;
+            }
+              
+            &:hover {
+                text-indent: 30px;
+                
+                &::before {
+                    transform: scale(1,1);
+                    text-indent: 0;
+                }
+            }
         }
     }
 }
-
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
