@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+@import "style.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-main;
+    font-size: $font-size-main;
+    font-weight: 300;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: $color-black;
+}
+
+.video {
+    width: 100%;
+}
+
+.swiper-slide img {
+    width: 100%;
+}

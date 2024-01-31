@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <script src="https://kit.fontawesome.com/fa8d36e7e1.js" crossorigin="anonymous"></script>
+    <script src="./js/jquery.min.js"></script>
+
+    <title>1</title>
+</head>
+<body>
+<div class="container">
+    <div class="bg__area">
+        <div class="bg__area__left">
+            <div class="bg__area__left__list">
+                <div class="bg__area__left__list__text">지금 가장 핫한<br>이벤트를<br>만나보세요</div>
+                <div class="bg__area__left__list__logo"><img src="./images/logo.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="wrap">
+        <header class="header">
+            <nav class="header__nav">
+                <ul class="header__nav__list">
+                    <li class="header__nav__list__item">
+                        <a href="#" class="header__nav__list__link"><img src="./images/top_icon_01.png" alt=""></a>
+                    </li>
+                    <li class="header__nav__list__item">
+                        <a href="#" class="header__nav__list__link header__nav__list__logo"><img src="./images/logo.png" alt=""></a>
+                    </li>
+                    <li class="header__nav__list__item">
+                        <a href="#" class="header__nav__list__link header__nav__list__hamburger_menu"><img src="./images/top_icon_02.png" alt=""></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main page01">
+            <video class="video" playsinline muted loop src="./images/01/240130_01.mp4" type="video/mp4"></video>
+            <script>setTimeout(function(){ $('.video').trigger('play'); },500);</script>
+
+            <div class="rolling__banner">
+                <div class="swiper-container rolling__banner__main">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide rolling__banner__main__slide">
+                            <img src="./images/01/slide_01_01.jpg" alt="">
+                            <div class="slide__text">
+                                <span class="slide__text__mark slide__text__item">요즘 핫한</span>
+                                <span class="slide__text__title__main slide__text__item">메인 타이틀 메인 타이틀 메인 타이틀</span>
+                                <span class="slide__text__title__sub slide__text__item">서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide rolling__banner__main__slide">
+                            <img src="./images/01/slide_01_02.jpg" alt="">
+                            <div class="slide__text">
+                                <span class="slide__text__mark slide__text__item">요즘 핫한</span>
+                                <span class="slide__text__title__main slide__text__item">메인 타이틀 메인 타이틀 메인 타이틀</span>
+                                <span class="slide__text__title__sub slide__text__item">서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide rolling__banner__main__slide">
+                            <img src="./images/01/slide_01_03.jpg" alt="">
+                            <div class="slide__text">
+                                <span class="slide__text__mark slide__text__item">요즘 핫한</span>
+                                <span class="slide__text__title__main slide__text__item">메인 타이틀 메인 타이틀 메인 타이틀</span>
+                                <span class="slide__text__title__sub slide__text__item">서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="swiper-container rolling__banner__auto">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide rolling__banner__auto__slide">
+                            <img src="./images/01/slide_02_01.png" alt="">
+                        </div>
+                        <div class="swiper-slide rolling__banner__auto__slide">
+                            <img src="./images/01/slide_02_02.png" alt="">
+                        </div>
+                        <div class="swiper-slide rolling__banner__auto__slide">
+                            <img src="./images/01/slide_02_03.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="banner__list">
+                    <div class="banner__list__title">지금 가장 핫한 이벤트를<br>추천합니다</div>
+                    
+                    <div class="banner__list__item">
+                        <img src="./images/01/banner_1p_01.jpg" alt="">
+                        <div class="banner__list__item__title">
+                            <span class="banner__list__item__title__main">플란치과의원</span>
+                            <span class="banner__list__item__title__sub">플란치과의원</span>
+                        </div>
+                        <div class="banner__list__hashtag">
+                            <span class="banner__list__hashtag__item"># 해시태그</span>
+                            <span class="banner__list__hashtag__item"># 해시태그</span>
+                            <span class="banner__list__hashtag__item"># 해시태그</span>
+                            <span class="banner__list__hashtag__item"># 해시태그해시태그</span>
+                            <span class="banner__list__hashtag__item"># 해시태그</span>
+                            <span class="banner__list__hashtag__item"># 해시태그</span>
+                        </div>
+                    </div>
+    
+                    <div class="banner__list__item">
+                        <img src="./images/01/banner_1p_02.jpg" alt="">
+                        <div class="banner__list__item__title">
+                            <span class="banner__list__item__title__main">플란치과의원</span>
+                            <span class="banner__list__item__title__sub">플란치과의원</span>
+                        </div>
+                        <div class="banner__list__hashtag">
+                            <span class="banner__list__hashtag__item"># 해시태그</span>
+                            <span class="banner__list__hashtag__item"># 해시태그</span>
+                            <span class="banner__list__hashtag__item"># 해시태그</span>
+                            <span class="banner__list__hashtag__item"># 해시태그해시태그</span>
+                            <span class="banner__list__hashtag__item"># 해시태그</span>
+                            <span class="banner__list__hashtag__item"># 해시태그</span>
+                        </div>
+                    </div>
+    
+                    <div class="banner__list__item">
+                        <img src="./images/01/banner_1p_03.jpg" alt="">
+                        <div class="banner__list__item__title">
+                            <span class="banner__list__item__title__main">플란치과의원</span>
+                            <span class="banner__list__item__title__sub">플란치과의원</span>
+                        </div>
+                        <div class="banner__list__hashtag">
+                            <span class="banner__list__hashtag__item"># 해시태그</span>
+                            <span class="banner__list__hashtag__item"># 해시태그</span>
+                            <span class="banner__list__hashtag__item"># 해시태그</span>
+                            <span class="banner__list__hashtag__item"># 해시태그해시태그</span>
+                            <span class="banner__list__hashtag__item"># 해시태그</span>
+                            <span class="banner__list__hashtag__item"># 해시태그</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents__more__btn">
+                <span class="contents__more__btn__text">더 보기</span>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <nav class="footer__nav">
+                <ul class="footer__nav__list">
+                    <li class="footer__nav__list__item">
+                        <a href="#" class="footer__nav__list__link">
+                            <img src="./images/icon_01.png" alt="">
+                            <div class="footer__nav__list__link__text">홈</div>
+                        </a>
+                    </li>
+                    <li class="footer__nav__list__item">
+                        <a href="#" class="footer__nav__list__link">
+                            <img src="./images/icon_02.png" alt="">
+                            <div class="footer__nav__list__link__text">이벤트</div>
+                        </a>
+                    </li>
+                    <li class="footer__nav__list__item">
+                        <a href="#" class="footer__nav__list__link footer__nav__list__link__middle__icon">
+                            <img src="./images/icon_03.png" alt="">
+                        </a>
+                    </li>
+                    <li class="footer__nav__list__item">
+                        <a href="#" class="footer__nav__list__link">
+                            <img src="./images/icon_04.png" alt="">
+                            <div class="footer__nav__list__link__text">이벤트</div>
+                        </a>
+                    </li>
+                    <li class="footer__nav__list__item">
+                        <a href="#" class="footer__nav__list__link">
+                            <img src="./images/icon_05.png" alt="">
+                            <div class="footer__nav__list__link__text">콘텐츠</div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+
+    <div class="bg__area">
+        <div class="bg__area__right">
+            <div class="bg__area__right__person"><img src="./images/person.png" alt=""></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var mySwiper_main = new Swiper(".page01 .rolling__banner__main", {
+        slidesPerView: 1.2,
+        centeredSlides: true,
+        spaceBetween: 12,
+        observer: true,
+        observeParents: true,
+    });
+
+    var mySwiper = new Swiper('.page01 .rolling__banner__auto', {
+        autoHeight:true,
+        loop : true, // 슬라이드 반복
+        autoplay : { // 자동 재생
+            delay : 500, // 딜레이 0
+        },
+        speed : 3000, // 슬라이드 속도 2초
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
+
+</body>
+</html>
