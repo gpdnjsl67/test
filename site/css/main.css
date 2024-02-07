@@ -265,11 +265,10 @@ body::-webkit-scrollbar {
   margin: 0;
 }
 .main.page02 .rolling__banner {
-  margin-top: 2em;
-  padding: 3.5rem 0;
+  padding: 0 0 3.5rem;
 }
 .main.page02 .banner__list {
-  margin-top: 8em;
+  margin-top: 3.5rem;
   padding: 0 3.5rem;
 }
 .main.page02 .banner__list__item {
