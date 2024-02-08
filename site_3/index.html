@@ -73,7 +73,7 @@
                         </div>
     
                         <ul class="reservation__list">
-                            <li class="reservation__list__item">
+                            <li class="reservation__list__item" data-value="1">
                                 <div class="reservation__list__title__sub">
                                     <div class="reservation__list__title__sub--array">
                                         <div class="check__icon"><div class="check__icon__mark"></div></div>
@@ -88,17 +88,17 @@
                                     <div class="reservation__list__question">진료여부<span class="asterisk--pink">*</span></div>
                                     <div class="reservation__list__radio">
                                         <label>
-                                            <input type="radio" name="진료여부" value="초진">
+                                            <input type="radio" name="진료여부" value="초진" onclick="nextSelectionOpen($(this));">
                                             <span class="reservation__list__radio__text">초진</span>
                                         </label>
                                         <label>
-                                            <input type="radio" name="진료여부" value="재진">
+                                            <input type="radio" name="진료여부" value="재진" onclick="nextSelectionOpen($(this));">
                                             <span class="reservation__list__radio__text">재진</span>
                                         </label>
                                     </div>
                                 </div>
                             </li>
-                            <li class="reservation__list__item">
+                            <li class="reservation__list__item" data-value="2">
                                 <div class="reservation__list__title__sub">
                                     <div class="reservation__list__title__sub--array">
                                         <div class="check__icon"><div class="check__icon__mark"></div></div>
@@ -118,17 +118,19 @@
     
                                     <div class="reservation__list__answer__box row__gap">
                                         <div class="reservation__list__question">예약 시간 선택</div>
-                                        <select name="" id="" class="reservation__list__select-box">
+                                        <select name="reservation_time" id="" class="reservation__list__select-box">
                                             <option value="" selected disabled hidden>예약 시간을 선택해 주세요</option>
                                             <option value="10:00">10:00</option>
                                             <option value="10:30">10:30</option>
+                                            <option value="11:00">11:00</option>
+                                            <option value="11:30">11:30</option>
                                         </select>
                                     </div>
     
-                                    <span class="reservation__list__next__btn">다음 <span class="reservation__list__next__btn--arrow">＞</span></span>
+                                    <span class="reservation__list__next__btn reservation__list__next__btn__time">다음 <span class="reservation__list__next__btn--arrow">＞</span></span>
                                 </div>
                             </li>
-                            <li class="reservation__list__item">
+                            <li class="reservation__list__item" data-value="3">
                                 <div class="reservation__list__title__sub">
                                     <div class="reservation__list__title__sub--array">
                                         <div class="check__icon"><div class="check__icon__mark"></div></div>
@@ -143,25 +145,25 @@
                                     <div class="reservation__list__question">필요한 부위<span class="asterisk--pink">*</span></div>
                                     <div class="reservation__list__radio">
                                         <label>
-                                            <input type="radio" name="필요한 부위" value="앞니">
+                                            <input type="radio" name="필요한 부위" value="앞니" onclick="nextSelectionOpen($(this));">
                                             <span class="reservation__list__radio__text">앞니</span>
                                         </label>
                                         <label>
-                                            <input type="radio" name="필요한 부위" value="어금니">
+                                            <input type="radio" name="필요한 부위" value="어금니" onclick="nextSelectionOpen($(this));">
                                             <span class="reservation__list__radio__text">어금니</span>
                                         </label>
                                         <label>
-                                            <input type="radio" name="필요한 부위" value="전체">
+                                            <input type="radio" name="필요한 부위" value="전체" onclick="nextSelectionOpen($(this));">
                                             <span class="reservation__list__radio__text">전체</span>
                                         </label>
                                         <label>
-                                            <input type="radio" name="필요한 부위" value="모르겠음">
+                                            <input type="radio" name="필요한 부위" value="모르겠음" onclick="nextSelectionOpen($(this));">
                                             <span class="reservation__list__radio__text">모르겠음</span>
                                         </label>
                                     </div>
                                 </div>
                             </li>
-                            <li class="reservation__list__item">
+                            <li class="reservation__list__item" data-value="4">
                                 <div class="reservation__list__title__sub">
                                     <div class="reservation__list__title__sub--array">
                                         <div class="check__icon"><div class="check__icon__mark"></div></div>
@@ -176,25 +178,25 @@
                                     <div class="reservation__list__question">나이<span class="asterisk--pink">*</span></div>
                                     <div class="reservation__list__radio">
                                         <label>
-                                            <input type="radio" name="나이" value="30대">
+                                            <input type="radio" name="나이" value="30대" onclick="nextSelectionOpen($(this));">
                                             <span class="reservation__list__radio__text">30대</span>
                                         </label>
                                         <label>
-                                            <input type="radio" name="나이" value="40대">
+                                            <input type="radio" name="나이" value="40대" onclick="nextSelectionOpen($(this));">
                                             <span class="reservation__list__radio__text">40대</span>
                                         </label>
                                         <label>
-                                            <input type="radio" name="나이" value="50대">
+                                            <input type="radio" name="나이" value="50대" onclick="nextSelectionOpen($(this));">
                                             <span class="reservation__list__radio__text">50대</span>
                                         </label>
                                         <label>
-                                            <input type="radio" name="나이" value="60대">
+                                            <input type="radio" name="나이" value="60대" onclick="nextSelectionOpen($(this));">
                                             <span class="reservation__list__radio__text">60대</span>
                                         </label>
                                     </div>
                                 </div>
                             </li>
-                            <li class="reservation__list__item">
+                            <li class="reservation__list__item" data-value="5">
                                 <div class="reservation__list__title__sub">
                                     <div class="reservation__list__title__sub--array">
                                         <div class="check__icon"><div class="check__icon__mark"></div></div>
@@ -209,27 +211,27 @@
                                     <div class="reservation__list__answer__box row__gap">
                                         <div class="reservation__list__question">성함<span class="asterisk--pink">*</span></div>
                                         <div class="reservation__list__input-name">
-                                            <input type="text" class="input__basic" placeholder="이름을 입력해 주세요" required>
+                                            <input type="text" name="성함" class="input__basic" placeholder="이름을 입력해 주세요" required>
                                         </div>
                                     </div>
     
                                     <div class="reservation__list__answer__box row__gap">
                                         <div class="reservation__list__question">연락처<span class="asterisk--pink">*</span></div>
                                         <div class="reservation__list__input-tel reservation__list__input--grid row__gap">
-                                            <input type="text" class="input__basic" placeholder="연락처를 입력해 주세요" required>
+                                            <input type="text" name="연락처" class="input__basic" placeholder="연락처를 입력해 주세요" required>
                                             <div class="btn__authentication btn__authentication--send"><span>인증번호 전송</span></div>
                                         </div>
         
                                         <div class="reservation__list__input-tel reservation__list__input--grid">
-                                            <input type="tel" class="input__basic" placeholder="인증번호 입력" required>
+                                            <input type="tel" name="인증번호" class="input__basic" placeholder="인증번호 입력" required>
                                             <div class="btn__authentication btn__authentication--complete"><span>인증완료</span></div>
                                         </div>
                                     </div>
     
-                                    <span class="reservation__list__next__btn">다음 <span class="reservation__list__next__btn--arrow">＞</span></span>
+                                    <span class="reservation__list__next__btn reservation__list__next__btn__tel">다음 <span class="reservation__list__next__btn--arrow">＞</span></span>
                                 </div>
                             </li>
-                            <li class="reservation__list__item">
+                            <li class="reservation__list__item" data-value="6">
                                 <div class="reservation__list__title__sub">
                                     <div class="reservation__list__title__sub--array">
                                         <div class="check__icon"><div class="check__icon__mark"></div></div>
@@ -247,7 +249,7 @@
                                         안녕하세요! 본원에서는 고객님의 소중한 개인정보를 상담 외 어떤 목적으로도 사용하지 않습니다.
                                     </div>
                                     <label>
-                                        <input type="radio" name="agreement" value="동의합니다">
+                                        <input type="radio" name="agreement" value="동의합니다" onclick="nextSelectionOpen($(this));">
                                         <span class="reservation__list__radio__text">동의합니다</span>
                                     </label>
                                 </div>
@@ -256,7 +258,8 @@
                     </div>
 
                     <div class="reservation__submit__btn">
-                        <input type="submit" class="" value="비용 확인하기" onclick="openSelectBox($('.confirmation__container'));">
+                        <!-- <input type="submit" class="" value="비용 확인하기"> -->
+                        <input type="text" value="비용 확인하기">
                     </div>
                 </div>
 
@@ -438,6 +441,9 @@
 </div>
 
 <script>
+    var dateSelected = false; // 날짜 선택 여부를 나타내는 변수
+    var selectBoxSelected = false; // select-box 선택 여부를 나타내는 변수
+
     // datepicker JS
     $.datepicker.regional['ko'] = {
         monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
@@ -446,8 +452,9 @@
         // weekHeader: 'Wk',
         dateFormat: 'yy.mm.dd(D)',
         onSelect: function(dateText, inst) {
-            // 선택한 날짜 출력
+            dateSelected = true;
             // console.log("선택된 날짜:", dateText);
+            // 선택한 날짜 출력
             $('.reservation__list__print-date').text(dateText);
         },
         firstDay: 0,
@@ -493,55 +500,132 @@
             obj.text('∨'); // Change to downward arrow when hidden
         }
     }
+
+    // input 시 효과
+    function nextSelectionOpen(obj) {
+        var listItemLength = $('.reservation__list__item').length; // item 갯수
+        
+        var clickedParent = obj.closest('.reservation__list__item'); // 현재 부모 item
+
+        var clickedCurrentDataVal = Number(clickedParent.attr('data-value')); // 현재 data-value 값
+        var clickedNextDataVal = Number(clickedCurrentDataVal) + 1; // 다음 data-value 값
+        
+        var clickedCurrent = obj.closest(`[data-value="${clickedCurrentDataVal}"]`);
+        var clickedNext = obj.closest(`[data-value="${clickedNextDataVal}"]`);
+
+        var checkedIcon = clickedCurrent.find('.check__icon'); // 체크 아이콘
+
+        // == 변경되는 부분 == //
+        checkedIcon.addClass('check__icon--checked'); // 체크 아이콘 컬러 변경
+        clickedCurrent.find('.reservation__list__answer__container').hide();
+        $("[data-value='" + clickedNextDataVal + "']").find('.reservation__list__answer__container').show();
+
+        // 전부 다 input시 submit버튼 컬러 변경 
+        if ($('.check__icon--checked').length === $('.reservation__list__item').length) {
+            $('.reservation__submit__btn').addClass('reservation__submit__btn--checked');
+            $('.reservation__submit__btn').on('click', function() {
+                openSelectBox($('.confirmation__container'));
+            });
+        } else {
+            $('.reservation__submit__btn').removeClass('reservation__submit__btn--checked');
+        }
+    }
     
     $(document).ready(function () {
-
-        // $('.arrow__toggle__btn').on('click', function () {
-        //     var answerBox = $(this).closest('.reservation__list__item').find('.reservation__list__answer__container');
-            
-        //     answerBox.toggle();
-
-        //     if (answerBox.is(':visible')) {
-        //         $(this).text('∧'); // Change to upward arrow when visible
-        //     } else {
-        //         $(this).text('∨'); // Change to downward arrow when hidden
-        //     }
-        // });
-
-        $('input[type="radio"]').on('change', function() {
-            $('.reservation__list__item').each(function() {
-                const checkedRadio = $(this).find('input[type="radio"]:checked');
-        
-                if (checkedRadio.length > 0) {
-                    const checkedValue = checkedRadio.val();
-        
-                    const reservationAnswerElement = $(this).find('.reservation__answer');
-                    const answerBox = $(this).find('.reservation__list__answer__container');
-                    const checkedIcon = $(this).find('.check__icon');
-        
-                    if (reservationAnswerElement.length > 0) {
-                        reservationAnswerElement.text(checkedValue);
-                        checkedIcon.addClass('check__icon--checked');
-                        answerBox.hide();
-                        nextSectionOpen(answerBox);
-                        // arrowAction($('.arrow__toggle__btn'));
-                    }
-                }
-            });
-        });
-
+        // 첫번째 answer__container 제외하고 모두 hide
         $('.reservation__list__item:not(:first-child) .reservation__list__answer__container').hide();
 
-        function nextSectionOpen(obj) {
-            // 현재 클릭된 container 닫기
-            obj.hide();
+    // =============== 예약일 유효성 검사 //
 
-            // 다음 형제 요소의 container 열기
-            var $nextSibling = obj.parent().next('.reservation__list__item').find('.reservation__list__answer__container');
-            if ($nextSibling.length > 0) {
-                $nextSibling.show();
+        // select-box의 변경을 감지하는 이벤트 리스너
+        $(".reservation__list__select-box[name='reservation_time']").change(function () {
+            selectBoxSelected = true; // select-box가 선택되었음을 표시
+        });
+
+        // 두 조건이 모두 충족되었을 때 함수 실행
+        $(".reservation__list__next__btn__time").on('click', function() {
+            if (dateSelected && selectBoxSelected) {
+                nextSelectionOpen($(this));
             }
+        });
+
+    // 예약일 유효성 검사 ===============//
+
+
+
+    $(".reservation__list__next__btn__tel").on('click', function() {
+        // 연락처 입력란과 인증번호 입력란의 값을 가져옵니다.
+        var nameVal = $("input[name='성함']").val();
+        var phoneVal = $("input[name='연락처']").val();
+        var verification = $("input[name='인증번호']").val();
+
+        if (nameVal !== "" && phoneVal !== "" && verification !== "") {
+            nextSelectionOpen($(this));
+        } else {
+            alert("연락처와 인증번호를 모두 입력하세요.");
+            console.log('nameVal : ' + nameVal);
+            console.log('phoneVal : ' + phoneVal);
+            console.log('verification : ' + verification);
         }
+    });
+
+
+    // if ($('.reservation__list__item.check__icon--checked').length === $('.reservation__list__item').length) {
+    //     $(this).addClass('reservation__submit__btn--checked');
+    // }
+
+    
+
+        // $('input[type="radio"]').on('change', function() {
+        //     $('.reservation__list__item').each(function() {
+        //         const checkedRadio = $(this).find('input[type="radio"]:checked');
+        
+        //         if (checkedRadio.length > 0) {
+        //             const checkedValue = checkedRadio.val();
+        
+        //             const reservationAnswerElement = $(this).find('.reservation__answer');
+        //             const answerBox = $(this).find('.reservation__list__answer__container');
+        //             const checkedIcon = $(this).find('.check__icon');
+        
+        //             if (reservationAnswerElement.length > 0) {
+        //                 reservationAnswerElement.text(checkedValue);
+        //                 checkedIcon.addClass('check__icon--checked');
+        //                 answerBox.hide();
+        //                 nextSectionOpen(answerBox);
+        //                 // arrowAction($('.arrow__toggle__btn'));
+        //             }
+        //         }
+        //     });
+        // });
+
+        // function switchReservation(value) {
+        //     $(".reservation__list__answer__container").hide(); // 모든 요소 숨기기
+        //     $("[data-value='" + value + "'].reservation__list__answer__container").show(); // 해당 value의 요소 보여주기
+        // }
+        
+        // 클릭 이벤트 핸들러를 추가합니다.
+        // $('[data-value]').click(function(){
+        //     // 클릭된 요소의 data-value 값을 가져옵니다.
+        //     var clickedValue = $(this).attr('data-value');
+            
+        //     // 모든 reservation__list__answer__container 요소를 숨깁니다.
+        //     $('.reservation__list__answer__container').hide();
+            
+        //     // data-value 값에 따라 해당하는 요소를 표시합니다.
+        //     $('[data-value="' + clickedValue + '"]').show();
+        // });
+
+
+        // function nextSectionOpen(obj) {
+        //     // 현재 클릭된 container 닫기
+        //     obj.hide();
+
+        //     // 다음 형제 요소의 container 열기
+        //     var $nextSibling = obj.parent().next('.reservation__list__item').find('.reservation__list__answer__container');
+        //     if ($nextSibling.length > 0) {
+        //         $nextSibling.show();
+        //     }
+        // }
     });
 </script>
 

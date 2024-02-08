@@ -11,8 +11,9 @@
 }
 .ui-datepicker-prev,
 .ui-datepicker-next {
+    position: relative;
     width: 23px;
-    height: 22px;
+    height: 24px;
     text-indent: 9999px;
     border: 2px solid #b0aead;
     border-radius: 100%;

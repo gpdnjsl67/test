@@ -102,8 +102,8 @@ body {
 .check__icon {
   padding: 0.3em 0.6em 0.6em;
   display: inline-block;
-  background-color: #efefef;
   border-radius: 99em;
+  background-color: #efefef;
 }
 .check__icon__mark {
   width: 0.5em;
@@ -250,24 +250,31 @@ body {
   width: 100%;
   max-width: 500px;
   height: 80%;
-  overflow-x: hidden;
-  overflow-y: scroll;
   border-radius: 2rem 2rem 0 0;
   background-color: #fff;
 }
 .main .content__container__close__btn {
+  z-index: 99;
+  position: sticky;
+  top: 0;
   text-align: right;
 }
 .main .content__container__close__btn span {
   display: inline-block;
-  padding: 0.3em 0.7em 0.9em;
+  padding: 0.3em 0.4em;
   line-height: 1em;
   font-size: 2.9em;
   cursor: pointer;
   color: #6f6f6f;
 }
+.main .content__wrap {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 0 0 6rem;
+}
 .main .select__reservation .content__wrap {
-  padding: 0 2rem;
+  padding: 1.2em 1.5em 6rem;
 }
 .main .select__reservation .reservation__title__main {
   margin-bottom: 1em;
@@ -492,6 +499,10 @@ body {
   text-align: center;
   border: none;
   border-radius: 7px;
+  color: #fff;
+  background-color: #989898;
+}
+.main .select__reservation .reservation__submit__btn--checked input {
   color: #fff;
   background-color: #f83152;
 }
