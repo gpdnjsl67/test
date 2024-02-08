@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/datepicker.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <script src="https://kit.fontawesome.com/fa8d36e7e1.js" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+    <title>3</title>
+</head>
+<body>
+<div class="container">
+    <div class="bg__area">
+        <div class="bg__area__left">
+            <div class="bg__area__left__list">
+                <div class="bg__area__left__list__text">지금 가장 핫한<br>이벤트를<br>만나보세요</div>
+                <div class="bg__area__left__list__logo"><img src="./images/logo.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="wrap">
+        <header class="header">
+            <nav class="header__nav">
+                <ul class="header__nav__list">
+                    <li class="header__nav__list__item">
+                        <a href="#" class="header__nav__list__link"><img src="./images/top_icon_01.png" alt=""></a>
+                    </li>
+                    <li class="header__nav__list__item">
+                        <a href="#" class="header__nav__list__link header__nav__list__logo"><img src="./images/logo.png" alt=""></a>
+                    </li>
+                    <li class="header__nav__list__item">
+                        <a href="#" class="header__nav__list__link header__nav__list__hamburger_menu"><img src="./images/top_icon_02.png" alt=""></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            <div class="overlay"></div>
+            <form action="#">
+                <div class="main__image"><img src="./images/event_main_01.jpg" alt=""></div>
+    
+                <div class="main__btn">
+                    <div class="main__btn__item main__btn__item--pink" onclick="openSelectBox($('.select__reservation'));">모의견적 진행하기</div>
+                    <div class="main__btn__item main__btn__item--yellow" onclick="openSelectBox($('.select__place'));">카톡상담</div>
+                </div>
+    
+                <!-- 모의견적 진행하기 박스 -->
+                <div class="content__container select__reservation">
+                    <div class="content__container__close__btn" onclick="closeBtn($('.select__reservation'));"><span>x</span></div>
+                    <div class="content__wrap">
+                        <div class="reservation__title__main">
+                            <div>
+                                <span class="reservation__title__main__mark--pink">HOT</span>
+                                <span class="reservation__title__main__text">임플란트 1인 (강남점)</span>
+                            </div>
+                            <div class="required__text">
+                                <span class="asterisk--pink">*</span><span>필수</span>
+                            </div>
+                        </div>
+    
+                        <ul class="reservation__list">
+                            <li class="reservation__list__item">
+                                <div class="reservation__list__title__sub">
+                                    <div class="reservation__list__title__sub--array">
+                                        <div class="check__icon"><div class="check__icon__mark"></div></div>
+                                        <span class="reservation__list__title__sub__text">진료여부</span>
+                                    </div>
+                                    <div class="reservation__list__title__sub--array">
+                                        <div class="reservation__answer"></div>
+                                        <div class="arrow__toggle__btn" onclick="arrowAction($(this));">∧</div>
+                                    </div>
+                                </div>
+                                <div class="reservation__list__answer__container reservation__list__answer__container--flex">
+                                    <div class="reservation__list__question">진료여부<span class="asterisk--pink">*</span></div>
+                                    <div class="reservation__list__radio">
+                                        <label>
+                                            <input type="radio" name="진료여부" value="초진">
+                                            <span class="reservation__list__radio__text">초진</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="진료여부" value="재진">
+                                            <span class="reservation__list__radio__text">재진</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="reservation__list__item">
+                                <div class="reservation__list__title__sub">
+                                    <div class="reservation__list__title__sub--array">
+                                        <div class="check__icon"><div class="check__icon__mark"></div></div>
+                                        <span class="reservation__list__title__sub__text">예약일</span>
+                                    </div>
+                                    <div class="reservation__list__title__sub--array">
+                                        <div class="reservation__answer"></div>
+                                        <div class="arrow__toggle__btn" onclick="arrowAction($(this));">∨</div>
+                                    </div>
+                                </div>
+                                <div class="reservation__list__answer__container">
+                                    <div class="reservation__list__answer__box row__gap">
+                                        <div id="datepicker" class="calendar"></div>
+                                        <div class="reservation__list__question">예약일 선택<span class="asterisk--pink">*</span></div>
+                                        <div class="reservation__list__print-date">희망 예약일을 선택해 주세요</div>
+                                    </div>
+    
+                                    <div class="reservation__list__answer__box row__gap">
+                                        <div class="reservation__list__question">예약 시간 선택</div>
+                                        <select name="" id="" class="reservation__list__select-box">
+                                            <option value="" selected disabled hidden>예약 시간을 선택해 주세요</option>
+                                            <option value="10:00">10:00</option>
+                                            <option value="10:30">10:30</option>
+                                        </select>
+                                    </div>
+    
+                                    <span class="reservation__list__next__btn">다음 <span class="reservation__list__next__btn--arrow">＞</span></span>
+                                </div>
+                            </li>
+                            <li class="reservation__list__item">
+                                <div class="reservation__list__title__sub">
+                                    <div class="reservation__list__title__sub--array">
+                                        <div class="check__icon"><div class="check__icon__mark"></div></div>
+                                        <span class="reservation__list__title__sub__text">임플란트가 필요한 부위는?</span>
+                                    </div>
+                                    <div class="reservation__list__title__sub--array">
+                                        <div class="reservation__answer"></div>
+                                        <div class="arrow__toggle__btn" onclick="arrowAction($(this));">∨</div>
+                                    </div>
+                                </div>
+                                <div class="reservation__list__answer__container reservation__list__answer__container--flex">
+                                    <div class="reservation__list__question">필요한 부위<span class="asterisk--pink">*</span></div>
+                                    <div class="reservation__list__radio">
+                                        <label>
+                                            <input type="radio" name="필요한 부위" value="앞니">
+                                            <span class="reservation__list__radio__text">앞니</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="필요한 부위" value="어금니">
+                                            <span class="reservation__list__radio__text">어금니</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="필요한 부위" value="전체">
+                                            <span class="reservation__list__radio__text">전체</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="필요한 부위" value="모르겠음">
+                                            <span class="reservation__list__radio__text">모르겠음</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="reservation__list__item">
+                                <div class="reservation__list__title__sub">
+                                    <div class="reservation__list__title__sub--array">
+                                        <div class="check__icon"><div class="check__icon__mark"></div></div>
+                                        <span class="reservation__list__title__sub__text">현재 나이는?</span>
+                                    </div>
+                                    <div class="reservation__list__title__sub--array">
+                                        <div class="reservation__answer"></div>
+                                        <div class="arrow__toggle__btn" onclick="arrowAction($(this));">∨</div>
+                                    </div>
+                                </div>
+                                <div class="reservation__list__answer__container reservation__list__answer__container--flex">
+                                    <div class="reservation__list__question">나이<span class="asterisk--pink">*</span></div>
+                                    <div class="reservation__list__radio">
+                                        <label>
+                                            <input type="radio" name="나이" value="30대">
+                                            <span class="reservation__list__radio__text">30대</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="나이" value="40대">
+                                            <span class="reservation__list__radio__text">40대</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="나이" value="50대">
+                                            <span class="reservation__list__radio__text">50대</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="나이" value="60대">
+                                            <span class="reservation__list__radio__text">60대</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="reservation__list__item">
+                                <div class="reservation__list__title__sub">
+                                    <div class="reservation__list__title__sub--array">
+                                        <div class="check__icon"><div class="check__icon__mark"></div></div>
+                                        <span class="reservation__list__title__sub__text">성함/연락처</span>
+                                    </div>
+                                    <div class="reservation__list__title__sub--array">
+                                        <div class="reservation__answer"></div>
+                                        <div class="arrow__toggle__btn" onclick="arrowAction($(this));">∨</div>
+                                    </div>
+                                </div>
+                                <div class="reservation__list__answer__container">
+                                    <div class="reservation__list__answer__box row__gap">
+                                        <div class="reservation__list__question">성함<span class="asterisk--pink">*</span></div>
+                                        <div class="reservation__list__input-name">
+                                            <input type="text" class="input__basic" placeholder="이름을 입력해 주세요" required>
+                                        </div>
+                                    </div>
+    
+                                    <div class="reservation__list__answer__box row__gap">
+                                        <div class="reservation__list__question">연락처<span class="asterisk--pink">*</span></div>
+                                        <div class="reservation__list__input-tel reservation__list__input--grid row__gap">
+                                            <input type="text" class="input__basic" placeholder="연락처를 입력해 주세요" required>
+                                            <div class="btn__authentication btn__authentication--send"><span>인증번호 전송</span></div>
+                                        </div>
+        
+                                        <div class="reservation__list__input-tel reservation__list__input--grid">
+                                            <input type="tel" class="input__basic" placeholder="인증번호 입력" required>
+                                            <div class="btn__authentication btn__authentication--complete"><span>인증완료</span></div>
+                                        </div>
+                                    </div>
+    
+                                    <span class="reservation__list__next__btn">다음 <span class="reservation__list__next__btn--arrow">＞</span></span>
+                                </div>
+                            </li>
+                            <li class="reservation__list__item">
+                                <div class="reservation__list__title__sub">
+                                    <div class="reservation__list__title__sub--array">
+                                        <div class="check__icon"><div class="check__icon__mark"></div></div>
+                                        <span class="reservation__list__title__sub__text">개인정보 수집 및 이용</span>
+                                    </div>
+                                    <div class="reservation__list__title__sub--array">
+                                        <div class="reservation__answer"></div>
+                                        <div class="arrow__toggle__btn" onclick="arrowAction($(this));">∨</div>
+                                    </div>
+                                </div>
+                                <div class="reservation__list__answer__container reservation__list__agreement">
+                                    <div class="reservation__list__question">개인정보 수집 및 이용<span class="asterisk--pink">*</span></div>
+                                    <div class="reservation__list__agreement__text">
+                                        <span class="text__underline">개인정보 수집 및 이용</span>에 관한 내용을 확인하고 동의함.<br>
+                                        안녕하세요! 본원에서는 고객님의 소중한 개인정보를 상담 외 어떤 목적으로도 사용하지 않습니다.
+                                    </div>
+                                    <label>
+                                        <input type="radio" name="agreement" value="동의합니다">
+                                        <span class="reservation__list__radio__text">동의합니다</span>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="reservation__submit__btn">
+                        <input type="submit" class="" value="비용 확인하기" onclick="openSelectBox($('.confirmation__container'));">
+                    </div>
+                </div>
+
+                <!-- 모의견적 진행하기 박스 > 결과창 -->
+                <div class="content__container confirmation__container">
+                    <div class="content__container__close__btn" onclick="closeBtn($('.confirmation__container'));"><span>x</span></div>
+                    <div class="content__wrap">
+                        <div class="confirmation__top">
+                            <div class="confirmation__notice--top">
+                                <span class="notice__text">진료에 따라 비용은 달라질 수 있습니다.</span>
+                            </div>
+                            <div class="confirmation__cost">
+                                <div class="confirmation__cost__text">
+                                    <span class="user__name">user__name</span>님의 모의 견적 비용은<br>임플란트<span class="user__cost">user__cost</span>만원(vat.별도) 입니다.
+                                </div>
+                            </div>
+                            <div class="confirmation__notice--bottom">
+                                <span class="notice__text">아래 화면을 캡쳐 후 병원에 보여주시면<br>견적 금액에서 최대 49% 할인 혜택을 받으실 수 있습니다.</span>
+                            </div>
+                            <div class="confirmation__capture__btn"><span>캡쳐하기</span></div>
+                        </div>
+
+                        <div class="confirmation__bottom">
+                            <div class="confirmation__bottom__wrap">
+                                <div class="confirmation__bottom__today">2024.02.07</div>
+                                <div class="confirmation__bottom__title">예약확정서</div>
+                                <div class="confirmation__bottom__reservation__number">(예약확인번호:12345)</div>
+
+                                <div class="confirmation__bottom__row">
+                                    <div class="confirmation__table">
+                                        <div class="confirmation__table__row confirmation__table__head">
+                                            <div class="confirmation__table__cell">이름</div>
+                                            <div class="confirmation__table__cell">연락처</div>
+                                        </div>
+                                        <div class="confirmation__table__row">
+                                            <div class="confirmation__table__cell"><span class="user__name">user__name</span></div>
+                                            <div class="confirmation__table__cell"><span class="user__tel">user__tel</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="confirmation__table">
+                                        <div class="confirmation__table__row confirmation__table__head">
+                                            <div class="confirmation__table__cell">진료여부</div>
+                                            <div class="confirmation__table__cell">희망 예약일</div>
+                                            <div class="confirmation__table__cell">희망 예약시간</div>
+                                        </div>
+                                        <div class="confirmation__table__row">
+                                            <div class="confirmation__table__cell">초진</div>
+                                            <div class="confirmation__table__cell">24.02.07</div>
+                                            <div class="confirmation__table__cell">16:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="confirmation__bottom__row confirmation__result__container">
+                                    <div class="confirmation__result">
+                                        <div class="confirmation__result__question">임플란트가 필요한 부위</div>
+                                        <div class="confirmation__result__anwser">모르겠음</div>
+                                    </div>
+                                    <div class="confirmation__result">
+                                        <div class="confirmation__result__question">임플란트 필요한 개수</div>
+                                        <div class="confirmation__result__anwser">3개</div>
+                                    </div>
+                                    <div class="confirmation__result">
+                                        <div class="confirmation__result__question">현재 나이는</div>
+                                        <div class="confirmation__result__anwser">30대</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="confirmation__footer">
+                                    <div class="confirmation__footer__corp confirmation__bottom__row">
+                                        <div class="confirmation__footer__corp__row">
+                                            <div class="confirmation__footer__corp__left">의료기관명</div>
+                                            <div class="confirmation__footer__corp__right">플란치과의원</div>
+                                        </div>
+                                        <div class="confirmation__footer__corp__row">
+                                            <div class="confirmation__footer__corp__left">병원의 위치</div>
+                                            <div class="confirmation__footer__corp__right">서울특별시 강남구 도산대로 119 케이타워 13~16층</div>
+                                        </div>
+                                        <div class="confirmation__footer__corp__row">
+                                            <div class="confirmation__footer__corp__left">사업자 등록번호</div>
+                                            <div class="confirmation__footer__corp__right">195-35-00289</div>
+                                        </div>
+                                        <div class="confirmation__footer__corp__row">
+                                            <div class="confirmation__footer__corp__left">대표자명</div>
+                                            <div class="confirmation__footer__corp__right">최영인</div>
+                                        </div>
+                                        <div class="confirmation__footer__corp__row">
+                                            <div class="confirmation__footer__corp__left">고객센터</div>
+                                            <div class="confirmation__footer__corp__right">1522-2875</div>
+                                        </div>
+                                    </div>
+
+                                    <ul class="confirmation__footer__notice">
+                                        <li>* 당일 임플란트 식립의 경우 개인에 따라 차이가 있어 불가할 수 있습니다.</li>
+                                        <li>* 임플란트 시술 시 교합이상, 신경손상, 염증 등의 문제점이 발생할 수 있습니다.</li>
+                                        <li>* 이는 의료진의 충분한 체크와 상담을 통해 문제점을 예방하고 최소화할 수 있습니다.</li>
+                                        <li>* 뼈이식 비용은 불포함이며, 개인 치아상태에 따라 명시된 비용 외에 변동이 될 수 있습니다.</li>
+                                        <li>* 당일 임플란트 식립의 경우 개인에 따라 차이가 있어 불가능할 수 있습니다.</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- 카톡상담 박스 -->
+                <div class="content__container select__place">
+                    <div class="content__container__close__btn" onclick="closeBtn($('.select__place'));"><span>x</span></div>
+                    <div class="content__wrap">
+                        <div class="select__place__title">상담을 원하시는 지점을<br>선택해 주세요</div>
+                        <div class="select__place__list">
+                            <a href="#" class="select__place__link">
+                                <span class="select__place__link__text">플란치과 서울점</span>
+                            </a>
+                            <a href="#" class="select__place__link">
+                                <span class="select__place__link__text">플란치과 인천부평점</span>
+                            </a>
+                            <a href="#" class="select__place__link">
+                                <span class="select__place__link__text">플란치과 인천검단점</span>
+                            </a>
+                            <a href="#" class="select__place__link">
+                                <span class="select__place__link__text">플란치과 경기 동탄점</span>
+                            </a>
+                            <a href="#" class="select__place__link">
+                                <span class="select__place__link__text">플란치과 경기 수원점</span>
+                            </a>
+                            <a href="#" class="select__place__link">
+                                <span class="select__place__link__text">플란치과 경기 부산점</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </main>
+
+        <footer class="footer">
+            <nav class="footer__nav">
+                <ul class="footer__nav__list">
+                    <li class="footer__nav__list__item">
+                        <a href="#" class="footer__nav__list__link">
+                            <img src="./images/icon_01.png" alt="">
+                            <div class="footer__nav__list__link__text">홈</div>
+                        </a>
+                    </li>
+                    <li class="footer__nav__list__item">
+                        <a href="#" class="footer__nav__list__link">
+                            <img src="./images/icon_02.png" alt="">
+                            <div class="footer__nav__list__link__text">이벤트</div>
+                        </a>
+                    </li>
+                    <li class="footer__nav__list__item">
+                        <a href="#" class="footer__nav__list__link footer__nav__list__link__middle__icon">
+                            <img src="./images/icon_03.png" alt="">
+                        </a>
+                    </li>
+                    <li class="footer__nav__list__item">
+                        <a href="#" class="footer__nav__list__link">
+                            <img src="./images/icon_04.png" alt="">
+                            <div class="footer__nav__list__link__text">이벤트</div>
+                        </a>
+                    </li>
+                    <li class="footer__nav__list__item">
+                        <a href="#" class="footer__nav__list__link">
+                            <img src="./images/icon_05.png" alt="">
+                            <div class="footer__nav__list__link__text">콘텐츠</div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+
+    <div class="bg__area">
+        <div class="bg__area__right">
+            <div class="bg__area__right__person"><img src="./images/person.png" alt=""></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // datepicker JS
+    $.datepicker.regional['ko'] = {
+        monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+        dayNamesShort: ['일','월','화','수','목','금','토'],
+        dayNamesMin: ['일','월','화','수','목','금','토'],
+        // weekHeader: 'Wk',
+        dateFormat: 'yy.mm.dd(D)',
+        onSelect: function(dateText, inst) {
+            // 선택한 날짜 출력
+            // console.log("선택된 날짜:", dateText);
+            $('.reservation__list__print-date').text(dateText);
+        },
+        firstDay: 0,
+        isRTL: false,
+        showMonthAfterYear: true,
+        yearSuffix: ''
+    };
+    $.datepicker.setDefaults($.datepicker.regional['ko']);
+
+    $('#datepicker').datepicker({
+        inline: true,
+        showOn: 'focus',
+        buttonImageOnly: true,
+        yearRange: 'c-0:c+99',
+        minDate : new Date(),
+        maxDate: '+365d',
+        beforeShowDay: function(date){ /* 일요일 선택 X */
+            var day = date.getDay();
+            return [(day != 0)];
+        },
+    });
+
+    function openSelectBox(obj) {
+        $('.overlay').show();
+        $('.content__container').not(obj).hide();
+        obj.show();
+    }
+
+    function closeBtn(obj) {
+        $('.overlay').hide();
+        obj.hide();        
+    }
+
+    // 화살표 버튼 액션
+    function arrowAction(obj) {
+        var answerBox = obj.closest('.reservation__list__item').find('.reservation__list__answer__container');
+        
+        answerBox.toggle();
+
+        if (answerBox.is(':visible')) {
+            obj.text('∧'); // Change to upward arrow when visible
+        } else {
+            obj.text('∨'); // Change to downward arrow when hidden
+        }
+    }
+    
+    $(document).ready(function () {
+
+        // $('.arrow__toggle__btn').on('click', function () {
+        //     var answerBox = $(this).closest('.reservation__list__item').find('.reservation__list__answer__container');
+            
+        //     answerBox.toggle();
+
+        //     if (answerBox.is(':visible')) {
+        //         $(this).text('∧'); // Change to upward arrow when visible
+        //     } else {
+        //         $(this).text('∨'); // Change to downward arrow when hidden
+        //     }
+        // });
+
+        $('input[type="radio"]').on('change', function() {
+            $('.reservation__list__item').each(function() {
+                const checkedRadio = $(this).find('input[type="radio"]:checked');
+        
+                if (checkedRadio.length > 0) {
+                    const checkedValue = checkedRadio.val();
+        
+                    const reservationAnswerElement = $(this).find('.reservation__answer');
+                    const answerBox = $(this).find('.reservation__list__answer__container');
+                    const checkedIcon = $(this).find('.check__icon');
+        
+                    if (reservationAnswerElement.length > 0) {
+                        reservationAnswerElement.text(checkedValue);
+                        checkedIcon.addClass('check__icon--checked');
+                        answerBox.hide();
+                        nextSectionOpen(answerBox);
+                        // arrowAction($('.arrow__toggle__btn'));
+                    }
+                }
+            });
+        });
+
+        $('.reservation__list__item:not(:first-child) .reservation__list__answer__container').hide();
+
+        function nextSectionOpen(obj) {
+            // 현재 클릭된 container 닫기
+            obj.hide();
+
+            // 다음 형제 요소의 container 열기
+            var $nextSibling = obj.parent().next('.reservation__list__item').find('.reservation__list__answer__container');
+            if ($nextSibling.length > 0) {
+                $nextSibling.show();
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
