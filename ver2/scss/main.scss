@@ -160,7 +160,7 @@ body::-webkit-scrollbar {
 
                     .banner__bg__area {
                         video {
-                            border-radius: $border-radius-img;
+                            border-radius: calc($border-radius-img * 2);
                         }
                     }
                 }

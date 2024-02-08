@@ -152,7 +152,7 @@ body::-webkit-scrollbar {
   position: relative;
 }
 .main.page01 .rolling__banner__main__slide .banner__bg__area video {
-  border-radius: 1em;
+  border-radius: 2em;
 }
 .main.page01 .rolling__banner__main .slide__text {
   position: absolute;
