@@ -488,7 +488,7 @@ body {
   cursor: pointer;
   background-color: #fff;
 }
-.main .select__reservation .reservation__submit__btn input {
+.main .select__reservation .reservation__submit__btn__text {
   display: block;
   margin: 0 auto;
   padding: 0.7em 0;
@@ -502,7 +502,7 @@ body {
   color: #fff;
   background-color: #989898;
 }
-.main .select__reservation .reservation__submit__btn--checked input {
+.main .select__reservation .reservation__submit__btn--checked .reservation__submit__btn__text {
   color: #fff;
   background-color: #f83152;
 }
@@ -540,7 +540,8 @@ body {
   color: #000;
 }
 .main .confirmation__container .confirmation__cost__text span {
-  font-size: 1em;
+  font-size: inherit;
+  font-weight: inherit;
 }
 .main .confirmation__container .confirmation__capture__btn {
   margin: 2em auto 0;
@@ -621,6 +622,10 @@ body {
 .main .confirmation__container .confirmation__result__anwser {
   font-size: 1.2em;
   font-weight: 500;
+}
+.main .confirmation__container .confirmation__result__anwser span {
+  font-size: inherit;
+  font-weight: inherit;
 }
 .main .confirmation__container .confirmation__footer__corp {
   padding: 5em 0;

@@ -449,7 +449,7 @@ body {
             cursor: pointer;
             background-color: $color-white;
 
-            input {
+            &__text {
                 display: block;
                 margin: 0 auto;
                 padding: 0.7em 0;
@@ -465,7 +465,7 @@ body {
             }
 
             &--checked {
-                input {
+                .reservation__submit__btn__text {
                     color: $color-white;
                     background-color: $color-pink;
                 }
@@ -517,7 +517,8 @@ body {
                     color: $color-black;
 
                     span {
-                        font-size: 1em;
+                        font-size: inherit;
+                        font-weight: inherit;
                     }
                 }
             }
@@ -609,6 +610,7 @@ body {
                 &:not(:last-child) {
                     margin-bottom: 2em;
                 }
+
                 &__question {
                     font-size: $font-size-confirmation;
                     font-weight: 700;
@@ -617,6 +619,11 @@ body {
                 &__anwser {
                     font-size: $font-size-confirmation;
                     font-weight: 500;
+
+                    span {
+                        font-size: inherit;
+                        font-weight: inherit;
+                    }
                 }
             }
 

@@ -211,14 +211,14 @@
                                     <div class="reservation__list__answer__box row__gap">
                                         <div class="reservation__list__question">성함<span class="asterisk--pink">*</span></div>
                                         <div class="reservation__list__input-name">
-                                            <input type="text" name="성함" class="input__basic" placeholder="이름을 입력해 주세요" required>
+                                            <input type="text" name="성함" class="input__basic" placeholder="이름을 입력해 주세요" maxlength="8" required>
                                         </div>
                                     </div>
     
                                     <div class="reservation__list__answer__box row__gap">
                                         <div class="reservation__list__question">연락처<span class="asterisk--pink">*</span></div>
                                         <div class="reservation__list__input-tel reservation__list__input--grid row__gap">
-                                            <input type="text" name="연락처" class="input__basic" placeholder="연락처를 입력해 주세요" required>
+                                            <input type="text" name="연락처" class="input__basic" placeholder="연락처를 입력해 주세요" maxlength="11" required>
                                             <div class="btn__authentication btn__authentication--send"><span>인증번호 전송</span></div>
                                         </div>
         
@@ -258,8 +258,8 @@
                     </div>
 
                     <div class="reservation__submit__btn">
-                        <!-- <input type="submit" class="" value="비용 확인하기"> -->
-                        <input type="text" value="비용 확인하기">
+                        <!-- <input type="submit" class="" value="비용 확인하기" disabled> -->
+                        <span class="reservation__submit__btn__text">비용 확인하기</span>
                     </div>
                 </div>
 
@@ -273,7 +273,7 @@
                             </div>
                             <div class="confirmation__cost">
                                 <div class="confirmation__cost__text">
-                                    <span class="user__name">user__name</span>님의 모의 견적 비용은<br>임플란트<span class="user__cost">user__cost</span>만원(vat.별도) 입니다.
+                                    <span class="user__name">홍길동</span>님의 모의 견적 비용은<br>임플란트 <span class="user__cost">99</span>만원(vat.별도) 입니다.
                                 </div>
                             </div>
                             <div class="confirmation__notice--bottom">
@@ -306,9 +306,15 @@
                                             <div class="confirmation__table__cell">희망 예약시간</div>
                                         </div>
                                         <div class="confirmation__table__row">
-                                            <div class="confirmation__table__cell">초진</div>
-                                            <div class="confirmation__table__cell">24.02.07</div>
-                                            <div class="confirmation__table__cell">16:00</div>
+                                            <div class="confirmation__table__cell">
+                                                <span class="user_sel1"></span>
+                                            </div>
+                                            <div class="confirmation__table__cell">
+                                                <span class="user_sel2"></span>
+                                            </div>
+                                            <div class="confirmation__table__cell">
+                                                <span class="user_sel3"></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -316,15 +322,15 @@
                                 <div class="confirmation__bottom__row confirmation__result__container">
                                     <div class="confirmation__result">
                                         <div class="confirmation__result__question">임플란트가 필요한 부위</div>
-                                        <div class="confirmation__result__anwser">모르겠음</div>
+                                        <div class="confirmation__result__anwser"><span class="user_sel4"></span></div>
                                     </div>
                                     <div class="confirmation__result">
                                         <div class="confirmation__result__question">임플란트 필요한 개수</div>
-                                        <div class="confirmation__result__anwser">3개</div>
+                                        <div class="confirmation__result__anwser"><span class="user_sel5"></span></div>
                                     </div>
                                     <div class="confirmation__result">
                                         <div class="confirmation__result__question">현재 나이는</div>
-                                        <div class="confirmation__result__anwser">30대</div>
+                                        <div class="confirmation__result__anwser"><span class="user_sel6"></span></div>
                                     </div>
                                 </div>
                                 
@@ -441,8 +447,9 @@
 </div>
 
 <script>
-    var dateSelected = false; // 날짜 선택 여부를 나타내는 변수
-    var selectBoxSelected = false; // select-box 선택 여부를 나타내는 변수
+    let dateSelected = false; // 날짜 선택 여부를 나타내는 변수
+    let selectBoxSelected = false; // select-box 선택 여부를 나타내는 변수
+    let selectedDate; // datepicker에서 선택한 날짜
 
     // datepicker JS
     $.datepicker.regional['ko'] = {
@@ -456,6 +463,8 @@
             // console.log("선택된 날짜:", dateText);
             // 선택한 날짜 출력
             $('.reservation__list__print-date').text(dateText);
+            selectedDate = dateText;
+            return selectedDate;
         },
         firstDay: 0,
         isRTL: false,
@@ -501,30 +510,53 @@
         }
     }
 
-    // input 시 효과
+    // input 시 실행 함수
     function nextSelectionOpen(obj) {
         var listItemLength = $('.reservation__list__item').length; // item 갯수
-        
         var clickedParent = obj.closest('.reservation__list__item'); // 현재 부모 item
-
         var clickedCurrentDataVal = Number(clickedParent.attr('data-value')); // 현재 data-value 값
         var clickedNextDataVal = Number(clickedCurrentDataVal) + 1; // 다음 data-value 값
-        
-        var clickedCurrent = obj.closest(`[data-value="${clickedCurrentDataVal}"]`);
-        var clickedNext = obj.closest(`[data-value="${clickedNextDataVal}"]`);
-
+        var clickedCurrent = obj.closest(`.reservation__list__item[data-value="${clickedCurrentDataVal}"]`); // 현재 부모 item
+        var clickedNext = obj.closest(`.reservation__list__item[data-value="${clickedNextDataVal}"]`); // 다음 부모 item
         var checkedIcon = clickedCurrent.find('.check__icon'); // 체크 아이콘
 
         // == 변경되는 부분 == //
         checkedIcon.addClass('check__icon--checked'); // 체크 아이콘 컬러 변경
         clickedCurrent.find('.reservation__list__answer__container').hide();
+
         $("[data-value='" + clickedNextDataVal + "']").find('.reservation__list__answer__container').show();
+
+        // checked한 input val 출력
+        const reservationAnswerElement = clickedParent.find('.reservation__answer');
+        const checkedValue = obj.val();
+        reservationAnswerElement.text(checkedValue);
+
+        // 예약일
+        if(clickedCurrentDataVal == 2) {
+            reservationAnswerElement.text(`${selectedDate} ${$("select[name='reservation_time']").val()}`);
+        }
+
+        // 성함/연락처
+        if(clickedCurrentDataVal == 5) {
+            reservationAnswerElement.text(`${$("input[name='성함']").val()} / ${$("input[name='연락처']").val()}`);
+        }
 
         // 전부 다 input시 submit버튼 컬러 변경 
         if ($('.check__icon--checked').length === $('.reservation__list__item').length) {
             $('.reservation__submit__btn').addClass('reservation__submit__btn--checked');
+
             $('.reservation__submit__btn').on('click', function() {
                 openSelectBox($('.confirmation__container'));
+
+                $('.user__name').text($("input[name='성함']").val());
+                $('.user__tel').text($("input[name='연락처']").val());
+                $('.user_sel1').text($("input[name='진료여부']:checked").val());
+                $('.user_sel2').text(selectedDate);
+                $('.user_sel3').text($("select[name='reservation_time']").val());
+                $('.user_sel4').text($("input[name='필요한 부위']:checked").val());
+                // $('.user_sel5').text($("input[name='']:checked").val());
+                $('.user_sel6').text($("input[name='나이']:checked").val());
+                
             });
         } else {
             $('.reservation__submit__btn').removeClass('reservation__submit__btn--checked');
@@ -563,9 +595,6 @@
             nextSelectionOpen($(this));
         } else {
             alert("연락처와 인증번호를 모두 입력하세요.");
-            console.log('nameVal : ' + nameVal);
-            console.log('phoneVal : ' + phoneVal);
-            console.log('verification : ' + verification);
         }
     });
 
