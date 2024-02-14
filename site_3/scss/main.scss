@@ -343,6 +343,9 @@ body {
                 }
 
                 &__select-box {
+                    -webkit-appearance: none;
+                    -moz-appearance: none; 
+                    appearance: none;
                     @include basicBoxStyle;
 
                     option {
@@ -724,7 +727,6 @@ body {
                         width: 3.5em !important;
                     }
                 }
-
 
                 &__text {
                     font-size: 0.9em;

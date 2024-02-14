@@ -374,6 +374,9 @@ body {
   font-weight: 500;
 }
 .main .select__reservation .reservation__list__select-box {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 0.7em 1em;
   width: 100%;
   font-size: 1.3rem;
