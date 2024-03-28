@@ -1,0 +1,727 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+}
+
+.video {
+  width: 100%;
+}
+
+.swiper-slide img {
+  width: 100%;
+}
+
+[type=radio], span {
+  vertical-align: middle;
+}
+
+[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #000;
+  border-radius: 50%;
+  width: 1.3em;
+  height: 1.25em;
+  -webkit-transition: border 0.1s ease-in-out;
+  transition: border 0.1s ease-in-out;
+}
+
+[type=radio]:checked {
+  border: 0.3em solid #000;
+}
+
+[type=radio]:focus-visible {
+  outline-offset: 1px;
+  outline: 1px dotted #000;
+}
+
+[type=radio]:hover {
+  -webkit-box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+          box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+  cursor: pointer;
+}
+
+[type=radio]:hover + span {
+  cursor: pointer;
+}
+
+[type=radio]:disabled {
+  background-color: lightgray;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+[type=radio]:disabled + span {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  background: -webkit-gradient(linear, left top, right top, from(#96e3ff), to(#96fffa));
+  background: linear-gradient(to right, #96e3ff, #96fffa);
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+.row__gap {
+  margin-bottom: 0.5em;
+}
+
+.asterisk--pink {
+  color: #f83152;
+}
+
+.check__icon {
+  padding: 0.2em 0.4em 0.4em;
+  display: inline-block;
+  border-radius: 99em;
+  border: 1px solid #f83152;
+}
+.check__icon__mark {
+  width: 0.5em;
+  height: 0.7em;
+  border: 2px solid #f83152;
+  border-left: 0;
+  border-top: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.check__icon--checked {
+  background-color: #f83152;
+}
+
+#wrap {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  max-width: 500px;
+  overflow-y: scroll;
+  background-color: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 15px 0px;
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 15px 0px;
+}
+#wrap::-webkit-scrollbar {
+  display: none;
+}
+#wrap .overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: calc(100vh - 2.6em);
+  max-width: 500px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 500px 1fr;
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    display: block;
+  }
+  .bg__area {
+    display: none;
+  }
+}
+.bg__area {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.bg__area__left__list {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding-bottom: 4em;
+  padding-right: 5em;
+  border-bottom: 2px solid #fff;
+}
+.bg__area__left__list__text {
+  line-height: 1.3em;
+  font-size: 3.3em;
+  font-weight: 700;
+  color: #fff;
+}
+.bg__area__left__list__logo {
+  margin-top: 2em;
+  width: 23em;
+}
+.bg__area__left__list__logo img {
+  width: 100%;
+}
+.bg__area__right__person {
+  position: absolute;
+  bottom: -5px;
+  width: 20em;
+}
+.bg__area__right__person img {
+  width: 100%;
+}
+
+.header {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  padding: 0 1.3em;
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+}
+.header__nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 6rem;
+}
+.header__nav__list__link img {
+  width: 2.5em;
+}
+.header__nav__list__logo img {
+  width: 11.4em;
+}
+
+.main {
+  width: 100%;
+  position: relative;
+  padding: 6rem 0;
+}
+.main__image {
+  padding-bottom: calc(6rem + 2em);
+}
+.main__image img {
+  width: 100%;
+}
+.main__btn {
+  position: fixed;
+  left: 50%;
+  bottom: calc(6rem + 2em);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 90%;
+  max-width: calc(500px - 4rem);
+}
+.main__btn__item {
+  padding: 0.75em 0;
+  text-align: center;
+  line-height: 1.4em;
+  font-size: 1.5em;
+  font-weight: 700;
+  border-radius: 0.4em;
+  cursor: pointer;
+}
+.main__btn__item--pink {
+  color: #fff;
+  background-color: #f83152;
+}
+.main__btn__item--yellow {
+  color: #000;
+  background-color: #ffe800;
+}
+.main .content__container {
+  display: none;
+  position: fixed;
+  bottom: 6rem;
+  width: 100%;
+  max-width: 500px;
+  height: 80%;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #fff;
+}
+.main .content__container__close__btn {
+  z-index: 99;
+  position: sticky;
+  top: 0;
+  text-align: right;
+}
+.main .content__container__close__btn span {
+  display: inline-block;
+  padding: 0.3em 0.4em;
+  line-height: 1em;
+  font-size: 2.9em;
+  cursor: pointer;
+  color: #6f6f6f;
+}
+.main .content__wrap {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 0 0 6rem;
+}
+.main .select__reservation .content__wrap {
+  padding-bottom: 6rem;
+}
+.main .select__reservation .reservation__title__main {
+  padding: 0 2rem;
+  margin-bottom: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.main .select__reservation .reservation__title__main__text {
+  font-size: 1.5em;
+  font-weight: 800;
+}
+.main .select__reservation .reservation__list {
+  padding: 0 2rem 2rem;
+}
+.main .select__reservation .reservation__list li:not(:last-child) {
+  margin-bottom: 1em;
+}
+.main .select__reservation .reservation__list__item {
+  display: grid;
+  grid-template-columns: 1fr 3.5fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main .select__reservation .reservation__list__label {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.main .select__reservation .reservation__list__inp {
+  padding: 0.7em 1em;
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: 500;
+  border: #989898;
+  border-radius: 7px;
+  color: #989898;
+  background-color: #efefef;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+.main .select__reservation .reservation__list__inp--required {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1em;
+}
+.main .select__reservation .reservation__list__inp--required .reservation__list__inp__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.main .select__reservation .reservation__list__inp__item {
+  border: none;
+  font-size: 1em;
+}
+.main .select__reservation .reservation__list__inp__item:focus {
+  outline: none;
+}
+.main .select__reservation .reservation__list__required__text {
+  display: block;
+  font-size: 1em;
+  font-weight: 500;
+  color: #f83152;
+}
+.main .select__reservation .reservation__submit__btn {
+  padding: 2rem;
+  width: 100%;
+  cursor: pointer;
+  background-color: #fff;
+}
+.main .select__reservation .reservation__submit__btn__text {
+  display: block;
+  padding: 0.7em 0;
+  width: 100%;
+  font-size: 1.6em;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+  background-color: #989898;
+}
+.main .select__reservation .reservation__submit__btn--checked .reservation__submit__btn__text {
+  color: #fff;
+  background-color: #f83152;
+}
+.main .select__reservation__footer {
+  padding: 1.2em 1.5em;
+  text-align: center;
+}
+.main .select__reservation__footer .corp__item {
+  padding: 0.4em;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+.main .select__reservation__footer__text {
+  font-size: 1.2em;
+}
+.main .business__boxes {
+  display: grid;
+  gap: 1em;
+  padding: 2rem;
+  background-color: #efefef;
+}
+.main .business__boxes .folding__content.hide {
+  display: none;
+}
+.main .service__agreement {
+  padding: 1.5rem 1.9rem;
+  border-radius: 7px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+.main .service__agreement__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.main .service__agreement__title__text {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.main .service__agreement__title__arrow {
+  font-size: 1em;
+  font-weight: 900;
+  cursor: pointer;
+}
+.main .service__agreement__content {
+  margin-top: 1.2em;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+}
+.main .service__agreement .service__agreement__info:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+.main .service__agreement .service__agreement__info__title {
+  padding: 1em 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.main .service__agreement .service__agreement__info__title__text {
+  font-size: 1.3em;
+  font-weight: 400;
+}
+.main .service__agreement .service__agreement__info__title__arrow {
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+}
+.main .service__agreement .service__agreement__info__content {
+  height: 10em;
+  padding: 1em 1.5em;
+  overflow-y: scroll;
+  border-top: 1px solid #ddd;
+  background-color: #efefef;
+}
+.main .service__agreement .service__agreement__info__content__text {
+  font-size: 1.1em;
+  font-weight: 400;
+}
+.main .service__agreement__notice {
+  padding: 1.5rem 1.9rem;
+  border-radius: 7px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+.main .service__agreement__notice__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5em;
+}
+.main .service__agreement__notice__title__text {
+  letter-spacing: -0.05em;
+  line-height: 1;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+.main .business__info {
+  padding: 1.5rem 1.9rem;
+  border-radius: 7px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+.main .business__info__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.main .business__info__title__text {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.main .business__info__title__arrow {
+  font-size: 1em;
+  font-weight: 900;
+  cursor: pointer;
+}
+.main .business__info__content {
+  margin-top: 1.2em;
+}
+.main .business__info__content__row {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+.main .business__info__content__row:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+.main .business__info__content__left {
+  font-size: inherit;
+  font-weight: inherit;
+}
+.main .business__info__content__right {
+  font-size: inherit;
+  font-weight: inherit;
+}
+.main .confirmation__container .confirmation__top {
+  text-align: center;
+  padding: 3.5rem 3.5rem;
+}
+.main .confirmation__container .confirmation__top .notice__text {
+  letter-spacing: -0.05em;
+  color: #000;
+}
+.main .confirmation__container .confirmation__notice--top {
+  margin-bottom: 0.9em;
+}
+.main .confirmation__container .confirmation__notice--top .notice__text {
+  line-height: 1.3;
+  font-size: 2em;
+  font-weight: 700;
+}
+.main .confirmation__container .confirmation__notice--bottom .notice__text {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.main .confirmation__container .confirmation__btn {
+  display: block;
+  margin: 2em auto 0;
+  width: 9em;
+  cursor: pointer;
+}
+.main .confirmation__container .confirmation__btn span {
+  display: block;
+  padding: 0.6em 0;
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: 600;
+  border-radius: 7px;
+  color: #fff;
+  background-color: #f83152;
+}
+.main .confirmation__container .confirmation__bottom {
+  padding: 1.3rem;
+  background-color: #efefef;
+}
+.main .confirmation__container .confirmation__bottom__wrap {
+  padding: 5em 2em;
+  background-color: #fff;
+}
+.main .confirmation__container .confirmation__bottom__border {
+  border-bottom: 1px solid #ddd;
+}
+.main .confirmation__container .confirmation__bottom__today {
+  text-align: right;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.main .confirmation__container .confirmation__bottom__title {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 3em;
+  font-weight: 800;
+}
+.main .confirmation__container .confirmation__bottom__reservation__number {
+  margin: 1em 0 2em;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.3em;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+.main .confirmation__container .confirmation__table {
+  padding-bottom: 2em;
+  display: table;
+  width: 100%;
+}
+.main .confirmation__container .confirmation__table * {
+  font-size: 1em;
+  font-weight: 600;
+}
+.main .confirmation__container .confirmation__table__item {
+  padding: 0.8em 1em;
+  font-size: 1.2em;
+}
+.main .confirmation__container .confirmation__table__question {
+  color: #fff;
+  background-color: #058afc;
+}
+.main .confirmation__container .confirmation__result__container {
+  padding: 4em 0;
+}
+.main .confirmation__container .confirmation__result:not(:last-child) {
+  margin-bottom: 2em;
+}
+.main .confirmation__container .confirmation__result__question {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+.main .confirmation__container .confirmation__result__anwser {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.main .confirmation__container .confirmation__result__anwser span {
+  font-size: inherit;
+  font-weight: inherit;
+}
+.main .confirmation__container .confirmation__footer__corp {
+  padding: 5em 0;
+}
+.main .confirmation__container .confirmation__footer__corp__row {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 0.1em;
+}
+.main .confirmation__container .confirmation__footer__corp__row * {
+  letter-spacing: -0.05em;
+  font-size: 1em;
+  font-weight: 500;
+}
+.main .confirmation__container .confirmation__footer__corp__row:not(:last-child) {
+  margin-bottom: 0.4em;
+}
+.main .confirmation__container .confirmation__footer__notice {
+  padding-top: 3em;
+}
+.main .confirmation__container .confirmation__footer__notice li {
+  margin-bottom: 0.3em;
+  letter-spacing: -0.05em;
+  font-size: 0.85em;
+  font-weight: 400;
+  color: #989898;
+}
+.main .select__place__title {
+  margin-bottom: 2.8em;
+  letter-spacing: -0.05em;
+  text-align: center;
+  font-size: 2.2em;
+  font-weight: 700;
+}
+.main .select__place__list {
+  padding: 0 3.5rem 3.5rem;
+  display: grid;
+  gap: 1em;
+}
+.main .select__place__link {
+  display: block;
+  padding: 1.5em 3em;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  background-color: #fcfcfc;
+}
+.main .select__place__link__text {
+  font-size: 1.7em;
+  font-weight: 600;
+}
+
+.footer {
+  z-index: 99;
+  position: fixed;
+  bottom: 0;
+  padding: 0 3.5rem;
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+}
+.footer__nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 6rem;
+}
+.footer__nav__list__link {
+  text-align: center;
+}
+.footer__nav__list__link img {
+  width: 2.5em;
+}
+.footer__nav__list__link__middle__icon img {
+  width: 3.5em !important;
+}
+.footer__nav__list__link__text {
+  font-size: 0.9em;
+  font-weight: 600;
+}

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="//ligys.cdn.ntruss.com/css/consulting/consulting.css"> -->
+    <link rel="stylesheet" href="./css/consulting.css">
+
+    <script src="https://kit.fontawesome.com/fa8d36e7e1.js" crossorigin="anonymous"></script>
+    <script src="./js/jquery.min.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> -->
+
+    <title>3</title>
+</head>
+<body>
+<div class="container">
+    <div class="bg__area">
+        <div class="bg__area__left">
+            <div class="bg__area__left__list">
+                <div class="bg__area__left__list__text">지금 가장 핫한<br>이벤트를<br>만나보세요</div>
+                <div class="bg__area__left__list__logo"><img src="https://ligys.cdn.ntruss.com/icon/logo.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="wrap">
+        <header class="header">
+            <nav class="header__nav">
+                <ul class="header__nav__list">
+                    <li class="header__nav__list__item">
+                        <a href="#" class="header__nav__list__link"><img src="https://ligys.cdn.ntruss.com/icon/top_icon_01.png" alt=""></a>
+                    </li>
+                    <li class="header__nav__list__item">
+                        <a href="#" class="header__nav__list__link header__nav__list__logo"><img src="https://ligys.cdn.ntruss.com/icon/logo.png" alt=""></a>
+                    </li>
+                    <li class="header__nav__list__item">
+                        <a href="#" class="header__nav__list__link header__nav__list__hamburger_menu"><img src="https://ligys.cdn.ntruss.com/icon/top_icon_02.png" alt=""></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            <div class="overlay"></div>
+            <form action="#">
+                <div class="main__image">
+                    <img src="https://ligys.cdn.ntruss.com/event/v_9/event_main_01.jpg" alt="">
+                    <img src="https://ligys.cdn.ntruss.com/event/v_9/event_main_01.jpg" alt="">
+                </div>
+    
+                <div class="main__btn">
+                    <div class="main__btn__item main__btn__item--pink" onclick="openSelectBox($('.select__reservation'));">모의견적 진행하기</div>
+                </div>
+    
+                <!-- 모의견적 진행하기 박스 -->
+                <div class="content__container select__reservation" style="display: block;">
+                    <div class="content__container__close__btn" onclick="closeSelectBox($('.select__reservation'));"><span>x</span></div>
+
+                    <div class="content__wrap">
+                        <section class="content_inner">
+                            <div class="reservation__title__main">
+                                <span class="reservation__title__main__text">예약자 정보</span>
+                            </div>
+        
+                            <ul class="reservation__list">
+                                <li class="" data-value="1">
+                                    <label class="reservation__list__item">
+                                        <span class="reservation__list__label">이름</span>
+                                        <div class="reservation__list__inp reservation__list__inp--required">
+                                            <input type="text" name="name" class="reservation__list__inp__item" maxlength="10" placeholder="이름을 입력해 주세요." required />
+                                            <span class="reservation__list__required__text">필수</span>
+                                        </div>
+                                    </label>
+                                </li>
+    
+                                <li class="" data-value="2">
+                                    <label class="reservation__list__item">
+                                        <span class="reservation__list__label">나이</span>
+                                        <div class="reservation__list__inp reservation__list__inp--required">
+                                            <input type="tel" name="age" class="reservation__list__inp__item" minlength="1" maxlength="2" placeholder="나이를 입력해 주세요." required />
+                                            <span class="reservation__list__required__text">필수</span>
+                                        </div>
+                                    </label>
+                                </li>
+    
+                                <li class="" data-value="3">
+                                    <label class="reservation__list__item">
+                                        <span class="reservation__list__label">연락처</span>
+                                        <div class="reservation__list__inp reservation__list__inp--required">
+                                            <input type="tel" name="phone" class="reservation__list__inp__item" maxlength="11" placeholder="연락처를 입력해 주세요." required />
+                                            <span class="reservation__list__required__text">필수</span>
+                                        </div>
+                                    </label>
+                                </li>
+    
+                                <li class="" data-value="4">
+                                    <label class="reservation__list__item">
+                                        <span class="reservation__list__label">요청사항</span>
+                                        <div class="reservation__list__inp">
+                                            <textarea name="add1" class="reservation__list__inp__item" placeholder="요청하실 내용을 적어주세요." rows="3" style="width: 100%; resize: none;"></textarea>
+                                        </div>
+                                    </label>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section class="content_inner business__boxes">
+                            <div class="business__info"> <!-- 병원 정보 -->
+                                <div class="business__info__title">
+                                    <span class="business__info__title__text">병원 정보</span>
+                                    <span class="business__info__title__arrow arrow__btn">∨</span>
+                                </div>
+                                <div class="business__info__content folding__content hide">
+                                    <!-- insertBusinessInfo 스크립트로 적용 -->
+                                </div>
+                            </div>
+
+                            <div class="service__agreement"> <!-- 개인정보 수집 제공 -->
+                                <div class="service__agreement__title">
+                                    <span class="service__agreement__title__text">개인정보 수집 제공</span>
+                                    <span class="service__agreement__title__arrow arrow__btn">∧</span>
+                                </div>
+
+                                <div class="service__agreement__content folding__content">
+                                    <div class="service__agreement__info">
+                                        <div class="service__agreement__info__title">
+                                            <span class="service__agreement__info__title__text">개인정보 수집 및 이용</span>
+                                            <span class="service__agreement__info__title__arrow arrow__btn">∨</span>
+                                        </div>
+                                        <div class="service__agreement__info__content folding__content hide">
+                                            <span class="service__agreement__info__content__text">이 헌법시행 당시의 법령과 조약은 이 헌법에 위배되지 아니하는 한 그 효력을 지속한다. 이 헌법시행 당시에 이 헌법에 의하여 새로 설치될 기관의 권한에 속하는 직무를 행하고 있는 기관은 이 헌법에 의하여 새로운 기관이 설치될 때까지 존속하며 그 직무를 행한다. 타인의 범죄행위로 인하여 생명·신체에 대한 피해를 받은 국민은 법률이 정하는 바에 의하여 국가로부터 구조를 받을 수 있다. 법관이 중대한 심신상의 장해로 직무를 수행할 수 없을 때에는 법률이 정하는 바에 의하여 퇴직하게 할 수 있다. 모든 국민은 헌법과 법률이 정한 법관에 의하여 법률에 의한 재판을 받을 권리를 가진다. 헌법재판소는 법률에 저촉되지 아니하는 범위안에서 심판에 관한 절차, 내부규율과 사무처리에 관한 규칙을 제정할 수 있다.</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="service__agreement__info folding__content">
+                                        <div class="service__agreement__info__title">
+                                            <span class="service__agreement__info__title__text">개인정보 수집 및 이용</span>
+                                            <span class="service__agreement__info__title__arrow arrow__btn">∨</span>
+                                        </div>
+                                        <div class="service__agreement__info__content folding__content hide">
+                                            <span class="service__agreement__info__content__text">이 헌법시행 당시의 법령과 조약은 이 헌법에 위배되지 아니하는 한 그 효력을 지속한다. 이 헌법시행 당시에 이 헌법에 의하여 새로 설치될 기관의 권한에 속하는 직무를 행하고 있는 기관은 이 헌법에 의하여 새로운 기관이 설치될 때까지 존속하며 그 직무를 행한다. 타인의 범죄행위로 인하여 생명·신체에 대한 피해를 받은 국민은 법률이 정하는 바에 의하여 국가로부터 구조를 받을 수 있다. 법관이 중대한 심신상의 장해로 직무를 수행할 수 없을 때에는 법률이 정하는 바에 의하여 퇴직하게 할 수 있다. 모든 국민은 헌법과 법률이 정한 법관에 의하여 법률에 의한 재판을 받을 권리를 가진다. 헌법재판소는 법률에 저촉되지 아니하는 범위안에서 심판에 관한 절차, 내부규율과 사무처리에 관한 규칙을 제정할 수 있다.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="service__agreement__notice"> <!-- 개인정보 수집 및 이용 동의함 -->
+                                <div class="service__agreement__notice__title">
+                                    <div class="check__icon"><div class="check__icon__mark"></div></div>
+                                    <span class="service__agreement__notice__title__text">
+                                        개인정보 수집 및 이용에 관한 내용을 확인하고 동의함.
+                                    </span>
+                                    <!-- ∧∨ -->
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="reservation__submit__btn">
+                            <!-- <input type="submit" class="reservation__submit__btn__text" value="동의하고 신청하기" disabled> -->
+                            <span class="reservation__submit__btn__text">동의하고 신청하기</span>
+                        </div>
+                        
+                        <div class="select__reservation__footer">
+                            <div class="corp__list">
+                                <a href="#" class="corp__item terms__of__service__btn">이용약관</a>
+                                <a href="#" class="corp__item privacy__policy">개인정보처리방침</a>
+                            </div>
+                            <span class="select__reservation__footer__text">
+                                OOOO는 통신판매의 당사자가 아니며, 상품의 정보, 거래조건, 이용 및 환불, 쿠폰 사용 등과 관련한 의무와 책임은 각 판매자에게 있습니다.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 모의견적 진행하기 박스 > 결과창 -->
+                <div class="content__container confirmation__container">
+                    <div class="content__container__close__btn" onclick="closeSelectBox($('.confirmation__container'));"><span>x</span></div>
+
+                    <div class="content__wrap">
+                        <div class="confirmation__top">
+                            <div class="confirmation__notice--top">
+                                <span class="notice__text">등록해 주셔서<br>감사합니다.</span>
+                            </div>
+                            <div class="confirmation__notice--bottom">
+                                <span class="notice__text">최대한 빠르게 연락드리겠습니다.</span>
+                            </div>
+                            <a href="#" class="confirmation__btn"><span>확인</span></a>
+                        </div>
+
+                        <div class="confirmation__bottom">
+                            <div class="confirmation__bottom__wrap">
+                                <div class="confirmation__bottom__today">2024.02.07</div>
+                                <div class="confirmation__bottom__title">예약확정서</div>
+                                <div class="confirmation__bottom__reservation__number">(예약확인번호:12345)</div>
+
+                                <div class="confirmation__table confirmation__bottom__border">
+                                    <div class="confirmation__table__set">
+                                        <div class="confirmation__table__item confirmation__table__question">이름</div>
+                                        <div class="confirmation__table__item confirmation__table__anwser"><span class="user__name"></span></div>
+                                    </div>
+                                    <div class="confirmation__table__set">
+                                        <div class="confirmation__table__item confirmation__table__question">나이</div>
+                                        <div class="confirmation__table__item confirmation__table__anwser"><span class="user__age"></span></div>
+                                    </div>
+                                    <div class="confirmation__table__set">
+                                        <div class="confirmation__table__item confirmation__table__question">연락처</div>
+                                        <div class="confirmation__table__item confirmation__table__anwser"><span class="user__phone"></span></div>
+                                    </div>
+                                </div>
+
+                                <div class="confirmation__result__container confirmation__bottom__border">
+                                    <div class="confirmation__result">
+                                        <div class="confirmation__result__question">요청사항</div>
+                                        <div class="confirmation__result__anwser"><span class="user__add1">dd</span></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="confirmation__footer">
+                                    <div class="confirmation__footer__corp confirmation__bottom__border">
+                                        <!-- insertBusinessInfo 스크립트로 적용 -->
+                                    </div>
+
+                                    <ul class="confirmation__footer__notice">
+                                        <li>* 당일 임플란트 식립의 경우 개인에 따라 차이가 있어 불가할 수 있습니다.</li>
+                                        <li>* 임플란트 시술 시 교합이상, 신경손상, 염증 등의 문제점이 발생할 수 있습니다.</li>
+                                        <li>* 이는 의료진의 충분한 체크와 상담을 통해 문제점을 예방하고 최소화할 수 있습니다.</li>
+                                        <li>* 뼈이식 비용은 불포함이며, 개인 치아상태에 따라 명시된 비용 외에 변동이 될 수 있습니다.</li>
+                                        <li>* 당일 임플란트 식립의 경우 개인에 따라 차이가 있어 불가능할 수 있습니다.</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </main>
+
+        <footer class="footer">
+            <nav class="footer__nav">
+                <ul class="footer__nav__list">
+                    <li class="footer__nav__list__item">
+                        <a href="#" class="footer__nav__list__link">
+                            <img src="https://ligys.cdn.ntruss.com/icon/icon_01.png" alt="">
+                            <div class="footer__nav__list__link__text">홈</div>
+                        </a>
+                    </li>
+                    <li class="footer__nav__list__item">
+                        <a href="#" class="footer__nav__list__link">
+                            <img src="https://ligys.cdn.ntruss.com/icon/icon_02.png" alt="">
+                            <div class="footer__nav__list__link__text">이벤트</div>
+                        </a>
+                    </li>
+                    <li class="footer__nav__list__item">
+                        <a href="#" class="footer__nav__list__link footer__nav__list__link__middle__icon">
+                            <img src="https://ligys.cdn.ntruss.com/icon/icon_03.png" alt="">
+                        </a>
+                    </li>
+                    <li class="footer__nav__list__item">
+                        <a href="#" class="footer__nav__list__link">
+                            <img src="https://ligys.cdn.ntruss.com/icon/icon_04.png" alt="">
+                            <div class="footer__nav__list__link__text">이벤트</div>
+                        </a>
+                    </li>
+                    <li class="footer__nav__list__item">
+                        <a href="#" class="footer__nav__list__link">
+                            <img src="https://ligys.cdn.ntruss.com/icon/icon_05.png" alt="">
+                            <div class="footer__nav__list__link__text">콘텐츠</div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+
+    <div class="bg__area">
+        <div class="bg__area__right">
+            <div class="bg__area__right__person"><img src="https://ligys.cdn.ntruss.com/icon/person.png" alt=""></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openSelectBox(obj) {
+        $('.overlay').show();
+        $('.content__container').not(obj).hide();
+        obj.show();
+    }
+
+    function closeSelectBox(obj) {
+        $('.overlay').hide();
+        obj.hide();        
+    }
+
+    const arrows = document.querySelectorAll('.arrow__btn');
+    arrows.forEach(arrow => {
+        arrow.addEventListener('click', function() {
+            const content = this.parentElement.nextElementSibling;
+
+            // Toggle visibility of content
+            if (content.classList.contains('hide')) {
+                content.classList.remove('hide');
+                this.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hide');
+                this.style.transform = 'rotate(0)';
+            }
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const inputs = document.querySelectorAll('.reservation__list__inp__item');
+        const submitBtn = document.querySelector('.reservation__submit__btn');
+
+        inputs.forEach(input => {
+            input.addEventListener('keyup', function() {
+                const isValid = validateInputs();
+
+                if (isValid) {
+                    submitBtn.classList.add('reservation__submit__btn--checked');
+                    submitBtn.disabled = false;
+                    printInputVal(); // input value값 출력
+                    submitBtn.addEventListener('click', () => {openSelectBox($('.confirmation__container'));});
+
+                } else {
+                    submitBtn.classList.remove('reservation__submit__btn--checked');
+                    submitBtn.disabled = true;
+                }
+            });
+        });
+
+        // input 유효성 검사
+        function validateInputs() {
+            let isValid = true;
+            inputs.forEach(input => {
+                if (input.hasAttribute('required') && input.value.trim() === '') {
+                    isValid = false;
+                }
+            });
+            return isValid;
+        }
+
+        // input value값 출력
+        function printInputVal() {
+            $('.user__name').text($("input[name='name']").val());
+            $('.user__age').text($("input[name='age']").val());
+            $('.user__phone').text($("input[name='phone']").val());
+            $('.user__add1').text($("textarea[name='add1']").val());
+        }
+    });
+
+    // 공통 footer 내용
+    function insertBusinessInfo(obj) {
+        var hospitalInfo = `
+            <div class="business__info__content__row">
+                <span class="business__info__content__left">상호명</span>
+                <span class="business__info__content__right">플란치과의원</span>
+            </div>
+            <div class="business__info__content__row">
+                <span class="business__info__content__left">대표자명</span>
+                <span class="business__info__content__right">홍길동</span>
+            </div>
+            <div class="business__info__content__row">
+                <span class="business__info__content__left">소재지</span>
+                <span class="business__info__content__right">주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소</span>
+            </div>
+            <div class="business__info__content__row">
+                <span class="business__info__content__left">사업자번호</span>
+                <span class="business__info__content__right">123-45-67891</span>
+            </div>
+            <div class="business__info__content__row">
+                <span class="business__info__content__left">연락처</span>
+                <span class="business__info__content__right">1522-2875</span>
+            </div>
+        `;
+
+        obj.html(hospitalInfo);
+    }
+
+    insertBusinessInfo($('.business__info__content'));
+    insertBusinessInfo($('.confirmation__footer__corp'));
+</script>
+
+</body>
+</html>
