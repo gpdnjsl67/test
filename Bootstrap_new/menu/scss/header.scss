@@ -1,0 +1,52 @@
+@import "../../scss/reset.scss";
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 77;
+    display: flex;
+    align-items: center;
+    height: $height-header;
+    background-color: $color-blue;
+
+    &-inner {
+        padding: 0 3rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-left {
+        .hamburger-btn {
+            .bs-fa-icon {
+                font-size: 2rem;
+                color: $color-white;
+            }
+        }
+    }
+
+    &-right {
+        .integrated-list {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+
+            .integrated-item {
+                .integrated-link {
+                    font-size: 1.2rem;
+                    color: $color-white;
+
+                    &#btn-logout {
+                        line-height: 1;
+                        padding: 0.4em 1em;
+                        border: 1px solid $color-white;
+                        border-radius: 9999px;
+                    }
+                }
+            }
+        }   
+    }
+}

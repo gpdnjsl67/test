@@ -1,0 +1,90 @@
+$breakpoint-mobile: 335px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+$font-main: "Noto Sans KR", sans-serif;
+$font-main-size: 1.3rem;
+
+$height-header: 5rem;
+
+// color
+$color-black: #212121;
+$color-white: #fff;
+$color-yellow: yellow;
+$color-blue: #4271d9;
+$color-red: #c93636;
+$color-orange: #ff6a00;
+$color-light-orange: #e5a247;
+$color-green: green;
+$color-text-gray-bs: #9b98a4;
+$color-border-gray-bs: #e2e6ed;
+$color-placeholder-bs: #c5c5c5;
+$color-bg-button-gray: #f5f5f5;
+$color-bg-disabled: #f5f5f5;
+$color-icon-gray: #7a7a84;
+$color-bg-table-row: #f5f5f5;
+$color-hover: #eaf1ff;
+$color-submenu-hover: #1e4eb8;
+
+// padding
+$padding-bs: 0.8rem 0.8rem;
+$padding-table: 2rem;
+
+// gap
+$gap-bs: 0.5rem;
+$gap-list: 2rem 3rem;
+$gap-pagination: 0.4rem;
+
+// border
+$border-bs: 1px solid #e2e6ed;
+
+// border-radius
+$border-radius-bs: 0.5rem;
+
+// focus
+$focus-outline-bs: 2px solid $color-blue;
+
+// btn
+$width-btn-bs-1: 8.5rem;
+$width-btn-bs-2: 4.5rem;
+$width-btn-bs-3: 1.3rem;
+
+// icon
+$icon-small: 1.3rem;
+$icon-medium: 1.5rem;
+$icon-big: 2rem;
+
+
+
+// ======== mixin ======== //
+@mixin mobile {
+    @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: #{$breakpoint-desktop}) {
+        @content;
+    }
+}
+
+// @mixin respond($breakpoint-tablet) {
+//     @media screen and (max-width: $breakpoint-tablet) {
+//         @content;
+//     }
+// }
+
+@mixin responsive($break) {
+    @if $break == medium-screens {
+        @media only screen and (max-width: $breakpoint-tablet) {
+            @content;
+        }
+    }
+}

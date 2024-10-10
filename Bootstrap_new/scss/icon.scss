@@ -1,0 +1,22 @@
+@import "reset.scss";
+
+// fontawesome 아이콘
+.bs-fa-icon {
+    color: $color-icon-gray;
+
+    i, path, svg {
+        font-size: 1em;
+    }
+
+    &--small {
+        font-size: $icon-small;
+    }
+
+    &--medium {
+        font-size: $icon-medium;
+    }
+
+    &--big {
+        font-size: $icon-big;
+    }
+}

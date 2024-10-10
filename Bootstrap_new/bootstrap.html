@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="JHW">
+    <title>MM Bootstrap</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> <!-- 구글 폰트 -->
+    <script src="./fontawesome/all.min.js" type="text/javascript"></script> <!-- fontawesome js -->
+    <link rel="stylesheet" href="./fontawesome/all.min.css"> <!-- fontawesome css -->
+    <!-- // start CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./menu/css/header.css">
+    <link rel="stylesheet" type="text/css" href="./menu/css/aside_menu.css">
+    <link rel="stylesheet" type="text/css" href="./css/modal.css">
+    <link rel="stylesheet" type="text/css" href="./css/table.css">
+    <link rel="stylesheet" type="text/css" href="./css/list.css">
+    <link rel="stylesheet" type="text/css" href="./css/icon.css">
+    <!-- end CSS // -->
+
+    <script src="./js/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div data-include-path="./menu/header.html"></div>
+
+        <div id="container">
+            <div data-include-path="./menu/aside_menu.html"></div>
+        
+            <main id="main">
+                <div class="exp-wrap">
+                    <!--============= 입력 필드 =============-->
+                    <div class="exp-item">
+                        <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                    </div>
+                    <div class="exp-item">
+                        <div class="bs-field bs-field-in-btn">
+                            <input type="text" class="bs-input-text" placeholder="내용을 입력해 주세요.">
+                            <a href="#" class="bs-btn bs-btn--gray"><span class="bs-btn-des">확인</span></a>
+                        </div>
+                    </div>
+            
+                    <div class="exp-item">
+                        <input type="text" class="bs-field bs-input-text" placeholder="비활성화" disabled />
+                    </div>
+            
+                    <div class="exp-item">
+                        <div class="bs-field-width-btn bs-field-width-btn--size1">
+                            <input type="text" class="bs-field" placeholder="내용을 입력해 주세요." />
+                            <a href="#" class="bs-btn bs-btn--gray"><span class="bs-btn-des">확인</span></a>
+                        </div>
+                    </div>
+            
+                    <div class="exp-item">
+                        <div class="bs-field-width-btn bs-field-width-btn--size_icon_medium">
+                            <input type="text" class="bs-field" placeholder="내용을 입력해 주세요." />
+                            <a href="#"><span class="bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-pencil"></i></span></a>
+                        </div>
+                        <div class="bs-small-text">※ 변경 이후 시점의 DB부터 적용됩니다.</div>
+                    </div>
+            
+                    <div class="exp-item">
+                        <div class="bs-field-width-btn bs-field-width-btn--size2">
+                            <input type="text" class="bs-field" placeholder="내용을 입력해 주세요." />
+                            <a href="#" class="bs-btn bs-btn--blue"><span class="bs-btn-des">확인</span></a>
+                        </div>
+                    </div>
+            
+                    <div class="exp-item">
+                        <input type="search" class="bs-field bs-search-bar" placeholder="Search...">
+                    </div>
+            
+                    <!--============= checkbox =============-->
+                    <div class="exp-item">
+                        <label class="bs-sel-style1-btn"><input type="checkbox" class="bs-sel-style1-input" value="" name="" checked /><span class="bs-sel-style1-btn-des">check1</span></label>
+                        <label class="bs-sel-style1-btn"><input type="checkbox" class="bs-sel-style1-input" value="" name="" /><span class="bs-sel-style1-btn-des">check2</span></label>
+                    </div>
+            
+                    <div class="exp-item">
+                        <label class="bs-sel-style2-btn bs-sel-style2-btn--size1">
+                            <input type="checkbox" class="bs-checkbox-box bs-sel-style2-input" value="" name="" checked />
+                            <div class="bs-btn bs-btn--gray bs-sel-style2-des">
+                                <span class="bs-btn-des">check1</span>
+                            </div>
+                        </label>
+                        <label class="bs-sel-style2-btn">
+                            <input type="checkbox" class="bs-checkbox-box bs-sel-style2-input" value="" name="" />
+                            <div class="bs-btn bs-btn--gray bs-sel-style2-des">
+                                <span class="bs-btn-des">check2</span>
+                            </div>
+                        </label>
+                    </div>
+            
+                    <!--============= checkbox =============-->
+                    <div class="exp-item">
+                        <label class="bs-sel-style1-btn"><input type="radio" class="bs-sel-style1-input" value="" name="radio_name1" checked /><span class="bs-sel-style1-btn-des">radio1</span></label>
+                        <label class="bs-sel-style1-btn"><input type="radio" class="bs-sel-style1-input" value="" name="radio_name1" /><span class="bs-sel-style1-btn-des">radio2</span></label>
+                    </div>
+            
+                    <div class="exp-item">
+                        <label class="bs-sel-style2-btn bs-sel-style2-btn--size1">
+                            <input type="radio" class="bs-radio-box bs-sel-style2-input" value="" name="radio_name2" checked />
+                            <div class="bs-btn bs-btn--gray bs-sel-style2-des">
+                                <span class="bs-btn-des">radio1</span>
+                            </div>
+                        </label>
+                        <label class="bs-sel-style2-btn">
+                            <input type="radio" class="bs-radio-box bs-sel-style2-input" value="" name="radio_name2" />
+                            <div class="bs-btn bs-btn--gray bs-sel-style2-des">
+                                <span class="bs-btn-des">radio2</span>
+                            </div>
+                        </label>
+                    </div>
+            
+                    <!--============= fontawesome 아이콘 =============-->
+                    <div class="exp-item">
+                        <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-pencil"></i></span>
+                        <span class="bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-pencil"></i></span>
+                        <span class="bs-fa-icon bs-fa-icon--big"><i class="fa-solid fa-pencil"></i></span>
+            
+                        <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-circle-plus"></i></span>
+                        <span class="bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-circle-plus"></i></span>
+                        <span class="bs-fa-icon bs-fa-icon--big"><i class="fa-solid fa-circle-plus"></i></span>
+                    </div>
+            
+                    <!--============= select =============-->
+                    <div class="exp-item">
+                        <div class="bs-field">
+                            <select class="bs-select">
+                                <option class="bs-select-option" value="" disabled="" selected="">선택하세요.</option>
+                                <option class="bs-select-option" value="">option1</option>
+                                <option class="bs-select-option" value="">option2</option>
+                                <option class="bs-select-option" value="">option3</option>
+                            </select>
+                        </div>
+                    </div>
+            
+                    <div class="exp-item">
+                        <div class="bs-field">
+                            <select class="bs-select" disabled>
+                                <option class="bs-select-option" value="" disabled="" selected="">선택하세요.</option>
+                                <option class="bs-select-option" value="">option1</option>
+                                <option class="bs-select-option" value="">option2</option>
+                                <option class="bs-select-option" value="">option3</option>
+                            </select>
+                        </div>
+                    </div>
+            
+                    <div class="exp-item">
+                        <label class="bs-field-width-btn bs-field-width-btn--size1">
+                            <div class="bs-field">
+                                <select class="bs-select">
+                                    <option class="bs-select-option" value="" disabled="" selected="">선택하세요.</option>
+                                    <option class="bs-select-option" value="">option1</option>
+                                    <option class="bs-select-option" value="">option2</option>
+                                    <option class="bs-select-option" value="">option3</option>
+                                </select>
+                            </div>
+                            <a href="#" class="bs-btn bs-btn--gray"><span class="bs-btn-des">확인</span></a>
+                        </label>
+                    </div>
+            
+                    <!--============= 리스트 =============-->
+                    <div class="exp-item">
+                        <div class="bs-field-list-wrap">
+                            <div class="bs-field-list bs-field-list--array2">
+                                <div class="bs-field-list-item bs-field-list-item-width-title">
+                                    <div class="bs-field-list-item-title">광고주명</div>
+                                    <span class="bs-main-text">ddd</span>
+                                </div>
+                                <label class="bs-field-list-item bs-field-list-item-width-title">
+                                    <div class="bs-field-list-item-title">광고주명</div>
+                                    <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                </label>
+                                <label class="bs-field-list-item bs-field-list-item-width-title">
+                                    <div class="bs-field-list-item-title">광고주명</div>
+                                    <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!--============= 모달창 =============-->
+                    <div class="exp-item">
+                        <div class="modal-open-btn bs-btn bs-btn--blue" onclick="modalOpen($('#modal1.bs-modal'), $('.overlay.modal1'))"><span class="bs-btn-des">모달창 열기</span></div> <!-- 모달창 오픈 버튼 -->
+                
+                        <div class="overlay modal1"></div>
+                        <div id="modal1" class="bs-modal">
+                            <div class="bs-modal-inner">
+                                <!-- 모달_TOP -->
+                                <div class="bs-modal-top">
+                                    <span class="bs-modal-top-title">광고주 정보</span>
+                                    <div class="bs-modal-top-close-btn" onclick="modalClose($('#modal1.bs-modal'), $('.overlay.modal1'))">
+                                        <span class="bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-x"></i></span>
+                                    </div>
+                                </div>
+                
+                                <!-- 모달_CONTENT -->
+                                <div class="bs-modal-content">
+                                    <div class="bs-field-list-wrap">
+                                        <div class="bs-field-list bs-field-list--array2">
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">개인정보 전문 주소</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">광고주명</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">광고주명</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                        </div>
+                                        <div class="bs-field-list bs-field-list--array1">
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">광고주명</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">광고주명</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">광고주명</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                            <div class="bs-field-list-item">
+                                                <div class="bs-field bs-field-in-btn">
+                                                    <input type="text" class="bs-input-text" placeholder="내용을 입력해 주세요.">
+                                                    <a href="#" class="bs-btn bs-btn--gray"><span class="bs-btn-des">확인</span></a>
+                                                </div>
+                                                <div class="bs-small-text">※ 변경 이후 시점의 DB부터 적용됩니다.</div>
+                                            </div>
+                                            <div class="bs-field-list-item">
+                                                <div class="bs-field">
+                                                    <select class="bs-select">
+                                                        <option class="bs-select-option" value="" disabled="" selected="">선택하세요.</option>
+                                                        <option class="bs-select-option" value="">option1</option>
+                                                        <option class="bs-select-option" value="">option2</option>
+                                                        <option class="bs-select-option" value="">option3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">광고주명</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">광고주명</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">광고주명</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">광고주명</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">광고주명</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">광고주명</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 모달_BOTTOM -->
+                                <div class="bs-modal-bottom">
+                                    <a href="#" class="bs-modal-bottom-submit-btn">완료</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="exp-item">
+                        <div class="modal-open-btn bs-btn bs-btn--blue" onclick="modalOpen($('#modal2.bs-modal'), $('.overlay.modal2'))"><span class="bs-btn-des">모달창 열기</span></div> <!-- 모달창 오픈 버튼 -->
+                
+                        <div class="overlay modal2"></div>
+                        <div id="modal2" class="bs-modal bs-modal--no-bottom-btn">
+                            <div class="bs-modal-inner">
+                                <!-- 모달_TOP -->
+                                <div class="bs-modal-top">
+                                    <span class="bs-modal-top-title">광고주 정보</span>
+                                    <div class="bs-modal-top-close-btn" onclick="modalClose($('#modal2.bs-modal'), $('.overlay.modal2'))">
+                                        <span class="bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-x"></i></span>
+                                    </div>
+                                </div>
+                
+                                <!-- 모달_CONTENT -->
+                                <div class="bs-modal-content">
+                                    <div class="bs-field-list-wrap">
+                                        <div class="bs-field-list bs-field-list--array2">
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">개인정보 전문 주소</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">광고주명</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">광고주명</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                        </div>
+                                        <div class="bs-field-list bs-field-list--array1">
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">광고주명</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">광고주명</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">광고주명</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                            <div class="bs-field-list-item">
+                                                <div class="bs-field bs-field-in-btn">
+                                                    <input type="text" class="bs-input-text" placeholder="내용을 입력해 주세요.">
+                                                    <a href="#" class="bs-btn bs-btn--gray"><span class="bs-btn-des">확인</span></a>
+                                                </div>
+                                                <div class="bs-small-text">※ 변경 이후 시점의 DB부터 적용됩니다.</div>
+                                            </div>
+                                            <div class="bs-field-list-item">
+                                                <div class="bs-field">
+                                                    <select class="bs-select">
+                                                        <option class="bs-select-option" value="" disabled="" selected="">선택하세요.</option>
+                                                        <option class="bs-select-option" value="">option1</option>
+                                                        <option class="bs-select-option" value="">option2</option>
+                                                        <option class="bs-select-option" value="">option3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">광고주명</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">광고주명</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">광고주명</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">광고주명</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">광고주명</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                            <label class="bs-field-list-item bs-field-list-item-width-title">
+                                                <div class="bs-field-list-item-title">광고주명</div>
+                                                <input type="text" class="bs-field bs-input-text" placeholder="내용을 입력해 주세요." />
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+            
+                    <!--============= table =============-->
+                    <div class="exp-item">
+                        <!-- <div class="flip-scroll"> -->
+                            <div class="bs-table-wrap">
+                                <div class="bs-table-top">
+                                    <div class="bs-table-top-left">
+                                        <span class="bs-fa-icon bs-fa-icon--big"><i class="fa-solid fa-circle-plus"></i></span>
+                                    </div>
+                                    <div class="bs-table-top-right">
+                                        <input type="search" class="bs-field bs-field--big bs-search-bar" placeholder="Search...">
+                                    </div>
+                                </div>
+                
+                                <div class="bs-table">
+                                    <div class="bs-table-header-group">
+                                        <div class="bs-table-row">
+                                            <div class="bs-table-cell bs-table-head bs-table-cell--ta-center"><span class="bs-table-cell-text">이벤트 번호</span></div>
+                                            <div class="bs-table-cell bs-table-head"><span class="bs-table-cell-text">광고주/매체</span></div>
+                                            <div class="bs-table-cell bs-table-head"><span class="bs-table-cell-text">구분/타이틀</span></div>
+                                            <div class="bs-table-cell bs-table-head bs-table-cell--ta-center"><span class="bs-table-cell-text">사용/연동</span></div>
+                                            <div class="bs-table-cell bs-table-head bs-table-cell--ta-right"><span class="bs-table-cell-text">유입DB/유입수</span></div>
+                                            <div class="bs-table-cell bs-table-head bs-table-cell--ta-center"><span class="bs-table-cell-text">작성자/일자</span></div>
+                                            <div class="bs-table-cell bs-table-head bs-table-cell--ta-center"><span class="bs-table-cell-text">수정</span></div>
+                                        </div>
+                                    </div>
+                
+                                    <div class="bs-table-body">
+                                        <div class="bs-table-row">
+                                            <div class="bs-table-cell bs-table-cell--ta-center">
+                                                <span class="bs-table-cell-text">4981</span>
+                                            </div>
+                                            <div class="bs-table-cell">
+                                                <span class="bs-table-cell-text">리팅성형외과부산점</span>
+                                                <span class="bs-small-text">GDN</span>
+                                            </div>
+                                            <div class="bs-table-cell">
+                                                <span class="bs-table-cell-text">미니리프팅</span>
+                                                <span class="bs-small-text">리프팅</span>
+                                            </div>
+                                            <div class="bs-table-cell bs-table-cell--ta-center">
+                                                <span class="bs-table-cell-text">사용</span>
+                                                <span class="bs-small-text">O</span>
+                                            </div>
+                                            <div class="bs-table-cell bs-table-cell--ta-right">
+                                                <span class="bs-table-cell-text">0</span>
+                                                <span class="bs-small-text">0</span>
+                                            </div>
+                                            <div class="bs-table-cell bs-table-cell--ta-center">
+                                                <span class="bs-table-cell-text">admin1234</span>
+                                                <span class="bs-small-text">2024-07-31</span>
+                                            </div>
+                                            <div class="bs-table-cell bs-table-cell--ta-center">
+                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-pencil"></i></span>
+                                            </div>
+                                        </div>
+                
+                                        <div class="bs-table-row bs-table-row-bar bs-table-row-bar--blue">
+                                            <div class="bs-table-cell bs-table-cell--ta-center">
+                                                <span class="bs-table-cell-text">4981</span>
+                                            </div>
+                                            <div class="bs-table-cell">
+                                                <span class="bs-table-cell-text">리팅성형외과부산점</span>
+                                                <span class="bs-small-text">GDN</span>
+                                            </div>
+                                            <div class="bs-table-cell">
+                                                <span class="bs-table-cell-text">미니리프팅</span>
+                                                <span class="bs-small-text">리프팅</span>
+                                            </div>
+                                            <div class="bs-table-cell bs-table-cell--ta-center">
+                                                <span class="bs-table-cell-text">사용</span>
+                                                <span class="bs-small-text">O</span>
+                                            </div>
+                                            <div class="bs-table-cell bs-table-cell--ta-right">
+                                                <span class="bs-table-cell-text">0</span>
+                                                <span class="bs-small-text">0</span>
+                                            </div>
+                                            <div class="bs-table-cell bs-table-cell--ta-center">
+                                                <span class="bs-table-cell-text">admin1234</span>
+                                                <span class="bs-small-text">2024-07-31</span>
+                                            </div>
+                                            <div class="bs-table-cell bs-table-cell--ta-center">
+                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-pencil"></i></span>
+                                            </div>
+                                        </div>
+                
+                                        <div class="bs-table-row bs-table-row-bar bs-table-row-bar--orange">
+                                            <div class="bs-table-cell bs-table-cell--ta-center">
+                                                <span class="bs-table-cell-text">4981</span>
+                                            </div>
+                                            <div class="bs-table-cell">
+                                                <span class="bs-table-cell-text">리팅성형외과부산점123123123</span>
+                                                <span class="bs-small-text">GDN</span>
+                                            </div>
+                                            <div class="bs-table-cell">
+                                                <span class="bs-table-cell-text">미니리프팅</span>
+                                                <span class="bs-small-text">리프팅</span>
+                                            </div>
+                                            <div class="bs-table-cell bs-table-cell--ta-center">
+                                                <span class="bs-table-cell-text">사용</span>
+                                                <span class="bs-small-text">O</span>
+                                            </div>
+                                            <div class="bs-table-cell bs-table-cell--ta-right">
+                                                <span class="bs-table-cell-text">0</span>
+                                                <span class="bs-small-text">0</span>
+                                            </div>
+                                            <div class="bs-table-cell bs-table-cell--ta-center">
+                                                <span class="bs-table-cell-text">admin1234</span>
+                                                <span class="bs-small-text">2024-07-31</span>
+                                            </div>
+                                            <div class="bs-table-cell bs-table-cell--ta-center">
+                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-pencil"></i></span>
+                                            </div>
+                                        </div>
+                
+                                        <div class="bs-table-row bs-table-row-bar bs-table-row-bar--green">
+                                            <div class="bs-table-cell bs-table-cell--ta-center">
+                                                <span class="bs-table-cell-text">4981</span>
+                                            </div>
+                                            <div class="bs-table-cell">
+                                                <span class="bs-table-cell-text">리팅성형외과부산점123123123</span>
+                                                <span class="bs-small-text">GDN</span>
+                                            </div>
+                                            <div class="bs-table-cell">
+                                                <span class="bs-table-cell-text">미니리프팅</span>
+                                                <span class="bs-small-text">리프팅</span>
+                                            </div>
+                                            <div class="bs-table-cell bs-table-cell--ta-center">
+                                                <span class="bs-table-cell-text">사용</span>
+                                                <span class="bs-small-text">O</span>
+                                            </div>
+                                            <div class="bs-table-cell bs-table-cell--ta-right">
+                                                <span class="bs-table-cell-text">0</span>
+                                                <span class="bs-small-text">0</span>
+                                            </div>
+                                            <div class="bs-table-cell bs-table-cell--ta-center">
+                                                <span class="bs-table-cell-text">admin1234</span>
+                                                <span class="bs-small-text">2024-07-31</span>
+                                            </div>
+                                            <div class="bs-table-cell bs-table-cell--ta-center">
+                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-pencil"></i></span>
+                                            </div>
+                                        </div>
+                
+                                        <div class="bs-table-row bs-table-row-bar bs-table-row-bar--light-orange">
+                                            <div class="bs-table-cell bs-table-cell--ta-center">
+                                                <span class="bs-table-cell-text">4981</span>
+                                            </div>
+                                            <div class="bs-table-cell">
+                                                <span class="bs-table-cell-text">리팅성형외과부산점123123123</span>
+                                                <span class="bs-small-text">GDN</span>
+                                            </div>
+                                            <div class="bs-table-cell">
+                                                <span class="bs-table-cell-text">미니리프팅</span>
+                                                <span class="bs-small-text">리프팅</span>
+                                            </div>
+                                            <div class="bs-table-cell bs-table-cell--ta-center">
+                                                <span class="bs-table-cell-text">사용</span>
+                                                <span class="bs-small-text">O</span>
+                                            </div>
+                                            <div class="bs-table-cell bs-table-cell--ta-right">
+                                                <span class="bs-table-cell-text">0</span>
+                                                <span class="bs-small-text">0</span>
+                                            </div>
+                                            <div class="bs-table-cell bs-table-cell--ta-center">
+                                                <span class="bs-table-cell-text">admin1234</span>
+                                                <span class="bs-small-text">2024-07-31</span>
+                                            </div>
+                                            <div class="bs-table-cell bs-table-cell--ta-center">
+                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-pencil"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="bs-table-bottom">
+                                    <!-- <span>테이블_BOTTOM</span> -->
+                                    <div class="bs-table-bottom-left">
+                                        <div class="bs-field bs-field--small">
+                                            <select class="bs-select bs-select--small">
+                                                <option class="bs-select-option" value="10">10</option>
+                                                <option class="bs-select-option" value="15">15</option>
+                                                <option class="bs-select-option" value="20">20</option>
+                                                <option class="bs-select-option" value="25">25</option>
+                                                <option class="bs-select-option" value="50">50</option>
+                                                <option class="bs-select-option" value="100">100</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="bs-table-bottom-right">
+                                        <nav class="bs-pagination">
+                                            <a href="#" class="bs-pagination-previous bs-pagination-link">이전</a>
+                
+                                            <ul class="bs-pagination-list">
+                                                <li><a href="#" class="bs-pagination-link is-current">1</a></li>
+                                                <li><a href="#" class="bs-pagination-link">2</a></li>
+                                                <li><a href="#" class="bs-pagination-link">3</a></li>
+                                                <li><a href="#" class="bs-pagination-link">4</a></li>
+                                                <li><a href="#" class="bs-pagination-link">5</a></li>
+                                                <li><a href="#" class="bs-pagination-link">22</a></li>
+                                            </ul>
+                
+                                            <a href="#" class="bs-pagination-next bs-pagination-link">다음</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                    </div>
+            
+                    <!--============= list-box =============-->
+                    <div class="exp-item">
+                        <div class="bs-list-box">
+            
+                        </div>
+                    </div>
+            
+            
+            
+            
+            
+                    <!-- <div include-html="header.html"></div> -->
+                    <div data-include-path="footer.html"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
+    <script src="./menu/js/aside_menu.js"></script>
+
+    <script>
+        window.addEventListener('load', function() {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function(el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        });
+
+        // function includeHTML() {
+        //     var z, i, elmnt, file, xhttp;
+        //     z = document.getElementsByTagName("*");
+        //     for (i = 0; i < z.length; i++) {
+        //         elmnt = z[1];
+        //         file = elmnt.getAttribute("include-html");
+        //         if(file) {
+        //             xhttp = new XMLHttpRequest();
+        //             xhttp.onreadystatechange = function() {
+        //                 if(this.readyState == 4 && this.status == 200) {
+        //                     elmnt.innerHTML = this.responseText;
+        //                     elmnt.removeAttribute("include-html");
+        //                     includeHTML();
+        //             }
+        //         }
+        //         xhttp.open("GET", file, true);
+        //         xhttp.send();
+        //         return;
+        //         }
+        //     }
+        // }
+        
+        // includeHTML();
+    </script>
+
+<script>
+    $('.gnb-item-dropdown .gnb-link').on('click', () => {
+        e.preventDefault(); // 링크 기본 동작 방지
+        console.log('test');
+    });
+</script>
+
+</body>
+</html>

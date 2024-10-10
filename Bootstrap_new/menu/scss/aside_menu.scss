@@ -1,0 +1,105 @@
+@import "../../scss/reset.scss";
+
+#aside-menu {
+    // position: sticky;
+    // width: 100%;
+    padding-top: $height-header;
+    background-color: #343a40;
+}
+
+.aside-menu {
+    &-inner {
+        padding-top: 3rem;
+    }
+
+    .main-logo {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .gnb {
+        margin-top: 5rem;
+
+        // &-list {
+
+        // }
+
+        &-item {
+            &.is-current {
+                background-color: $color-blue;
+            }
+
+            &:hover {
+                background-color: $color-blue;
+            }
+
+            &-title {
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+            }
+
+            // 드롭다운 메뉴
+            &-dropdown {
+                &.active {
+                    .gnb-sub-menu-arrow  {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+        }
+
+        &-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5em 2.5em;
+
+            .gnb-item-title {
+
+                .bs-fa-icon {
+                    color: $color-white;
+                }
+
+                &-text {
+                    font-size: 1.5rem;
+                    color: $color-white;
+                }
+            }
+        }
+
+        &-sub-menu-arrow {
+            color: $color-white;
+        }
+
+        .gnb-sub-menu {
+            &-list {
+                display: none;
+            }
+
+            &-item {
+                &:hover {
+                    background-color: $color-submenu-hover;
+                }
+
+                &.is-current {
+                    background-color: $color-submenu-hover;
+                }
+            }
+
+            &-link {
+                display: block;
+                padding: 0.9em;
+                padding-left: 6rem;
+                font-size: 1.3rem;
+                color: $color-white;
+            }
+        }
+    }
+}

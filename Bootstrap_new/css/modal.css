@@ -1,0 +1,148 @@
+body {
+  font-size: 10px;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 10px;
+}
+
+@media (min-width: 335px) and (max-width: 767px) {
+  * {
+    font-size: 1.3vw;
+  }
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #212121;
+}
+
+select {
+  position: relative;
+  -webkit-appearance: none; /* for chrome */
+  -moz-appearance: none; /*for firefox*/
+  appearance: none;
+  background: url("../images/chevron-down-solid.svg") right/0.7em no-repeat transparent;
+}
+
+/* bs-scroll-bar */
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  margin: 5px 0;
+  border-radius: 5px;
+  background-color: #e2e6ed;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #c2c2c2;
+}
+
+*::-webkit-scrollbar-track {
+  margin: 3px 0;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+.modal-open-btn {
+  cursor: pointer;
+}
+
+.overlay {
+  display: none;
+  z-index: 88;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.bs-modal {
+  display: none;
+  z-index: 99;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 900px;
+  height: 80vh;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+.bs-modal .bs-modal-inner {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  height: 100%;
+}
+.bs-modal--no-bottom-btn .bs-modal-inner {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  height: 100%;
+}
+.bs-modal-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2em;
+  border-bottom: 1px solid #e2e6ed;
+}
+.bs-modal-top-title {
+  display: block;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.bs-modal-top-close-btn {
+  display: block;
+  cursor: pointer;
+}
+.bs-modal-top-close-btn .bs-fa-icon {
+  color: #4271d9;
+}
+.bs-modal-content {
+  padding: 3em;
+  overflow-y: scroll;
+}
+.bs-modal-bottom {
+  background-color: #4271d9;
+}
+.bs-modal-bottom .bs-modal-bottom-submit-btn {
+  padding: 1em 0;
+  display: block;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #fff;
+}

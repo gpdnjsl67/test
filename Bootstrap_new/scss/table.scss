@@ -1,0 +1,148 @@
+@import "reset.scss";
+
+// 테이블
+/*
+    display 속성 중 table 관련 속성    
+    table -> table
+    table-caption -> caption
+    table-cell -> td
+    table-column -> col
+    table-column-group -> colgroup
+    table-footer-group -> tfoot
+    table-header-group -> thead
+    table-row -> tr
+    table-row-group -> tbody    
+*/
+
+.flip-scroll {
+    width: 100%;
+    overflow-y: scroll;
+    // border: $border-bs;
+    // border-radius: $border-radius-bs;
+    // background-color: $color-white;
+}
+
+.bs-table-wrap {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border: $border-bs;
+    border-radius: $border-radius-bs;
+    background-color: $color-white;
+
+    // TABLE TOP
+    .bs-table-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2em;
+    }
+
+    // TABLE
+    .bs-table {
+        display: table;
+        // table-layout: fixed;
+        width: 100%;
+        border-top: $border-bs;
+
+        // TABLE 공통
+        .bs-table-row {
+            display: table-row;
+            background-color: $color-white;
+
+            .bs-table-cell {
+                display: table-cell;
+                padding: $padding-table;
+                vertical-align: middle;
+                text-align: left;
+                border-bottom: $border-bs;
+
+                &--ta-center {
+                    text-align: center;
+                }
+
+                &--ta-right {
+                    text-align: right;
+                }
+
+                &-text {
+                    display: block;
+                    font-size: $font-main-size;
+                }
+            }
+        }
+
+        // TABLE HEAD
+        &-header-group {
+            display: table-header-group;
+
+            .bs-table-head {
+                color: $color-text-gray-bs;
+            }
+        }
+    
+        // TABLE BODY
+        &-body {
+            display: table-row-group;
+
+            .bs-table-row {
+                position: relative;
+
+                &:nth-child(odd) {
+                    background-color: $color-bg-table-row;
+                }
+
+                // TABLE 좌측 row color bar
+                &-bar {
+                    &::after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 0.4em;
+                        height: 100%;
+                    }
+                    
+                    &--blue {
+                        &::after {
+                            background-color: $color-blue;
+                        }
+                    }
+                    
+                    &--orange {
+                        &::after {
+                            background-color: $color-orange;
+                        }
+                    }
+                    
+                    &--light-orange {
+                        &::after {
+                            background-color: $color-light-orange;
+                        }
+                    }
+                    
+                    &--green {
+                        &::after {
+                            background-color: $color-green;
+                        }
+                    }
+                }
+
+                
+                
+            }
+
+        }
+    }
+
+    // TABLE_BOTTOM
+    .bs-table-bottom {
+        padding: $padding-table;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $color-bg-table-row;
+    }
+}
