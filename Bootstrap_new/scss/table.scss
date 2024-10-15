@@ -1,4 +1,4 @@
-@import "reset.scss";
+@import "style.scss";
 
 // 테이블
 /*
@@ -22,7 +22,7 @@
     // background-color: $color-white;
 }
 
-.bs-table-wrap {
+.bs-table-wrapper {
     display: table;
     table-layout: fixed;
     width: 100%;
@@ -30,119 +30,152 @@
     border-radius: $border-radius-bs;
     background-color: $color-white;
 
-    // TABLE TOP
-    .bs-table-top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 2em;
-    }
-
     // TABLE
     .bs-table {
-        display: table;
-        // table-layout: fixed;
-        width: 100%;
-        border-top: $border-bs;
-
-        // TABLE 공통
-        .bs-table-row {
+        // TABLE ROW 공통
+        &__row {
             display: table-row;
-            background-color: $color-white;
+            position: relative;
+            background-color: $color-white;        
+        }
 
-            .bs-table-cell {
-                display: table-cell;
-                padding: $padding-table;
-                vertical-align: middle;
-                text-align: left;
-                border-bottom: $border-bs;
+        // TABLE CELL 공통
+        &__cell {
+            display: table-cell;
+            padding: $padding-table;
+            vertical-align: middle;
+            text-align: left;
+            border-bottom: $border-bs;
 
-                &--ta-center {
-                    text-align: center;
+            &--ta-center {
+                text-align: center;
+            }
+
+            &--ta-right {
+                text-align: right;
+            }
+
+            &-text {
+                display: block;
+                font-size: $font-main-size;
+            }
+        }
+
+        // ===== TABLE TOP ===== //
+        &__top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2em;
+        }
+
+        // ===== TABLE BODY ===== //
+        &__body {
+            display: table;
+            // table-layout: fixed;
+            width: 100%;
+            border-top: $border-bs;
+
+            .bs-table {
+                // TABLE HEAD
+                &__header {
+                    display: table-header-group;
+                    color: $color-text-gray-bs;
                 }
 
-                &--ta-right {
-                    text-align: right;
-                }
+                // TABLE CONTENT
+                &__content {
+                    display: table-row-group;
 
-                &-text {
-                    display: block;
-                    font-size: $font-main-size;
+                    .bs-table__row {
+                        &:nth-child(odd) {
+                            background-color: $color-bg-table-row;
+                        }
+
+                    // TABLE 좌측 row color bar
+                    &-bar {
+                        &::after {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 0.4em;
+                            height: 100%;
+                        }
+                        
+                        &--blue {
+                            &::after {
+                                background-color: $color-blue;
+                            }
+                        }
+                        
+                        &--orange {
+                            &::after {
+                                background-color: $color-orange;
+                            }
+                        }
+                        
+                        &--light-orange {
+                            &::after {
+                                background-color: $color-light-orange;
+                            }
+                        }
+                        
+                        &--green {
+                            &::after {
+                                background-color: $color-green;
+                            }
+                        }
+                    }
+                    }
                 }
             }
         }
 
-        // TABLE HEAD
-        &-header-group {
-            display: table-header-group;
-
-            .bs-table-head {
-                color: $color-text-gray-bs;
-            }
-        }
-    
-        // TABLE BODY
-        &-body {
-            display: table-row-group;
-
-            .bs-table-row {
-                position: relative;
-
-                &:nth-child(odd) {
-                    background-color: $color-bg-table-row;
-                }
-
-                // TABLE 좌측 row color bar
-                &-bar {
-                    &::after {
-                        content: '';
-                        display: block;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 0.4em;
-                        height: 100%;
-                    }
-                    
-                    &--blue {
-                        &::after {
-                            background-color: $color-blue;
-                        }
-                    }
-                    
-                    &--orange {
-                        &::after {
-                            background-color: $color-orange;
-                        }
-                    }
-                    
-                    &--light-orange {
-                        &::after {
-                            background-color: $color-light-orange;
-                        }
-                    }
-                    
-                    &--green {
-                        &::after {
-                            background-color: $color-green;
-                        }
-                    }
-                }
-
-                
-                
-            }
-
+        // ===== TABLE BOTTOM ===== //
+        &__bottom {
+            padding: $padding-table;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: $color-bg-table-row;
         }
     }
 
-    // TABLE_BOTTOM
-    .bs-table-bottom {
-        padding: $padding-table;
-        width: 100%;
+    // pagination
+    .bs-pagination {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        background-color: $color-bg-table-row;
+        gap: $gap-pagination;
+
+        &__list {
+            display: flex;
+            align-items: center;
+            gap: $gap-pagination;
+        }
+
+        &__link {
+            @include basic-box;
+            padding: 0.3em 0.5em;
+            width: 2.2em;
+            text-align: center;
+            font-size: $font-main-size;
+            background-color: $color-white;
+
+            &:hover {
+                background-color: $color-hover;
+            }
+
+            &--current {
+                color: $color-white;
+                background-color: $color-blue;
+            }
+        }
+
+        &__previous, &__next {
+            width: auto;
+        }
     }
 }

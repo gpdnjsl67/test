@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import "reset.scss";
+@import "style.scss";
 
 // 모달창
 .modal-open-btn {
@@ -32,7 +32,7 @@
     border-radius: $border-radius-bs;
     background-color: $color-white;
 
-    .bs-modal-inner {
+    &__inner {
         display: grid;
         grid-template-rows: auto 1fr auto;
         align-content: space-between;
@@ -49,42 +49,44 @@
     }
 
     // 모달 섹션 - top
-    &-top {
+    &__top {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 2em;
         border-bottom: $border-bs;
 
-        // 모달 제목
-        &-title {
-            display: block;
-            font-size: 1.5em;
-            font-weight: 500;
-        }
+        .bs-modal {
+            // 모달 제목
+            &__title {
+                display: block;
+                font-size: 1.5em;
+                font-weight: 500;
+            }
 
-        // 모달 닫기 버튼
-        &-close-btn {
-            display: block;
-            cursor: pointer;
+            // 모달 닫기 버튼
+            &__close-btn {
+                display: block;
+                cursor: pointer;
 
-            .bs-fa-icon {
-                color: $color-blue;
+                .bs-fa-icon {
+                    color: $color-blue;
+                }
             }
         }
     }
 
     // 모달 섹션 - content
-    &-content {
+    &__content {
         padding: 3em;
         overflow-y: scroll;
     }
 
     // 모달 섹션 - bottom
-    &-bottom {
+    &__bottom {
         background-color: $color-blue;
 
-        .bs-modal-bottom-submit-btn {
+        .bs-modal__btn {
             padding: 1em 0;
             display: block;
             text-align: center;

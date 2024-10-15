@@ -1,4 +1,5 @@
-@import "../../scss/reset.scss";
+@charset "UTF-8";
+@import "../../scss/style.scss";
 
 .header {
     position: fixed;
@@ -11,7 +12,7 @@
     height: $height-header;
     background-color: $color-blue;
 
-    &-inner {
+    &__inner {
         padding: 0 3rem;
         width: 100%;
         display: flex;
@@ -19,34 +20,34 @@
         justify-content: space-between;
     }
 
-    &-left {
-        .hamburger-btn {
-            .bs-fa-icon {
-                font-size: 2rem;
-                color: $color-white;
-            }
-        }
+    &__left { }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
     }
 
-    &-right {
-        .integrated-list {
-            display: flex;
-            align-items: center;
-            gap: 3rem;
+    &__item { }
 
-            .integrated-item {
-                .integrated-link {
-                    font-size: 1.2rem;
-                    color: $color-white;
+    &__link {
+        font-size: 1.2rem;
+        color: $color-white;
 
-                    &#btn-logout {
-                        line-height: 1;
-                        padding: 0.4em 1em;
-                        border: 1px solid $color-white;
-                        border-radius: 9999px;
-                    }
-                }
-            }
-        }   
+        // logout 버튼
+        &--logout {
+            line-height: 1;
+            padding: 0.4em 1em;
+            border: 1px solid $color-white;
+            border-radius: 9999px;
+        }
+    }
+}
+
+// 햄버거 메뉴 버튼
+.hamburger-btn {
+    .bs-fa-icon {
+        font-size: 2rem;
+        color: $color-white;
     }
 }

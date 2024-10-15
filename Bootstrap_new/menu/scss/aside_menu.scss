@@ -1,4 +1,5 @@
-@import "../../scss/reset.scss";
+@charset "UTF-8";
+@import "../../scss/style.scss";
 
 #aside-menu {
     // position: sticky;
@@ -8,11 +9,20 @@
 }
 
 .aside-menu {
-    &-inner {
+    // 드롭다운 메뉴
+    &--dropdown {
+        &.active {
+            .aside-menu__sub-menu-arrow {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__inner {
         padding-top: 3rem;
     }
 
-    .main-logo {
+    &__logo {
         display: block;
         width: 80%;
         margin: 0 auto;
@@ -22,84 +32,69 @@
         }
     }
 
-    .gnb {
+    &__gnb {
         margin-top: 5rem;
+    }
 
-        // &-list {
+    &__list { }
 
-        // }
+    &__item {
+        &--is-current {
+            background-color: $color-blue;
+        }
+
+        &:hover {
+            background-color: $color-blue;
+        }
+
+        &-title {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+    
+            .bs-fa-icon {
+                color: $color-white;
+            }
+    
+            &-text {
+                font-size: 1.5rem;
+                color: $color-white;
+            }
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5em 2.5em;
+    }
+
+    &__sub-menu {
+        &-arrow {
+            color: $color-white !important;
+        }
+
+        &-list {
+            display: none;
+        }
 
         &-item {
-            &.is-current {
-                background-color: $color-blue;
+            &--current {
+                background-color: $color-submenu-hover;
             }
-
+            
             &:hover {
-                background-color: $color-blue;
+                background-color: $color-submenu-hover;
             }
-
-            &-title {
-                display: flex;
-                align-items: center;
-                gap: 1.5rem;
-            }
-
-            // 드롭다운 메뉴
-            &-dropdown {
-                &.active {
-                    .gnb-sub-menu-arrow  {
-                        transform: rotate(180deg);
-                    }
-                }
-            }
-
         }
 
         &-link {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1.5em 2.5em;
-
-            .gnb-item-title {
-
-                .bs-fa-icon {
-                    color: $color-white;
-                }
-
-                &-text {
-                    font-size: 1.5rem;
-                    color: $color-white;
-                }
-            }
-        }
-
-        &-sub-menu-arrow {
+            display: block;
+            padding: 0.9em;
+            padding-left: 6rem;
+            font-size: 1.3rem;
             color: $color-white;
-        }
-
-        .gnb-sub-menu {
-            &-list {
-                display: none;
-            }
-
-            &-item {
-                &:hover {
-                    background-color: $color-submenu-hover;
-                }
-
-                &.is-current {
-                    background-color: $color-submenu-hover;
-                }
-            }
-
-            &-link {
-                display: block;
-                padding: 0.9em;
-                padding-left: 6rem;
-                font-size: 1.3rem;
-                color: $color-white;
-            }
         }
     }
 }

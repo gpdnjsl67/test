@@ -1,7 +1,8 @@
-@import "reset.scss";
+// @import "reset.scss";
+@import "style.scss";
 
-.exp-wrap {margin-top: $height-header; padding: 30px;}
-.exp-wrap .exp-item {margin-bottom: 20px;}
+// .exp-wrap {margin-top: $height-header; padding: 30px;}
+.exp-wrap .exp-item {margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px dotted #ddd;}
 
 // ========================================= //
 
@@ -10,208 +11,235 @@
     grid-template-columns: 23em auto;
     height: 100vh;
     overflow: hidden;
+    transition: 0.3s grid-template-columns;
+
+    &.active {
+        grid-template-columns: 0 auto;
+
+        .aside-menu-inner {
+            opacity: 0;
+        }
+    }
 }
 
 #main {
+    margin-top: $height-header;
+    padding: 7em 5em;
     overflow-y: scroll;
+
+    // 상단 타이틀
+    .title-area {
+        margin-bottom: 6em;
+        display: flex;
+        align-items: flex-end;
+        gap: $gap-bs;
+
+        &__main {
+            line-height: 1;
+            font-size: 4em;
+            font-weight: 500;
+            color: $color-blue;
+        }
+
+        &__sub {
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+    }
 }
 
 // display
-.d-block {display: block;}
-.d-inline-block {display: inline-block;}
-.d-grid {display: grid;}
-.d-flex {display: flex;}
-.d-none {display: none;}
+.d-block {display: block !important;}
+.d-inline-block {display: inline-block !important;}
+.d-grid {display: grid !important;}
+.d-flex {display: flex !important;}
+.d-none {display: none !important;}
+
+// 정렬 속성
+.ai-start {align-items: start !important;}
+.ai-center {align-items: center !important;}
+.ai-end {align-items: end !important;}
+
+.jc-start {justify-content: flex-start !important;}
+.jc-center {justify-content: center !important;}
+.jc-end {justify-content: flex-end !important;}
+.jc-sa {justify-content: space-around !important;}
+.jc-sb {justify-content: space-between !important;}
+
+// gap
+.bs-gap {gap: $gap-bs !important;}
+.box-gap {gap: 2rem !important;}
+.section-gap {gap: 5rem !important;}
 
 // font-size
-.fs-10 {font-size: 1rem;}
-.fs-11 {font-size: 1.1rem;}
-.fs-12 {font-size: 1.2rem;}
-.fs-13 {font-size: 1.3rem;}
-.fs-14 {font-size: 1.4rem;}
-.fs-15 {font-size: 1.5rem;}
-.fs-16 {font-size: 1.6rem;}
-.fs-17 {font-size: 1.7rem;}
-.fs-18 {font-size: 1.8rem;}
+.fs-10 {font-size: 1rem !important;}
+.fs-11 {font-size: 1.1rem !important;}
+.fs-12 {font-size: 1.2rem !important;}
+.fs-13 {font-size: 1.3rem !important;}
+.fs-14 {font-size: 1.4rem !important;}
+.fs-15 {font-size: 1.5rem !important;}
+.fs-16 {font-size: 1.6rem !important;}
+.fs-17 {font-size: 1.7rem !important;}
+.fs-18 {font-size: 1.8rem !important;}
 
-// 메인 사이즈 텍스트
-.bs-main-text {
-    font-size: $font-main-size;
-    color: $color-text-gray-bs;
-}
+// 텍스트
+.bs-text {
+    &--gray {
+        color: $color-text-gray-bs;
+    }
 
-// 작은 사이즈 텍스트
-.bs-small-text {
-    display: block;
-    font-size: 1rem;
-    color: $color-text-gray-bs;
+    &--black {
+        color: $color-black;
+    }
+
+    &__main {
+        font-size: $font-main-size;
+    }
+
+    &__small {
+        display: block;
+        font-size: 1rem;
+    }
 }
 
 // 기본 입력 필드 (input=text, search ...)
 .bs-field {
+    @include basic-box;
     display: block;
     padding: $padding-bs;
     width: 100%;
-    border: $border-bs;
-    border-radius: $border-radius-bs;
+    overflow: hidden;
     font-size: $font-main-size;
     color: $color-black;
     background-color: $color-white;
 
-    &::placeholder {
-        color: $color-placeholder-bs;
-    }
-
+    &::placeholder { color: $color-placeholder-bs; }
+    &:disabled { background-color: $color-bg-disabled; }
     &:hover { outline: 0; }
-    &:focus { outline: $focus-outline-bs;}
-    &:has(:focus) { outline: $focus-outline-bs;}
+    &:focus { outline: $focus-outline-bs; }
+    &:has(:focus) { outline: $focus-outline-bs; }
+    &:has(.bs-select:disabled) { background-color: $color-bg-disabled; }
 
-    &--big {
-        width: 20em;
-    }
+    &--big { width: 20em; }
+    &--big-medium { width: 15em; }
+    &--medium { width: 9em; }
+    &--small { width: 4em; }
 
-    &--medium {
-        width: 9em;
-    }
+    // 우측에 버튼이 있을 때 정렬 속성
+    &--size1 { grid-template-columns: 1fr $width-btn-bs-1; }
+    &--size2 { grid-template-columns: 1fr $width-btn-bs-2; }
+    &--size-icon-small { grid-template-columns: 1fr $icon-small; }
+    &--size-icon-medium { grid-template-columns: 1fr $icon-medium; }
+    &--size-icon-big { grid-template-columns: 1fr $icon-big; }
 
-    &--small {
-        width: 4em;
-    }
-
-    // input text disabled
-    &.bs-input-text {
-        &:disabled {
-            background-color: $color-bg-disabled;
-        }
-    }
-
-    &:has(.bs-select:disabled) {
-        background-color: $color-bg-disabled;
-    }
-
-    &-in-btn {
+    // field 안에 우측 버튼
+    &--in-btn {
         display: grid;
         grid-template-columns: 1fr $width-btn-bs-1;
         gap: $gap-bs;
         padding: 0;
-        padding-left: 0.8em;
 
-        .bs-input-text {
-            font-size: 1.3rem;
-            border: none;
-
-            &:focus {
-                outline: none;
+        .bs-field {
+            &__text {
+                padding: $padding-bs;
+                font-size: $font-main-size;
+                border: none;
+    
+                &:focus { outline: none; }
+                &::placeholder { color: $color-placeholder-bs;}
             }
 
-            &::placeholder {
-                color: $color-placeholder-bs;
+            &__btn {
+                border: none;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
             }
         }
+    }
 
-        .bs-btn {
-            font-size: 1em;
-            border: none;
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-        }
+    // field 우측 버튼
+    &--with-btn {
+        display: grid;
+        align-items: center;
+        justify-content: space-between;
+        gap: $gap-bs;
     }
 }
 
 // 공통 기본 버튼
 .bs-btn {
+    @include basic-box;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: $padding-bs;
     height: 100%;
-    border: $border-bs;
-    border-radius: $border-radius-bs;
 
-    &:hover {
-        opacity: .9;
-    }
-    
     &--gray {
         color: $color-text-gray-bs;
         background-color: $color-bg-button-gray;
     }
-    
+
     &--blue {
         color: $color-white;
         background-color: $color-blue;
     }
 
-    &-des {
+    &__description {
         display: block;
         width: 100%;
         text-align: center;
         font-size: $font-main-size;
     }
+
+    &:hover { opacity: .9; }
 }
 
-// 우측에 버튼이 있는 input
-.bs-field-width-btn {
-    display: grid;
-    align-items: center;
-    justify-content: space-between;
-    gap: $gap-bs;
-
-    &--size1 {
-        grid-template-columns: 1fr $width-btn-bs-1;
-    }
-
-    &--size2 {
-        grid-template-columns: 1fr $width-btn-bs-2;
-    }
-
-    &--size_icon_small {
-        grid-template-columns: 1fr $icon-small;
-    }
-
-    &--size_icon_medium {
-        grid-template-columns: 1fr $icon-medium;
-    }
-
-    &--size_icon_big {
-        grid-template-columns: 1fr $icon-big;
-    }
+// 기본 textarea
+.bs-textarea {
+    width: 100%;
+    resize: none;
 }
 
-// sel-style1 - 기본 텍스트 스타일 radio, checkbow
-.bs-sel-style1-btn {
-    display: flex;
-    align-items: center;
-    gap: $gap-bs;
-
-    .bs-sel-style1-btn-des {
-        display: block;
-        line-height: 1;
-        font-size: $font-main-size;
-        color: $color-text-gray-bs;
-    }
-}
-
-// sel-style2 - 버튼형 스타일 radio, checkbow
-.bs-sel-style2-btn {
-    // position: relative;
-    display: block;
-    cursor: pointer;
-
+// selector (radio, checkbox) CSS
+.bs-selector {
     &--size1 {
         width: $width-btn-bs-1;
     }
 
-    .bs-sel-style2-input {
-        display: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        outline: none;
-        
-        &:checked + .bs-sel-style2-des {
-            color: $color-white;
-            background-color: $color-blue;
+    &__description {
+        font-size: $font-main-size !important;
+    }
+
+    // selector text-style - 기본 텍스트 스타일
+    &--text-style {
+        display: flex;
+        align-items: center;
+        gap: $gap-bs;
+
+        > .bs-selector__description {
+            display: block;
+            line-height: 1;
+            color: $color-text-gray-bs;
+        }
+    }
+
+    // selector btn-style - 버튼 스타일
+    &--btn-style {
+        display: block;
+        cursor: pointer;
+
+        > .bs-selector__input {
+            display: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            outline: none;
+
+            &:checked + .bs-selector__description {
+                color: $color-white;
+                background-color: $color-blue;
+            }
         }
     }
 }
@@ -228,52 +256,10 @@
     color: $color-text-gray-bs;
     // background: transparent;
 
-    &:focus {
-        outline: none;
-    }
+    &:focus { outline: none; }
 
-    &-option {
+    &__option {
         font-size: 1em;
         color: $color-black;
-    }
-}
-
-// pagination
-.bs-pagination {
-    display: flex;
-    align-items: center;
-    gap: $gap-pagination;
-
-    &-list {
-        display: flex;
-        align-items: center;
-        gap: $gap-pagination;
-    }
-
-    &-link {
-        padding: 0.3em 0.5em;
-        width: 2.2em;
-        text-align: center;
-        font-size: $font-main-size;
-        border: $border-bs;
-        border-radius: $border-radius-bs;
-        background-color: $color-white;
-
-        &:hover {
-            background-color: $color-hover;
-        }
-
-        &.is-current {
-            color: $color-white;
-            background-color: $color-blue;
-        }
-    }
-
-    &-previous {
-        width: auto;
-    }
-
-    &-next {
-        width: auto;
     }
 }

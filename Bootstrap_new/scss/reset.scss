@@ -1,9 +1,22 @@
 @charset "UTF-8";
-
 @import "style.scss";
 
+html {
+    // font-size: 62.5%; // 1rem = 10px
+    @include font-size(6.25);
+
+}
+
+@include mobile {
+    html {
+        @include font-size(5);
+        font-size: 1.3vw;
+    }
+}
+
+
 body {
-    font-size: 10px;
+    font-size: 1rem;
 
     &::-webkit-scrollbar {
         display: none;
@@ -15,14 +28,14 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: $font-main;
-    font-size: 10px;
+    // font-size: 10px;
 }
 
-@include mobile {
-    * {
-        font-size: 1.3vw;
-    }
-}
+// @include mobile {
+//     * {
+//         font-size: 1.3vw;
+//     }
+// }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
@@ -82,6 +95,7 @@ select {
 /* bs-scroll-bar */
 *::-webkit-scrollbar {
     width: 4px;
+    height: 4px;
 }
 
 *::-webkit-scrollbar-thumb {

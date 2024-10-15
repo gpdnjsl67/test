@@ -27,7 +27,7 @@ $color-hover: #eaf1ff;
 $color-submenu-hover: #1e4eb8;
 
 // padding
-$padding-bs: 0.8rem 0.8rem;
+$padding-bs: 0.8rem;
 $padding-table: 2rem;
 
 // gap
@@ -58,9 +58,12 @@ $icon-big: 2rem;
 
 // ======== mixin ======== //
 @mixin mobile {
-    @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+    @media (max-width: #{$breakpoint-tablet - 1px}) {
         @content;
     }
+    // @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+    //     @content;
+    // }
 }
 
 @mixin tablet {
@@ -81,10 +84,22 @@ $icon-big: 2rem;
 //     }
 // }
 
+// 반응형
 @mixin responsive($break) {
     @if $break == medium-screens {
         @media only screen and (max-width: $breakpoint-tablet) {
             @content;
         }
     }
+}
+
+// font-size
+@mixin font-size($size) {
+    font-size: $size / 10 * 1rem;
+}
+
+// 기본 박스 스타일
+@mixin basic-box {
+    border: $border-bs;
+    border-radius: $border-radius-bs;
 }

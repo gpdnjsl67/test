@@ -1,5 +1,15 @@
+html {
+  font-size: 0.625rem;
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 0.5rem;
+    font-size: 1.3vw;
+  }
+}
 body {
-  font-size: 10px;
+  font-size: 1rem;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -11,14 +21,8 @@ body::-webkit-scrollbar {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 10px;
 }
 
-@media (min-width: 335px) and (max-width: 767px) {
-  * {
-    font-size: 1.3vw;
-  }
-}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
@@ -44,6 +48,7 @@ select {
 /* bs-scroll-bar */
 *::-webkit-scrollbar {
   width: 4px;
+  height: 4px;
 }
 
 *::-webkit-scrollbar-thumb {

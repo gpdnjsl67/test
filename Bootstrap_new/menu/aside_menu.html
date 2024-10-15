@@ -11,76 +11,75 @@
 </head>
 <body>
     <aside class="aside-menu" id="aside-menu">
-        <div class="aside-menu-inner">
-            <a href="#" class="main-logo"><img src="./images/main_logo.png" alt="main-logo"></a>
+        <div class="aside-menu__inner">
+            <a href="#" class="aside-menu__logo"><img src="./images/main_logo.png" alt="main-logo"></a>
     
-            <nav class="gnb" id="gnb">
-                <ul class="gnb-list">
-                    <li class="gnb-item is-current">
-                        <a href="#" class="gnb-link">
-                            <div class="gnb-item-title">
+            <nav class="aside-menu__gnb" id="gnb">
+                <ul class="aside-menu__list">
+                    <li class="aside-menu__item aside-menu__item--current">
+                        <a href="#" class="aside-menu__link">
+                            <div class="aside-menu__item-title">
                                 <span class="bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-clipboard-list"></i></span>
-                                <span class="gnb-item-title-text">CPA광고관리</span>
+                                <span class="aside-menu__item-title-text">CPA 광고관리</span>
                             </div>
                         </a>
                     </li>
-                    <li class="gnb-item">
-                        <a href="#" class="gnb-link">
-                            <div class="gnb-item-title">
+                    <li class="aside-menu__item aside-menu__item--current">
+                        <a href="#" class="aside-menu__link">
+                            <div class="aside-menu__item-title">
                                 <span class="bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-clipboard-list"></i></span>
-                                <span class="gnb-item-title-text">광고생성</span>
+                                <span class="aside-menu__item-title-text">광고생성</span>
                             </div>
                         </a>
                     </li>
-                    <li class="gnb-item">
-                        <a href="#" class="gnb-link">
-                            <div class="gnb-item-title">
+                    <li class="aside-menu__item aside-menu__item--current">
+                        <a href="#" class="aside-menu__link">
+                            <div class="aside-menu__item-title">
                                 <span class="bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-folder-plus"></i></span>
-                                <span class="gnb-item-title-text">API광고관리</span>
+                                <span class="aside-menu__item-title-text">API 광고관리</span>
                             </div>
                         </a>
                     </li>
-                    <li class="gnb-item">
-                        
-                        <a href="#" class="gnb-link">
-                            <div class="gnb-item-title">
+                    <li class="aside-menu__item aside-menu__item--current">
+                        <a href="#" class="aside-menu__link">
+                            <div class="aside-menu__item-title">
                                 <span class="bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-chart-pie"></i></span>
-                                <span class="gnb-item-title-text">DB관리</span>
+                                <span class="aside-menu__item-title-text">DB 관리</span>
                             </div>
                         </a>
                     </li>
-                    <li class="gnb-item gnb-item-dropdown">
-                        <a href="#" class="gnb-link">
-                            <div class="gnb-item-title">
+                    <li class="aside-menu__item aside-menu__item--dropdown">
+                        <a href="#" class="aside-menu__link">
+                            <div class="aside-menu__item-title">
                                 <span class="bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-laptop"></i></span>
-                                <span class="gnb-item-title-text">관리자 페이지</span>
+                                <span class="aside-menu__item-title-text">관리자 페이지</span>
                             </div>
-                            <span class="gnb-sub-menu-arrow bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-angle-down"></i></span>
+                            <span class="aside-menu__sub-menu-arrow bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-angle-down"></i></span>
                         </a>
-                        <ul class="gnb-sub-menu-list">
-                            <li class="gnb-sub-menu-item is-current">
-                                <a class="gnb-sub-menu-link" href="#">이벤트페이지 관리</a>
+                        <ul class="aside-menu__sub-menu-list">
+                            <li class="aside-menu__sub-menu-item aside-menu__sub-menu-item--current"> <!-- is-current (현재 선택된 탭) -->
+                                <a class="aside-menu__sub-menu-link" href="#">이벤트페이지 관리</a>
                             </li>
-                            <li class="gnb-sub-menu-item">
-                                <a class="gnb-sub-menu-link" href="#">신규 이벤트페이지 생성</a>
+                            <li class="aside-menu__sub-menu-item">
+                                <a class="aside-menu__sub-menu-link" href="#">신규 이벤트페이지 생성</a>
                             </li>
-                            <li class="gnb-sub-menu-item">
-                                <a class="gnb-sub-menu-link" href="#">전환 관리</a>
+                            <li class="aside-menu__sub-menu-item">
+                                <a class="aside-menu__sub-menu-link" href="#">전환 관리</a>
                             </li>
-                            <li class="gnb-sub-menu-item">
-                                <a class="gnb-sub-menu-link" href="#">매체 관리</a>
+                            <li class="aside-menu__sub-menu-item">
+                                <a class="aside-menu__sub-menu-link" href="#">매체 관리</a>
                             </li>
-                            <li class="gnb-sub-menu-item">
-                                <a class="gnb-sub-menu-link" href="#">광고주 관리</a>
+                            <li class="aside-menu__sub-menu-item">
+                                <a class="aside-menu__sub-menu-link" href="#">광고주 관리</a>
                             </li>
-                            <li class="gnb-sub-menu-item">
-                                <a class="gnb-sub-menu-link" href="#">충전금 관리</a>
+                            <li class="aside-menu__sub-menu-item">
+                                <a class="aside-menu__sub-menu-link" href="#">충전금 관리</a>
                             </li>
-                            <li class="gnb-sub-menu-item">
-                                <a class="gnb-sub-menu-link" href="#">CPA 광고요청 관리</a>
+                            <li class="aside-menu__sub-menu-item">
+                                <a class="aside-menu__sub-menu-link" href="#">CPA 광고요청 관리</a>
                             </li>
-                            <li class="gnb-sub-menu-item">
-                                <a class="gnb-sub-menu-link" href="#">월별정산서 관리</a>
+                            <li class="aside-menu__sub-menu-item">
+                                <a class="aside-menu__sub-menu-link" href="#">월별정산서 관리</a>
                             </li>
                         </ul>
                     </li>
@@ -89,6 +88,20 @@
         </div>
     </aside>
 
-    <script src="./js/aside_menu.js" type="text/javascript"></script>
+    <script src="./menu/js/aside_menu.js"></script>
+
+    <!-- <script>
+    $('.gnb-item-dropdown .gnb-link').click(function(e) {
+        // e.preventDefault(); // 링크 기본 동작 방지
+
+        // 서브 메뉴 토글
+        $(this).find('.gnb-sub-menu-list').stop(true, true).slideToggle('fast');
+        // $(this).find('.gnb-sub-menu-list').show();
+
+        // active 클래스 토글
+        $(this).toggleClass('active');
+        console.log('test');
+    });
+    </script> -->
 </body>
 </html>

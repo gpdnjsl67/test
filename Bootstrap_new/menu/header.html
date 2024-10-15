@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery.min.js"></script>
     <!-- <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../css/icon.css">
     <link rel="stylesheet" type="text/css" href="./css/header.css"> -->
@@ -10,30 +11,31 @@
 </head>
 <body>
     <header id="header" class="header">
-        <div class="header-inner">
-            <div class="header-left">
+        <div class="header__inner">
+            <div class="header__left">
                 <a href="#" class="hamburger-btn"><span class="bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-bars"></i></span></a>
             </div>
-            <div class="header-right">
-                <ul class="integrated-list">
-                    <li class="integrated-item">
-                        <a href="#" class="integrated-link" id="btn-go-to-mobile">모바일 버전</a>
+            <div class="header__right">
+                <ul class="header__list">
+                    <li class="header__item">
+                        <a href="#" class="header__link header__link--mobile" id="btn-go-to-mobile">모바일 버전</a>
                     </li>
-                    <li class="integrated-item">
-                        <a href="#" class="integrated-link" id="btn-mypage">마이페이지</a>
+                    <li class="header__item">
+                        <a href="#" class="header__link header__link--mypage" id="btn-mypage">마이페이지</a>
                     </li>
-                    <li class="integrated-item">
-                        <a href="#" class="integrated-link" id="btn-notices">공지사항</a>
+                    <li class="header__item">
+                        <a href="#" class="header__link header__link--notice" id="btn-notice">공지사항</a>
                     </li>
-                    <li class="integrated-item">
-                        <a href="#" class="integrated-link" id="btn-ask">고객문의</a>
+                    <li class="header__item">
+                        <a href="#" class="header__link header__link--ask" id="btn-ask">고객문의</a>
                     </li>
-                    <li class="integrated-item">
-                        <a href="#" class="integrated-link" id="btn-logout">LOGOUT</a>
+                    <li class="header__item">
+                        <a href="#" class="header__link header__link--logout" id="btn-logout">LOGOUT</a>
                     </li>
                 </ul>
             </div>
         </div>
     </header>
+    <script src="./menu/js/header.js"></script>
 </body>
 </html>

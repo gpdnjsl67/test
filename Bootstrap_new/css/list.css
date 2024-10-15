@@ -1,81 +1,15 @@
-body {
-  font-size: 10px;
-}
-body::-webkit-scrollbar {
-  display: none;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 10px;
-}
-
-@media (min-width: 335px) and (max-width: 767px) {
-  * {
-    font-size: 1.3vw;
-  }
-}
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-ul, ol, li {
-  list-style: none;
-}
-
-a {
-  display: inline-block;
-  text-decoration: none;
-  color: #212121;
-}
-
-select {
-  position: relative;
-  -webkit-appearance: none; /* for chrome */
-  -moz-appearance: none; /*for firefox*/
-  appearance: none;
-  background: url("../images/chevron-down-solid.svg") right/0.7em no-repeat transparent;
-}
-
-/* bs-scroll-bar */
-*::-webkit-scrollbar {
-  width: 4px;
-}
-
-*::-webkit-scrollbar-thumb {
-  margin: 5px 0;
-  border-radius: 5px;
-  background-color: #e2e6ed;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background-color: #c2c2c2;
-}
-
-*::-webkit-scrollbar-track {
-  margin: 3px 0;
-  border-radius: 5px;
-  background-color: #f5f5f5;
-}
-
-.bs-field-list-wrap {
+.bs-list-container {
   display: grid;
   gap: 2rem 3rem;
 }
-.bs-field-list-wrap .bs-field-list--array1 {
+.bs-list-container .list-group {
   display: grid;
   gap: 2rem 3rem;
 }
-.bs-field-list-wrap .bs-field-list--array2 {
-  display: grid;
+.bs-list-container .list-group--array2 {
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem 3rem;
 }
-.bs-field-list-wrap .bs-field-list-item-width-title {
+.bs-list-container .list-group__item--with-title {
   display: grid;
   gap: 0.5rem;
   -webkit-box-align: center;
@@ -83,7 +17,7 @@ select {
           align-items: center;
   grid-template-columns: 11em 1fr;
 }
-.bs-field-list-wrap .bs-field-list-item-title {
+.bs-list-container .list-group__item-title {
   font-size: 1.3rem;
   color: #9b98a4;
 }
