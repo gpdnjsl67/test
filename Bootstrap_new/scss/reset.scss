@@ -24,6 +24,7 @@ html {
 
 body {
     font-size: 1rem;
+    overscroll-behavior: contain;
 
     &::-webkit-scrollbar {
         display: none;
