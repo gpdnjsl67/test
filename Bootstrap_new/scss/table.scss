@@ -14,13 +14,23 @@
     table-row-group -> tbody    
 */
 
-.flip-scroll {
-    width: 100%;
-    overflow-y: scroll;
+// .flip-scroll {
+//     width: 100%;
+//     overflow-y: scroll;
+//     // border: $border-bs;
+//     // border-radius: $border-radius-bs;
+//     // background-color: $color-white;
+// }
+
+.bs-table-container {
+    // overflow-x: scroll;
     // border: $border-bs;
     // border-radius: $border-radius-bs;
-    // background-color: $color-white;
 }
+
+// .bs-table--scroll {
+//     overflow-x: scroll;
+// }
 
 .bs-table-wrapper {
     display: table;
@@ -28,10 +38,15 @@
     width: 100%;
     border: $border-bs;
     border-radius: $border-radius-bs;
+    overflow: hidden;
     background-color: $color-white;
 
     // TABLE
     .bs-table {
+        &--scroll {
+            overflow-x: scroll;
+        }
+
         // TABLE ROW 공통
         &__row {
             display: table-row;
@@ -45,7 +60,6 @@
             padding: $padding-table;
             vertical-align: middle;
             text-align: left;
-            border-bottom: $border-bs;
 
             &--ta-center {
                 text-align: center;
@@ -63,18 +77,20 @@
 
         // ===== TABLE TOP ===== //
         &__top {
+            width: auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 2em;
+            border-bottom: $border-bs;
         }
 
         // ===== TABLE BODY ===== //
         &__body {
             display: table;
-            // table-layout: fixed;
             width: 100%;
-            border-top: $border-bs;
+            // table-layout: fixed;
+            white-space: nowrap;
 
             .bs-table {
                 // TABLE HEAD
@@ -90,6 +106,10 @@
                     .bs-table__row {
                         &:nth-child(odd) {
                             background-color: $color-bg-table-row;
+                        }
+
+                        .bs-table__cell {
+                            border-top: $border-bs;
                         }
 
                     // TABLE 좌측 row color bar
@@ -140,6 +160,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            border-top: $border-bs;
             background-color: $color-bg-table-row;
         }
     }

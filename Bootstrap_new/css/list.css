@@ -19,5 +19,6 @@
 }
 .bs-list-container .list-group__item-title {
   font-size: 1.3rem;
+  font-weight: 500;
   color: #9b98a4;
 }

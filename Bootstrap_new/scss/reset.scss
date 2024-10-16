@@ -7,6 +7,13 @@ html {
 
 }
 
+@include desktop {
+    html {
+        @include font-size(5.5);
+        // font-size: 1.3vw;
+    }
+}
+
 @include mobile {
     html {
         @include font-size(5);

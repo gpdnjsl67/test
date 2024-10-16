@@ -38,7 +38,7 @@
   overflow-y: scroll;
 }
 .bs-box-list__item {
-  padding: 1.5em;
+  padding: 1.4em 1.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,8 +50,18 @@
           justify-content: space-between;
   font-size: 1.3rem;
 }
+.bs-box-list__item--checked {
+  background-color: #eaf1ff;
+}
+.bs-box-list__item--checked .bs-selector__description {
+  font-weight: 500;
+  color: #4271d9;
+}
 .bs-box-list__item:not(:first-child) {
   border-top: 1px solid #e2e6ed;
+}
+.bs-box-list__item:hover {
+  background-color: #eaf1ff;
 }
 .bs-box-list__quantity-label {
   line-height: 1;

@@ -1,4 +1,5 @@
 // @import "reset.scss";
+@charset "UTF-8";
 @import "style.scss";
 
 // .exp-wrap {margin-top: $height-header; padding: 30px;}
@@ -22,9 +23,9 @@
     }
 }
 
-#main {
+.main {
     margin-top: $height-header;
-    padding: 7em 5em;
+    padding: 7em 3em;
     overflow-y: scroll;
 
     // 상단 타이틀
@@ -47,6 +48,14 @@
         }
     }
 }
+
+// width
+.w-auto {width: auto;}
+.w-100 {width: 100%;}
+.w-em-20 {width: 20em;}
+.w-em-15 {width: 15em;}
+.w-em-9 {width: 9em;}
+.w-em-4 {width: 4em;}
 
 // display
 .d-block {display: block !important;}
@@ -81,6 +90,14 @@
 .fs-16 {font-size: 1.6rem !important;}
 .fs-17 {font-size: 1.7rem !important;}
 .fs-18 {font-size: 1.8rem !important;}
+
+// font-weight
+.fw-400 {font-weight: 400 !important;}
+.fw-500 {font-weight: 500 !important;}
+.fw-600 {font-weight: 600 !important;}
+.fw-700 {font-weight: 700 !important;}
+.fw-800 {font-weight: 800 !important;}
+.fw-900 {font-weight: 900 !important;}
 
 // 텍스트
 .bs-text {
@@ -124,6 +141,7 @@
     &--big-medium { width: 15em; }
     &--medium { width: 9em; }
     &--small { width: 4em; }
+    &--auto { width: auto; }
 
     // 우측에 버튼이 있을 때 정렬 속성
     &--size1 { grid-template-columns: 1fr $width-btn-bs-1; }
@@ -207,17 +225,85 @@
         width: $width-btn-bs-1;
     }
 
+    &__input {
+        display: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: none;
+    }
+
     &__description {
         font-size: $font-main-size !important;
     }
 
     // selector text-style - 기본 텍스트 스타일
     &--text-style {
+        position: relative;
         display: flex;
         align-items: center;
         gap: $gap-bs;
 
+        &::before {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 1.3rem;
+            height: 1.3rem;
+            // border: $border-bs;
+            background-color: $color-white;
+        }
+
+        &:has(:checked) {
+            &::after {
+                position: absolute;
+                content: '';
+                display: block;
+            }
+        }
+
+        // radio
+        &:has(.bs-selector__radio) {
+            &::before {
+                border: $border-bs;
+                border-radius: 999px;
+            }
+
+            &:has(:checked) {
+                &::before {
+                    border-radius: 999px;
+                    border-color: $color-blue;
+                    box-shadow: 0 0 0 0.35rem $color-blue inset;
+                }
+            }
+        }
+
+        // checkbox
+        &:has(.bs-selector__checkbox) {
+            &::before {
+                border: $border-bs;
+            }
+
+            &:has(:checked) {
+                &::before {
+                    background-color: $color-blue;
+                }
+
+                &::after {
+                    top: 50%;
+                    left: 0.04rem;
+                    width: 0.25rem;
+                    height: 0.55rem;
+                    border-bottom: 0.2rem solid $color-white;
+                    border-right: 0.2rem solid $color-white;
+                    transform: rotate(45deg) translateY(-95%);
+                }
+            }
+        }
+
+
         > .bs-selector__description {
+            padding-left: 1.5em;
             display: block;
             line-height: 1;
             color: $color-text-gray-bs;
@@ -230,12 +316,6 @@
         cursor: pointer;
 
         > .bs-selector__input {
-            display: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            outline: none;
-
             &:checked + .bs-selector__description {
                 color: $color-white;
                 background-color: $color-blue;
@@ -254,7 +334,6 @@
     font-size: 1em;
     border: none;
     color: $color-text-gray-bs;
-    // background: transparent;
 
     &:focus { outline: none; }
 

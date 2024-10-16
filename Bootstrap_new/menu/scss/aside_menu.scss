@@ -1,14 +1,11 @@
 @charset "UTF-8";
 @import "../../scss/style.scss";
 
-#aside-menu {
-    // position: sticky;
-    // width: 100%;
-    padding-top: $height-header;
-    background-color: #343a40;
-}
-
 .aside-menu {
+    padding-top: $height-header;
+    height: 100vh;
+    background-color: #343a40;
+
     // 드롭다운 메뉴
     &--dropdown {
         &.active {
