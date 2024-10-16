@@ -4,6 +4,12 @@
   border-bottom: 1px dotted #ddd;
 }
 
+#wrap {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
 #container {
   display: grid;
   grid-template-columns: 23em auto;
