@@ -34,6 +34,14 @@ window.addEventListener('load', function() {
     });
 });
 
+// 사파리 vh 대응
+function setScreenSize() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+setScreenSize();
+window.addEventListener('resize', setScreenSize);
+
 // 연필 아이콘 옆 text 입력 필드 활성화 토글 함수
 function toggleInputDisable(event) {
     const textInputField = event.target.closest('a').previousElementSibling; // a 태그의 이전 sibling인 input 요소 선택

@@ -9,15 +9,15 @@
 
 #wrap {
     width: 100vw;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);;
     overflow: hidden;
 }
 
 #container {
     display: grid;
     grid-template-columns: 23em auto;
-    height: 100vh;
-    overflow: hidden;
+    // height: 100vh;
+    // overflow: hidden;
     transition: 0.3s grid-template-columns;
 
     &.active {
