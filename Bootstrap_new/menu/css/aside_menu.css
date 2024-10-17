@@ -1,6 +1,4 @@
 .aside-menu {
-  padding-top: 5rem;
-  height: 100vh;
   background-color: #343a40;
 }
 .aside-menu--dropdown.active .aside-menu__sub-menu-arrow {

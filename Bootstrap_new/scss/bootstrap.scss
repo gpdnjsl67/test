@@ -15,6 +15,7 @@
 }
 
 #container {
+    padding-top: $height-header;
     display: grid;
     grid-template-columns: 23em auto;
     height: calc(var(--vh, 1vh) * 100);
@@ -31,7 +32,7 @@
 }
 
 .main {
-    margin-top: $height-header;
+    // margin-top: $height-header;
     padding: 7em 3em;
     overflow-y: scroll;
 

@@ -28,6 +28,9 @@
   position: relative;
   background-color: #fff;
 }
+.bs-table-wrapper .bs-table__row:hover {
+  background-color: #eaf1ff !important;
+}
 .bs-table-wrapper .bs-table__cell {
   display: table-cell;
   padding: 2rem;

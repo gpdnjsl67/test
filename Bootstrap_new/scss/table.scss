@@ -51,7 +51,11 @@
         &__row {
             display: table-row;
             position: relative;
-            background-color: $color-white;        
+            background-color: $color-white;
+            
+            &:hover {
+                background-color: $color-hover !important;
+            }
         }
 
         // TABLE CELL 공통

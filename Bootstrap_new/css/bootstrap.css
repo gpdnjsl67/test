@@ -9,6 +9,7 @@
 }
 
 #container {
+  padding-top: 5rem;
   display: grid;
   grid-template-columns: 23em auto;
   height: calc(var(--vh, 1vh) * 100);
@@ -25,7 +26,6 @@
 }
 
 .main {
-  margin-top: 5rem;
   padding: 7em 3em;
   overflow-y: scroll;
 }
