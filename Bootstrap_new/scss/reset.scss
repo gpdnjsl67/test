@@ -4,6 +4,8 @@
 html {
     // font-size: 62.5%; // 1rem = 10px
     @include font-size(6.25);
+    overflow: hidden;
+    overscroll-behavior: none
 
 }
 
@@ -24,7 +26,7 @@ html {
 
 body {
     font-size: 1rem;
-    overscroll-behavior: contain;
+    // overscroll-behavior: contain;
 
     &::-webkit-scrollbar {
         display: none;
