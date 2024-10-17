@@ -1,5 +1,5 @@
 html {
-  font-size: 0.625rem;
+  font-size: 62.5%;
   overflow: hidden;
   -ms-scroll-chaining: none;
       overscroll-behavior: none;
@@ -8,12 +8,7 @@ html {
 @media (max-width: 1024px) {
   html {
     font-size: 0.55rem;
-  }
-}
-@media (max-width: 768px) {
-  html {
-    font-size: 0.5rem;
-    font-size: 1.3vw;
+    font-size: 1vw;
   }
 }
 body {

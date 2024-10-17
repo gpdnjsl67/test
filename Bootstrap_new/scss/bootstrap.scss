@@ -32,7 +32,6 @@
 }
 
 .main {
-    // margin-top: $height-header;
     padding: 7em 3em;
     overflow-y: scroll;
 
@@ -60,10 +59,13 @@
 // width
 .w-auto {width: auto;}
 .w-100 {width: 100%;}
-.w-em-20 {width: 20em;}
-.w-em-15 {width: 15em;}
-.w-em-9 {width: 9em;}
-.w-em-4 {width: 4em;}
+.w-rem-27 {width: 27rem;}
+.w-rem-17 {width: 17rem;}
+.w-rem-12 {width: 12rem;}
+.w-rem-6 {width: 6rem;}
+
+// padding
+.padding-bs {padding: $padding-bs;}
 
 // display
 .d-block {display: block !important;}
@@ -107,6 +109,14 @@
 .fw-800 {font-weight: 800 !important;}
 .fw-900 {font-weight: 900 !important;}
 
+// overflow
+.overflow-auto {overflow: auto;}
+.overflow-hidden {overflow: hidden;}
+.overflow-x-scroll {overflow-x: scroll;}
+.overflow-y-scroll {overflow-y: scroll;}
+.overflow-x-hidden {overflow-x: hidden;}
+.overflow-y-hidden {overflow-y: hidden;}
+
 // 텍스트
 .bs-text {
     &--gray {
@@ -127,6 +137,11 @@
     }
 }
 
+// 기본 박스 스타일
+.bs-box {
+    @include basic-box;
+}
+
 // 기본 입력 필드 (input=text, search ...)
 .bs-field {
     @include basic-box;
@@ -145,10 +160,10 @@
     &:has(:focus) { outline: $focus-outline-bs; }
     &:has(.bs-select:disabled) { background-color: $color-bg-disabled; }
 
-    &--big { width: 20em; }
-    &--big-medium { width: 15em; }
-    &--medium { width: 9em; }
-    &--small { width: 4em; }
+    &--big { width: 27rem; }
+    &--big-medium { width: 17rem; }
+    &--medium { width: 12rem; }
+    &--small { width: 6rem; }
     &--auto { width: auto; }
 
     // 우측에 버튼이 있을 때 정렬 속성

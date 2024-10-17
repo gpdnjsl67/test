@@ -2,8 +2,8 @@
 @import "style.scss";
 
 html {
-    // font-size: 62.5%; // 1rem = 10px
-    @include font-size(6.25);
+    font-size: 62.5%; // 1rem = 10px
+    // @include font-size(6.25);
     overflow: hidden;
     overscroll-behavior: none
 
@@ -12,16 +12,16 @@ html {
 @include desktop {
     html {
         @include font-size(5.5);
-        // font-size: 1.3vw;
+        font-size: 1vw;
     }
 }
 
-@include mobile {
-    html {
-        @include font-size(5);
-        font-size: 1.3vw;
-    }
-}
+// @include tablet {
+//     html {
+//         // @include font-size(5);
+//         font-size: 1.25vw;
+//     }
+// }
 
 
 body {
