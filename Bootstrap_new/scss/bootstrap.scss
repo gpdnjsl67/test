@@ -24,7 +24,7 @@
     &.active {
         grid-template-columns: 0 auto;
 
-        .aside-menu-inner {
+        .aside-menu__inner {
             opacity: 0;
         }
     }
