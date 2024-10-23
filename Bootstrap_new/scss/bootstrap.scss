@@ -125,7 +125,7 @@
 #container {
     padding-top: $height-header;
     display: grid;
-    grid-template-columns: 22rem auto;
+    grid-template-columns: 23em auto;
     width: 100%;
     height: calc(var(--vh, 1vh) * 100);
     overflow: hidden;
@@ -141,13 +141,13 @@
 }
 
 .main {
-    padding: 7rem 3rem;
+    padding: 7em 3em;
     width: 100%;
     overflow-y: scroll;
     background-color: #f8f9fa;
 
     .main-top {
-        margin-bottom: 6rem;
+        margin-bottom: 6em;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -161,13 +161,13 @@
             .top-title {
                 &__main {
                     line-height: 1;
-                    font-size: 4rem;
+                    font-size: 4em;
                     font-weight: 500;
                     color: $color-blue;
                 }
         
                 &__sub {
-                    font-size: 1.2rem;
+                    font-size: 1.2em;
                     font-weight: 500;
                 }
             }
@@ -293,7 +293,9 @@
     &--in-icon {
         display: grid;
         grid-template-columns: 5rem 1fr;
+        // gap: $gap-bs;
         padding: 0;
+        background-color: $color-bg-button-gray;
 
         .bs-field {
             &__icon {
@@ -301,8 +303,6 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-        background-color: $color-bg-button-gray;
-
             }
 
             &__text {
@@ -396,6 +396,7 @@
             background-color: $color-white;
 
             &:checked {
+                // border-color: $color-blue;
                 border: none;
                 box-shadow: 0 0 0 0.45rem $color-blue inset;
             }
@@ -411,19 +412,18 @@
             background-color: $color-white;
 
             &:checked {
-                border: none;
                 background-color: $color-blue;
 
                 &::before {
                     position: absolute;
                     content: '';
                     display: block;
-                    top: 0.25rem;
-                    left: 0.55rem;
+                    top: 0.15em;
+                    left: 0.4em;
                     width: 0.25rem;
                     height: 0.55rem;
-                    border-bottom: 0.2rem solid $color-white;
-                    border-right: 0.2rem solid $color-white;
+                    border-bottom: 2px solid $color-white;
+                    border-right: 2px solid $color-white;
                     transform: rotate(40deg);
                 }
             }
@@ -452,8 +452,12 @@
 
 // select
 .bs-select {
+    // text-align-last: center;
+    // text-align: center;
+    // -ms-text-align-last: center;
+    // -moz-text-align-last: center;
     width: 100%;
-    font-size: $font-main-size;
+    font-size: 1em;
     border: none;
     color: $color-text-gray-bs;
 
