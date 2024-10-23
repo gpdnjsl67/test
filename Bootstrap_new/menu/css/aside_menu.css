@@ -1,4 +1,7 @@
 .aside-menu {
+  position: relative;
+  z-index: 66;
+  width: 100%;
   background-color: #343a40;
 }
 .aside-menu--dropdown.active .aside-menu__sub-menu-arrow {
