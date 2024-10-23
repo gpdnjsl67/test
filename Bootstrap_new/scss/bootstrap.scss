@@ -125,7 +125,7 @@
 #container {
     padding-top: $height-header;
     display: grid;
-    grid-template-columns: 23em auto;
+    grid-template-columns: 22rem auto;
     width: 100%;
     height: calc(var(--vh, 1vh) * 100);
     overflow: hidden;
@@ -141,13 +141,13 @@
 }
 
 .main {
-    padding: 7em 3em;
+    padding: 7rem 3rem;
     width: 100%;
     overflow-y: scroll;
     background-color: #f8f9fa;
 
     .main-top {
-        margin-bottom: 6em;
+        margin-bottom: 6rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -161,13 +161,13 @@
             .top-title {
                 &__main {
                     line-height: 1;
-                    font-size: 4em;
+                    font-size: 4rem;
                     font-weight: 500;
                     color: $color-blue;
                 }
         
                 &__sub {
-                    font-size: 1.2em;
+                    font-size: 1.2rem;
                     font-weight: 500;
                 }
             }
@@ -293,9 +293,7 @@
     &--in-icon {
         display: grid;
         grid-template-columns: 5rem 1fr;
-        // gap: $gap-bs;
         padding: 0;
-        background-color: $color-bg-button-gray;
 
         .bs-field {
             &__icon {
@@ -303,12 +301,14 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                background-color: $color-bg-button-gray;
             }
 
             &__text {
                 padding: $padding-bs;
                 font-size: $font-main-size;
                 border: none;
+                background-color: $color-white;
     
                 &:focus { outline: none; }
                 &::placeholder { color: $color-placeholder-bs;}
@@ -367,7 +367,7 @@
     }
 
     &__input {
-        display: none;
+        // display: none;
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
@@ -396,9 +396,8 @@
             background-color: $color-white;
 
             &:checked {
-                // border-color: $color-blue;
                 border: none;
-                box-shadow: 0 0 0 0.45rem $color-blue inset;
+                box-shadow: 0 0 0 0.5rem $color-blue inset;
             }
         }
 
@@ -409,21 +408,23 @@
             width: $selector-size;
             height: $selector-size;
             border: $border-bs;
+            border-radius: 0;
             background-color: $color-white;
 
             &:checked {
+                border: none;
                 background-color: $color-blue;
 
                 &::before {
                     position: absolute;
                     content: '';
                     display: block;
-                    top: 0.15em;
-                    left: 0.4em;
+                    top: 0.25rem;
+                    left: 0.55rem;
                     width: 0.25rem;
                     height: 0.55rem;
-                    border-bottom: 2px solid $color-white;
-                    border-right: 2px solid $color-white;
+                    border-bottom: 0.2rem solid $color-white;
+                    border-right: 0.2rem solid $color-white;
                     transform: rotate(40deg);
                 }
             }
@@ -452,12 +453,8 @@
 
 // select
 .bs-select {
-    // text-align-last: center;
-    // text-align: center;
-    // -ms-text-align-last: center;
-    // -moz-text-align-last: center;
     width: 100%;
-    font-size: 1em;
+    font-size: $font-main-size;
     border: none;
     color: $color-text-gray-bs;
 
@@ -489,34 +486,4 @@
         color: $color-text-gray-bs;
         background-color: $color-white;
     }
-
-    // &__input {
-    //     width: 80px;
-    //     height: 30px;
-    //     line-height:30px;
-    //     background: #999;
-    //     border-radius: 3px;
-    //     color: #fff;
-    //     font-weight: bold;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    //     cursor: pointer;
-    // }
-
-    // &__label {
-    //     padding: 0 5px 0 10px;
-    //     margin-left: 5px;
-    //     display: block;
-    //     width: 500px;
-    //     min-height: 30px;
-    //     border: 1px solid #e7e7e7;
-    //     border-radius: 3px;
-    //     line-height: 30px;
-    //     color: #999;
-    //     overflow: hidden;
-    //     text-overflow: ellipsis;
-    //     white-space: nowrap;
-    //     box-sizing: border-box;
-    // }
 }

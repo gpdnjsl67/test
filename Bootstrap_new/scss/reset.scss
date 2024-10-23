@@ -8,14 +8,14 @@ html {
     overscroll-behavior: none;
 }
 
-@include desktop {
+@include tablet {
     html {
         @include font-size(5.5);
         font-size: 1vw;
     }
 }
 
-// @include tablet {
+// @include mobile {
 //     html {
 //         // @include font-size(5);
 //         font-size: 1.25vw;

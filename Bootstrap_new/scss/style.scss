@@ -43,7 +43,7 @@ $gap-pagination: 0.4rem;
 $gap-modal-section: 2rem;
 
 // border
-$border-bs: 1px solid #e2e6ed;
+$border-bs: 0.1rem solid #e2e6ed;
 
 // border-radius
 $border-radius-bs: 0.5rem;
@@ -80,7 +80,10 @@ $selector-size: 1.6rem;
     // @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
     //     @content;
     // }
-    @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop}) {
+    // @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop}) {
+    //     @content;
+    // }
+    @media (max-width: #{$breakpoint-tablet}) {
         @content;
     }
 }
