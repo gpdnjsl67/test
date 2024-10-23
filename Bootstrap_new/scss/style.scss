@@ -71,9 +71,6 @@ $icon-big: 2rem;
     @media (max-width: #{$breakpoint-tablet}) {
         @content;
     }
-    // @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
-    //     @content;
-    // }
 }
 
 @mixin tablet {
@@ -90,12 +87,6 @@ $icon-big: 2rem;
         @content;
     }
 }
-
-// @mixin respond($breakpoint-tablet) {
-//     @media screen and (max-width: $breakpoint-tablet) {
-//         @content;
-//     }
-// }
 
 // 반응형
 @mixin responsive($break) {

@@ -323,6 +323,7 @@
   padding-top: 4.5rem;
   display: grid;
   grid-template-columns: 23em auto;
+  width: 100%;
   height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
   -webkit-transition: 0.3s grid-template-columns;
@@ -338,6 +339,7 @@
 
 .main {
   padding: 7em 3em;
+  width: 100%;
   overflow-y: scroll;
   background-color: #f8f9fa;
 }
