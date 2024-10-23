@@ -1,10 +1,10 @@
 .bs-list-container {
   display: grid;
-  gap: 2rem 3rem;
+  gap: 2rem;
 }
 .bs-list-container .list-group {
   display: grid;
-  gap: 2rem 3rem;
+  gap: 2rem;
 }
 .bs-list-container .list-group--array2 {
   grid-template-columns: repeat(2, 1fr);

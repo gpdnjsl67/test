@@ -1,9 +1,6 @@
 .bs-fa-icon {
   color: #7a7a84;
 }
-.bs-fa-icon i, .bs-fa-icon path, .bs-fa-icon svg {
-  font-size: 1em;
-}
 .bs-fa-icon--small {
   font-size: 1.3rem;
 }
@@ -12,4 +9,16 @@
 }
 .bs-fa-icon--big {
   font-size: 2rem;
+}
+.bs-fa-icon--black {
+  color: #212121;
+}
+.bs-fa-icon--white {
+  color: #fff;
+}
+.bs-fa-icon--blue {
+  color: #4271d9;
+}
+.bs-fa-icon i, .bs-fa-icon path, .bs-fa-icon svg {
+  font-size: 1em;
 }

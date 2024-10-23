@@ -68,7 +68,7 @@
   color: #4271d9;
 }
 .bs-modal__content {
-  padding: 3em;
+  padding: 2.5rem;
   overflow-y: scroll;
 }
 .bs-modal__bottom {

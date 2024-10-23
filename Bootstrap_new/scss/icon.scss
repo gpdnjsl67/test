@@ -4,19 +4,16 @@
 .bs-fa-icon {
     color: $color-icon-gray;
 
+    &--small { font-size: $icon-small; }
+    &--medium { font-size: $icon-medium; }
+    &--big { font-size: $icon-big; }
+
+    &--black { color: $color-black; }
+    &--white { color: $color-white; }
+    &--blue { color: $color-blue; }
+
     i, path, svg {
         font-size: 1em;
     }
 
-    &--small {
-        font-size: $icon-small;
-    }
-
-    &--medium {
-        font-size: $icon-medium;
-    }
-
-    &--big {
-        font-size: $icon-big;
-    }
 }

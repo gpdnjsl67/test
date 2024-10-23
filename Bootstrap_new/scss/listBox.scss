@@ -1,6 +1,20 @@
 @charset "UTF-8";
 @import "style.scss";
 
+// 가로 한 줄로 정렬 시
+.bs-box-list-container {
+    display: flex;
+    align-items: center;
+    gap: $gap-box;
+}
+
+// 가로 한 줄로 정렬 시 (반응형) - 모바일에선 세로 한 줄
+@include mobile {
+    .bs-box-list-container {
+        display: grid;
+    }
+}
+
 // bs-box-list
 .bs-box-list-wrapper {
     width: 100%;
@@ -10,12 +24,14 @@
 .bs-box-list {
     @include basic-box;
     width: 100%;
+    background-color: $color-white;
 
     &__title {
         display: flex;
-        align-self: center;
+        align-items: center;
         justify-content: space-between;
-        padding: 2em;
+        padding: $padding-box-list;
+        height: $height-box-top;
         overflow: hidden;
 
         &-text {
@@ -34,9 +50,16 @@
     }
 
     &__items {
-        height: 24rem;
         border-top: $border-bs;
-        overflow-y: scroll;
+
+        &--scroll {
+            height: $height-box-list;
+            overflow-y: scroll;
+        }
+
+        &--no-scroll {
+            padding: $padding-box-list;
+        }
     }
 
     &__item {
