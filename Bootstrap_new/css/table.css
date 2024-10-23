@@ -76,6 +76,9 @@
 .bs-table-wrapper .bs-table__body .bs-table__content {
   display: table-row-group;
 }
+.bs-table-wrapper .bs-table__body .bs-table__content .bs-table__row {
+  white-space: wrap;
+}
 .bs-table-wrapper .bs-table__body .bs-table__content .bs-table__row:hover {
   background-color: #eaf1ff !important;
 }

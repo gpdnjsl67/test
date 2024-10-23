@@ -8,19 +8,19 @@ html {
     overscroll-behavior: none;
 }
 
-@include desktop {
-    html {
-        @include font-size(5.5);
-        font-size: 1vw;
-    }
-}
-
-// @include tablet {
+// @include desktop {
 //     html {
-//         // @include font-size(5);
-//         font-size: 1.25vw;
+//         @include font-size(5.5);
+//         font-size: 1vw;
 //     }
 // }
+
+@include mobile {
+    html {
+        // @include font-size(5);
+        font-size: 1.4vw;
+    }
+}
 
 
 body {

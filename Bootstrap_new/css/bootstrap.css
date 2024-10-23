@@ -677,12 +677,12 @@
   position: absolute;
   content: "";
   display: block;
-  top: 0.15em;
-  left: 0.4em;
+  top: 0.15rem;
+  left: 0.4rem;
   width: 0.25rem;
   height: 0.55rem;
-  border-bottom: 2px solid #fff;
-  border-right: 2px solid #fff;
+  border-bottom: 0.2rem solid #fff;
+  border-right: 0.2rem solid #fff;
   -webkit-transform: rotate(40deg);
           transform: rotate(40deg);
 }

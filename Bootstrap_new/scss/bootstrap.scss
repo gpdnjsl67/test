@@ -396,7 +396,6 @@
             background-color: $color-white;
 
             &:checked {
-                // border-color: $color-blue;
                 border: none;
                 box-shadow: 0 0 0 0.45rem $color-blue inset;
             }
@@ -418,12 +417,12 @@
                     position: absolute;
                     content: '';
                     display: block;
-                    top: 0.15em;
-                    left: 0.4em;
+                    top: 0.15rem;
+                    left: 0.4rem;
                     width: 0.25rem;
                     height: 0.55rem;
-                    border-bottom: 2px solid $color-white;
-                    border-right: 2px solid $color-white;
+                    border-bottom: 0.2rem solid $color-white;
+                    border-right: 0.2rem solid $color-white;
                     transform: rotate(40deg);
                 }
             }
