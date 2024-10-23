@@ -2,9 +2,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   gap: 2rem;
 }
 
@@ -34,7 +34,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 2rem;
+  padding: 0 2rem;
   height: 7rem;
   overflow: hidden;
 }
@@ -44,6 +44,7 @@
   color: #9b98a4;
 }
 .bs-box-list__title-arrow {
+  padding: 0;
   cursor: pointer;
 }
 .bs-box-list__title-arrow.active {

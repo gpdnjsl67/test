@@ -23,8 +23,12 @@
 .h-auto {height: auto !important;}
 .h-100 {height: 100% !important;}
 
+// margin
+.margin-0 {margin: 0 !important;}
+
 // padding
 .padding-bs {padding: $padding-bs !important;}
+.padding-0 {padding: 0 !important;}
 
 // position
 .position-static {position: static !important;}
@@ -185,12 +189,6 @@
         padding: 0.6rem 1rem;
     }
 
-    // &__btn {
-    //     .bs-fa-icon {
-    //         color: $color-black;
-    //     }
-    // }
-
     &__prev { }
 
     &__date-range {
@@ -206,10 +204,6 @@
 
     &__range-control {
         background-color: $color-blue;
-
-        // .bs-fa-icon {
-        //     color: $color-white;
-        // }
     }
 }
 
@@ -251,7 +245,7 @@
 
     &::placeholder { color: $color-placeholder-bs; }
     &:disabled { background-color: $color-bg-disabled; }
-    &:hover { outline: 0; }
+    &:hover { outline: 0; border-color: $color-blue; }
     &:focus { outline: $focus-outline-bs; }
     &:has(:focus) { outline: $focus-outline-bs; }
     &:has(.bs-select:disabled) { background-color: $color-bg-disabled; }
@@ -295,6 +289,33 @@
         }
     }
 
+    // field 좌측에 아이콘
+    &--in-icon {
+        display: grid;
+        grid-template-columns: 5rem 1fr;
+        // gap: $gap-bs;
+        padding: 0;
+        background-color: $color-bg-button-gray;
+
+        .bs-field {
+            &__icon {
+                padding: 1rem 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &__text {
+                padding: $padding-bs;
+                font-size: $font-main-size;
+                border: none;
+    
+                &:focus { outline: none; }
+                &::placeholder { color: $color-placeholder-bs;}
+            }
+        }
+    }
+
     // field 우측 버튼
     &--with-btn {
         display: grid;
@@ -311,7 +332,7 @@
     align-items: center;
     justify-content: center;
     padding: $padding-bs;
-    height: 100%;
+    // height: 100%;
 
     &--gray {
         color: $color-text-gray-bs;
@@ -364,66 +385,51 @@
         align-items: center;
         gap: $gap-bs;
 
-        &::before {
-            position: absolute;
-            content: '';
-            display: block;
-            width: 1.3rem;
-            height: 1.3rem;
-            // border: $border-bs;
-            background-color: $color-white;
-        }
-
-        &:has(:checked) {
-            &::after {
-                position: absolute;
-                content: '';
-                display: block;
-            }
-        }
-
         // radio
-        &:has(.bs-selector__radio) {
-            &::before {
-                border: $border-bs;
-                border-radius: 999px;
-            }
+        .bs-selector__radio {
+            position: relative;
+            display: block;
+            width: $selector-size;
+            height: $selector-size;
+            border: $border-bs;
+            border-radius: 9999px;
+            background-color: $color-white;
 
-            &:has(:checked) {
-                &::before {
-                    border-radius: 999px;
-                    border-color: $color-blue;
-                    box-shadow: 0 0 0 0.35rem $color-blue inset;
-                }
+            &:checked {
+                // border-color: $color-blue;
+                border: none;
+                box-shadow: 0 0 0 0.45rem $color-blue inset;
             }
         }
 
         // checkbox
-        &:has(.bs-selector__checkbox) {
-            &::before {
-                border: $border-bs;
-            }
+        .bs-selector__checkbox {
+            position: relative;
+            display: block;
+            width: $selector-size;
+            height: $selector-size;
+            border: $border-bs;
+            background-color: $color-white;
 
-            &:has(:checked) {
+            &:checked {
+                background-color: $color-blue;
+
                 &::before {
-                    background-color: $color-blue;
-                }
-
-                &::after {
-                    top: 50%;
-                    left: 0.05rem;
+                    position: absolute;
+                    content: '';
+                    display: block;
+                    top: 0.15em;
+                    left: 0.4em;
                     width: 0.25rem;
                     height: 0.55rem;
-                    border-bottom: 0.2rem solid $color-white;
-                    border-right: 0.2rem solid $color-white;
-                    transform: rotate(45deg) translateY(-95%);
+                    border-bottom: 2px solid $color-white;
+                    border-right: 2px solid $color-white;
+                    transform: rotate(40deg);
                 }
             }
         }
 
-
         > .bs-selector__description {
-            padding-left: 1.5em;
             display: block;
             line-height: 1;
             color: $color-text-gray-bs;

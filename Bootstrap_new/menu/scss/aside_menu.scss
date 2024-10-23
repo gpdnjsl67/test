@@ -50,9 +50,9 @@
             align-items: center;
             gap: 1.5rem;
     
-            .bs-fa-icon {
-                color: $color-white;
-            }
+            // .bs-fa-icon {
+            //     color: $color-white;
+            // }
     
             &-text {
                 font-size: 1.5rem;
@@ -69,10 +69,6 @@
     }
 
     &__sub-menu {
-        &-arrow {
-            color: $color-white !important;
-        }
-
         &-list {
             display: none;
         }

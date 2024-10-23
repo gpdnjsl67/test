@@ -5,8 +5,7 @@ html {
     font-size: 62.5%; // 1rem = 10px
     // @include font-size(6.25);
     overflow: hidden;
-    overscroll-behavior: none
-
+    overscroll-behavior: none;
 }
 
 @include desktop {
@@ -38,7 +37,6 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: $font-main;
-    // font-size: 10px;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {

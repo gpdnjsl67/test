@@ -4,7 +4,8 @@
 // 가로 한 줄로 정렬 시
 .bs-box-list-container {
     display: flex;
-    align-items: center;
+    // align-items: center;
+    align-items: baseline;
     gap: $gap-box;
 }
 
@@ -30,7 +31,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: $padding-box-list;
+        padding: 0 $padding-box-list;
         height: $height-box-top;
         overflow: hidden;
 
@@ -41,6 +42,7 @@
         }
 
         &-arrow {
+            padding: 0;
             cursor: pointer;
             
             &.active {

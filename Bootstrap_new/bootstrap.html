@@ -8,8 +8,12 @@
     <title>MM Bootstrap</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> <!-- 구글 폰트 -->
-    <script src="./fontawesome/all.min.js" type="text/javascript"></script> <!-- fontawesome js -->
-    <link rel="stylesheet" href="./fontawesome/all.min.css"> <!-- fontawesome css -->
+
+    <!-- // fontawesome -->
+    <script src="./fontawesome/ver5/all.min.js" type="text/javascript"></script> <!-- fontawesome js -->
+    <link rel="stylesheet" href="./fontawesome/ver5/all.min.css"> <!-- fontawesome css -->
+    <!-- fontawesome // -->
+
     <!-- // start CSS -->
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/icon.css">
@@ -34,7 +38,7 @@
 
         <div id="container">
             <div data-include-path="./menu/aside_menu.html"></div>
-            
+        
             <main class="main" id="main">
                 <div class="main-top">
                     <div class="main-top__left main-top__title">
@@ -44,16 +48,16 @@
                     <div class="main-top__right">
                         <div class="bs-calendar">
                             <a href="#" class="bs-calendar__item bs-calendar__btn bs-calendar__prev">
-                                <span class="bs-fa-icon bs-fa-icon--medium bs-fa-icon--black"><i class="fa-solid fa-caret-left"></i></span>
+                                <span class="bs-fa-icon bs-fa-icon--medium bs-fa-icon--black"><i class="fas fa-caret-left"></i></span>
                             </a>
                             <div class="bs-calendar__item bs-calendar__date-range">
                                 <span>2024-10-10 ~ 2024-10-10</span>
                             </div>
                             <a href="#" class="bs-calendar__item bs-calendar__btn bs-calendar__next">
-                                <span class="bs-fa-icon bs-fa-icon--medium bs-fa-icon--black"><i class="fa-solid fa-caret-right"></i></span>
+                                <span class="bs-fa-icon bs-fa-icon--medium bs-fa-icon--black"><i class="fas fa-caret-right"></i></span>
                             </a>
                             <a href="#" class="bs-calendar__item bs-calendar__range-control">
-                                <span class="bs-fa-icon bs-fa-icon--medium bs-fa-icon--white"><i class="fa-solid fa-calendar-days"></i></span>
+                                <span class="bs-fa-icon bs-fa-icon--medium bs-fa-icon--white"><i class="fas fa-calendar-alt"></i></span>
                             </a>
                         </div>
                     </div>
@@ -65,12 +69,22 @@
                     <div class="exp-item">
                         <input type="text" class="bs-field bs-field__text" placeholder="내용을 입력해 주세요." />
                     </div>
+                    
                     <div class="exp-item">
                         <div class="bs-field bs-field--in-btn">
                             <input type="text" class="bs-field__text" placeholder="내용을 입력해 주세요." />
                             <a href="#" class="bs-field__btn bs-btn bs-btn--gray">
                                 <span class="bs-btn__description">확인</span>
                             </a>
+                        </div>
+                    </div>
+
+                    <div class="exp-item">
+                        <div class="bs-field bs-field--in-icon">
+                            <div class="bs-field__icon">
+                                <span class="bs-fa-icon bs-fa-icon--medium"><i class="fas fa-lock"></i></span>
+                            </div>
+                            <input type="text" class="bs-field__text" placeholder="내용을 입력해 주세요." />
                         </div>
                     </div>
             
@@ -88,7 +102,7 @@
                     <div class="exp-item">
                         <div class="bs-field--with-btn bs-field--size-icon-medium">
                             <input type="text" class="bs-field bs-field__text" placeholder="내용을 입력해 주세요." disabled />
-                            <a href="#" onclick="toggleInputDisable(event);"><span class="bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-pencil"></i></span></a>
+                            <a href="#" onclick="toggleInputDisable(event);"><span class="bs-fa-icon bs-fa-icon--medium"><i class="fas fa-pencil-alt"></i></span></a>
                         </div>
                         <div class="bs-text__small bs-text--gray">※ 변경 이후 시점의 DB부터 적용됩니다.</div>
                     </div>
@@ -205,13 +219,13 @@
             
                     <!--============= fontawesome 아이콘 =============-->
                     <div class="exp-item">
-                        <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-pencil"></i></span>
-                        <span class="bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-pencil"></i></span>
-                        <span class="bs-fa-icon bs-fa-icon--big"><i class="fa-solid fa-pencil"></i></span>
+                        <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
+                        <span class="bs-fa-icon bs-fa-icon--medium"><i class="fas fa-pencil-alt"></i></span>
+                        <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-pencil-alt"></i></span>
             
-                        <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-circle-plus"></i></span>
-                        <span class="bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-circle-plus"></i></span>
-                        <span class="bs-fa-icon bs-fa-icon--big"><i class="fa-solid fa-circle-plus"></i></span>
+                        <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-plus-circle"></i></span>
+                        <span class="bs-fa-icon bs-fa-icon--medium"><i class="fas fa-plus-circle"></i></span>
+                        <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-plus-circle"></i></span>
                     </div>
             
                     <!--============= select =============-->
@@ -294,7 +308,7 @@
                                 <div class="bs-modal__top">
                                     <span class="bs-modal__title">광고주 정보</span>
                                     <div class="bs-modal__close-btn" onclick="modalClose($('#modal1.bs-modal'), $('.overlay.modal1'))">
-                                        <span class="bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-x"></i></span>
+                                        <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
                 
@@ -407,7 +421,7 @@
                                 <div class="bs-modal__top">
                                     <span class="bs-modal__title">광고주 정보</span>
                                     <div class="bs-modal__close-btn" onclick="modalClose($('#modal2.bs-modal'), $('.overlay.modal2'))">
-                                        <span class="bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-x"></i></span>
+                                        <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
                 
@@ -456,7 +470,7 @@
                                 <div class="bs-modal__top">
                                     <span class="bs-modal__title">광고주 정보</span>
                                     <div class="bs-modal__close-btn" onclick="modalClose($('#modal3.bs-modal'), $('.overlay.modal3'))">
-                                        <span class="bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-x"></i></span>
+                                        <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
                 
@@ -621,7 +635,7 @@
                                                 <span class="bs-text__small bs-text--gray">2024-07-31</span>
                                             </div>
                                             <div class="bs-table__cell bs-table__cell--ta-center">
-                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-pencil"></i></span>
+                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
                                             </div>
                                         </div>
                 
@@ -650,7 +664,7 @@
                                                 <span class="bs-text__small bs-text--gray">2024-07-31</span>
                                             </div>
                                             <div class="bs-table__cell bs-table__cell--ta-center">
-                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-pencil"></i></span>
+                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
                                             </div>
                                         </div>
                 
@@ -679,7 +693,7 @@
                                                 <span class="bs-text__small bs-text--gray">2024-07-31</span>
                                             </div>
                                             <div class="bs-table__cell bs-table__cell--ta-center">
-                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-pencil"></i></span>
+                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
                                             </div>
                                         </div>
                 
@@ -708,7 +722,7 @@
                                                 <span class="bs-text__small bs-text--gray">2024-07-31</span>
                                             </div>
                                             <div class="bs-table__cell bs-table__cell--ta-center">
-                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-pencil"></i></span>
+                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
                                             </div>
                                         </div>
                 
@@ -737,7 +751,7 @@
                                                 <span class="bs-text__small bs-text--gray">2024-07-31</span>
                                             </div>
                                             <div class="bs-table__cell bs-table__cell--ta-center">
-                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-pencil"></i></span>
+                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
                                             </div>
                                         </div>
                                     </div>
@@ -781,8 +795,8 @@
                         <div class="bs-table-wrapper">
                             <div class="bs-table__top">
                                 <div class="bs-table__top-left">
-                                    <span class="bs-fa-icon bs-fa-icon--big"><i class="fa-solid fa-circle-plus"></i></span>
-                                    <span class="bs-fa-icon bs-fa-icon--big"><i class="fa-solid fa-circle-plus"></i></span>
+                                    <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-plus-circle"></i></span>
+                                    <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-plus-circle"></i></span>
                                 </div>
                                 <div class="bs-table__top-right d-flex bs-gap">
                                     <div class="bs-field bs-field--medium">
@@ -837,7 +851,7 @@
                                                 <span class="bs-text__small bs-text--gray">2024-07-31</span>
                                             </div>
                                             <div class="bs-table__cell bs-table__cell--ta-center">
-                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-pencil"></i></span>
+                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
                                             </div>
                                         </div>
                 
@@ -866,7 +880,7 @@
                                                 <span class="bs-text__small bs-text--gray">2024-07-31</span>
                                             </div>
                                             <div class="bs-table__cell bs-table__cell--ta-center">
-                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-pencil"></i></span>
+                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
                                             </div>
                                         </div>
                 
@@ -895,7 +909,7 @@
                                                 <span class="bs-text__small bs-text--gray">2024-07-31</span>
                                             </div>
                                             <div class="bs-table__cell bs-table__cell--ta-center">
-                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-pencil"></i></span>
+                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
                                             </div>
                                         </div>
                 
@@ -924,7 +938,7 @@
                                                 <span class="bs-text__small bs-text--gray">2024-07-31</span>
                                             </div>
                                             <div class="bs-table__cell bs-table__cell--ta-center">
-                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-pencil"></i></span>
+                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
                                             </div>
                                         </div>
                 
@@ -953,7 +967,7 @@
                                                 <span class="bs-text__small bs-text--gray">2024-07-31</span>
                                             </div>
                                             <div class="bs-table__cell bs-table__cell--ta-center">
-                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-pencil"></i></span>
+                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
                                             </div>
                                         </div>
                                     </div>
@@ -1035,7 +1049,7 @@
                                                 <span class="bs-text__small bs-text--gray">2024-07-31</span>
                                             </div>
                                             <div class="bs-table__cell bs-table__cell--ta-center">
-                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-pencil"></i></span>
+                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
                                             </div>
                                         </div>
                 
@@ -1064,7 +1078,7 @@
                                                 <span class="bs-text__small bs-text--gray">2024-07-31</span>
                                             </div>
                                             <div class="bs-table__cell bs-table__cell--ta-center">
-                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-pencil"></i></span>
+                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
                                             </div>
                                         </div>
                 
@@ -1093,7 +1107,7 @@
                                                 <span class="bs-text__small bs-text--gray">2024-07-31</span>
                                             </div>
                                             <div class="bs-table__cell bs-table__cell--ta-center">
-                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-pencil"></i></span>
+                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
                                             </div>
                                         </div>
                 
@@ -1122,7 +1136,7 @@
                                                 <span class="bs-text__small bs-text--gray">2024-07-31</span>
                                             </div>
                                             <div class="bs-table__cell bs-table__cell--ta-center">
-                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-pencil"></i></span>
+                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
                                             </div>
                                         </div>
                 
@@ -1151,7 +1165,7 @@
                                                 <span class="bs-text__small bs-text--gray">2024-07-31</span>
                                             </div>
                                             <div class="bs-table__cell bs-table__cell--ta-center">
-                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fa-solid fa-pencil"></i></span>
+                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
                                             </div>
                                         </div>
                                     </div>
@@ -1166,7 +1180,7 @@
                             <div class="bs-box-list">
                                 <div class="bs-box-list__title">
                                     <span class="bs-box-list__title-text">매체</span>
-                                    <span class="bs-box-list__title-arrow bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-angle-up"></i></span>
+                                    <span class="bs-box-list__title-arrow bs-fa-icon bs-fa-icon--big"><i class="fas fa-angle-up"></i></span>
                                 </div>
                                 <ul class="bs-box-list__items bs-box-list__items--scroll">
                                     <li class="bs-box-list__item">
@@ -1222,9 +1236,9 @@
                                 <div class="bs-box-list">
                                     <div class="bs-box-list__title">
                                         <span class="bs-box-list__title-text">매체</span>
-                                        <span class="bs-box-list__title-arrow bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-angle-up"></i></span>
+                                        <span class="bs-box-list__title-arrow bs-fa-icon bs-fa-icon--big"><i class="fas fa-angle-up"></i></span>
                                     </div>
-                                    <ul class="bs-box-list__items--scroll">
+                                    <ul class="bs-box-list__items bs-box-list__items--scroll">
                                         <li class="bs-box-list__item">
                                             <label class="bs-selector bs-selector--text-style">
                                                 <input type="checkbox" class="bs-selector__input bs-selector__checkbox" value="" name="" checked />
@@ -1246,7 +1260,7 @@
                                 <div class="bs-box-list">
                                     <div class="bs-box-list__title">
                                         <span class="bs-box-list__title-text">매체</span>
-                                        <span class="bs-box-list__title-arrow bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-angle-up"></i></span>
+                                        <span class="bs-box-list__title-arrow bs-fa-icon bs-fa-icon--big"><i class="fas fa-angle-up"></i></span>
                                     </div>
                                     <ul class="bs-box-list__items bs-box-list__items--scroll">
                                         <li class="bs-box-list__item">
@@ -1298,7 +1312,7 @@
                                 <div class="bs-box-list">
                                     <div class="bs-box-list__title">
                                         <span class="bs-box-list__title-text">매체</span>
-                                        <span class="bs-box-list__title-arrow bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-angle-up"></i></span>
+                                        <span class="bs-box-list__title-arrow bs-fa-icon bs-fa-icon--big"><i class="fas fa-angle-up"></i></span>
                                     </div>
                                     <ul class="bs-box-list__items bs-box-list__items--scroll">
                                         <li class="bs-box-list__item">
@@ -1354,7 +1368,7 @@
                             <div class="bs-box-list">
                                 <div class="bs-box-list__title">
                                     <span class="bs-box-list__title-text">매체</span>
-                                    <span class="bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fas fa-pencil-alt"></i></span>
+                                    <span class="bs-fa-icon bs-fa-icon--medium"><i class="fas fas fa-pencil-alt"></i></span>
                                 </div>
                                 <div class="bs-list-container bs-box-list__items bs-box-list__items--no-scroll">
                                     <div class="list-group list-group--array2">
@@ -1395,9 +1409,9 @@
                                     <span class="bs-box-list__title-text">매체</span>
                                     <div class="d-flex bs-gap">
                                         <input type="text" class="bs-field bs-field__text bs-field--big-medium" placeholder="내용을 입력해 주세요." />
-                                        <button class="bs-field__btn bs-btn bs-btn--gray bs-box-list__title-arrow w-rem-4">
-                                            <span class="bs-fa-icon bs-fa-icon--medium"><i class="fa-solid fa-angle-up"></i></span>
-                                        </button>
+                                        <span class="bs-field__btn bs-btn bs-btn--gray bs-box-list__title-arrow w-rem-4">
+                                            <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-angle-up"></i></span>
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="bs-list-container bs-box-list__items bs-box-list__items--no-scroll">

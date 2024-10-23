@@ -10,7 +10,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 4.5rem;
+  height: 4.7rem;
   background-color: #4271d9;
 }
 .header__inner {
@@ -44,9 +44,4 @@
   padding: 0.4em 1em;
   border: 1px solid #fff;
   border-radius: 9999px;
-}
-
-.hamburger-btn .bs-fa-icon {
-  font-size: 2rem;
-  color: #fff;
 }

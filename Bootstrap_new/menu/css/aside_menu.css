@@ -37,9 +37,6 @@
           align-items: center;
   gap: 1.5rem;
 }
-.aside-menu__item-title .bs-fa-icon {
-  color: #fff;
-}
 .aside-menu__item-title-text {
   font-size: 1.5rem;
   color: #fff;
@@ -55,9 +52,6 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1.5em 2.5em;
-}
-.aside-menu__sub-menu-arrow {
-  color: #fff !important;
 }
 .aside-menu__sub-menu-list {
   display: none;

@@ -59,9 +59,9 @@
             position: relative;
             background-color: $color-white;
             
-            &:hover {
-                background-color: $color-hover !important;
-            }
+            // &:hover {
+            //     background-color: $color-hover !important;
+            // }
         }
 
         // TABLE CELL 공통
@@ -115,6 +115,10 @@
                     display: table-row-group;
 
                     .bs-table__row {
+                        &:hover {
+                            background-color: $color-hover !important;
+                        }
+                        
                         &:nth-child(odd) {
                             background-color: $color-bg-table-row;
                         }
