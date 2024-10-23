@@ -5,9 +5,10 @@ html {
       overscroll-behavior: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   html {
-    font-size: 1.4vw;
+    font-size: 0.55rem;
+    font-size: 1.1vw;
   }
 }
 body {
