@@ -14,7 +14,7 @@ html {
 @media (max-width: 768px) {
   html {
     font-size: 0.55rem;
-    font-size: 1vw;
+    font-size: 1.1vw;
   }
 }
 body {
