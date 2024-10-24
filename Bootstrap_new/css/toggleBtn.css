@@ -2,7 +2,7 @@
   width: 4rem;
   overflow: hidden;
   cursor: pointer;
-  border: 0.1rem solid #e2e6ed;
+  border: 0.15rem solid #e2e6ed;
   border-radius: 1rem;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;

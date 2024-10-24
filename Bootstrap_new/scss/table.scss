@@ -58,6 +58,7 @@
         // TABLE ROW 공통
         &__row {
             display: table-row;
+            table-layout: fixed;
             position: relative;
             background-color: $color-white;
         }

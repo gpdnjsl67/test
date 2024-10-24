@@ -245,10 +245,17 @@
     background-color: $color-white;
 
     &::placeholder { color: $color-placeholder-bs; }
-    &:disabled { background-color: $color-bg-disabled; }
-    &:hover { border-color: $color-blue; }
     &:focus {outline: 0;}
     &:has(:focus) { border-color: $color-blue; }
+    &:disabled { background-color: $color-bg-disabled; }
+    &:hover {
+        &:not(:disabled) {
+            border-color: $color-blue;
+        }
+        // &:has(.bs-select:disabled) {
+        //     border-color: $color-white;
+        // }
+    }
     &:has(.bs-select:disabled) { background-color: $color-bg-disabled; }
 
     &--big { width: 27rem; }
@@ -475,6 +482,14 @@
     display: grid;
     gap: $gap-bs;
 
+    &__one-btn {
+        grid-template-columns: 1fr $width-btn-bs-1;
+    }
+
+    &__two-btn {
+        grid-template-columns: 1fr $width-btn-bs-1 $width-btn-bs-2;
+    }
+
     input[type='file'] {
         display: none;
         width: 0;
@@ -482,11 +497,18 @@
         overflow: hidden;
     }
 
+    &__label {
+        cursor: pointer
+    }
+
     &__description {
         @include basic-box;
         padding: $padding-bs;
         display: flex;
         align-items: center;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
         font-size: $font-main-size;
         color: $color-text-gray-bs;
         background-color: $color-white;

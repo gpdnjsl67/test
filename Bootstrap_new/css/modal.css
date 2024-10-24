@@ -22,8 +22,7 @@
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 90vw;
-  max-width: 900px;
-  height: 80vh;
+  max-width: 1000px;
   overflow: hidden;
   border-radius: 0.5rem;
   background-color: #fff;
@@ -53,7 +52,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 2em;
-  border-bottom: 0.11rem solid #e2e6ed;
+  border-bottom: 0.15rem solid #e2e6ed;
 }
 .bs-modal__top .bs-modal__title {
   display: block;
@@ -69,6 +68,7 @@
 }
 .bs-modal__content {
   padding: 2.5rem;
+  max-height: 80vh;
   overflow-y: scroll;
 }
 .bs-modal__bottom {
