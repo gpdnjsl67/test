@@ -2,6 +2,7 @@
 
 // fontawesome 아이콘
 .bs-fa-icon {
+    line-height: 1;
     color: $color-icon-gray;
 
     &--small { font-size: $icon-small; }
