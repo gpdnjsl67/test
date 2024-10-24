@@ -41,7 +41,7 @@
 }
 .header__link--logout {
   line-height: 1;
-  padding: 0.4em 1em;
-  border: 1px solid #fff;
+  padding: 0.4rem 1rem;
+  border: 0.11rem solid #fff;
   border-radius: 9999px;
 }

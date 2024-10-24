@@ -11,11 +11,15 @@
     table-row -> tr
     table-row-group -> tbody    
 */
+.table-cell-wrap {
+  white-space: wrap;
+}
+
 .bs-table-wrapper {
   display: table;
   table-layout: fixed;
   width: 100%;
-  border: 0.1rem solid #e2e6ed;
+  border: 0.11rem solid #e2e6ed;
   border-radius: 0.5rem;
   overflow: hidden;
   background-color: #fff;
@@ -62,7 +66,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 2rem;
-  border-bottom: 0.1rem solid #e2e6ed;
+  border-bottom: 0.11rem solid #e2e6ed;
 }
 .bs-table-wrapper .bs-table__body {
   display: table;
@@ -76,9 +80,6 @@
 .bs-table-wrapper .bs-table__body .bs-table__content {
   display: table-row-group;
 }
-.bs-table-wrapper .bs-table__body .bs-table__content .bs-table__row {
-  white-space: wrap;
-}
 .bs-table-wrapper .bs-table__body .bs-table__content .bs-table__row:hover {
   background-color: #eaf1ff !important;
 }
@@ -86,7 +87,7 @@
   background-color: #f5f5f5;
 }
 .bs-table-wrapper .bs-table__body .bs-table__content .bs-table__row .bs-table__cell {
-  border-top: 0.1rem solid #e2e6ed;
+  border-top: 0.11rem solid #e2e6ed;
 }
 .bs-table-wrapper .bs-table__body .bs-table__content .bs-table__row-bar::after {
   content: "";
@@ -124,7 +125,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-top: 0.1rem solid #e2e6ed;
+  border-top: 0.11rem solid #e2e6ed;
   background-color: #f5f5f5;
 }
 .bs-table-wrapper .bs-pagination {
@@ -146,7 +147,7 @@
   gap: 0.4rem;
 }
 .bs-table-wrapper .bs-pagination__link {
-  border: 0.1rem solid #e2e6ed;
+  border: 0.11rem solid #e2e6ed;
   border-radius: 0.5rem;
   padding: 0.3em 0.5em;
   width: 2.2em;

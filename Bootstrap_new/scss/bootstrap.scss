@@ -186,7 +186,7 @@
 
     // 공통
     &__item {
-        padding: 0.6rem 1rem;
+        padding: 0.7rem 1rem;
     }
 
     &__prev { }
@@ -196,6 +196,7 @@
         border-left: $border-bs;
 
         span {
+            line-height: 1;
             font-size: $font-main-size;
         }
     }
@@ -367,11 +368,15 @@
     }
 
     &__input {
-        // display: none;
+        display: none;
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
         outline: none;
+
+        &:disabled {
+            opacity: .5;
+        }
     }
 
     &__description {

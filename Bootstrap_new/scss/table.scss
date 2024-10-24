@@ -32,6 +32,8 @@
 //     overflow-x: scroll;
 // }
 
+.table-cell-wrap { white-space: wrap; }
+
 .bs-table-wrapper {
     display: table;
     table-layout: fixed;
@@ -96,7 +98,6 @@
         &__body {
             display: table;
             width: 100%;
-            // table-layout: fixed;
             white-space: nowrap;
 
             .bs-table {
@@ -111,7 +112,7 @@
                     display: table-row-group;
 
                     .bs-table__row {
-                        white-space: wrap;
+                        // white-space: wrap;
 
                         &:hover {
                             background-color: $color-hover !important;
