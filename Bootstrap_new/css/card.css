@@ -17,7 +17,7 @@
   width: 100%;
 }
 .bs-card__inner {
-  border: 1px solid #e2e6ed;
+  border: 0.1rem solid #e2e6ed;
   border-radius: 0.5rem;
   position: relative;
   padding: 1.5rem 2.5rem;
@@ -47,7 +47,7 @@
 }
 .bs-card__top {
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid #e2e6ed;
+  border-bottom: 0.1rem solid #e2e6ed;
 }
 .bs-card__top__data-title {
   font-size: 1.8em;

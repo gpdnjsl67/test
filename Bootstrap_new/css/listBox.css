@@ -19,7 +19,7 @@
 }
 
 .bs-box-list {
-  border: 1px solid #e2e6ed;
+  border: 0.1rem solid #e2e6ed;
   border-radius: 0.5rem;
   width: 100%;
   background-color: #fff;
@@ -52,7 +52,7 @@
           transform: rotate(180deg);
 }
 .bs-box-list__items {
-  border-top: 1px solid #e2e6ed;
+  border-top: 0.1rem solid #e2e6ed;
 }
 .bs-box-list__items--scroll {
   height: 24rem;
@@ -82,7 +82,7 @@
   color: #4271d9;
 }
 .bs-box-list__item:not(:first-child) {
-  border-top: 1px solid #e2e6ed;
+  border-top: 0.1rem solid #e2e6ed;
 }
 .bs-box-list__item:hover {
   background-color: #eaf1ff;

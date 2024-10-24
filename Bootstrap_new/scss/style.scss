@@ -89,7 +89,7 @@ $selector-size: 1.6rem;
 }
 
 @mixin desktop {
-    @media (max-width: #{$breakpoint-desktop}) {
+    @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop}) {
         @content;
     }
 }

@@ -245,9 +245,9 @@
 
     &::placeholder { color: $color-placeholder-bs; }
     &:disabled { background-color: $color-bg-disabled; }
-    &:hover { outline: 0; border-color: $color-blue; }
-    &:focus { outline: $focus-outline-bs; }
-    &:has(:focus) { outline: $focus-outline-bs; }
+    &:hover { border-color: $color-blue; }
+    &:focus {outline: 0;}
+    &:has(:focus) { border-color: $color-blue; }
     &:has(.bs-select:disabled) { background-color: $color-bg-disabled; }
 
     &--big { width: 27rem; }
@@ -268,7 +268,7 @@
     &--in-btn {
         display: grid;
         grid-template-columns: 1fr $width-btn-bs-1;
-        gap: $gap-bs;
+        // gap: $gap-bs;
         padding: 0;
 
         .bs-field {
