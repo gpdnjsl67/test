@@ -52,6 +52,10 @@
   margin: 0 !important;
 }
 
+.margin-0-auto {
+  margin: 0 auto !important;
+}
+
 .padding-bs {
   padding: 0.8rem !important;
 }
@@ -164,6 +168,10 @@
 
 .section-gap {
   gap: 5rem !important;
+}
+
+.table-gap {
+  gap: 2rem !important;
 }
 
 .txt-align-left {
@@ -706,9 +714,7 @@
 }
 
 .bs-select {
-  width: 100%;
   font-size: 1.3rem;
-  border: none;
   color: #9b98a4;
 }
 .bs-select:focus {

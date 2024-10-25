@@ -25,6 +25,7 @@
 
 // margin
 .margin-0 {margin: 0 !important;}
+.margin-0-auto {margin: 0 auto !important;}
 
 // padding
 .padding-bs {padding: $padding-bs !important;}
@@ -58,6 +59,7 @@
 .bs-gap {gap: $gap-bs !important;}
 .box-gap {gap: $gap-box !important;}
 .section-gap {gap: 5rem !important;}
+.table-gap {gap: 2rem !important;}
 
 .txt-align-left {text-align: left !important;}
 .txt-align-center {text-align: center !important;}
@@ -465,9 +467,7 @@
 
 // select
 .bs-select {
-    width: 100%;
     font-size: $font-main-size;
-    border: none;
     color: $color-text-gray-bs;
 
     &:focus { outline: none; }

@@ -49,13 +49,13 @@
                     </div>
                     <div class="main-top__right">
                         <div class="bs-calendar">
-                            <a href="#" class="bs-calendar__item bs-calendar__btn bs-calendar__prev">
+                            <a href="#" class="bs-calendar__item bs-calendar__btn bs-calendar__prev" title="1일 전">
                                 <span class="bs-fa-icon bs-fa-icon--medium bs-fa-icon--black"><i class="fas fa-caret-left"></i></span>
                             </a>
                             <div class="bs-calendar__item bs-calendar__date-range">
                                 <span>2024-10-10 ~ 2024-10-10</span>
                             </div>
-                            <a href="#" class="bs-calendar__item bs-calendar__btn bs-calendar__next">
+                            <a href="#" class="bs-calendar__item bs-calendar__btn bs-calendar__next" title="1일 후">
                                 <span class="bs-fa-icon bs-fa-icon--medium bs-fa-icon--black"><i class="fas fa-caret-right"></i></span>
                             </a>
                             <a href="#" class="bs-calendar__item bs-calendar__range-control">
@@ -232,37 +232,31 @@
             
                     <!--============= select =============-->
                     <div class="exp-item">
-                        <div class="bs-field">
-                            <select class="bs-select">
-                                <option class="bs-select__option" value="" disabled="" selected="">선택하세요.</option>
-                                <option class="bs-select__option" value="">option1</option>
-                                <option class="bs-select__option" value="">option2</option>
-                                <option class="bs-select__option" value="">option3</option>
-                            </select>
-                        </div>
+                        <select class="bs-select bs-field">
+                            <option class="bs-select__option" value="" disabled="" selected="">선택하세요.</option>
+                            <option class="bs-select__option" value="">option1</option>
+                            <option class="bs-select__option" value="">option2</option>
+                            <option class="bs-select__option" value="">option3</option>
+                        </select>
                     </div>
             
                     <div class="exp-item">
-                        <div class="bs-field">
-                            <select class="bs-select" disabled>
-                                <option class="bs-select__option" value="" disabled="" selected="">선택하세요.</option>
-                                <option class="bs-select__option" value="">option1</option>
-                                <option class="bs-select__option" value="">option2</option>
-                                <option class="bs-select__option" value="">option3</option>
-                            </select>
-                        </div>
+                        <select class="bs-select bs-field" disabled>
+                            <option class="bs-select__option" value="" disabled="" selected="">선택하세요.</option>
+                            <option class="bs-select__option" value="">option1</option>
+                            <option class="bs-select__option" value="">option2</option>
+                            <option class="bs-select__option" value="">option3</option>
+                        </select>
                     </div>
             
                     <div class="exp-item">
                         <label class="bs-field--with-btn bs-field--size1">
-                            <div class="bs-field">
-                                <select class="bs-select">
-                                    <option class="bs-select__option" value="" disabled="" selected="">선택하세요.</option>
-                                    <option class="bs-select__option" value="">option1</option>
-                                    <option class="bs-select__option" value="">option2</option>
-                                    <option class="bs-select__option" value="">option3</option>
-                                </select>
-                            </div>
+                            <select class="bs-select bs-field">
+                                <option class="bs-select__option" value="" disabled="" selected="">선택하세요.</option>
+                                <option class="bs-select__option" value="">option1</option>
+                                <option class="bs-select__option" value="">option2</option>
+                                <option class="bs-select__option" value="">option3</option>
+                            </select>
                             <a href="#" class="bs-btn bs-btn--gray"><span class="bs-btn__description">확인</span></a>
                         </label>
                     </div>
@@ -585,14 +579,12 @@
                                     <span class="bs-table__title">회원정보</span>
                                 </div>
                                 <!-- <div class="bs-table__top-right d-flex bs-gap">
-                                    <div class="bs-field bs-field--medium">
-                                        <select class="bs-select">
-                                            <option class="bs-select__option" value="" disabled="" selected="">선택하세요.</option>
-                                            <option class="bs-select__option" value="">option1</option>
-                                            <option class="bs-select__option" value="">option2</option>
-                                            <option class="bs-select__option" value="">option3</option>
-                                        </select>
-                                    </div>
+                                    <select class="bs-select bs-field bs-field--medium">
+                                        <option class="bs-select__option" value="" disabled="" selected="">선택하세요.</option>
+                                        <option class="bs-select__option" value="">option1</option>
+                                        <option class="bs-select__option" value="">option2</option>
+                                        <option class="bs-select__option" value="">option3</option>
+                                    </select>
                                     <input type="search" class="bs-field bs-field--big bs-search-bar" placeholder="Search..." />
                                 </div> -->
                             </div>
@@ -763,16 +755,14 @@
                             <div class="bs-table__bottom">
                                 <!-- <span>테이블_BOTTOM</span> -->
                                 <div class="bs-table__bottom-left">
-                                    <div class="bs-field bs-field--small">
-                                        <select class="bs-select bs-select--small">
-                                            <option class="bs-select__option" value="10">10</option>
-                                            <option class="bs-select__option" value="15">15</option>
-                                            <option class="bs-select__option" value="20">20</option>
-                                            <option class="bs-select__option" value="25">25</option>
-                                            <option class="bs-select__option" value="50">50</option>
-                                            <option class="bs-select__option" value="100">100</option>
-                                        </select>
-                                    </div>
+                                    <select class="bs-select bs-field bs-field--small">
+                                        <option class="bs-select__option" value="10">10</option>
+                                        <option class="bs-select__option" value="15">15</option>
+                                        <option class="bs-select__option" value="20">20</option>
+                                        <option class="bs-select__option" value="25">25</option>
+                                        <option class="bs-select__option" value="50">50</option>
+                                        <option class="bs-select__option" value="100">100</option>
+                                    </select>
                                 </div>
                                 <div class="bs-table__bottom-right">
                                     <nav class="bs-pagination">
@@ -801,14 +791,12 @@
                                     <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-plus-circle"></i></span>
                                 </div>
                                 <div class="bs-table__top-right d-flex bs-gap">
-                                    <div class="bs-field bs-field--medium">
-                                        <select class="bs-select">
-                                            <option class="bs-select__option" value="" disabled="" selected="">선택하세요.</option>
-                                            <option class="bs-select__option" value="">option1</option>
-                                            <option class="bs-select__option" value="">option2</option>
-                                            <option class="bs-select__option" value="">option3</option>
-                                        </select>
-                                    </div>
+                                    <select class="bs-select bs-field bs-field--medium">
+                                        <option class="bs-select__option" value="" disabled="" selected="">선택하세요.</option>
+                                        <option class="bs-select__option" value="">option1</option>
+                                        <option class="bs-select__option" value="">option2</option>
+                                        <option class="bs-select__option" value="">option3</option>
+                                    </select>
                                     <input type="search" class="bs-field bs-field--big bs-search-bar" placeholder="Search..." />
                                 </div>
                             </div>
@@ -979,16 +967,14 @@
                             <div class="bs-table__bottom">
                                 <!-- <span>테이블_BOTTOM</span> -->
                                 <div class="bs-table__bottom-left">
-                                    <div class="bs-field bs-field--small">
-                                        <select class="bs-select bs-select--small">
-                                            <option class="bs-select__option" value="10">10</option>
-                                            <option class="bs-select__option" value="15">15</option>
-                                            <option class="bs-select__option" value="20">20</option>
-                                            <option class="bs-select__option" value="25">25</option>
-                                            <option class="bs-select__option" value="50">50</option>
-                                            <option class="bs-select__option" value="100">100</option>
-                                        </select>
-                                    </div>
+                                    <select class="bs-select bs-field bs-field--small">
+                                        <option class="bs-select__option" value="10">10</option>
+                                        <option class="bs-select__option" value="15">15</option>
+                                        <option class="bs-select__option" value="20">20</option>
+                                        <option class="bs-select__option" value="25">25</option>
+                                        <option class="bs-select__option" value="50">50</option>
+                                        <option class="bs-select__option" value="100">100</option>
+                                    </select>
                                 </div>
                                 <div class="bs-table__bottom-right">
                                     <nav class="bs-pagination">

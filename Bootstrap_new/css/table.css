@@ -28,6 +28,7 @@
   overflow-x: scroll;
 }
 .bs-table-wrapper .bs-table__title {
+  display: block;
   font-size: 1.5rem;
   font-weight: 500;
   color: #9b98a4;

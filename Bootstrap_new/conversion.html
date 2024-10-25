@@ -32,7 +32,6 @@
     <link rel="stylesheet" type="text/css" href="./css/tab.css">
     <link rel="stylesheet" type="text/css" href="./css/toggleBtn.css"> -->
     <!-- End CSS // -->
-
 </head>
 <body>
     <div id="wrap">
@@ -50,55 +49,56 @@
                 </div>
 
                 <!-- // main contents -->
+                <!-- ========== 관리자 페이지 > 전환 관리 ========== -->
                 <div id="conversion-page">
-                    <div class="bs-table-wrapper">
-                        <div class="bs-table__top">
-                            <div class="bs-table__top-left">
-                                <a href="javascript:void(0);" id="btn-create-conversion" title="전환 생성" onclick="modalOpen($('#modal-create-conversion'), $('#overlay-create-conversion'));">
-                                    <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-plus-circle"></i></span>
-                                </a>
-                            </div>
-                            <div class="bs-table__top-right">
-                                <input type="search" class="bs-field bs-field--big bs-search-bar" placeholder="Search..." />
-                            </div>
-                        </div>
-        
-                        <div class="bs-table--scroll">
-                            <div class="bs-table__body">
-                                <div class="bs-table__header">
-                                    <div class="bs-table__row">
-                                        <div class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">구분</span></div>
-                                        <div class="bs-table__cell"><span class="bs-table__cell-text">전환 ID</span></div>
-                                        <div class="bs-table__cell"><span class="bs-table__cell-text">전환명</span></div>
-                                        <div class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">수정</span></div>
-                                    </div>
+                    <div class="conversion__content">
+                        <div class="bs-table-wrapper">
+                            <div class="bs-table__top">
+                                <div class="bs-table__top-left">
+                                    <a href="javascript:void(0);" id="btn-create-conversion" title="전환 생성" onclick="modalOpen($('#modal__create-conversion'), $('#overlay__create-conversion'));">
+                                        <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-plus-circle"></i></span>
+                                    </a>
                                 </div>
+                                <div class="bs-table__top-right">
+                                    <input type="search" class="bs-field bs-field--big bs-search-bar" placeholder="Search..." />
+                                </div>
+                            </div>
             
-                                <div class="bs-table__content">
-                                    <div class="bs-table__row">
-                                        <div class="bs-table__cell bs-table__cell--ta-center">
-                                            <span class="bs-table__cell-text">1</span>
+                            <div class="bs-table--scroll">
+                                <div class="bs-table__body">
+                                    <div class="bs-table__header">
+                                        <div class="bs-table__row">
+                                            <div class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">구분</span></div>
+                                            <div class="bs-table__cell"><span class="bs-table__cell-text">전환 ID</span></div>
+                                            <div class="bs-table__cell"><span class="bs-table__cell-text">전환명</span></div>
+                                            <div class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">수정</span></div>
                                         </div>
-                                        <div class="bs-table__cell">
-                                            <span class="bs-table__cell-text">1242305360428319</span>
-                                        </div>
-                                        <div class="bs-table__cell">
-                                            <span class="bs-table__cell-text">[T2]모모성형외과_부산점_여성헤어라인1</span>
-                                        </div>
-                                        <div class="bs-table__cell bs-table__cell--ta-center">
-                                            <a href="javascript:void(0);" title="전환 수정" onclick="modalOpen($('#modal-edit-conversion'), $('#overlay-edit-conversion'));">
-                                                <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
-                                            </a>
+                                    </div>
+                
+                                    <div class="bs-table__content">
+                                        <div class="bs-table__row">
+                                            <div class="bs-table__cell bs-table__cell--ta-center">
+                                                <span class="bs-table__cell-text">1</span>
+                                            </div>
+                                            <div class="bs-table__cell">
+                                                <span class="bs-table__cell-text">1242305360428319</span>
+                                            </div>
+                                            <div class="bs-table__cell">
+                                                <span class="bs-table__cell-text">[T2]모모성형외과_부산점_여성헤어라인1</span>
+                                            </div>
+                                            <div class="bs-table__cell bs-table__cell--ta-center">
+                                                <a href="javascript:void(0);" title="전환 수정" onclick="modalOpen($('#modal__edit-conversion'), $('#overlay__edit-conversion'));">
+                                                    <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-        
-                        <div class="bs-table__bottom">
-                            <div class="bs-table__bottom-left">
-                                <div class="bs-field bs-field--small">
-                                    <select class="bs-select bs-select--small">
+            
+                            <div class="bs-table__bottom">
+                                <div class="bs-table__bottom-left">
+                                    <select class="bs-select bs-field bs-field--small">
                                         <option class="bs-select__option" value="10">10</option>
                                         <option class="bs-select__option" value="15">15</option>
                                         <option class="bs-select__option" value="20">20</option>
@@ -107,34 +107,34 @@
                                         <option class="bs-select__option" value="100">100</option>
                                     </select>
                                 </div>
-                            </div>
-                            <div class="bs-table__bottom-right">
-                                <nav class="bs-pagination">
-                                    <a href="#" class="bs-pagination__previous bs-pagination__link">이전</a>
-        
-                                    <ul class="bs-pagination__list">
-                                        <li><a href="#" class="bs-pagination__link bs-pagination__link--current">1</a></li>
-                                        <li><a href="#" class="bs-pagination__link">2</a></li>
-                                        <li><a href="#" class="bs-pagination__link">3</a></li>
-                                        <li><a href="#" class="bs-pagination__link">4</a></li>
-                                        <li><a href="#" class="bs-pagination__link">5</a></li>
-                                        <li><a href="#" class="bs-pagination__link">6</a></li>
-                                    </ul>
-        
-                                    <a href="#" class="bs-pagination__next bs-pagination__link">다음</a>
-                                </nav>
+                                <div class="bs-table__bottom-right">
+                                    <nav class="bs-pagination">
+                                        <a href="#" class="bs-pagination__previous bs-pagination__link">이전</a>
+            
+                                        <ul class="bs-pagination__list">
+                                            <li><a href="#" class="bs-pagination__link bs-pagination__link--current">1</a></li>
+                                            <li><a href="#" class="bs-pagination__link">2</a></li>
+                                            <li><a href="#" class="bs-pagination__link">3</a></li>
+                                            <li><a href="#" class="bs-pagination__link">4</a></li>
+                                            <li><a href="#" class="bs-pagination__link">5</a></li>
+                                            <li><a href="#" class="bs-pagination__link">6</a></li>
+                                        </ul>
+            
+                                        <a href="#" class="bs-pagination__next bs-pagination__link">다음</a>
+                                    </nav>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- modal : 전환 생성 -->
-                    <div class="overlay" id="overlay-create-conversion"></div>
-                    <div id="modal-create-conversion" class="bs-modal">
+                    <div class="overlay" id="overlay__create-conversion"></div>
+                    <div id="modal__create-conversion" class="bs-modal">
                         <div class="bs-modal__inner">
                             <!-- 모달_TOP -->
                             <div class="bs-modal__top">
                                 <span class="bs-modal__title">전환 생성</span>
-                                <div class="bs-modal__close-btn" onclick="modalClose($('#modal-create-conversion'), $('#overlay-create-conversion'));">
+                                <div class="bs-modal__close-btn" onclick="modalClose($('#modal__create-conversion'), $('#overlay__create-conversion'));">
                                     <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-times"></i></span>
                                 </div>
                             </div>
@@ -167,13 +167,13 @@
                     </div>
 
                     <!-- modal : 전환 수정 -->
-                    <div class="overlay" id="overlay-edit-conversion"></div>
-                    <div id="modal-edit-conversion" class="bs-modal">
+                    <div class="overlay" id="overlay__edit-conversion"></div>
+                    <div id="modal__edit-conversion" class="bs-modal">
                         <div class="bs-modal__inner">
                             <!-- 모달_TOP -->
                             <div class="bs-modal__top">
                                 <span class="bs-modal__title">전환 수정</span>
-                                <div class="bs-modal__close-btn" onclick="modalClose($('#modal-edit-conversion'), $('#overlay-edit-conversion'));">
+                                <div class="bs-modal__close-btn" onclick="modalClose($('#modal__edit-conversion'), $('#overlay__edit-conversion'));">
                                     <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-times"></i></span>
                                 </div>
                             </div>

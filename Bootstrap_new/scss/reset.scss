@@ -72,7 +72,7 @@ select {
     -moz-appearance: none; /*for firefox*/
     appearance: none;
 
-    background: url("../images/chevron-down-solid.svg") right / 0.7em no-repeat transparent;
+    background: url("../images/chevron-down-solid.svg") calc(100% - $padding-bs) center / 0.9rem no-repeat transparent;
 }
 
 /* bs-scroll-bar */
