@@ -11,10 +11,16 @@
 // width
 .w-auto {width: auto !important;}
 .w-100 {width: 100% !important;}
+.w-rem-50 {width: 50rem !important;}
+.w-rem-40 {width: 40rem !important;}
+.w-rem-35 {width: 35rem !important;}
+.w-rem-30 {width: 30rem !important;}
 .w-rem-27 {width: 27rem !important;}
 .w-rem-20 {width: 20rem !important;}
 .w-rem-17 {width: 17rem !important;}
 .w-rem-12 {width: 12rem !important;}
+.w-rem-9 {width: 9rem !important;}
+.w-rem-8 {width: 8rem !important;}
 .w-rem-6 {width: 6rem !important;}
 .w-rem-5 {width: 5rem !important;}
 .w-rem-4 {width: 4rem !important;}
@@ -27,9 +33,65 @@
 .margin-0 {margin: 0 !important;}
 .margin-0-auto {margin: 0 auto !important;}
 
+.mt-bs {margin-top: $gap-bs !important;}
+.mt-1 {margin-top: 1rem !important;}
+.mt-2 {margin-top: 2rem !important;}
+.mt-3 {margin-top: 3rem !important;}
+.mt-4 {margin-top: 4rem !important;}
+.mt-5 {margin-top: 5rem !important;}
+
+.mr-bs {margin-right: $gap-bs !important;}
+.mr-1 {margin-right: 1rem !important;}
+.mr-2 {margin-right: 2rem !important;}
+.mr-3 {margin-right: 3rem !important;}
+.mr-4 {margin-right: 4rem !important;}
+.mr-5 {margin-right: 5rem !important;}
+
+.mb-bs {margin-bottom: $gap-bs !important;}
+.mb-1 {margin-bottom: 1rem !important;}
+.mb-2 {margin-bottom: 2rem !important;}
+.mb-3 {margin-bottom: 3rem !important;}
+.mb-4 {margin-bottom: 4rem !important;}
+.mb-5 {margin-bottom: 5rem !important;}
+
+.ml-bs {margin-left: $gap-bs !important;}
+.ml-1 {margin-left: 1rem !important;}
+.ml-2 {margin-left: 2rem !important;}
+.ml-3 {margin-left: 3rem !important;}
+.ml-4 {margin-left: 4rem !important;}
+.ml-5 {margin-left: 5rem !important;}
+
 // padding
 .padding-bs {padding: $padding-bs !important;}
 .padding-0 {padding: 0 !important;}
+
+.pt-bs {padding-top: $gap-bs !important;}
+.pt-1 {padding-top: 1rem !important;}
+.pt-2 {padding-top: 2rem !important;}
+.pt-3 {padding-top: 3rem !important;}
+.pt-4 {padding-top: 4rem !important;}
+.pt-5 {padding-top: 5rem !important;}
+
+.pr-bs {padding-right: $gap-bs !important;}
+.pr-1 {padding-right: 1rem !important;}
+.pr-2 {padding-right: 2rem !important;}
+.pr-3 {padding-right: 3rem !important;}
+.pr-4 {padding-right: 4rem !important;}
+.pr-5 {padding-right: 5rem !important;}
+
+.pb-bs {padding-bottom: $gap-bs !important;}
+.pb-1 {padding-bottom: 1rem !important;}
+.pb-2 {padding-bottom: 2rem !important;}
+.pb-3 {padding-bottom: 3rem !important;}
+.pb-4 {padding-bottom: 4rem !important;}
+.pb-5 {padding-bottom: 5rem !important;}
+
+.pl-bs {padding-left: $gap-bs !important;}
+.pl-1 {padding-left: 1rem !important;}
+.pl-2 {padding-left: 2rem !important;}
+.pl-3 {padding-left: 3rem !important;}
+.pl-4 {padding-left: 4rem !important;}
+.pl-5 {padding-left: 5rem !important;}
 
 // position
 .position-static {position: static !important;}
@@ -56,11 +118,19 @@
 .jc-sb {justify-content: space-between !important;}
 
 // gap
+.gap-none {gap: 0 !important;}
 .bs-gap {gap: $gap-bs !important;}
 .box-gap {gap: $gap-box !important;}
-.section-gap {gap: 5rem !important;}
-.table-gap {gap: 2rem !important;}
+.section-gap {gap: $gap-section !important;}
+.table-gap {gap: $gap-table !important;}
 
+.grid-2 {grid-template-columns: repeat(2, 1fr) !important;}
+.grid-2-1 {grid-template-columns: 2fr 1fr !important;}
+.grid-1-2 {grid-template-columns: 1fr 2fr !important;}
+.grid-3 {grid-template-columns: repeat(3, 1fr) !important;}
+.grid-4 {grid-template-columns: repeat(4, 1fr) !important;}
+
+// text-align
 .txt-align-left {text-align: left !important;}
 .txt-align-center {text-align: center !important;}
 .txt-align-right {text-align: right !important;}
@@ -75,14 +145,21 @@
 .fs-16 {font-size: 1.6rem !important;}
 .fs-17 {font-size: 1.7rem !important;}
 .fs-18 {font-size: 1.8rem !important;}
+.fs-19 {font-size: 1.9rem !important;}
+.fs-20 {font-size: 2rem !important;}
 
 // font-weight
+.fw-300 {font-weight: 300 !important;}
 .fw-400 {font-weight: 400 !important;}
 .fw-500 {font-weight: 500 !important;}
 .fw-600 {font-weight: 600 !important;}
 .fw-700 {font-weight: 700 !important;}
 .fw-800 {font-weight: 800 !important;}
 .fw-900 {font-weight: 900 !important;}
+
+// 영역 넘칠 때 줄바꿈
+.white-space-wrap {white-space: wrap !important; word-wrap: break-word !important;}
+.white-space-nowrap {white-space: nowrap !important; word-wrap: normal !important;}
 
 // overflow
 .overflow-auto {overflow: auto !important;}
@@ -91,6 +168,9 @@
 .overflow-y-scroll {overflow-y: scroll !important;}
 .overflow-x-hidden {overflow-x: hidden !important;}
 .overflow-y-hidden {overflow-y: hidden !important;}
+
+// cursor
+.cursor-pointer {cursor: pointer !important;}
 
 // border
 .border-bs {border: $border-bs !important;}
@@ -114,6 +194,7 @@
 .c-black {color: $color-black !important;}
 .c-white {color: $color-white !important;}
 .c-blue {color: $color-blue !important;}
+.c-red {color: $color-red !important;}
 
 // background-color
 .bg-white {background-color: $color-white !important;}
@@ -146,7 +227,7 @@
     padding: 7rem 3rem;
     width: 100%;
     overflow-y: scroll;
-    background-color: #f8f9fa;
+    background-color: $bgc-main-gray;
 
     .main-top {
         margin-bottom: 6rem;
@@ -220,6 +301,14 @@
         color: $color-black;
     }
 
+    &--blue {
+        color: $color-blue;
+    }
+
+    &--red {
+        color: $color-red;
+    }
+
     &__main {
         font-size: $font-main-size;
     }
@@ -247,9 +336,9 @@
     background-color: $color-white;
 
     &::placeholder { color: $color-placeholder-bs; }
-    &:focus {outline: 0;}
+    &:focus { outline: 0; border-color: $color-blue; }
     &:has(:focus) { border-color: $color-blue; }
-    &:disabled { background-color: $color-bg-disabled; }
+    &:disabled { color: $color-placeholder-bs; background-color: $color-bg-disabled; }
     &:hover {
         &:not(:disabled) {
             border-color: $color-blue;
@@ -260,11 +349,12 @@
     }
     &:has(.bs-select:disabled) { background-color: $color-bg-disabled; }
 
-    &--big { width: 27rem; }
-    &--big-medium { width: 20rem; }
-    &--medium { width: 12rem; }
-    &--small { width: 6rem; }
-    &--very-small { width: 4rem; }
+    &--big { width: $width-field-big; }
+    &--big-medium { width: $width-field-big-medium; }
+    &--medium { width: $width-field-medium; }
+    &--medium-small { width: $width-field-medium-small; }
+    &--small { width: $width-field-small; }
+    &--very-small { width: $width-field-very-small; }
     &--auto { width: auto; }
 
     // 우측에 버튼이 있을 때 정렬 속성
@@ -315,8 +405,8 @@
             }
 
             &__text {
-                padding: $padding-bs;
-                font-size: $font-main-size;
+                padding: 1.3rem;
+                font-size: 1.5rem;
                 border: none;
                 background-color: $color-white;
     
@@ -342,11 +432,15 @@
     align-items: center;
     justify-content: center;
     padding: $padding-bs;
-    // height: 100%;
 
     &--gray {
         color: $color-text-gray-bs;
         background-color: $color-bg-button-gray;
+    }
+
+    &--white {
+        color: $color-text-gray-bs;
+        background-color: $color-white;
     }
 
     &--blue {
@@ -361,13 +455,52 @@
         font-size: $font-main-size;
     }
 
-    &:hover { opacity: .9; }
+    &:hover { opacity: .8; }
+}
+
+// 공통 기본 button 태그 스타일
+.bs-button {
+    @include basic-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.6rem;
+
+    &--gray {
+        color: $color-text-gray-bs;
+        background-color: $color-bg-button-gray;
+    }
+
+    &--blue {
+        color: $color-white;
+        background-color: $color-blue;
+    }
+
+    &--white {
+        color: $color-text-gray-bs;
+        background-color: $color-white;
+    }
+
+    &__description {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 1.6rem;
+    }
+
+    &:hover { opacity: .8; }
 }
 
 // 기본 textarea
 .bs-textarea {
     width: 100%;
+    overflow-y: scroll;
     resize: none;
+    border: 0;
+
+    &:focus {
+        outline: 0;
+    }
 }
 
 // selector (radio, checkbox) CSS
@@ -510,7 +643,7 @@
         text-overflow: ellipsis;
         overflow: hidden;
         font-size: $font-main-size;
-        color: $color-text-gray-bs;
+        color: $color-placeholder-bs;
         background-color: $color-white;
     }
 }

@@ -1,0 +1,97 @@
+@charset "UTF-8";
+@import "style.scss";
+
+.adv-thumbnail {
+    width: 5rem;
+    overflow: hidden;
+    border-radius: $border-radius-bs;
+
+    &:hover {
+        transform: scale(1.8);
+    }
+
+    &__img {
+        width: 100%;
+    }
+}
+
+.adv {
+    &__item {
+        position: relative;
+
+        &--off {
+            &::after {
+                position: absolute;
+                left: 0;
+                top: 0;
+                content: '';
+                width: 100%;
+                height: 100%;
+                background-color: $color-white;
+                opacity: .5;
+            }
+        }
+    }
+}
+
+// 모달창 내 광고 일정
+.adv-schedule {
+    position: relative;
+
+    &--off {
+        &::after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: $color-black;
+            opacity: .4;
+        }
+    }
+
+    &__table {
+        width: 100%;
+        display: table;
+        // border: $border-bs;
+        border-top: $border-bs;
+        border-left: $border-bs;
+
+        &__header {
+            display: table-header-group;
+        }
+
+        &__head {
+            background-color: #eaf1ff !important;
+        }
+
+        &__row {
+            display: table-row;
+            table-layout: fixed;
+        }
+
+        &__cell {
+            display: table-cell;
+            padding: 0.7rem 0;
+            text-align: center;
+            font-size: $font-main-size;
+            cursor: pointer;
+            border-right: $border-bs;
+            border-bottom: $border-bs;
+            background-color: $color-white;
+            
+            &--clicked {
+                background-color: $color-blue;
+            }
+        }
+
+        &__content {
+            display: table-row-group;
+        }
+    }
+}
+
+.small-title-grid {
+    grid-template-columns: 7rem 1fr !important;
+}

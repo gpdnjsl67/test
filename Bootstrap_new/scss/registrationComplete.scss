@@ -1,0 +1,10 @@
+@charset "UTF-8";
+@import "style.scss";
+
+.registrationComplete {
+    &__content {
+        @include basic-box;
+        padding: 4rem 15rem;
+        background-color: $color-white;
+    }
+}

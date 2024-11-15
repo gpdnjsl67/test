@@ -1,0 +1,15 @@
+.FindEmailConfirm__content {
+  border: 0.15rem solid #e2e6ed;
+  border-radius: 0.5rem;
+  padding: 4rem 15rem;
+  background-color: #fff;
+}
+.FindEmailConfirm .icon-checkmark {
+  margin: 0 auto 2rem;
+  width: 3rem;
+  height: 5rem;
+  border-right: 0.6rem solid #4271d9;
+  border-bottom: 0.6rem solid #4271d9;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}

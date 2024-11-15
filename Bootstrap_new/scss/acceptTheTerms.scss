@@ -1,0 +1,52 @@
+@charset "UTF-8";
+@import "style.scss";
+
+.signup-agreement {
+    &__inner {
+        padding: $padding-auth-box;
+        display: grid;
+        gap: 4rem;
+    }
+    
+    &__title {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: $color-text-gray-bs;
+
+        &--red {
+            color: $color-red;
+        }
+    }
+
+    &__content {
+        @include basic-box;
+        padding: 1rem;
+        height: 12rem;
+        overflow-y: scroll;
+        font-size: $font-main-size;
+        color: $color-text-gray-bs;
+    }
+
+    &__options {
+        margin: 1rem 0;
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    &__description {
+        font-size: 1.2rem;
+        color: $color-text-gray-bs;
+    }
+
+    &__btns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__btn {
+        border: none;
+        border-radius: 0;
+    }
+}

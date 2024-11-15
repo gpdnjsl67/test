@@ -1,0 +1,19 @@
+@charset "UTF-8";
+@import "style.scss";
+
+.FindEmailConfirm {
+    &__content {
+        @include basic-box;
+        padding: 4rem 15rem;
+        background-color: $color-white;
+    }
+
+    .icon-checkmark {
+        margin: 0 auto 2rem;
+        width: 3rem;
+        height: 5rem;
+        border-right: 0.6rem solid $color-blue;
+        border-bottom: 0.6rem solid $color-blue;
+        transform: rotate(45deg);
+    }
+}

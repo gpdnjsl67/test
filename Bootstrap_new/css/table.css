@@ -39,6 +39,17 @@
   position: relative;
   background-color: #fff;
 }
+.bs-table-wrapper .bs-table__row--sub {
+  display: none;
+  background-color: #e9f1fe !important;
+}
+.bs-table-wrapper .bs-table__row--sub-sub {
+  display: none;
+  background-color: #f3f7ff !important;
+}
+.bs-table-wrapper .bs-table__row--active {
+  display: table-row;
+}
 .bs-table-wrapper .bs-table__cell {
   display: table-cell;
   padding: 2rem;
@@ -161,8 +172,8 @@
   background-color: #eaf1ff;
 }
 .bs-table-wrapper .bs-pagination__link--current {
-  color: #fff;
-  background-color: #4271d9;
+  color: #fff !important;
+  background-color: #4271d9 !important;
 }
 .bs-table-wrapper .bs-pagination__previous, .bs-table-wrapper .bs-pagination__next {
   width: auto;

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+@import "style.scss";
+
+.notice-file-preview {
+    margin-top: 1rem;
+    position: relative;
+    height: 20rem;
+
+    &::before {
+        z-index: 0;
+        content: '미리보기';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $color-text-gray-bs;
+    }
+
+    &__img {
+        z-index: 1;
+        position: relative;
+        height: 100%;
+    }
+}

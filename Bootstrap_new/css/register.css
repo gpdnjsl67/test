@@ -1,0 +1,13 @@
+.register__content {
+  padding: 4rem 15rem;
+}
+.register__notice {
+  margin-bottom: 1rem;
+}
+.register__inputs {
+  display: grid;
+  gap: 1rem;
+}
+.register__btn {
+  border-radius: 0;
+}

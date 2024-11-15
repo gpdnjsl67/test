@@ -1,0 +1,100 @@
+@charset "UTF-8";
+@import "style.scss";
+
+.event-edit {
+    &__preview-tab {
+        position: relative;
+    }
+
+    &__preview-links {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 32rem;
+    }
+
+    &__preview-link {
+        display: block;
+        font-size: $font-main-size;
+        color: $color-text-gray-bs;
+    }
+
+    &__preview-content {
+        padding: 1rem;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__preview-inner {
+        height: 80rem;
+    }
+
+    // &__preview-message {
+    //     font-size: $font-main-size;
+    //     color: $color-text-gray-bs;
+    // }
+}
+
+.event-media {
+    &__content {
+        display: grid;
+        gap: $gap-bs;
+    }
+
+    &__row {
+        display: grid;
+        gap: $gap-bs;
+
+        &--new {
+            grid-template-columns: $width-field-big-medium auto $width-field-very-small;
+        }
+
+        &--saved {
+            grid-template-columns: $width-field-big-medium auto $width-field-small $width-field-small;
+        }
+    }
+}
+
+// 차단 공통 (전화번호, 아이피)
+.block-box {
+    @include basic-box;
+    padding: 2rem;
+
+    &__top {
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-size: $font-main-size;
+        font-weight: 500;
+        color: $color-text-gray-bs;
+    }
+
+    &__list {
+        margin-top: 1rem;
+        padding: 0 0.5rem;
+        max-height: 20rem;
+        overflow-y: scroll;
+
+        &__item {
+            padding: 1rem 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: $border-bs;
+        }
+    }
+
+    &__added-item {
+        font-size: $font-main-size;
+        color: $color-text-gray-bs;
+    }
+}

@@ -1,0 +1,12 @@
+.event-management__content {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.event-management__table {
+  grid-column: 1/span 2;
+}
+
+.event-preview__content {
+  height: 85rem;
+}

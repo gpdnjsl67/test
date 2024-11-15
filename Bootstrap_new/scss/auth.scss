@@ -1,0 +1,58 @@
+@charset "UTF-8";
+@import "style.scss";
+
+body {
+    background-color: $bgc-main-gray;
+}
+
+#wrap {
+    position: relative;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // overflow-y: scroll;
+    // background-color: $bgc-main-gray;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 2.5rem;
+        background-color: $color-blue;
+    }
+}
+
+.auth {
+    &__container {
+        position: relative;
+        padding: 7rem 0 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__form {
+        width: 87rem;
+    }
+
+    &__step-img {
+        margin: 0 auto 5rem;
+        display: block;
+        width: 50rem;
+    }
+
+    &__title {
+        border-bottom: $border-bs;
+    }
+
+    &__icon-checkmark {
+        margin: 0 auto 2rem;
+        width: 3rem;
+        height: 5rem;
+        border-right: 0.6rem solid $color-blue;
+        border-bottom: 0.6rem solid $color-blue;
+        transform: rotate(45deg);
+    }
+}

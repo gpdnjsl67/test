@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "style.scss";
 
 // 테이블
@@ -62,6 +63,20 @@
             table-layout: fixed;
             position: relative;
             background-color: $color-white;
+
+            &--sub {
+                display: none;
+                background-color: #e9f1fe !important;
+            }
+
+            &--sub-sub {
+                display: none;
+                background-color: #f3f7ff !important;
+            }
+
+            &--active {
+                display: table-row;
+            }
         }
 
         // TABLE CELL 공통
@@ -212,8 +227,8 @@
             }
 
             &--current {
-                color: $color-white;
-                background-color: $color-blue;
+                color: $color-white !important;
+                background-color: $color-blue !important;
             }
         }
 

@@ -1,6 +1,5 @@
 html {
   font-size: 62.5%;
-  overflow: hidden;
   -ms-scroll-chaining: none;
       overscroll-behavior: none;
 }
@@ -57,7 +56,7 @@ select {
   -webkit-appearance: none; /* for chrome */
   -moz-appearance: none; /*for firefox*/
   appearance: none;
-  background: url("../images/chevron-down-solid.svg") calc(100% - 0.8rem) center/0.9rem no-repeat transparent;
+  background: url("../images/chevron-down-solid.svg") calc(100% - 0.7rem) center/0.9rem no-repeat transparent;
 }
 
 /* bs-scroll-bar */

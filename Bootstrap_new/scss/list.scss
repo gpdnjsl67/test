@@ -16,12 +16,16 @@
             grid-template-columns: repeat(2, 1fr);
         }
     
+        &--array3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    
         &__item {
             &--with-title {
                 display: grid;
                 gap: $gap-bs;
                 align-items: center;
-                grid-template-columns: 11rem 1fr;
+                grid-template-columns: 13rem 1fr;
             }
     
             &-title {

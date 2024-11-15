@@ -1,0 +1,43 @@
+@charset "UTF-8";
+@import "style.scss";
+
+.feedback-comment {
+    @include basic-box;
+    padding: 1rem;
+    background-color: #f5f5f5;
+
+    &__add-area {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 10rem;
+        gap: $gap-bs;
+    }
+
+    &__submit-btn {
+        height: 100%;
+        font-size: $font-main-size;
+    }
+}
+
+.feedback-file-preview {
+    margin-top: 1rem;
+    position: relative;
+    height: 20rem;
+
+    &::before {
+        z-index: 0;
+        content: '미리보기';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $color-text-gray-bs;
+    }
+
+    &__img {
+        z-index: 1;
+        position: relative;
+        height: 100%;
+    }
+}

@@ -1,0 +1,51 @@
+#customerDB-page .db-summary {
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  #customerDB-page .bs-table__top {
+    padding: 2rem;
+    height: auto;
+    display: grid;
+    gap: 2rem;
+  }
+}
+.authentication__content {
+  padding: 4rem 15rem;
+}
+.authentication__top-img {
+  margin: 0 auto 4rem;
+  width: 100%;
+}
+.authentication__top-img img {
+  width: 100%;
+}
+.authentication__inputs {
+  display: grid;
+  gap: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.authentication__item__phone {
+  display: grid;
+  grid-template-columns: 1fr 15rem;
+  gap: 0.5rem;
+}
+.authentication__ask-btn {
+  padding: 0;
+}
+
+.customer-history__details {
+  padding: 2rem;
+  height: 100%;
+  background-color: #f8f9fa;
+}
+.customer-history__textarea {
+  padding-top: 2rem;
+  height: 100%;
+  background-color: transparent;
+}
+.customer-history__textarea::-webkit-scrollbar {
+  display: none;
+}

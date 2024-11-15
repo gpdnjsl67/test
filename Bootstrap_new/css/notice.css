@@ -1,0 +1,22 @@
+@charset "UTF-8";
+.notice-file-preview {
+  margin-top: 1rem;
+  position: relative;
+  height: 20rem;
+}
+.notice-file-preview::before {
+  z-index: 0;
+  content: "미리보기";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #9b98a4;
+}
+.notice-file-preview__img {
+  z-index: 1;
+  position: relative;
+  height: 100%;
+}

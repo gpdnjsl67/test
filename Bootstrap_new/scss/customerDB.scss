@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@import "style.scss";
+
+#customerDB-page {
+    .db-summary {
+        gap: 1rem;
+    }
+}
+
+@include tablet {
+    #customerDB-page {
+        .bs-table__top {
+            padding: $padding-table;
+            height: auto;
+            display: grid;
+            gap: $padding-table;
+        }
+    }
+}
+
+.authentication {
+    &__content {
+        padding: 4rem 15rem;
+    }
+
+    &__top-img {
+        margin: 0 auto 4rem;
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__inputs {
+        display: grid;
+        gap: $gap-bs;
+        align-items: center;
+    }
+
+    &__item {
+        &__phone {
+            display: grid;
+            grid-template-columns: 1fr 15rem;
+            gap: $gap-bs;
+        }
+    }
+
+    &__ask-btn {
+        padding: 0;
+    }
+}
+
+.customer-history {
+    &__details {
+        padding: 2rem;
+        height: 100%;
+        background-color: #f8f9fa;
+    }
+
+    &__textarea {
+        padding-top: 2rem;
+        height: 100%;
+        background-color: transparent;
+        
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}

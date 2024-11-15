@@ -9,11 +9,11 @@
 
     // 드롭다운 메뉴
     &--dropdown {
-        &.active {
-            .aside-menu__sub-menu-arrow {
-                transform: rotate(180deg);
-            }
-        }
+        // &.active {
+        //     > .aside-menu__sub-menu-arrow {
+        //         transform: rotate(180deg) !important;
+        //     }
+        // }
     }
 
     &__inner {
@@ -37,8 +37,12 @@
     &__list { }
 
     &__item {
-        &--is-current {
+        &--current {
             background-color: $color-blue;
+
+            .aside-menu__sub-menu-arrow {
+                transform: rotate(180deg) !important;
+            }
         }
 
         &:hover {
@@ -49,10 +53,6 @@
             display: flex;
             align-items: center;
             gap: 1.5rem;
-    
-            // .bs-fa-icon {
-            //     color: $color-white;
-            // }
     
             &-text {
                 font-size: 1.5rem;
@@ -71,6 +71,10 @@
     &__sub-menu {
         &-list {
             display: none;
+        }
+
+        &-arrow {
+            display: block;
         }
 
         &-item {

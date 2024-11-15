@@ -18,12 +18,12 @@ $(document).ready(function() {
     }
 
     // 초기 로드 시 체크 상태에 따른 클래스 설정
-    $('.bs-box-list-wrapper .bs-box-list__item').each(function() {
+    $('.bs-box-list .bs-box-list__item').each(function() {
         toggleCheckedClass($(this));
     });
 
     // 클릭 이벤트 처리
-    $('.bs-box-list-wrapper').on('click', '.bs-box-list__item', function() {
+    $('.bs-box-list').on('click', '.bs-box-list__item', function() {
         const checkbox = $(this).find('.bs-selector__checkbox');
         
         // 체크박스 상태 토글 후 클래스 업데이트
@@ -31,5 +31,3 @@ $(document).ready(function() {
         toggleCheckedClass($(this));
     });
 });
-
-

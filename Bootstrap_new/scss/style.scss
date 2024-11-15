@@ -4,10 +4,24 @@ $breakpoint-desktop: 1024px;
 
 $font-main: "Noto Sans KR", sans-serif;
 $font-main-size: 1.3rem;
+$font-size-auth-input: 1.5rem;
 
+// width
+$width-field-big: 27rem;
+$width-field-big-medium: 20rem;
+$width-field-medium: 12rem;
+$width-field-medium-small: 9rem;
+$width-field-small: 6rem;
+$width-field-very-small: 4rem;
+
+// height
 $height-header: 4.7rem;
 $height-box-list: 24rem;
 $height-box-top: 7rem;
+$height-preview: 85rem;
+
+// bg
+$bgc-main-gray: #f8f9fa;
 
 // color
 $color-black: #212121;
@@ -31,13 +45,17 @@ $color-submenu-hover: #1e4eb8;
 $color-tab-off-gray: #f5f5f5;
 
 // padding
-$padding-bs: 0.8rem;
+$padding-bs: 0.7rem;
 $padding-table: 2rem;
 $padding-box-list: 2rem;
+$padding-auth-input: 1.3rem;
+$padding-auth-box: 4rem 15rem;
 
 // gap
 $gap-bs: 0.5rem;
-$gap-list: 2rem;
+$gap-section: 4rem;
+$gap-table: 2rem;
+$gap-list: 2rem 4rem;
 $gap-box: 2rem;
 $gap-pagination: 0.4rem;
 $gap-modal-section: 2rem;

@@ -1,0 +1,21 @@
+@charset "UTF-8";
+@import "style.scss";
+
+.register {
+    &__content {
+        padding: $padding-auth-box;
+    }
+
+    &__notice {
+        margin-bottom: 1rem;
+    }
+
+    &__inputs {
+        display: grid;
+        gap: 1rem;
+    }
+
+    &__btn {
+        border-radius: 0;
+    }
+}
