@@ -953,7 +953,6 @@
   width: 100%;
   overflow-y: scroll;
   resize: none;
-  border: 0;
 }
 .bs-textarea:focus {
   outline: 0;
