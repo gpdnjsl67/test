@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="JHW">
+    <title>MM</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> <!-- 구글 폰트 -->
+
+    <!-- // Fontawesome -->
+    <script src="./fontawesome/ver5/all.min.js" type="text/javascript"></script> <!-- fontawesome js -->
+    <link rel="stylesheet" href="./fontawesome/ver5/all.min.css"> <!-- fontawesome css -->
+    <!-- Fontawesome // -->
+
+    <!-- // Essential CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./css/icon.css">
+    <link rel="stylesheet" type="text/css" href="./menu/css/header.css">
+    <link rel="stylesheet" type="text/css" href="./menu/css/aside_menu.css">
+    <!--  Essential CSS // -->
+
+    <!-- // Start CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/modal.css">
+    <link rel="stylesheet" type="text/css" href="./css/table.css">
+    <link rel="stylesheet" type="text/css" href="./css/list.css">
+    <link rel="stylesheet" type="text/css" href="./css/boxList.css">
+    <link rel="stylesheet" type="text/css" href="./css/card.css">
+    <link rel="stylesheet" type="text/css" href="./css/scroll.css">
+    <link rel="stylesheet" type="text/css" href="./css/tab.css">
+    <link rel="stylesheet" type="text/css" href="./css/toggleBtn.css">
+    <!-- End CSS // -->
+
+</head>
+<body>
+    <div id="wrap">
+        <div data-include-path="./menu/header.html"></div>
+
+        <div id="container">
+            <div data-include-path="./menu/aside_menu.html"></div>
+        
+            <main class="main" id="main">
+                <div class="main-top">
+                    <div class="main-top__left main-top__title">
+                        <h1 class="top-title__main">마이 페이지</h1>
+                        <!-- <h2 class="top-title__sub">Advertisement List</h2> -->
+                    </div>
+                </div>
+
+                <!-- // main contents -->
+                <!-- ========== 마이 페이지 ========== -->
+                <div id="myPage-page">
+                    <div class="myPage__content d-grid section-gap">
+                        <div class="bs-box-list-wrapper d-grid box-gap grid-1-2">
+                            <!-- 박스 리스트 : 내정보 -->
+                            <div class="bs-box-list">
+                                <div class="bs-box-list__title">
+                                    <span class="bs-box-list__title-text">내정보</span>
+                                    <a href="javascript:void(0);" title="내정보 수정" onclick="modalOpen($('#modal__edit-myPage'), $('#overlay__edit-myPage'));">
+                                        <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
+                                    </a>
+                                </div>
+                                <div class="bs-list-container bs-box-list__items bs-box-list__items--no-scroll">
+                                    <div class="list-group list-group--array1">
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">아이디</div>
+                                            <span class="bs-text__main bs-text--gray">ddd</span>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">이름</div>
+                                            <span class="bs-text__main bs-text--gray">홍길동</span>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">이메일</div>
+                                            <span class="bs-text__main bs-text--gray">ddd@techlabs.kr</span>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">전화번호</div>
+                                            <span class="bs-text__main bs-text--gray">01012341234</span>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">상태</div>
+                                            <span class="bs-text__main bs-text--gray">사용가능</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 박스 리스트 : 업체 정보 -->
+                            <div class="bs-box-list">
+                                <div class="bs-box-list__title">
+                                    <span class="bs-box-list__title-text">업체 정보</span>
+                                </div>
+                                <div class="bs-list-container bs-box-list__items bs-box-list__items--no-scroll">
+                                    <div class="list-group list-group--array2">
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">업체명</div>
+                                            <span class="bs-text__main bs-text--gray">메타마케팅</span>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">업태</div>
+                                            <span class="bs-text__main bs-text--gray">서비스</span>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">사업자 번호</div>
+                                            <span class="bs-text__main bs-text--gray">105-86-88886</span>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">사업장 주소</div>
+                                            <span class="bs-text__main bs-text--gray">광고대행</span>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">대표자명</div>
+                                            <span class="bs-text__main bs-text--gray">ddd</span>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">계산서 발행메일주소</div>
+                                            <span class="bs-text__main bs-text--gray">ddd@techlabs.kr</span>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">상태</div>
+                                            <span class="bs-text__main bs-text--gray">직원</span>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">정산서 발행메일주소</div>
+                                            <span class="bs-text__main bs-text--gray">ddd@techlabs.kr</span>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">업종</div>
+                                            <span class="bs-text__main bs-text--gray">SYSTEM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="bs-table-wrapper">
+                            <div class="bs-table__top">
+                                <div class="bs-table__top-left">
+                                    <span class="bs-table__title">연결된 업체 정보</span>
+                                </div>
+                            </div>
+            
+                            <div class="bs-table--scroll">
+                                <div class="bs-table__body">
+                                    <div class="bs-table__header">
+                                        <ul class="bs-table__row">
+                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">상태</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">업체명/사업자번호</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">총 충전잔액</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">유상 충전잔액</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">무상 충전잔액</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">기타</span></li>
+                                        </ul>
+                                    </div>
+                
+                                    <div class="bs-table__content">
+                                        <ul class="bs-table__row bs-table__row-bar bs-table__row-bar--red">
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <span class="bs-table__cell-text">메타마케팅</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <span class="bs-table__cell-text">메타마케팅</span>
+                                                <span class="bs-text__small bs-text--gray">105-86-88886</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center">
+                                                <span class="bs-table__cell-text">0</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center">
+                                                <span class="bs-table__cell-text">0</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center">
+                                                <span class="bs-table__cell-text">0</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center">
+                                                <a href="#" class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-wallet"></i></a>
+                                                <span class="bs-text__small bs-text--gray">충전</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="bs-table__bottom">
+                                <div class="bs-table__bottom-left">
+                                    <select class="bs-select bs-field bs-field--small">
+                                        <option class="bs-select__option" value="10">10</option>
+                                        <option class="bs-select__option" value="15">15</option>
+                                        <option class="bs-select__option" value="20">20</option>
+                                        <option class="bs-select__option" value="25">25</option>
+                                        <option class="bs-select__option" value="50">50</option>
+                                        <option class="bs-select__option" value="100">100</option>
+                                    </select>
+                                </div>
+                                <div class="bs-table__bottom-right">
+                                    <nav class="bs-pagination">
+                                        <a href="#" class="bs-pagination__previous bs-pagination__link">이전</a>
+            
+                                        <ul class="bs-pagination__list">
+                                            <li><a href="#" class="bs-pagination__link bs-pagination__link--current">1</a></li>
+                                            <li><a href="#" class="bs-pagination__link">2</a></li>
+                                            <li><a href="#" class="bs-pagination__link">3</a></li>
+                                            <li><a href="#" class="bs-pagination__link">4</a></li>
+                                            <li><a href="#" class="bs-pagination__link">5</a></li>
+                                        </ul>
+            
+                                        <a href="#" class="bs-pagination__next bs-pagination__link">다음</a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- 테이블 : 회원정보 -->
+                        <div class="bs-table-wrapper">
+                            <div class="bs-table__top">
+                                <div class="bs-table__top-left">
+                                    <span class="bs-table__title">회원 정보</span>
+                                </div>
+                            </div>
+            
+                            <div class="bs-table--scroll">
+                                <div class="bs-table__body">
+                                    <div class="bs-table__header">
+                                        <ul class="bs-table__row">
+                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">상태</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">아이디</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">이름</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">이메일</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">전화번호</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">상태</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">승인</span></li>
+                                        </ul>
+                                    </div>
+                
+                                    <div class="bs-table__content">
+                                        <ul class="bs-table__row bs-table__row-bar bs-table__row-bar--blue">
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <span class="bs-table__cell-text">사용가능</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <span class="bs-table__cell-text">qwer1234</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <span class="bs-table__cell-text">홍길동</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <span class="bs-table__cell-text">qwer1234@techlabs.kr</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <span class="bs-table__cell-text">01012341234</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center">
+                                                <span class="bs-table__cell-text">직원</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center">
+                                                <span class="bs-table__cell-text">승인</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="bs-table__bottom">
+                                <div class="bs-table__bottom-left">
+                                    <select class="bs-select bs-field bs-field--small">
+                                        <option class="bs-select__option" value="10">10</option>
+                                        <option class="bs-select__option" value="15">15</option>
+                                        <option class="bs-select__option" value="20">20</option>
+                                        <option class="bs-select__option" value="25">25</option>
+                                        <option class="bs-select__option" value="50">50</option>
+                                        <option class="bs-select__option" value="100">100</option>
+                                    </select>
+                                </div>
+                                <div class="bs-table__bottom-right">
+                                    <nav class="bs-pagination">
+                                        <a href="#" class="bs-pagination__previous bs-pagination__link">이전</a>
+            
+                                        <ul class="bs-pagination__list">
+                                            <li><a href="#" class="bs-pagination__link bs-pagination__link--current">1</a></li>
+                                            <li><a href="#" class="bs-pagination__link">2</a></li>
+                                            <li><a href="#" class="bs-pagination__link">3</a></li>
+                                            <li><a href="#" class="bs-pagination__link">4</a></li>
+                                            <li><a href="#" class="bs-pagination__link">5</a></li>
+                                        </ul>
+            
+                                        <a href="#" class="bs-pagination__next bs-pagination__link">다음</a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- modal : 내정보 수정 -->
+                    <div class="overlay" id="overlay__edit-myPage"></div>
+                    <div id="modal__edit-myPage" class="bs-modal">
+                        <div class="bs-modal__inner">
+                            <!-- 모달_TOP -->
+                            <div class="bs-modal__top">
+                                <span class="bs-modal__title">내정보 수정</span>
+                                <div class="bs-modal__close-btn" onclick="modalClose($('#modal__edit-myPage'), $('#overlay__edit-myPage'));">
+                                    <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-times"></i></span>
+                                </div>
+                            </div>
+            
+                            <!-- 모달_CONTENT -->
+                            <div class="bs-modal__content">
+                                <div class="bs-list-container">
+                                    <div class="list-group list-group--array2">
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">아이디</div>
+                                            <span class="bs-text__main bs-text--gray">asdf1234</span>
+                                        </div>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">이름</div>
+                                            <input type="text" class="bs-field bs-field__text" value="홍길동" />
+                                        </label>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">이메일</div>
+                                            <!-- <input type="text" class="bs-field bs-field__text" value="ddd@techlabs.kr" disabled /> -->
+                                            <span class="bs-text__main bs-text--gray">ddd@techlabs.kr</span>
+                                        </label>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">전화번호</div>
+                                            <input type="text" class="bs-field bs-field__text" value="01012341234" />
+                                        </label>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">상태</div>
+                                            <span class="bs-text__main bs-text--gray">사용가능</span>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">권한</div>
+                                            <span class="bs-text__main bs-text--gray">직원</span>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">승인</div>
+                                            <span class="bs-text__main bs-text--gray">승인</span>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">연결된 업체 정보</div>
+                                            <span class="bs-text__main bs-text--gray">메타마케팅</span>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">비밀번호</div>
+                                            <a href="#" class="modal-open-btn bs-btn bs-btn--gray w-rem-12" onclick="modalOpen($('#modal1'), $('#overlay1'));"><span class="bs-btn__description">비밀번호 변경</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 모달_BOTTOM -->
+                            <div class="bs-modal__bottom">
+                                <button type="button" class="bs-modal__btn bs-modal__btn--save w-100">완료</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  main contents // -->
+            </main>
+        </div>
+    </div>
+
+    <!-- // Essential CSS -->
+    <script src="./js/jquery.min.js" type="text/javascript"></script>
+    <script src="./menu/js/aside_menu.js"></script>
+    <script src="./js/main.js"></script>
+    <!-- Essential CSS // -->
+    
+    <script src="./js/modal.js"></script>
+    <!-- <script src="./js/boxList.js"></script>
+    <script src="./js/tab.js"></script>
+    <script src="./js/upload.js"></script>
+    <script src="./js/toggleBtn.js"></script> -->
+</body>
+</html>

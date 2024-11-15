@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="JHW">
+    <title>MM</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> <!-- 구글 폰트 -->
+
+    <!-- // Fontawesome -->
+    <script src="./fontawesome/ver5/all.min.js" type="text/javascript"></script> <!-- fontawesome js -->
+    <link rel="stylesheet" href="./fontawesome/ver5/all.min.css"> <!-- fontawesome css -->
+    <!-- Fontawesome // -->
+
+    <!-- // Essential CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./css/icon.css">
+    <link rel="stylesheet" type="text/css" href="./menu/css/header.css">
+    <link rel="stylesheet" type="text/css" href="./menu/css/aside_menu.css">
+    <!--  Essential CSS // -->
+
+    <!-- // Start CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/modal.css">
+    <link rel="stylesheet" type="text/css" href="./css/table.css">
+    <link rel="stylesheet" type="text/css" href="./css/list.css">
+    <link rel="stylesheet" type="text/css" href="./css/notice.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./css/boxList.css">
+    <link rel="stylesheet" type="text/css" href="./css/card.css">
+    <link rel="stylesheet" type="text/css" href="./css/scroll.css">
+    <link rel="stylesheet" type="text/css" href="./css/tab.css">
+    <link rel="stylesheet" type="text/css" href="./css/toggleBtn.css"> -->
+    <!-- End CSS // -->
+</head>
+<body>
+    <div id="wrap">
+        <div data-include-path="./menu/header.html"></div>
+
+        <div id="container">
+            <div data-include-path="./menu/aside_menu.html"></div>
+        
+            <main class="main" id="main">
+                <div class="main-top">
+                    <div class="main-top__left main-top__title">
+                        <h1 class="top-title__main">공지사항</h1>
+                        <!-- <h2 class="top-title__sub">Advertisement List</h2> -->
+                    </div>
+                </div>
+
+                <!-- // main contents -->
+                <!-- ========== 공지사항 ========== -->
+                <div id="notice-page">
+                    <div class="notice__content">
+                        <div class="bs-table-wrapper">
+                            <div class="bs-table__top">
+                                <div class="bs-table__top-left">
+                                    <a href="javascript:void(0);" id="btn__create-notice" title="공지사항 생성" onclick="modalOpen($('#modal__create-notice'), $('#overlay__create-notice'));">
+                                        <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-plus-circle"></i></span>
+                                    </a>
+                                </div>
+                                <div class="bs-table__top-right">
+                                    <input type="search" class="bs-field bs-field--big bs-search-bar" placeholder="Search...">
+                                </div>
+                            </div>
+            
+                            <div class="bs-table--scroll">
+                                <div class="bs-table__body">
+                                    <div class="bs-table__header">
+                                        <ul class="bs-table__row">
+                                            <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">구분</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">대상</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">제목</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">내용</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">작성자</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">일자</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">수정</span></li>
+                                        </ul>
+                                    </div>
+                
+                                    <div class="bs-table__content">
+                                        <ul class="bs-table__row">
+                                            <li class="bs-table__cell bs-table__cell--ta-center">
+                                                <span class="bs-table__cell-text">1</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <span class="bs-table__cell-text">DB관리</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <a href="#" class="bs-table__cell-text w-rem-30 white-space-wrap" onclick="modalOpen($('#modal__view-notice'), $('#overlay__view-notice'));" title="공지사항 보기">제목제목</a>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <a href="#" class="bs-table__cell-text w-rem-40 white-space-wrap" onclick="modalOpen($('#modal__view-notice'), $('#overlay__view-notice'));" title="공지사항 보기">내용내용</a>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <span class="bs-table__cell-text">admin</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center">
+                                                <span class="bs-table__cell-text">2024-10-29 15:30:33</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center">
+                                                <a href="javascript:void(0);" title="공지사항 수정" onclick="modalOpen($('#modal__edit-notice'), $('#overlay__edit-notice'));">
+                                                    <span class="bs-fa-icon bs-fa-icon--medium"><i class="fas fa-pencil-alt"></i></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="bs-table__bottom">
+                                <div class="bs-table__bottom-left">
+                                    <select class="bs-select bs-field bs-field--small">
+                                        <option class="bs-select__option" value="10">10</option>
+                                        <option class="bs-select__option" value="15">15</option>
+                                        <option class="bs-select__option" value="20">20</option>
+                                        <option class="bs-select__option" value="25">25</option>
+                                        <option class="bs-select__option" value="50">50</option>
+                                        <option class="bs-select__option" value="100">100</option>
+                                    </select>
+                                </div>
+                                <div class="bs-table__bottom-right">
+                                    <nav class="bs-pagination">
+                                        <a href="#" class="bs-pagination__previous bs-pagination__link">이전</a>
+            
+                                        <ul class="bs-pagination__list">
+                                            <li><a href="#" class="bs-pagination__link bs-pagination__link--current">1</a></li>
+                                            <li><a href="#" class="bs-pagination__link">2</a></li>
+                                            <li><a href="#" class="bs-pagination__link">3</a></li>
+                                            <li><a href="#" class="bs-pagination__link">4</a></li>
+                                            <li><a href="#" class="bs-pagination__link">5</a></li>
+                                            <li><a href="#" class="bs-pagination__link">6</a></li>
+                                        </ul>
+            
+                                        <a href="#" class="bs-pagination__next bs-pagination__link">다음</a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- modal : 공지사항 생성 -->
+                    <div class="overlay" id="overlay__create-notice"></div>
+                    <div id="modal__create-notice" class="bs-modal">
+                        <div class="bs-modal__inner">
+                            <!-- 모달_TOP -->
+                            <div class="bs-modal__top">
+                                <span class="bs-modal__title">공지사항 생성</span>
+                                <div class="bs-modal__close-btn" onclick="modalClose($('#modal__create-notice'), $('#overlay__create-notice'));">
+                                    <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-times"></i></span>
+                                </div>
+                            </div>
+            
+                            <!-- 모달_CONTENT -->
+                            <div class="bs-modal__content">
+                                <div class="bs-list-container">
+                                    <div class="list-group__item list-group__item--with-title">
+                                        <div class="list-group__item-title">대상</div>
+                                        <select class="bs-select bs-field bs-field--medium">
+                                            <option class="bs-select__option" value="" selected="">전체</option>
+                                            <option class="bs-select__option" value="">대행사</option>
+                                            <option class="bs-select__option" value="">광고주</option>
+                                            <option class="bs-select__option" value="">DB관리</option>
+                                        </select>
+                                    </div>
+                                    <div class="list-group list-group--array1">
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">제목</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="제목을 입력해 주세요." />
+                                        </label>
+                                        <div class="list-group__item list-group__item--with-title ai-start">
+                                            <div class="list-group__item-title">내용</div>
+                                            <textarea class="bs-textarea bs-field" name="" id="" rows="10" placeholder="내용을 입력해 주세요."></textarea>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">파일</div>
+                                            <div>
+                                                <div class="bs-file-upload bs-file-upload__one-btn">
+                                                    <input class="bs-file-upload__input" id="notice-file-upload__edit" type="file" multiple />
+                                                    <span class="bs-file-upload__description">선택 파일 없음</span>
+                                                    <label class="bs-file-upload__label bs-btn bs-btn--gray" for="notice-file-upload__edit">
+                                                        <span class="bs-btn__description">불러오기</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title ai-start">
+                                            <div class="list-group__item-title">파일 다운</div>
+                                            <div class="">
+                                                <a href="#" class="notice-file-download bs-text bs-text__main bs-text--gray">banner.jpg</a>
+                                                <div class="notice-file-preview border-bs d-flex array-center">
+                                                    <img src="./images/banner.jpg" class="notice-file-preview__img" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 모달_BOTTOM -->
+                            <div class="bs-modal__bottom">
+                                <button type="button" class="bs-modal__btn bs-modal__btn--save w-100">저장</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- modal : 공지사항 뷰페이지 -->
+                    <div class="overlay" id="overlay__view-notice"></div>
+                    <div id="modal__view-notice" class="bs-modal">
+                        <div class="bs-modal__inner">
+                            <!-- 모달_TOP -->
+                            <div class="bs-modal__top">
+                                <span class="bs-modal__title">공지사항</span>
+                                <div class="bs-modal__close-btn" onclick="modalClose($('#modal__view-notice'), $('#overlay__view-notice'));">
+                                    <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-times"></i></span>
+                                </div>
+                            </div>
+            
+                            <!-- 모달_CONTENT -->
+                            <div class="bs-modal__content">
+                                <div class="bs-list-container">
+                                    <div class="list-group__item list-group__item--with-title">
+                                        <div class="list-group__item-title">대상</div>
+                                        <select class="bs-select bs-field bs-field--medium" disabled>
+                                            <option class="bs-select__option" value="" selected="">전체</option>
+                                            <option class="bs-select__option" value="">대행사</option>
+                                            <option class="bs-select__option" value="">광고주</option>
+                                            <option class="bs-select__option" value="">DB관리</option>
+                                        </select>
+                                    </div>
+                                    <div class="list-group list-group--array1">
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">제목</div>
+                                            <span class="bs-text__main bs-text--gray">제목제목</span>
+                                        </label>
+                                        <div class="list-group__item list-group__item--with-title ai-start">
+                                            <div class="list-group__item-title">내용</div>
+                                            <span class="bs-text__main bs-text--gray">내용내용<br>내용내용</span>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title ai-start">
+                                            <div class="list-group__item-title">파일 다운</div>
+                                            <div class="">
+                                                <a href="#" class="notice-file-download bs-text bs-text__main bs-text--gray">banner.jpg</a>
+                                                <div class="notice-file-preview border-bs d-flex array-center">
+                                                    <img src="./images/banner.jpg" class="notice-file-preview__img" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 모달_BOTTOM -->
+                            <div class="bs-modal__bottom">
+                                <button type="button" class="bs-modal__btn bs-modal__btn--save w-100">저장</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- modal : 공지사항 수정 -->
+                    <div class="overlay" id="overlay__edit-notice"></div>
+                    <div id="modal__edit-notice" class="bs-modal">
+                        <div class="bs-modal__inner">
+                            <!-- 모달_TOP -->
+                            <div class="bs-modal__top">
+                                <span class="bs-modal__title">공지사항 수정</span>
+                                <div class="bs-modal__close-btn" onclick="modalClose($('#modal__edit-notice'), $('#overlay__edit-notice'));">
+                                    <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-times"></i></span>
+                                </div>
+                            </div>
+            
+                            <!-- 모달_CONTENT -->
+                            <div class="bs-modal__content">
+                                <div class="bs-list-container">
+                                    <div class="list-group__item list-group__item--with-title">
+                                        <div class="list-group__item-title">대상</div>
+                                        <select class="bs-select bs-field bs-field--medium">
+                                            <option class="bs-select__option" value="" selected="">전체</option>
+                                            <option class="bs-select__option" value="">대행사</option>
+                                            <option class="bs-select__option" value="">광고주</option>
+                                            <option class="bs-select__option" value="">DB관리</option>
+                                        </select>
+                                    </div>
+                                    <div class="list-group list-group--array1">
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">제목</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="제목을 입력해 주세요." />
+                                        </label>
+                                        <div class="list-group__item list-group__item--with-title ai-start">
+                                            <div class="list-group__item-title">내용</div>
+                                            <textarea class="bs-textarea bs-field" name="" id="" rows="10" placeholder="내용을 입력해 주세요."></textarea>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">파일</div>
+                                            <div>
+                                                <div class="bs-file-upload bs-file-upload__one-btn">
+                                                    <input class="bs-file-upload__input" id="notice-file-upload__edit" type="file" multiple />
+                                                    <span class="bs-file-upload__description">선택 파일 없음</span>
+                                                    <label class="bs-file-upload__label bs-btn bs-btn--gray" for="notice-file-upload__edit">
+                                                        <span class="bs-btn__description">불러오기</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title ai-start">
+                                            <div class="list-group__item-title">파일 다운</div>
+                                            <div class="">
+                                                <a href="#" class="notice-file-download bs-text bs-text__main bs-text--gray">banner.jpg</a>
+                                                <div class="notice-file-preview border-bs d-flex array-center">
+                                                    <img src="./images/banner.jpg" class="notice-file-preview__img" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 모달_BOTTOM -->
+                            <div class="bs-modal__bottom">
+                                <button type="button" class="bs-modal__btn bs-modal__btn--save w-100">수정</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  main contents // -->
+            </main>
+        </div>
+    </div>
+
+    <!-- // Essential CSS -->
+    <script src="./js/jquery.min.js" type="text/javascript"></script>
+    <script src="./menu/js/aside_menu.js"></script>
+    <script src="./js/main.js"></script>
+    <!-- Essential CSS // -->
+    
+    <script src="./js/modal.js"></script>
+    <script src="./js/upload.js"></script>
+
+    <!-- <script src="./js/boxList.js"></script>
+    <script src="./js/tab.js"></script>
+    <script src="./js/toggleBtn.js"></script> -->
+</body>
+</html>

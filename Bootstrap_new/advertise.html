@@ -32,6 +32,8 @@
     <link rel="stylesheet" type="text/css" href="./css/tab.css">
     <link rel="stylesheet" type="text/css" href="./css/toggleBtn.css">
     <!-- End CSS // -->
+
+    <link rel="stylesheet" type="text/css" href="./css/advertise.css">
 </head>
 <body>
     <div id="wrap">
@@ -46,9 +48,26 @@
                         <h1 class="top-title__main">API 광고관리</h1>
                         <!-- <h2 class="top-title__sub">Advertisement List</h2> -->
                     </div>
+                    <div class="main-top__right">
+                        <div class="bs-calendar">
+                            <a href="#" class="bs-calendar__item bs-calendar__btn bs-calendar__prev" title="1일 전">
+                                <span class="bs-fa-icon bs-fa-icon--medium bs-fa-icon--black"><i class="fas fa-caret-left"></i></span>
+                            </a>
+                            <div class="bs-calendar__item bs-calendar__date-range">
+                                <span>2024-10-10 ~ 2024-10-10</span>
+                            </div>
+                            <a href="#" class="bs-calendar__item bs-calendar__btn bs-calendar__next" title="1일 후">
+                                <span class="bs-fa-icon bs-fa-icon--medium bs-fa-icon--black"><i class="fas fa-caret-right"></i></span>
+                            </a>
+                            <a href="#" class="bs-calendar__item bs-calendar__range-control">
+                                <span class="bs-fa-icon bs-fa-icon--medium bs-fa-icon--white"><i class="fas fa-calendar-alt"></i></span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- // main contents -->
+                <!-- ========== API 광고관리 ========== -->
                 <div id="advertise-page">
                     <div class="advertise__content d-grid section-gap">
                         <div class="bs-box-list-container">
@@ -198,35 +217,35 @@
                             <div class="bs-card">
                                 <div class="bs-card__inner">
                                     <div class="bs-card__row bs-card__top">
-                                        <span class="bs-card__top__data-title">지출액</span>
-                                        <span class="bs-card__top__data-value" id="">30,563,246</span>
+                                        <span class="bs-card__top__data-title">DB단가</span>
+                                        <span class="bs-card__top__data-value" id="">30,563</span>
                                     </div>
                                     <div class="bs-card__row bs-card__bottom">
-                                        <span class="bs-card__bottom__data-title">예산</span>
-                                        <span class="bs-card__bottom__data-value" id="">111,247,998</span>
+                                        <span class="bs-card__bottom__data-title">수익률</span>
+                                        <span class="bs-card__bottom__data-value" id="">28%</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="bs-card">
                                 <div class="bs-card__inner">
                                     <div class="bs-card__row bs-card__top">
-                                        <span class="bs-card__top__data-title">지출액</span>
-                                        <span class="bs-card__top__data-value" id="">30,563,246</span>
+                                        <span class="bs-card__top__data-title">DB수</span>
+                                        <span class="bs-card__top__data-value" id="">888</span>
                                     </div>
                                     <div class="bs-card__row bs-card__bottom">
-                                        <span class="bs-card__bottom__data-title">예산</span>
-                                        <span class="bs-card__bottom__data-value" id="">111,247,998</span>
+                                        <span class="bs-card__bottom__data-title">예상 DB수</span>
+                                        <span class="bs-card__bottom__data-value" id="">12,345</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="bs-card">
                                 <div class="bs-card__inner">
                                     <div class="bs-card__row bs-card__top">
-                                        <span class="bs-card__top__data-title">지출액</span>
+                                        <span class="bs-card__top__data-title">수익</span>
                                         <span class="bs-card__top__data-value" id="">30,563,246</span>
                                     </div>
                                     <div class="bs-card__row bs-card__bottom">
-                                        <span class="bs-card__bottom__data-title">예산</span>
+                                        <span class="bs-card__bottom__data-title">매출</span>
                                         <span class="bs-card__bottom__data-value" id="">111,247,998</span>
                                     </div>
                                 </div>
@@ -237,10 +256,10 @@
                             <div class="bs-table__top">
                                 <div class="bs-table__top-left d-flex table-gap ai-center">
                                     <span class="bs-table__title">광고관리</span>
-                                        <select class="bs-select bs-field bs-field--small">
-                                            <option class="bs-select__option" value="">전체</option>
-                                            <option class="bs-select__option" value="" selected="">사용</option>
-                                        </select>
+                                    <select class="bs-select bs-field bs-field--small">
+                                        <option class="bs-select__option" value="">전체</option>
+                                        <option class="bs-select__option" value="" selected="">사용</option>
+                                    </select>
                                     <a href="javascript:void(0);" id="btn-edit-advertise" title="광고 설정" onclick="modalOpen($('#modal__edit-advertise'), $('#overlay__edit-advertise'));">
                                         <span class="bs-fa-icon bs-fa-icon--medium"><i class="fas fa-pencil-alt"></i></span>
                                     </a>
@@ -261,81 +280,301 @@
                             <div class="bs-table--scroll">
                                 <div class="bs-table__body">
                                     <div class="bs-table__header">
-                                        <div class="bs-table__row">
-                                            <div class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">구분</span></div>
-                                            <div class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">매체</span></div>
-                                            <div class="bs-table__cell"><span class="bs-table__cell-text">캠페인 이름</span></div>
-                                            <div class="bs-table__cell"><span class="bs-table__cell-text"></span></div>
-                                            <div class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">
+                                        <ul class="bs-table__row">
+                                            <li class="bs-table__cell">
+                                                <label class="bs-selector bs-selector--text-style">
+                                                    <input type="checkbox" class="bs-selector__input bs-selector__checkbox" value="" name="" />
+                                                </label>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">매체</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">캠페인 이름</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text"></span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">
                                                 <span>지출액</span> / <span>예산</span>
                                                 </span>
-                                            </div>
-                                            <div class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">
                                                 <span>DB단가</span> / <span>수익율</span>
                                                 </span>
-                                            </div>
-                                            <div class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">
                                                 <span>DB수</span> / <span>DB전환율</span>
                                                 </span>
-                                            </div>
-                                            <div class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">
                                                 <span>수익</span> / <span>매출</span>
                                                 </span>
-                                            </div>
-                                            <div class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">
                                                 <span>노출수</span> / <span>클릭수</span>
                                                 </span>
-                                            </div>
-                                            <div class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">
                                                 <span>CPC</span> / <span>클릭율</span>
                                                 </span>
-                                            </div>
-                                        </div>
+                                            </li>
+                                        </ul>
                                     </div>
                 
                                     <div class="bs-table__content">
-                                        <div class="bs-table__row">
-                                            <div class="bs-table__cell bs-table__cell--ta-center">
-                                                <label class="bs-selector bs-selector--text-style array-center">
-                                                    <input type="checkbox" class="bs-selector__input bs-selector__checkbox" value="" name="" checked />
+                                        <ul class="bs-table__row bs-table__row--main">
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <label class="bs-selector bs-selector--text-style">
+                                                    <input type="checkbox" class="bs-selector__input bs-selector__checkbox" value="" name="" />
                                                 </label>
-                                            </div>
-                                            <div class="bs-table__cell bs-table__cell--ta-center">
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center">
                                                 <div class="bs-toggle-btn__image margin-0-auto">
                                                     <img src="./images/facebook_on.png" class="bs-toggle-btn__item" alt="media-icon" />
                                                 </div>
-                                            </div>
-                                            <div class="bs-table__cell">
-                                                <span class="bs-table__cell-text">[240801재라이브]카카오 비즈보드_방문_패밀리유_4968랜딩 MM (구3461랜딩)</span>
-                                            </div>
-                                            <div class="bs-table__cell bs-table__cell--ta-right">
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <span class="bs-table__cell-text w-rem-27 white-space-wrap">mainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmain</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
                                                 <span class="bs-table__cell-text"></span>
-                                            </div>
-                                            <div class="bs-table__cell bs-table__cell--ta-right">
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
                                                 <span class="bs-table__cell-text">199,904</span>
                                                 <span class="bs-text__small bs-text--gray">360,771</span>
-                                            </div>
-                                            <div class="bs-table__cell bs-table__cell--ta-right">
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
                                                 <span class="bs-table__cell-text">199,904</span>
                                                 <span class="bs-text__small bs-text--gray">360,771</span>
-                                            </div>
-                                            <div class="bs-table__cell bs-table__cell--ta-right">
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
                                                 <span class="bs-table__cell-text">199,904</span>
                                                 <span class="bs-text__small bs-text--gray">360,771</span>
-                                            </div>
-                                            <div class="bs-table__cell bs-table__cell--ta-right">
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
                                                 <span class="bs-table__cell-text">199,904</span>
                                                 <span class="bs-text__small bs-text--gray">360,771</span>
-                                            </div>
-                                            <div class="bs-table__cell bs-table__cell--ta-right">
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
                                                 <span class="bs-table__cell-text">199,904</span>
                                                 <span class="bs-text__small bs-text--gray">360,771</span>
-                                            </div>
-                                            <div class="bs-table__cell bs-table__cell--ta-right">
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
                                                 <span class="bs-table__cell-text">199,904</span>
                                                 <span class="bs-text__small bs-text--gray">360,771</span>
-                                            </div>
-                                        </div>
+                                            </li>
+                                        </ul>
+                                        <ul class="bs-table__row bs-table__row--sub">
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <label class="bs-selector bs-selector--text-style">
+                                                    <input type="checkbox" class="bs-selector__input bs-selector__checkbox" value="" name="" />
+                                                </label>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center">
+                                                <div class="bs-toggle-btn__image margin-0-auto">
+                                                    <img src="./images/facebook_on.png" class="bs-toggle-btn__item" alt="media-icon" />
+                                                </div>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <span class="bs-table__cell-text">sub</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fas fa-folder-open"></i></span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                        </ul>
+                                        <ul class="bs-table__row bs-table__row--sub-sub">
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <label class="bs-selector bs-selector--text-style">
+                                                    <input type="checkbox" class="bs-selector__input bs-selector__checkbox" value="" name="" />
+                                                </label>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center">
+                                                <div class="bs-toggle-btn__image margin-0-auto">
+                                                    <img src="./images/facebook_on.png" class="bs-toggle-btn__item" alt="media-icon" />
+                                                </div>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <span class="bs-table__cell-text">sub-sub</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <div class="adv-thumbnail">
+                                                    <img src="./images/banner.jpg" class="adv-thumbnail__img" alt="">
+                                                </div>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="bs-table__content">
+                                        <ul class="bs-table__row bs-table__row--main">
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <label class="bs-selector bs-selector--text-style">
+                                                    <input type="checkbox" class="bs-selector__input bs-selector__checkbox" value="" name="" />
+                                                </label>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center">
+                                                <div class="bs-toggle-btn__image margin-0-auto">
+                                                    <img src="./images/facebook_on.png" class="bs-toggle-btn__item" alt="media-icon" />
+                                                </div>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <span class="bs-table__cell-text w-rem-27 white-space-wrap">mainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmain</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text"></span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                        </ul>
+                                        <ul class="bs-table__row bs-table__row--sub">
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <label class="bs-selector bs-selector--text-style">
+                                                    <input type="checkbox" class="bs-selector__input bs-selector__checkbox" value="" name="" />
+                                                </label>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center">
+                                                <div class="bs-toggle-btn__image margin-0-auto">
+                                                    <img src="./images/facebook_on.png" class="bs-toggle-btn__item" alt="media-icon" />
+                                                </div>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <span class="bs-table__cell-text">sub</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fas fa-folder-open"></i></span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                        </ul>
+                                        <ul class="bs-table__row bs-table__row--sub-sub">
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <label class="bs-selector bs-selector--text-style">
+                                                    <input type="checkbox" class="bs-selector__input bs-selector__checkbox" value="" name="" />
+                                                </label>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center">
+                                                <div class="bs-toggle-btn__image margin-0-auto">
+                                                    <img src="./images/facebook_on.png" class="bs-toggle-btn__item" alt="media-icon" />
+                                                </div>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <span class="bs-table__cell-text">sub-sub</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <div class="adv-thumbnail">
+                                                    <img src="./images/banner.jpg" class="adv-thumbnail__img" alt="">
+                                                </div>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">199,904</span>
+                                                <span class="bs-text__small bs-text--gray">360,771</span>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -371,9 +610,9 @@
                         </div>
                     </div>
 
-                    <!-- modal : 광고 수정 -->
-                    <div class="overlay" id="overlay__edit-advertise"></div>
-                    <div id="modal__edit-advertise" class="bs-modal">
+                    <!-- modal : 광고 설정 -->
+                    <div class="overlay" id="overlay__edit-advertise" style="display: block !important;"></div>
+                    <div id="modal__edit-advertise" class="bs-modal" style="display: block !important;">
                         <div class="bs-modal__inner">
                             <!-- 모달_TOP -->
                             <div class="bs-modal__top">
@@ -386,45 +625,377 @@
                             <!-- 모달_CONTENT -->
                             <div class="bs-modal__content">
                                 <div class="bs-list-container">
-                                    <div class="list-group list-group--array2">
-                                        <label class="list-group__item list-group__item--with-title">
-                                            <div class="list-group__item-title">매체명</div>
-                                            <input type="text" class="bs-field bs-field__text" placeholder="매체명을 입력해 주세요." />
-                                        </label>
-                                        <label class="list-group__item list-group__item--with-title">
-                                            <div class="list-group__item-title">대상</div>
-                                            <input type="text" class="bs-field bs-field__text" placeholder="대상을 입력해 주세요." />
-                                        </label>
+                                    <div class="list-group list-group--array1">
                                         <div class="list-group__item list-group__item--with-title">
-                                            <div class="list-group__item-title">활성 아이콘</div>
-                                            <div>
-                                                <div class="bs-file-upload bs-file-upload__two-btn">
-                                                    <input class="bs-file-upload__input" id="modal--create__icon-active" type="file" multiple />
-                                                    <span class="bs-file-upload__description">선택 파일 없음</span>
-                                                    <label class="bs-file-upload__label bs-btn bs-btn--gray" for="modal--create__icon-active">
-                                                        <span class="bs-btn__description">불러오기</span>
-                                                    </label>
-                                                    <a href="#" class="bs-field__btn bs-btn bs-btn--gray">
-                                                        <span class="bs-btn__description">확인</span>
-                                                    </a>
-                                                </div>
-                                                <div class="bs-text__small bs-text--gray">※ 1:1 비율 권장 (300px X 300px)</div>
+                                            <div class="list-group__item-title">이름</div>
+                                            <div class="bs-field--with-btn bs-field--size-icon-medium">
+                                                <input type="text" class="bs-field bs-field__text" disabled />
+                                                <a href="#" onclick="toggleInputDisable(event);"><span class="bs-fa-icon bs-fa-icon--medium"><i class="fas fa-pencil-alt"></i></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group" style="grid-template-columns: 1fr 2fr;">
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">광고 예산</div>
+                                            <div class="bs-field--with-btn bs-field--size-icon-medium">
+                                                <input type="text" class="bs-field bs-field__text" disabled />
+                                                <a href="#" onclick="toggleInputDisable(event);"><span class="bs-fa-icon bs-fa-icon--medium"><i class="fas fa-pencil-alt"></i></span></a>
                                             </div>
                                         </div>
                                         <div class="list-group__item list-group__item--with-title">
-                                            <div class="list-group__item-title">비활성 아이콘</div>
-                                            <div>
-                                                <div class="bs-file-upload bs-file-upload__two-btn">
-                                                    <input class="bs-file-upload__input" id="modal--create__icon-inactive" type="file" multiple />
-                                                    <span class="bs-file-upload__description">선택 파일 없음</span>
-                                                    <label class="bs-file-upload__label bs-btn bs-btn--gray" for="modal--create__icon-inactive">
-                                                        <span class="bs-btn__description">불러오기</span>
-                                                    </label>
-                                                    <a href="#" class="bs-field__btn bs-btn bs-btn--gray">
-                                                        <span class="bs-btn__description">확인</span>
-                                                    </a>
+                                            <div class="adv__toggle-btn list-group__item-title c-blue cursor-pointer">광고 종료</div>
+                                            <div class="adv__item adv__item--off">
+                                                <div class="list-group list-group--array2">
+                                                    <div class="list-group__item list-group__item--with-title small-title-grid">
+                                                        <div class="list-group__item-title">수익</div>
+                                                        <div class="bs-field--with-btn bs-field--size-icon-medium">
+                                                            <input type="text" class="bs-field bs-field__text" disabled />
+                                                            <a href="#" onclick="toggleInputDisable(event);"><span class="bs-fa-icon bs-fa-icon--medium"><i class="fas fa-pencil-alt"></i></span></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-group__item list-group__item--with-title small-title-grid">
+                                                        <div class="list-group__item-title">수량</div>
+                                                        <div class="bs-field--with-btn bs-field--size-icon-medium">
+                                                            <input type="text" class="bs-field bs-field__text" disabled />
+                                                            <a href="#" onclick="toggleInputDisable(event);"><span class="bs-fa-icon bs-fa-icon--medium"><i class="fas fa-pencil-alt"></i></span></a>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="bs-text__small bs-text--gray">※ 1:1 비율 권장 (300px X 300px)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group" style="grid-template-columns: 3.2fr 1fr;">
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">이벤트페이지연결</div>
+                                            <div class="bs-field bs-field--in-btn">
+                                                <input type="text" class="bs-field__text" placeholder="캠페인은 사이트를 연결할 수 없습니다." disabled />
+                                                <a href="#" class="bs-field__btn bs-btn bs-btn--gray">
+                                                    <span class="bs-btn__description">확인하기</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title small-title-grid">
+                                            <div class="list-group__item-title">수익</div>
+                                            <div class="d-flex ai-center jc-sb">
+                                                <label class="bs-selector bs-selector--text-style">
+                                                    <input type="radio" class="bs-selector__input bs-selector__radio" value="" name="radio_name1" checked />
+                                                    <span class="bs-selector__description">반영</span>
+                                                </label>
+                                                <label class="bs-selector bs-selector--text-style">
+                                                    <input type="radio" class="bs-selector__input bs-selector__radio" value="" name="radio_name1" />
+                                                    <span class="bs-selector__description">미반영</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="list-group list-group--array1">
+                                        <div class="list-group__item list-group__item--with-title ai-start">
+                                            <div class="list-group__item-title c-blue cursor-pointer adv-schedule__toggle-btn">광고 일정</div>
+                                            <div class="adv-schedule">
+                                                <div class="adv-schedule__table">
+                                                    <div class="adv-schedule__table__header">
+                                                        <ul class="adv-schedule__table__row" id="adv-schedule__time">
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head adv-schedule__table--all-check"><span class="adv-schedule__table__cell-text">주/시간</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">00</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">01</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">02</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">03</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">04</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">05</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">06</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">07</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">08</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">09</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">10</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">11</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">12</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">13</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">14</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">15</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">16</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">17</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">18</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">19</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">20</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">21</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">22</span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">23</span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="adv-schedule__table__content" id="adv-schedule__week">
+                                                        <ul class="adv-schedule__table__row">
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">월</span>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"> </span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                        </ul>
+                                                        <ul class="adv-schedule__table__row">
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">화</span>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"> </span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                        </ul>
+                                                        <ul class="adv-schedule__table__row">
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">수</span>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"> </span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                        </ul>
+                                                        <ul class="adv-schedule__table__row">
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">목</span>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"> </span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                        </ul>
+                                                        <ul class="adv-schedule__table__row">
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">금</span>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"> </span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                        </ul>
+                                                        <ul class="adv-schedule__table__row">
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">토</span>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"> </span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                        </ul>
+                                                        <ul class="adv-schedule__table__row">
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">일</span>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"> </span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group list-group--array1">
+                                        <div class="list-group__item list-group__item--with-title ai-start">
+                                            <div class="list-group__item-title">광고 변경 내역</div>
+                                            <div class="adv-history">
+                                                <div class="bs-sroll">
+                                                    <ul class="bs-sroll__list">
+                                                        <li class="bs-sroll__item">
+                                                            <div class="bs-sroll__item-data bs-sroll__item-left">
+                                                                <span>변경</span>
+                                                                <span>상태변경 : 광고 스케줄로 인한 활성</span>
+                                                            </div>
+                                                            <div class="bs-sroll__item-data bs-sroll__item-right">
+                                                                <span>SYSTEM</span>
+                                                                <span>2024-10-10 16:00:00</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="bs-sroll__item">
+                                                            <div class="bs-sroll__item-data bs-sroll__item-left">
+                                                                <span>변경</span>
+                                                                <span>상태변경 : 광고 스케줄로 인한 활성</span>
+                                                            </div>
+                                                            <div class="bs-sroll__item-data bs-sroll__item-right">
+                                                                <span>SYSTEM</span>
+                                                                <span>2024-10-10 16:00:00</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="bs-sroll__item">
+                                                            <div class="bs-sroll__item-data bs-sroll__item-left">
+                                                                <span>변경</span>
+                                                                <span>상태변경 : 광고 스케줄로 인한 활성</span>
+                                                            </div>
+                                                            <div class="bs-sroll__item-data bs-sroll__item-right">
+                                                                <span>SYSTEM</span>
+                                                                <span>2024-10-10 16:00:00</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="bs-sroll__item">
+                                                            <div class="bs-sroll__item-data bs-sroll__item-left">
+                                                                <span>변경</span>
+                                                                <span>상태변경 : 광고 스케줄로 인한 활성</span>
+                                                            </div>
+                                                            <div class="bs-sroll__item-data bs-sroll__item-right">
+                                                                <span>SYSTEM</span>
+                                                                <span>2024-10-10 16:00:00</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="bs-sroll__item">
+                                                            <div class="bs-sroll__item-data bs-sroll__item-left">
+                                                                <span>변경</span>
+                                                                <span>상태변경 : 광고 스케줄로 인한 활성</span>
+                                                            </div>
+                                                            <div class="bs-sroll__item-data bs-sroll__item-right">
+                                                                <span>SYSTEM</span>
+                                                                <span>2024-10-10 16:00:00</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="bs-sroll__item">
+                                                            <div class="bs-sroll__item-data bs-sroll__item-left">
+                                                                <span>변경</span>
+                                                                <span>상태변경 : 광고 스케줄로 인한 활성</span>
+                                                            </div>
+                                                            <div class="bs-sroll__item-data bs-sroll__item-right">
+                                                                <span>SYSTEM</span>
+                                                                <span>2024-10-10 16:00:00</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="bs-sroll__item">
+                                                            <div class="bs-sroll__item-data bs-sroll__item-left">
+                                                                <span>변경</span>
+                                                                <span>상태변경 : 광고 스케줄로 인한 활성</span>
+                                                            </div>
+                                                            <div class="bs-sroll__item-data bs-sroll__item-right">
+                                                                <span>SYSTEM</span>
+                                                                <span>2024-10-10 16:00:00</span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -504,8 +1075,6 @@
                             </div>
                         </div>
                     </div>
-
-
                 </div>
                 <!--  main contents // -->
             </main>
@@ -523,5 +1092,6 @@
     <script src="./js/boxList.js"></script>
     <script src="./js/tab.js"></script>
     <script src="./js/toggleBtn.js"></script>
+    <script src="./js/advertise.js"></script>
 </body>
 </html>

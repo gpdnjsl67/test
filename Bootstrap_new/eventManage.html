@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="JHW">
+    <title>MM</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> <!-- 구글 폰트 -->
+
+    <!-- // Fontawesome -->
+    <script src="./fontawesome/ver5/all.min.js" type="text/javascript"></script> <!-- fontawesome js -->
+    <link rel="stylesheet" href="./fontawesome/ver5/all.min.css"> <!-- fontawesome css -->
+    <!-- Fontawesome // -->
+
+    <!-- // Essential CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./css/icon.css">
+    <link rel="stylesheet" type="text/css" href="./menu/css/header.css">
+    <link rel="stylesheet" type="text/css" href="./menu/css/aside_menu.css">
+    <!--  Essential CSS // -->
+
+    <!-- // Start CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/modal.css">
+    <link rel="stylesheet" type="text/css" href="./css/table.css">
+    <link rel="stylesheet" type="text/css" href="./css/list.css">
+    <link rel="stylesheet" type="text/css" href="./css/boxList.css">
+    <link rel="stylesheet" type="text/css" href="./css/card.css">
+    <link rel="stylesheet" type="text/css" href="./css/scroll.css">
+    <link rel="stylesheet" type="text/css" href="./css/tab.css">
+    <link rel="stylesheet" type="text/css" href="./css/toggleBtn.css">
+    <link rel="stylesheet" type="text/css" href="./css/eventManage.css">
+    <!-- End CSS // -->
+</head>
+<body>
+    <div id="wrap">
+        <div data-include-path="./menu/header.html"></div>
+
+        <div id="container">
+            <div data-include-path="./menu/aside_menu.html"></div>
+        
+            <main class="main" id="main">
+                <div class="main-top">
+                    <div class="main-top__left main-top__title">
+                        <h1 class="top-title__main">이벤트 페이지 생성</h1>
+                        <!-- <h2 class="top-title__sub">Advertisement List</h2> -->
+                    </div>
+                    <div class="main-top__right d-flex ai-center bs-gap">
+                        <a href="#" class="bs-btn bs-btn--white w-rem-8"><span class="bs-btn__description">취소</span></a>
+                        <a href="#" class="bs-btn bs-btn--white w-rem-8"><span class="bs-btn__description">확장</span></a>
+                        <input type="search" class="bs-field bs-field--big bs-search-bar" placeholder="광고주 또는 이벤트 가져오기" />
+                        <a href="#" class="bs-btn bs-btn--blue w-rem-8"><span class="bs-btn__description">저장하기</span></a>
+                    </div>
+                </div>
+
+                <!-- // main contents -->
+                <!-- ========== 이벤트 페이지 생성 ========== -->
+                <div id="event-create-page">
+                    <div class="event-create-page__content d-grid box-gap grid-2-1">
+                        <div class="bs-tab">
+                            <ul class="bs-tab__links">
+                                <li class="bs-tab__link bs-tab__link--current" data-tab="tab-1">설정</li>
+                                <li class="bs-tab__link" data-tab="tab-2">유효성</li>
+                                <li class="bs-tab__link" data-tab="tab-3">필수값</li>
+                                <li class="bs-tab__link" data-tab="tab-4">스크립트</li>
+                                <li class="bs-tab__link" data-tab="tab-5">땡큐페이지</li>
+                            </ul>
+                            
+                            <div class="bs-tab__content">
+                                <!-- 설정 탭 -->
+                                <div id="tab-1" class="bs-tab__panel bs-tab__panel--current">
+                                    <div class="bs-list-container">
+                                        <div class="list-group">
+                                            <label class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">광고주</div>
+                                                <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                            </label>
+                                            <label class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">랜딩 주소</div>
+                                                <input type="text" class="bs-field bs-field__text" />
+                                            </label>
+                                            <div class="event-media list-group__item list-group__item--with-title ai-start">
+                                                <div class="list-group__item-title">
+                                                    매체
+                                                    <a href="#" class="event-media__add-btn bs-fa-icon bs-fa-icon--medium"><i class="fas fas fa-plus-circle"></i></a>
+                                                </div>
+                                                <div class="event-media__content">
+                                                    <div class="event-media__row event-media__row--new">
+                                                        <input type="search" class="bs-field bs-search-bar" placeholder="매체를 선택하세요." />
+                                                        <input type="text" class="bs-field bs-field__text" disabled />
+                                                        <a href="#" class="event-media__del-btn bs-field__btn bs-btn bs-btn--gray">
+                                                            <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-times"></i></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <label class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">이벤트 구분</div>
+                                                <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                            </label>
+                                            <label class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">DB 단가</div>
+                                                <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                            </label>
+                                            <label class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">브라우저 제목(타이틀)</div>
+                                                <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                            </label>
+                                            <div class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">랜딩 구분</div>
+                                                <select class="bs-select bs-field bs-field--big-medium">
+                                                    <option class="bs-select__option" value="" selected="">일반</option>
+                                                    <option class="bs-select__option" value="">잠재 고객</option>
+                                                    <option class="bs-select__option" value="">엑셀 업로드</option>
+                                                    <option class="bs-select__option" value="">API 수신</option>
+                                                </select>
+                                            </div>
+                                            <label class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">키워드</div>
+                                                <input type="text" class="bs-field bs-field__text" placeholder="콤마로 구분 ex) 키워드1, 키워드2 ..." />
+                                            </label>
+                                            <label class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">설명</div>
+                                                <input type="text" class="bs-field bs-field__text" placeholder="이벤트를 구체적으로 설명해 주세요. (약 40자 내외, 최대 100자 이내)" />
+                                            </label>
+                                            <div class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">메세지 전송하기</div>
+                                                <div>
+                                                    <select class="bs-select bs-field bs-field--big-medium">
+                                                        <option class="bs-select__option" value="" selected="">사용안함</option>
+                                                        <option class="bs-select__option" value="">카카오 알림톡</option>
+                                                    </select>
+                                                    <span class="bs-text__small bs-text--gray">※ 슈어비즈의 API 키가 등록된 광고주만 전송됩니다.</span>
+                                                </div>
+
+                                            </div>
+                                            <div class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">케어랩스 외부연동</div>
+                                                <div>
+                                                    <div class="d-flex bs-gap">
+                                                        <select class="bs-select bs-field bs-field--big-medium">
+                                                            <option class="bs-select__option" value="" selected="">사용안함</option>
+                                                            <option class="bs-select__option" value="">사용</option>
+                                                        </select>
+                                                        <input type="text" class="bs-field bs-field__text bs-field--big-medium" placeholder="케어랩스 이벤트 번호" />
+                                                    </div>
+                                                    <span class="bs-text__small bs-text--gray">※ 케어랩스 외부연동 사용 시 케어랩스 이벤트 번호를 입력해 주세요. (미사용 시 이벤트 번호 입력 금지)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 유효성 탭 -->
+                                <div id="tab-2" class="bs-tab__panel">
+                                    <div class="bs-list-container">
+                                        <div class="list-group">
+                                            <div class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">성별</div>
+                                                <div class="d-flex bs-gap">
+                                                    <label class="bs-selector bs-selector--size1 bs-selector--btn-style">
+                                                        <input type="radio" class="bs-selector__input bs-selector__radio" value="" name="gender" />
+                                                        <div class="bs-btn bs-btn--gray bs-selector__description">
+                                                            <span class="bs-btn__description">무관</span>
+                                                        </div>
+                                                    </label>
+                                                    <label class="bs-selector bs-selector--size1 bs-selector--btn-style">
+                                                        <input type="radio" class="bs-selector__input bs-selector__radio" value="" name="gender" />
+                                                        <div class="bs-btn bs-btn--gray bs-selector__description">
+                                                            <span class="bs-btn__description">남</span>
+                                                        </div>
+                                                    </label>
+                                                    <label class="bs-selector bs-selector--size1 bs-selector--btn-style">
+                                                        <input type="radio" class="bs-selector__input bs-selector__radio" value="" name="gender" />
+                                                        <div class="bs-btn bs-btn--gray bs-selector__description">
+                                                            <span class="bs-btn__description">여</span>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">나이</div>
+                                                <div class="d-flex bs-gap ai-center">
+                                                    <input type="text" class="bs-field bs-field--big-medium bs-field__text" placeholder="설정에서 매체를 등록해 주세요." disabled />
+                                                    <input type="text" class="bs-field bs-field__text bs-field--medium-small txt-align-center" placeholder="최소 나이" />
+                                                    <span class="bs-text bs-text__main bs-text--gray">~</span>
+                                                    <input type="text" class="bs-field bs-field__text bs-field--medium-small txt-align-center" placeholder="최대 나이" />
+                                                    <input type="text" class="bs-field bs-field__text bs-field--big-medium txt-align-center" placeholder="나이 범위 (연생 랜딩)" />
+                                                </div>
+                                            </div>
+                                            <div class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">중복기간</div>
+                                                <div>
+                                                    <div class="d-flex bs-gap">
+                                                        <label class="bs-selector bs-selector--size1 bs-selector--btn-style">
+                                                            <input type="radio" class="bs-selector__input bs-selector__radio" value="" name="inputPeriod" />
+                                                            <div class="bs-btn bs-btn--gray bs-selector__description">
+                                                                <span class="bs-btn__description">전체</span>
+                                                            </div>
+                                                        </label>
+                                                        <label class="bs-selector bs-selector--size1 bs-selector--btn-style">
+                                                            <input type="radio" class="bs-selector__input bs-selector__radio" value="" name="inputPeriod" />
+                                                            <div class="bs-btn bs-btn--gray bs-selector__description">
+                                                                <span class="bs-btn__description">1일</span>
+                                                            </div>
+                                                        </label>
+                                                        <label class="bs-selector bs-selector--size1 bs-selector--btn-style">
+                                                            <input type="radio" class="bs-selector__input bs-selector__radio" value="" name="inputPeriod" />
+                                                            <div class="bs-btn bs-btn--gray bs-selector__description">
+                                                                <span class="bs-btn__description">1주일</span>
+                                                            </div>
+                                                        </label>
+                                                        <label class="bs-selector bs-selector--size1 bs-selector--btn-style">
+                                                            <input type="radio" class="bs-selector__input bs-selector__radio" value="" name="inputPeriod" />
+                                                            <div class="bs-btn bs-btn--gray bs-selector__description">
+                                                                <span class="bs-btn__description">1개월</span>
+                                                            </div>
+                                                        </label>
+                                                        <label class="bs-selector bs-selector--size1 bs-selector--btn-style">
+                                                            <input type="radio" class="bs-selector__input bs-selector__radio" value="" name="inputPeriod" />
+                                                            <div class="bs-btn bs-btn--gray bs-selector__description">
+                                                                <span class="bs-btn__description">6개월</span>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <span class="bs-text__small bs-text--gray">※ 변경 이후 시점의 DB부터 적용됩니다.</span>
+                                                </div>
+                                            </div>
+                                            <div class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">전화번호 중복</div>
+                                                <div>
+                                                    <select class="bs-select bs-field bs-field--big-medium">
+                                                        <option class="bs-select__option" value="">사용</option>
+                                                        <option class="bs-select__option" value="" selected="">미사용</option>
+                                                    </select>
+                                                    <span class="bs-text__small bs-text--gray">※ 변경 이후 시점의 DB부터 적용됩니다.</span>
+                                                </div>
+                                            </div>
+                                            <div class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">사전 중복 체크</div>
+                                                <select class="bs-select bs-field">
+                                                    <option class="bs-select__option" value="" selected="">사전 중복 체크 안 함</option>
+                                                    <option class="bs-select__option" value="">동일 이벤트 페이지 내의 이름과 연락처 중복 여부</option>
+                                                    <option class="bs-select__option" value="">동일 광고주 내의 이름과 연락처 중복 여부</option>
+                                                    <option class="bs-select__option" value="">동일 광고주와 매체 내의 이름과 연락처 중복 여부</option>
+                                                </select>
+                                            </div>
+                                            <div class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">이름 체크</div>
+                                                <div class="d-flex bs-gap ai-center">
+                                                    <select class="bs-select bs-field bs-field--big-medium">
+                                                        <option class="bs-select__option" value="" selected="">사용</option>
+                                                        <option class="bs-select__option" value="">미사용</option>
+                                                    </select>
+                                                    <span class="bs-text bs-text__main bs-text--gray">길이제한 :</span>
+                                                    <input type="text" class="bs-field bs-field__text bs-field--medium-small txt-align-center" placeholder="최소" value="2" />
+                                                    <span class="bs-text bs-text__main bs-text--gray">~</span>
+                                                    <input type="text" class="bs-field bs-field__text bs-field--medium-small txt-align-center" placeholder="최대" value="50" />
+                                                </div>
+                                            </div>
+                                            <div class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">외국어</div>
+                                                <div>
+                                                    <select class="bs-select bs-field bs-field--big-medium">
+                                                        <option class="bs-select__option" value="">사용</option>
+                                                        <option class="bs-select__option" value="" selected="">미사용</option>
+                                                    </select>
+                                                    <span class="bs-text__small bs-text--gray">※ 해외 랜딩인 경우에 사용으로 설정하시면 됩니다.</span>
+                                                </div>
+                                            </div>
+                                            <div class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">전화번호 체크</div>
+                                                <select class="bs-select bs-field bs-field--big-medium">
+                                                    <option class="bs-select__option" value="" selected="">010 사용</option>
+                                                    <option class="bs-select__option" value="">010 미사용</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="list-group__item list-group__item--with-title ai-start">
+                                                <div class="list-group__item-title">전화번호 차단</div>
+                                                <div class="block-box block-phone-box">
+                                                    <div class="block-box__top">
+                                                        <div class="block-box__title">허용/차단 추가 (<span class="block-phone-box__counting">0</span>)</div>
+                                                        <input type="search" class="bs-field bs-field--big bs-search-bar" placeholder="Search..." />
+                                                    </div>
+                                                    <div class="block-box__content">
+                                                        <div class="bs-field--with-btn bs-field--size1">
+                                                            <input type="text" class="block-box__input block-phone-box__input bs-field bs-field__text" maxlength="11" placeholder="차단할 전화번호를 입력해 주세요." />
+                                                            <a href="#" class="block-box__add-btn bs-field__btn bs-btn bs-btn--gray"><span class="bs-btn__description">추가</span></a>
+                                                        </div>
+
+                                                        <ul class="block-box__list block-phone-box__list">
+                                                            <!-- <li class="block-box__list__item block-phone-box__list__item">
+                                                                <span class="block-box__added-item block-box__phone-number">01012341234</span>
+                                                                <a href="#" class="block-box__del-btn bs-fa-icon bs-fa-icon--big"><i class="fas fa-times-circle"></i></a>
+                                                            </li> -->
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="list-group__item list-group__item--with-title ai-start">
+                                                <div class="list-group__item-title">아이피 차단</div>
+                                                <div class="block-box block-ip-box">
+                                                    <div class="block-box__top">
+                                                        <div class="block-box__title">허용/차단 추가 (<span class="block-ip-box__counting">0</span>)</div>
+                                                        <input type="search" class="bs-field bs-field--big bs-search-bar" placeholder="Search..." />
+                                                    </div>
+                                                    <div class="block-box__content">
+                                                        <div class="bs-field--with-btn bs-field--size1">
+                                                            <input type="text" class="block-box__input block-ip-box__input bs-field bs-field__text" maxlength="11" placeholder="차단할 아이피 주소를 입력해 주세요." />
+                                                            <a href="#" class="block-box__add-btn bs-field__btn bs-btn bs-btn--gray"><span class="bs-btn__description">추가</span></a>
+                                                        </div>
+
+                                                        <ul class="block-box__list block-ip-box__list">
+                                                            <!-- <li class="block-box__list__item block-phone-box__list__item">
+                                                                <span class="block-box__added-item block-box__phone-number">01012341234</span>
+                                                                <a href="#" class="block-box__del-btn bs-fa-icon bs-fa-icon--big"><i class="fas fa-times-circle"></i></a>
+                                                            </li> -->
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 필수값 탭 -->
+                                <div id="tab-3" class="bs-tab__panel">
+                                    <div class="bs-list-container">
+                                        <div class="list-group bs-section-divider">
+                                            <label class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">수집 목적</div>
+                                                <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                            </label>
+                                            <label class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">수집 항목</div>
+                                                <input type="text" class="bs-field bs-field__text" value="이름,나이,연락처,설문" />
+                                            </label>
+                                            <div class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">사용 여부</div>
+                                                <div>
+                                                    <select class="bs-select bs-field bs-field--big-medium">
+                                                        <option class="bs-select__option" value="" selected="">사용</option>
+                                                        <option class="bs-select__option" value="">미사용</option>
+                                                    </select>
+                                                    <span class="bs-text__small bs-text--gray">※ 광고주가 사용 중지로 되어있을 경우 랜딩은 노출되지 않습니다.</span>
+                                                </div>
+                                            </div>
+                                            <div class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">랜딩 고정값</div>
+                                                <div class="d-flex bs-gap">
+                                                    <select class="bs-select bs-field bs-field--big-medium">
+                                                        <option class="bs-select__option" value="" selected="">개별설정 안 함</option>
+                                                        <option class="bs-select__option" value="">지점</option>
+                                                    </select>
+                                                    <input type="text" class="bs-field bs-field--big-medium bs-field__text" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-group">
+                                            <div class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">외부연동 사용여부</div>
+                                                <select class="bs-select bs-field bs-field--big-medium">
+                                                    <option class="bs-select__option" value="" selected="">사용</option>
+                                                    <option class="bs-select__option" value="">미사용</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="bs-box-list-wrapper">
+                                            <div class="bs-box-list">
+                                                <div class="bs-box-list__title">
+                                                    <span class="bs-box-list__title-text">설정에서 매체를 등록해 주세요.</span>
+                                                    <div class="d-flex bs-gap">
+                                                        <!-- <input type="text" class="bs-field bs-field__text bs-field--big-medium" placeholder="내용을 입력해 주세요." /> -->
+                                                        <span class="bs-field__btn bs-btn bs-btn--gray bs-box-list__title-arrow w-rem-4 padding-bs">
+                                                            <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-angle-down"></i></span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="bs-list-container bs-box-list__items bs-box-list__items--no-scroll">
+                                                    <div class="list-group list-group--array2">
+                                                        <label class="list-group__item list-group__item--with-title">
+                                                            <div class="list-group__item-title">파트너 아이디</div>
+                                                            <input type="text" class="bs-field bs-field__text" placeholder="내용을 입력해 주세요." />
+                                                        </label>
+                                                        <label class="list-group__item list-group__item--with-title">
+                                                            <div class="list-group__item-title">지면코드</div>
+                                                            <input type="text" class="bs-field bs-field__text" placeholder="내용을 입력해 주세요." />
+                                                        </label>
+                                                        <label class="list-group__item list-group__item--with-title">
+                                                            <div class="list-group__item-title">파트너명</div>
+                                                            <input type="text" class="bs-field bs-field__text" placeholder="내용을 입력해 주세요." />
+                                                        </label>
+                                                        <label class="list-group__item list-group__item--with-title">
+                                                            <div class="list-group__item-title">지면명</div>
+                                                            <input type="text" class="bs-field bs-field__text" placeholder="내용을 입력해 주세요." />
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 스크립트 탭 -->
+                                <div id="tab-4" class="bs-tab__panel">
+                                    <div class="bs-box-list-wrapper d-grid bs-gap">
+                                        <div class="bs-box-list">
+                                            <div class="bs-box-list__title">
+                                                <span class="bs-box-list__title-text">설정에서 매체를 등록해 주세요.</span>
+                                                <div class="d-flex bs-gap">
+                                                    <!-- <input type="text" class="bs-field bs-field__text bs-field--big-medium" placeholder="내용을 입력해 주세요." /> -->
+                                                    <span class="bs-field__btn bs-btn bs-btn--gray bs-box-list__title-arrow w-rem-4 padding-bs">
+                                                        <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-angle-down"></i></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="bs-list-container bs-box-list__items bs-box-list__items--no-scroll">
+                                                <div class="list-group list-group--array1">
+                                                    <label class="list-group__item list-group__item--with-title">
+                                                        <div class="list-group__item-title">페이스북 Pixel ID</div>
+                                                        <input type="text" class="bs-field bs-field__text" placeholder="페이스북 Pixel ID를 입력해 주세요." />
+                                                    </label>
+                                                    <label class="list-group__item list-group__item--with-title ai-start">
+                                                        <div class="list-group__item-title">View Script</div>
+                                                        <textarea class="bs-textarea bs-field" name="" id="" rows="10" placeholder="View Script 소스를 입력해 주세요."></textarea>
+                                                    </label>
+                                                    <label class="list-group__item list-group__item--with-title ai-start">
+                                                        <div class="list-group__item-title">Complete Script</div>
+                                                        <textarea class="bs-textarea bs-field" name="" id="" rows="10" placeholder="Complete Script 소스를 입력해 주세요."></textarea>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bs-box-list">
+                                            <div class="bs-box-list__title">
+                                                <span class="bs-box-list__title-text">설정에서 매체를 등록해 주세요.</span>
+                                                <div class="d-flex bs-gap">
+                                                    <!-- <input type="text" class="bs-field bs-field__text bs-field--big-medium" placeholder="내용을 입력해 주세요." /> -->
+                                                    <span class="bs-field__btn bs-btn bs-btn--gray bs-box-list__title-arrow w-rem-4 padding-bs">
+                                                        <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-angle-down"></i></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="bs-list-container bs-box-list__items bs-box-list__items--no-scroll">
+                                                <div class="list-group list-group--array1">
+                                                    <label class="list-group__item list-group__item--with-title ai-start">
+                                                        <div class="list-group__item-title">View Script</div>
+                                                        <textarea class="bs-textarea bs-field" name="" id="" rows="10" placeholder="View Script 소스를 입력해 주세요."></textarea>
+                                                    </label>
+                                                    <label class="list-group__item list-group__item--with-title ai-start">
+                                                        <div class="list-group__item-title">Complete Script</div>
+                                                        <textarea class="bs-textarea bs-field" name="" id="" rows="10" placeholder="Complete Script 소스를 입력해 주세요."></textarea>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 땡큐페이지 탭 -->
+                                <div id="tab-5" class="bs-tab__panel">
+                                    <div class="bs-list-container">
+                                        <div class="list-group">
+                                            <div class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">연결</div>
+                                                <select class="bs-select bs-field bs-field--big-medium">
+                                                    <option class="bs-select__option" value="" selected="">연결</option>
+                                                    <option class="bs-select__option" value="">URL 연결</option>
+                                                    <option class="bs-select__option" value="">신규 생성</option>
+                                                </select>
+                                            </div>
+                                            <label class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">문구</div>
+                                                <input type="text" class="bs-field bs-field__text" value="등록해 주셔서<br>감사합니다" />
+                                            </label>
+                                            <label class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">버튼명</div>
+                                                <input type="text" class="bs-field bs-field__text" value="확인" />
+                                            </label>
+                                            <label class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">버튼 컬러</div>
+                                                <input type="text" class="bs-field bs-field__text" placeholder="ex) #0585c4" />
+                                            </label>
+                                            <label class="list-group__item list-group__item--with-title">
+                                                <div class="list-group__item-title">텍스트 컬러</div>
+                                                <input type="text" class="bs-field bs-field__text" placeholder="ex) #0585c4" />
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 우측 미리보기 섹션 -->
+                        <div class="bs-tab event-create__preview-tab">
+                            <ul class="bs-tab__links">
+                                <li class="bs-tab__link bs-tab__link--current" data-tab="tab-1">랜딩</li>
+                                <li class="bs-tab__link" data-tab="tab-2">땡큐페이지</li>
+                            </ul>
+                            <div class="bs-tab__content event-create__preview-content">
+                                <div id="tab-1" class="bs-tab__panel event-create__preview-panel bs-tab__panel--current">
+                                    <div class="event-create__preview-inner">
+                                        <div class="event-create__preview-message">개발이 완료되면 이벤트 페이지가 보여집니다.</div>
+                                    </div>
+                                </div>
+                                <div id="tab-2" class="bs-tab__panel event-create__preview-panel">
+                                    <div class="event-create__preview-inner">
+                                        <div class="event-create__preview-message">개발이 완료되면 이벤트 페이지가 보여집니다.</div>
+                                        <!-- <iframe src="https://mm-event.co.kr/3999/thanks/7" class="event-create__preview" frameborder="0" allowfullscreen="" width="100%" height="100%"></iframe> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  main contents // -->
+            </main>
+        </div>
+    </div>
+
+    <!-- // Essential CSS -->
+    <script src="./js/jquery.min.js" type="text/javascript"></script>
+    <script src="./menu/js/aside_menu.js"></script>
+    <script src="./js/main.js"></script>
+    <!-- Essential CSS // -->
+    
+    <script src="./js/eventManage.js"></script>
+    <script src="./js/tab.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/boxList.js"></script>
+    <script src="./js/upload.js"></script>
+    <script src="./js/toggleBtn.js"></script>
+</body>
+</html>

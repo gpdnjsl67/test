@@ -43,22 +43,18 @@
             <main class="main" id="main">
                 <div class="main-top">
                     <div class="main-top__left main-top__title">
-                        <h1 class="top-title__main">전환 관리</h1>
+                        <h1 class="top-title__main">회원 관리</h1>
                         <!-- <h2 class="top-title__sub">Advertisement List</h2> -->
                     </div>
                 </div>
 
                 <!-- // main contents -->
-                <!-- ========== 관리자 페이지 > 전환 관리 ========== -->
-                <div id="conversion-page">
-                    <div class="conversion__content">
+                <!-- ========== 관리자 페이지 > 회원 관리 ========== -->
+                <div id="membership-page">
+                    <div class="membership__content">
                         <div class="bs-table-wrapper">
                             <div class="bs-table__top">
-                                <div class="bs-table__top-left">
-                                    <a href="javascript:void(0);" id="btn__create-conversion" title="전환 생성" onclick="modalOpen($('#modal__create-conversion'), $('#overlay__create-conversion'));">
-                                        <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-plus-circle"></i></span>
-                                    </a>
-                                </div>
+                                <div class="bs-table__top-left"></div>
                                 <div class="bs-table__top-right">
                                     <input type="search" class="bs-field bs-field--big bs-search-bar" placeholder="Search..." />
                                 </div>
@@ -68,9 +64,14 @@
                                 <div class="bs-table__body">
                                     <div class="bs-table__header">
                                         <ul class="bs-table__row">
-                                            <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">구분</span></li>
-                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">전환 ID</span></li>
-                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">전환명</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">상태</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">아이디</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">이름</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">이메일</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">전화번호</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">연결된 업체 정보</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">권한</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">승인</span></li>
                                             <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">수정</span></li>
                                         </ul>
                                     </div>
@@ -78,16 +79,31 @@
                                     <div class="bs-table__content">
                                         <ul class="bs-table__row">
                                             <li class="bs-table__cell bs-table__cell--ta-center">
-                                                <span class="bs-table__cell-text">1</span>
+                                                <span class="bs-table__cell-text">사용가능</span>
                                             </li>
                                             <li class="bs-table__cell bs-table__cell--ta-left">
-                                                <span class="bs-table__cell-text">1242305360428319</span>
+                                                <span class="bs-table__cell-text">qwer1234</span>
                                             </li>
                                             <li class="bs-table__cell bs-table__cell--ta-left">
-                                                <span class="bs-table__cell-text">[T2]모모성형외과_부산점_여성헤어라인1</span>
+                                                <span class="bs-table__cell-text">홍길동</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <span class="bs-table__cell-text">qwer1234@techlabs.kr</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <span class="bs-table__cell-text">01012341234</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <span class="bs-table__cell-text">메타마케팅</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <span class="bs-table__cell-text">직원</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <span class="bs-table__cell-text">승인</span>
                                             </li>
                                             <li class="bs-table__cell bs-table__cell--ta-center">
-                                                <a href="javascript:void(0);" title="전환 수정" onclick="modalOpen($('#modal__edit-conversion'), $('#overlay__edit-conversion'));">
+                                                <a href="javascript:void(0);" title="전환 수정" onclick="modalOpen($('#modal__edit-membership'), $('#overlay__edit-membership'));">
                                                     <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
                                                 </a>
                                             </li>
@@ -127,14 +143,14 @@
                         </div>
                     </div>
 
-                    <!-- modal : 전환 생성 -->
-                    <div class="overlay" id="overlay__create-conversion"></div>
-                    <div id="modal__create-conversion" class="bs-modal">
+                    <!-- modal : 회원 관리 -->
+                    <div class="overlay" id="overlay__edit-membership"></div>
+                    <div id="modal__edit-membership" class="bs-modal">
                         <div class="bs-modal__inner">
                             <!-- 모달_TOP -->
                             <div class="bs-modal__top">
-                                <span class="bs-modal__title">전환 생성</span>
-                                <div class="bs-modal__close-btn" onclick="modalClose($('#modal__create-conversion'), $('#overlay__create-conversion'));">
+                                <span class="bs-modal__title">회원 관리</span>
+                                <div class="bs-modal__close-btn" onclick="modalClose($('#modal__edit-membership'), $('#overlay__edit-membership'));">
                                     <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-times"></i></span>
                                 </div>
                             </div>
@@ -142,57 +158,49 @@
                             <!-- 모달_CONTENT -->
                             <div class="bs-modal__content">
                                 <div class="bs-list-container">
-                                    <div class="list-group list-group--array1">
+                                    <div class="list-group list-group--array2">
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">아이디</div>
+                                            <span class="bs-text__main bs-text--gray">qwer1234</span>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">이름</div>
+                                            <span class="bs-text__main bs-text--gray">qwer1234</span>
+                                        </div>
                                         <label class="list-group__item list-group__item--with-title">
-                                            <div class="list-group__item-title">전환 ID</div>
-                                            <input type="text" class="bs-field bs-field__text" placeholder="전환 ID를 입력해 주세요." />
+                                            <div class="list-group__item-title">이메일</div>
+                                            <input type="text" class="bs-field bs-field__text" value="qwer1234@techlabs.kr" />
                                         </label>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">전화번호</div>
+                                            <span class="bs-text__main bs-text--gray">01012341234</span>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">상태</div>
+                                            <select class="bs-select bs-field">
+                                                <option class="bs-select__option" value="">사용가능</option>
+                                                <option class="bs-select__option" value="">사용중지</option>
+                                                <option class="bs-select__option" value="">탈퇴</option>
+                                            </select>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">권한</div>
+                                            <select class="bs-select bs-field">
+                                                <option class="bs-select__option" value="">운영자</option>
+                                                <option class="bs-select__option" value="">직원</option>
+                                                <option class="bs-select__option" value="">직원(읽기전용)</option>
+                                            </select>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">승인</div>
+                                            <select class="bs-select bs-field">
+                                                <option class="bs-select__option" value="">승인대기</option>
+                                                <option class="bs-select__option" value="">승인</option>
+                                            </select>
+                                        </div>
                                         <label class="list-group__item list-group__item--with-title">
-                                            <div class="list-group__item-title">전환명</div>
-                                            <input type="text" class="bs-field bs-field__text" placeholder="전환명을 입력해 주세요." />
-                                        </label>
-                                        <label class="list-group__item list-group__item--with-title">
-                                            <div class="list-group__item-title">Access Token</div>
-                                            <input type="text" class="bs-field bs-field__text" placeholder="Access Token을 입력해 주세요." />
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- 모달_BOTTOM -->
-                            <div class="bs-modal__bottom">
-                                <button type="button" class="bs-modal__btn bs-modal__btn--save w-100">완료</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- modal : 전환 수정 -->
-                    <div class="overlay" id="overlay__edit-conversion"></div>
-                    <div id="modal__edit-conversion" class="bs-modal">
-                        <div class="bs-modal__inner">
-                            <!-- 모달_TOP -->
-                            <div class="bs-modal__top">
-                                <span class="bs-modal__title">전환 수정</span>
-                                <div class="bs-modal__close-btn" onclick="modalClose($('#modal__edit-conversion'), $('#overlay__edit-conversion'));">
-                                    <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-times"></i></span>
-                                </div>
-                            </div>
-            
-                            <!-- 모달_CONTENT -->
-                            <div class="bs-modal__content">
-                                <div class="bs-list-container">
-                                    <div class="list-group list-group--array1">
-                                        <label class="list-group__item list-group__item--with-title">
-                                            <div class="list-group__item-title">전환 ID</div>
-                                            <input type="text" class="bs-field bs-field__text" placeholder="전환 ID를 입력해 주세요." disabled />
-                                        </label>
-                                        <label class="list-group__item list-group__item--with-title">
-                                            <div class="list-group__item-title">전환명</div>
-                                            <input type="text" class="bs-field bs-field__text" placeholder="전환명을 입력해 주세요." />
-                                        </label>
-                                        <label class="list-group__item list-group__item--with-title">
-                                            <div class="list-group__item-title">Access Token</div>
-                                            <input type="text" class="bs-field bs-field__text" placeholder="Access Token을 입력해 주세요." />
+                                            <div class="list-group__item-title">연결된 업체 정보</div>
+                                            <input type="search" class="bs-field bs-search-bar" />
                                         </label>
                                     </div>
                                 </div>
@@ -217,9 +225,9 @@
     <!-- Essential CSS // -->
     
     <script src="./js/modal.js"></script>
-    <script src="./js/upload.js"></script>
 
     <!-- <script src="./js/boxList.js"></script>
+    <script src="./js/upload.js"></script>
     <script src="./js/tab.js"></script>
     <script src="./js/toggleBtn.js"></script> -->
 </body>

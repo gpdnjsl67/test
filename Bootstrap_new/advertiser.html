@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="JHW">
+    <title>MM</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> <!-- 구글 폰트 -->
+
+    <!-- // Fontawesome -->
+    <script src="./fontawesome/ver5/all.min.js" type="text/javascript"></script> <!-- fontawesome js -->
+    <link rel="stylesheet" href="./fontawesome/ver5/all.min.css"> <!-- fontawesome css -->
+    <!-- Fontawesome // -->
+
+    <!-- // Essential CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./css/icon.css">
+    <link rel="stylesheet" type="text/css" href="./menu/css/header.css">
+    <link rel="stylesheet" type="text/css" href="./menu/css/aside_menu.css">
+    <!--  Essential CSS // -->
+
+    <!-- // Start CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/modal.css">
+    <link rel="stylesheet" type="text/css" href="./css/table.css">
+    <link rel="stylesheet" type="text/css" href="./css/list.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./css/boxList.css">
+    <link rel="stylesheet" type="text/css" href="./css/card.css">
+    <link rel="stylesheet" type="text/css" href="./css/scroll.css">
+    <link rel="stylesheet" type="text/css" href="./css/tab.css">
+    <link rel="stylesheet" type="text/css" href="./css/toggleBtn.css"> -->
+    <!-- End CSS // -->
+</head>
+<body>
+    <div id="wrap">
+        <div data-include-path="./menu/header.html"></div>
+
+        <div id="container">
+            <div data-include-path="./menu/aside_menu.html"></div>
+        
+            <main class="main" id="main">
+                <div class="main-top">
+                    <div class="main-top__left main-top__title">
+                        <h1 class="top-title__main">광고주 관리</h1>
+                        <!-- <h2 class="top-title__sub">Advertisement List</h2> -->
+                    </div>
+                </div>
+
+                <!-- // main contents -->
+                <!-- ========== 관리자 페이지 > 광고주 관리 ========== -->
+                <div id="advertiser-page">
+                    <div class="advertiser__content">
+                        <div class="bs-table-wrapper">
+                            <div class="bs-table__top">
+                                <div class="bs-table__top-left">
+                                    <a href="javascript:void(0);" id="btn-create-advertiser" title="광고주 생성" onclick="modalOpen($('#modal__create-advertiser'), $('#overlay__create-advertiser'));">
+                                        <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-plus-circle"></i></span>
+                                    </a>
+                                </div>
+                                <div class="bs-table__top-right">
+                                    <input type="search" class="bs-field bs-field--big bs-search-bar" placeholder="Search..." />
+                                </div>
+                            </div>
+            
+                            <div class="bs-table--scroll">
+                                <div class="bs-table__body">
+                                    <div class="bs-table__header">
+                                        <ul class="bs-table__row">
+                                            <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">구분</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">업체명</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">총 충전 잔액</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">유상 충전 잔액</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">무상 충전 잔액</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">이벤트 페이지 수</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">사용 여부</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">관리자 아이디</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">상태</span></li>
+                                        </ul>
+                                    </div>
+                
+                                    <div class="bs-table__content">
+                                        <ul class="bs-table__row">
+                                            <li class="bs-table__cell bs-table__cell--ta-center">
+                                                <span class="bs-table__cell-text">1</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left">
+                                                <span class="bs-table__cell-text">리팅성형외과의원</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">0</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">0</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <span class="bs-table__cell-text">0</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center">
+                                                <span class="bs-table__cell-text">15</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center">
+                                                <span class="bs-table__cell-text">사용중</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center">
+                                                <span class="bs-table__cell-text">qwer1234</span>
+                                            </li>
+                                            <li class="bs-table__cell bs-table__cell--ta-center">
+                                                <a href="javascript:void(0);" title="광고주 정보 수정" onclick="modalOpen($('#modal__edit-advertiser'), $('#overlay__edit-advertiser'));">
+                                                    <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="bs-table__bottom">
+                                <div class="bs-table__bottom-left">
+                                    <select class="bs-select bs-field bs-field--small">
+                                        <option class="bs-select__option" value="10">10</option>
+                                        <option class="bs-select__option" value="15">15</option>
+                                        <option class="bs-select__option" value="20">20</option>
+                                        <option class="bs-select__option" value="25">25</option>
+                                        <option class="bs-select__option" value="50">50</option>
+                                        <option class="bs-select__option" value="100">100</option>
+                                    </select>
+                                </div>
+                                <div class="bs-table__bottom-right">
+                                    <nav class="bs-pagination">
+                                        <a href="#" class="bs-pagination__previous bs-pagination__link">이전</a>
+            
+                                        <ul class="bs-pagination__list">
+                                            <li><a href="#" class="bs-pagination__link bs-pagination__link--current">1</a></li>
+                                            <li><a href="#" class="bs-pagination__link">2</a></li>
+                                            <li><a href="#" class="bs-pagination__link">3</a></li>
+                                            <li><a href="#" class="bs-pagination__link">4</a></li>
+                                            <li><a href="#" class="bs-pagination__link">5</a></li>
+                                            <li><a href="#" class="bs-pagination__link">6</a></li>
+                                        </ul>
+            
+                                        <a href="#" class="bs-pagination__next bs-pagination__link">다음</a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- modal : 광고주 생성 -->
+                    <div class="overlay" id="overlay__create-advertiser"></div>
+                    <div id="modal__create-advertiser" class="bs-modal">
+                        <div class="bs-modal__inner">
+                            <!-- 모달_TOP -->
+                            <div class="bs-modal__top">
+                                <span class="bs-modal__title">광고주 생성</span>
+                                <div class="bs-modal__close-btn" onclick="modalClose($('#modal__create-advertiser'), $('#overlay__create-advertiser'));">
+                                    <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-times"></i></span>
+                                </div>
+                            </div>
+            
+                            <!-- 모달_CONTENT -->
+                            <div class="bs-modal__content">
+                                <div class="bs-list-container">
+                                    <div class="list-group list-group--array2 bs-section-divider">
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">광고주명</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">업태</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">사업자 번호</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">사업장 주소</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">대표자명</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">계산서 발행메일주소</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">업종</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">정산서 발행메일주소</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                    </div>
+
+                                    <div class="list-group list-group--array2 bs-section-divider">
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">환불 은행명</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">환불 계좌번호</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">통장 사본</div>
+                                            <div class="bs-file-upload bs-field--size1">
+                                                <input class="bs-file-upload__input" id="copy-bank-account" type="file" multiple>
+                                                <span class="bs-file-upload__description">선택 파일 없음</span>
+                                                <label class="bs-file-upload__label bs-btn bs-btn--gray" for="copy-bank-account">
+                                                    <span class="bs-btn__description">불러오기</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">사업자등록증 사본</div>
+                                            <div class="bs-file-upload bs-field--size1">
+                                                <input class="bs-file-upload__input" id="copy-business-license" type="file" multiple>
+                                                <span class="bs-file-upload__description">선택 파일 없음</span>
+                                                <label class="bs-file-upload__label bs-btn bs-btn--gray" for="copy-business-license">
+                                                    <span class="bs-btn__description">불러오기</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="list-group list-group--array2">
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">외부연동 주소</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">개인정보 전문 주소</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">권한</div>
+                                            <select class="bs-select bs-field">
+                                                <option class="bs-select__option" value="">메타마케팅</option>
+                                                <option class="bs-select__option" value="">대행사</option>
+                                                <option class="bs-select__option" value="">광고주</option>
+                                                <option class="bs-select__option" value="">DB관리</option>
+                                                <option class="bs-select__option" value="" disabled="" selected="">승인대기</option>
+                                            </select>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">사용 여부</div>
+                                            <div>
+                                                <select class="bs-select bs-field">
+                                                    <option class="bs-select__option" value="" disabled="" selected="">사용</option>
+                                                    <option class="bs-select__option" value="">사용중지</option>
+                                                </select>
+                                                <div class="bs-text__small bs-text--gray">※ 사용중지는 해당 광고주의 모든 랜딩이 중지됩니다.</div>
+                                            </div>
+                                        </div>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">수집주체(사업자명)</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 모달_BOTTOM -->
+                            <div class="bs-modal__bottom">
+                                <button type="button" class="bs-modal__btn bs-modal__btn--save w-100">완료</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- modal : 광고주 수정 -->
+                    <div class="overlay" id="overlay__edit-advertiser"></div>
+                    <div id="modal__edit-advertiser" class="bs-modal">
+                        <div class="bs-modal__inner">
+                            <!-- 모달_TOP -->
+                            <div class="bs-modal__top">
+                                <span class="bs-modal__title">광고주 정보 수정</span>
+                                <div class="bs-modal__close-btn" onclick="modalClose($('#modal__edit-advertiser'), $('#overlay__edit-advertiser'));">
+                                    <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-times"></i></span>
+                                </div>
+                            </div>
+            
+                            <!-- 모달_CONTENT -->
+                            <div class="bs-modal__content">
+                                <div class="bs-list-container">
+                                    <div class="list-group list-group--array2 bs-section-divider">
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">광고주명</div>
+                                            <div class="">
+                                                <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                                <div class="bs-text__small bs-text--gray">※ 광고주명 수정 전 문의 바랍니다.</div>
+                                            </div>
+                                        </label>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">업태</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">사업자 번호</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">사업장 주소</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">대표자명</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">계산서 발행메일주소</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">업종</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">정산서 발행메일주소</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                    </div>
+
+                                    <div class="list-group list-group--array2 bs-section-divider">
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">환불 은행명</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">환불 계좌번호</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">통장 사본</div>
+                                            <div class="bs-file-upload bs-field--size1">
+                                                <input class="bs-file-upload__input" id="copy-bank-account" type="file" multiple>
+                                                <span class="bs-file-upload__description">선택 파일 없음</span>
+                                                <label class="bs-file-upload__label bs-btn bs-btn--gray" for="copy-bank-account">
+                                                    <span class="bs-btn__description">불러오기</span>
+                                                </label>
+                                            </div>
+                                        </label>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">사업자등록증 사본</div>
+                                            <div class="bs-file-upload bs-field--size1">
+                                                <input class="bs-file-upload__input" id="copy-business-license" type="file" multiple>
+                                                <span class="bs-file-upload__description">선택 파일 없음</span>
+                                                <label class="bs-file-upload__label bs-btn bs-btn--gray" for="copy-business-license">
+                                                    <span class="bs-btn__description">불러오기</span>
+                                                </label>
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                    <div class="list-group list-group--array2">
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">외부연동 주소</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">개인정보 전문 주소</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">권한</div>
+                                            <select class="bs-select bs-field">
+                                                <option class="bs-select__option" value="">메타마케팅</option>
+                                                <option class="bs-select__option" value="">대행사</option>
+                                                <option class="bs-select__option" value="">광고주</option>
+                                                <option class="bs-select__option" value="">DB관리</option>
+                                                <option class="bs-select__option" value="" disabled="" selected="">승인대기</option>
+                                            </select>
+                                        </div>
+                                        <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">사용 여부</div>
+                                            <div>
+                                                <select class="bs-select bs-field">
+                                                    <option class="bs-select__option" value="" disabled="" selected="">사용</option>
+                                                    <option class="bs-select__option" value="">사용중지</option>
+                                                </select>
+                                                <div class="bs-text__small bs-text--gray">※ 사용중지는 해당 광고주의 모든 랜딩이 중지됩니다.</div>
+                                            </div>
+                                        </div>
+                                        <label class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">수집주체(사업자명)</div>
+                                            <input type="text" class="bs-field bs-field__text" placeholder="입력해 주세요." />
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 모달_BOTTOM -->
+                            <div class="bs-modal__bottom">
+                                <button type="button" class="bs-modal__btn bs-modal__btn--save w-100">완료</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  main contents // -->
+            </main>
+        </div>
+    </div>
+
+    <!-- // Essential CSS -->
+    <script src="./js/jquery.min.js" type="text/javascript"></script>
+    <script src="./menu/js/aside_menu.js"></script>
+    <script src="./js/main.js"></script>
+    <!-- Essential CSS // -->
+    
+    <script src="./js/modal.js"></script>
+    <script src="./js/upload.js"></script>
+
+    <!-- <script src="./js/boxList.js"></script>
+    <script src="./js/tab.js"></script>
+    <script src="./js/toggleBtn.js"></script> -->
+</body>
+</html>
