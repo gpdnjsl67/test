@@ -277,7 +277,7 @@
                                 </div>
                             </div>
             
-                            <div class="bs-table--scroll">
+                            <div class="bs-table--scroll" id="advertise__table">
                                 <div class="bs-table__body">
                                     <div class="bs-table__header">
                                         <ul class="bs-table__row">
@@ -611,8 +611,8 @@
                     </div>
 
                     <!-- modal : 광고 설정 -->
-                    <div class="overlay" id="overlay__edit-advertise" style="display: block !important;"></div>
-                    <div id="modal__edit-advertise" class="bs-modal" style="display: block !important;">
+                    <div class="overlay" id="overlay__edit-advertise"></div>
+                    <div id="modal__edit-advertise" class="bs-modal">
                         <div class="bs-modal__inner">
                             <!-- 모달_TOP -->
                             <div class="bs-modal__top">
@@ -635,13 +635,18 @@
                                         </div>
                                     </div>
                                     <div class="list-group" style="grid-template-columns: 1fr 2fr;">
+                                        <!-- 광고세트 예산 사용중 -->
                                         <div class="list-group__item list-group__item--with-title">
+                                            <div class="list-group__item-title">광고 예산</div>
+                                            <input type="text" class="bs-field bs-field__text" value="광고세트 예산 사용중" disabled />
+                                        </div>
+                                        <!-- <div class="list-group__item list-group__item--with-title">
                                             <div class="list-group__item-title">광고 예산</div>
                                             <div class="bs-field--with-btn bs-field--size-icon-medium">
                                                 <input type="text" class="bs-field bs-field__text" disabled />
                                                 <a href="#" onclick="toggleInputDisable(event);"><span class="bs-fa-icon bs-fa-icon--medium"><i class="fas fa-pencil-alt"></i></span></a>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="list-group__item list-group__item--with-title">
                                             <div class="adv__toggle-btn list-group__item-title c-blue cursor-pointer">광고 종료</div>
                                             <div class="adv__item adv__item--off">
@@ -726,192 +731,192 @@
                                                     <div class="adv-schedule__table__content" id="adv-schedule__week">
                                                         <ul class="adv-schedule__table__row">
                                                             <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">월</span>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"> </span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"> </span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
                                                         </ul>
                                                         <ul class="adv-schedule__table__row">
                                                             <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">화</span>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"> </span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"> </span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
                                                         </ul>
                                                         <ul class="adv-schedule__table__row">
                                                             <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">수</span>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"> </span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"> </span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
                                                         </ul>
                                                         <ul class="adv-schedule__table__row">
                                                             <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">목</span>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"> </span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"> </span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
                                                         </ul>
                                                         <ul class="adv-schedule__table__row">
                                                             <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">금</span>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"> </span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"> </span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
                                                         </ul>
                                                         <ul class="adv-schedule__table__row">
                                                             <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">토</span>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"> </span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"> </span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
                                                         </ul>
                                                         <ul class="adv-schedule__table__row">
                                                             <li class="adv-schedule__table__cell adv-schedule__table__head"><span class="adv-schedule__table__cell-text">일</span>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"> </span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
-                                                            <li class="adv-schedule__table__cell"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"> </span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
+                                                            <li class="adv-schedule__table__cell adv-schedule__table__cell--clicked"><span class="adv-schedule__table__cell-text"></span></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -1023,46 +1028,469 @@
             
                             <!-- 모달_CONTENT -->
                             <div class="bs-modal__content">
-                                <div class="bs-list-container">
-                                    <div class="list-group list-group--array2">
-                                        <label class="list-group__item list-group__item--with-title">
-                                            <div class="list-group__item-title">매체명</div>
-                                            <input type="text" class="bs-field bs-field__text" placeholder="매체명을 입력해 주세요." />
-                                        </label>
-                                        <label class="list-group__item list-group__item--with-title">
-                                            <div class="list-group__item-title">대상</div>
-                                            <input type="text" class="bs-field bs-field__text" placeholder="대상을 입력해 주세요." />
-                                        </label>
-                                        <div class="list-group__item list-group__item--with-title">
-                                            <div class="list-group__item-title">활성 아이콘</div>
-                                            <div>
-                                                <div class="bs-file-upload bs-file-upload__two-btn">
-                                                    <input class="bs-file-upload__input" id="modal--edit__icon-active" type="file" multiple />
-                                                    <span class="bs-file-upload__description">선택 파일 없음</span>
-                                                    <label class="bs-file-upload__label bs-btn bs-btn--gray" for="modal--edit__icon-active">
-                                                        <span class="bs-btn__description">불러오기</span>
-                                                    </label>
-                                                    <a href="#" class="bs-field__btn bs-btn bs-btn--gray">
-                                                        <span class="bs-btn__description">확인</span>
-                                                    </a>
+                                <div id="todayDate" class="bs-text bs-text__main bs-text--gray txt-align-right mb-1">YYYY.MM.DD</div>
+
+                                <div class="d-grid section-gap">
+                                    <div id="compared-list" class="bs-table-wrapper">
+                                        <div class="bs-table--scroll">
+                                            <div class="bs-table__body">
+                                                <ul class="bs-table__header">
+                                                    <div class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text"></span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">DB단가</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">DB수</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">수익률</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">CPC</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">전환율</span></li>
+                                                    </div>
+                                                </ul>
+                            
+                                                <div class="bs-table__content">
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-left">
+                                                            <span class="bs-table__cell-text">오늘</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">14,444</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">55</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">50%</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">155</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">1.17%</span>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-left">
+                                                            <span class="bs-table__cell-text">어제</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">14,444</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">55</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">50%</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">155</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">1.17%</span>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-left">
+                                                            <span class="bs-table__cell-text">최근 4일</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">14,444</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">55</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">50%</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">155</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">1.17%</span>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-left">
+                                                            <span class="bs-table__cell-text">최근 7일</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">14,444</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">55</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">50%</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">155</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">1.17%</span>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-left">
+                                                            <span class="bs-table__cell-text">최근 14일</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">14,444</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">55</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">50%</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">155</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">1.17%</span>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-left">
+                                                            <span class="bs-table__cell-text">이번 달</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">14,444</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">55</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">50%</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">155</span>
+                                                        </li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-right">
+                                                            <span class="bs-table__cell-text">1.17%</span>
+                                                        </li>
+                                                    </ul>
                                                 </div>
-                                                <div class="bs-text__small bs-text--gray">※ 1:1 비율 권장 (300px X 300px)</div>
                                             </div>
                                         </div>
-                                        <div class="list-group__item list-group__item--with-title">
-                                            <div class="list-group__item-title">비활성 아이콘</div>
-                                            <div>
-                                                <div class="bs-file-upload bs-file-upload__two-btn">
-                                                    <input class="bs-file-upload__input" id="modal--edit__icon-inactive" type="file" multiple />
-                                                    <span class="bs-file-upload__description">선택 파일 없음</span>
-                                                    <label class="bs-file-upload__label bs-btn bs-btn--gray" for="modal--edit__icon-inactive">
-                                                        <span class="bs-btn__description">불러오기</span>
-                                                    </label>
-                                                    <a href="#" class="bs-field__btn bs-btn bs-btn--gray">
-                                                        <span class="bs-btn__description">확인</span>
-                                                    </a>
+                                    </div>
+    
+                                    <div id="hourly-data-list" class="bs-table-wrapper">
+                                        <div class="bs-table--scroll">
+                                            <div class="bs-table__body">
+                                                <ul class="bs-table__header">
+                                                    <div class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text"></span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center bg-blue-table-cell border-bottom"><span class="bs-table__cell-text"></span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center bg-blue-table-cell border-bottom"><span class="bs-table__cell-text">당일</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center bg-blue-table-cell border-bottom border-right"><span class="bs-table__cell-text"></span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center bg-blue-table-cell border-bottom"><span class="bs-table__cell-text"></span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center bg-blue-table-cell border-bottom"><span class="bs-table__cell-text">어제</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center bg-blue-table-cell border-bottom border-right"><span class="bs-table__cell-text"></span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center bg-blue-table-cell border-bottom"><span class="bs-table__cell-text"></span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center bg-blue-table-cell border-bottom"><span class="bs-table__cell-text">최근 7일</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center bg-blue-table-cell border-bottom"><span class="bs-table__cell-text"></span></li>
+                                                    </div>
+                                                    <div class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text"></span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">지출액</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">유효DB</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">DB단가</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">지출액</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">유효DB</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">DB단가</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">지출액</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">유효DB</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">DB단가</span></li>
+                                                    </div>
+                                                </ul>
+                            
+                                                <div class="bs-table__content">
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">00시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">01시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">02시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">03시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">04시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">05시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">06시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">07시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">08시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">09시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">10시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">11시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">12시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">13시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">14시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">15시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">16시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">17시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">18시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">19시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">20시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">21시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">22시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
+                                                    <ul class="bs-table__row">
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">23시</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center border-right"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                        <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">0</span></li>
+                                                    </ul>
                                                 </div>
-                                                <div class="bs-text__small bs-text--gray">※ 1:1 비율 권장 (300px X 300px)</div>
                                             </div>
                                         </div>
                                     </div>

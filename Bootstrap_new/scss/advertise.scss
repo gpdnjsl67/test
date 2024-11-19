@@ -1,6 +1,10 @@
 @charset "UTF-8";
 @import "style.scss";
 
+.small-title-grid {
+    grid-template-columns: 7rem 1fr !important;
+}
+
 .adv-thumbnail {
     width: 5rem;
     overflow: hidden;
@@ -31,6 +35,16 @@
                 opacity: .5;
             }
         }
+    }
+}
+
+#advertise__table {
+    .bs-table__content .bs-table__row:nth-child(odd) {
+        background-color: $color-white;
+    }
+
+    .bs-table__content:nth-child(odd) .bs-table__row {
+        background-color: $color-bg-table-row;
     }
 }
 
@@ -92,6 +106,18 @@
     }
 }
 
-.small-title-grid {
-    grid-template-columns: 7rem 1fr !important;
+// 데이터 비교 차트 (모달창 내)
+#compared-list {
+    .bs-table__cell {
+        padding: 1rem 2rem;
+    }
+}
+
+// 시간대 별 데이터 (모달창 내)
+#hourly-data-list {
+    .bs-table__header {
+    }
+    .bs-table__cell {
+        padding: 1rem;
+    }
 }

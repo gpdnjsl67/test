@@ -200,6 +200,18 @@
 .bg-white {background-color: $color-white !important;}
 .bg-blue {background-color: $color-blue !important;}
 .bg-gray-btn {background-color: $color-bg-button-gray !important;}
+.bg-blue-table-cell {background-color: #eaf1ff !important;}
+
+// 체크 마크
+.icon-checkmark {
+    margin: 0 auto 2rem;
+    width: 3rem;
+    height: 5rem;
+    border-right: 0.6rem solid $color-blue;
+    border-bottom: 0.6rem solid $color-blue;
+    transform: rotate(45deg);
+}
+
 
 #wrap {
     width: 100vw;

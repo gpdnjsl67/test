@@ -1,0 +1,181 @@
+@charset "UTF-8";
+@import "style.scss";
+
+.log {
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $gap-box;
+    }
+
+    &__search-bar {
+        grid-column: 1 / 3;
+    }
+
+    &__table {
+        &:not([data-table-value="1"]) {
+            display: none;
+        }
+    }
+}
+
+/* datePicker CSS */
+.ui-widget {
+    &.ui-widget-content {
+        margin-top: 0.5rem;
+        padding: 1rem;
+        border: 0.1rem solid #e2e6ed;
+        background-color: $color-white;
+        // overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    font-size: 1em;
+}
+
+.ui-widget-header {
+    // display: flex;
+    // align-items: center;
+    border: none;
+    background: none;
+}
+
+.ui-datepicker {
+    width: auto;
+    .ui-datepicker-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        select {
+            @include basic-box;
+            margin: 0.2rem;
+            padding: 0.2rem 0.5rem;
+            font-size: 1.5rem;
+
+            &:focus {
+                outline: 0;
+                border-color: $color-blue;
+            }
+        }
+
+        select option {
+            font-size: 1.5rem;
+        }
+    }
+
+    select.ui-datepicker-month, select.ui-datepicker-year {
+        width: 10rem
+    }
+
+    .ui-datepicker-prev, .ui-datepicker-next {
+        position: absolute;
+        top: 1.5rem;
+    }
+
+    // .ui-datepicker-prev {
+    //     left: 1rem;
+    // }
+
+    // .ui-datepicker-next {
+    //     right: 1rem;
+    // }
+
+    .ui-datepicker-prev span, .ui-datepicker-next span {
+        top: 0;
+        font-size: 1rem !important;
+    }
+
+    .ui-datepicker-prev, .ui-datepicker-next-hover {
+        border: none !important;
+        background: none !important;
+    }
+
+    table {
+        font-size: 1.1em;
+    }
+
+    th {
+        padding: 1em;
+    }
+
+    .ui-datepicker-week-end {
+        &:first-child span {
+            color: $color-red;
+        }
+
+        &:last-child span {
+            color: $color-blue;
+        }
+
+        & > tbody td.ui-datepicker-week-end:first-child a {
+            color: $color-red;
+    
+            &:hover {
+            color: $color-white;
+            }
+        }
+
+        & > tbody td.ui-datepicker-week-end:last-child a {
+            color: $color-blue;
+    
+            &:hover {
+            color: $color-white;
+            }
+        }
+    }
+
+    span {
+        font-size: $font-main-size !important;
+    }
+
+    .ui-state-default {
+        font-size: $font-main-size !important;
+    }
+
+    .ui-state-default,
+    .ui-widget-content .ui-state-default,
+    .ui-widget-header .ui-state-default,
+    .ui-button,
+    html .ui-button.ui-state-disabled:hover,
+    html .ui-button.ui-state-disabled:active {
+        border: none;
+        background: none;
+        color: #111;
+        text-align: center;
+    }
+
+    .ui-state-hover,
+    .ui-widget-content .ui-state-hover,
+    .ui-widget-header .ui-state-hover {
+        border-radius: $border-radius-bs;
+        color: $color-white;
+        background-color: $color-blue;
+    }
+
+    .ui-state-highlight,
+    .ui-widget-content .ui-state-highlight,
+    .ui-widget-header .ui-state-highlight {
+        border-radius: $border-radius-bs;
+        font-weight: 600;
+        color: #111;
+        background-color: #e2e6ed;
+    }
+
+    .ui-state-active,
+    .ui-widget-content .ui-state-active,
+    .ui-widget-header .ui-state-active,
+    a.ui-button:active,
+    .ui-button:active,
+    .ui-button.ui-state-active:hover {
+        font-weight: 600;
+        border-radius: $border-radius-bs;
+        color: $color-white !important;
+        background-color: $color-blue !important;
+    }
+
+    td span,
+    td a {
+        padding: 1rem;
+    }
+}

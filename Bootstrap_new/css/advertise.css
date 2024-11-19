@@ -1,3 +1,7 @@
+.small-title-grid {
+  grid-template-columns: 7rem 1fr !important;
+}
+
 .adv-thumbnail {
   width: 5rem;
   overflow: hidden;
@@ -23,6 +27,13 @@
   height: 100%;
   background-color: #fff;
   opacity: 0.5;
+}
+
+#advertise__table .bs-table__content .bs-table__row:nth-child(odd) {
+  background-color: #fff;
+}
+#advertise__table .bs-table__content:nth-child(odd) .bs-table__row {
+  background-color: #f5f5f5;
 }
 
 .adv-schedule {
@@ -71,6 +82,10 @@
   display: table-row-group;
 }
 
-.small-title-grid {
-  grid-template-columns: 7rem 1fr !important;
+#compared-list .bs-table__cell {
+  padding: 1rem 2rem;
+}
+
+#hourly-data-list .bs-table__cell {
+  padding: 1rem;
 }

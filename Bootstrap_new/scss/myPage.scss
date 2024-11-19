@@ -1,0 +1,39 @@
+@charset "UTF-8";
+@import "style.scss";
+
+.change-password {
+    &__content {
+        padding: 4rem 15rem;
+    }
+
+    &__top-img {
+        margin: 0 auto 4rem;
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__inputs {
+        display: grid;
+        gap: $gap-bs;
+        align-items: center;
+    }
+
+    &__item {
+        &__phone {
+            display: grid;
+            grid-template-columns: 1fr 15rem;
+            gap: $gap-bs;
+        }
+    }
+
+    &__ask-btn {
+        padding: 0;
+    }
+}
+
+#myPage-page .hidden {
+    display: none !important;
+}

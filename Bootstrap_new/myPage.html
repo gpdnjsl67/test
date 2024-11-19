@@ -32,6 +32,7 @@
     <link rel="stylesheet" type="text/css" href="./css/tab.css">
     <link rel="stylesheet" type="text/css" href="./css/toggleBtn.css">
     <!-- End CSS // -->
+    <link rel="stylesheet" type="text/css" href="./css/myPage.css">
 
 </head>
 <body>
@@ -58,9 +59,14 @@
                             <div class="bs-box-list">
                                 <div class="bs-box-list__title">
                                     <span class="bs-box-list__title-text">내정보</span>
-                                    <a href="javascript:void(0);" title="내정보 수정" onclick="modalOpen($('#modal__edit-myPage'), $('#overlay__edit-myPage'));">
-                                        <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
-                                    </a>
+                                    <div class="d-flex box-gap">
+                                        <a href="javascript:void(0);" title="내정보 수정" onclick="modalOpen($('#modal__change-password'), $('#overlay__change-password'));">
+                                            <span class="bs-fa-icon bs-fa-icon--medium"><i class="fas fa-lock"></i></span>
+                                        </a>
+                                        <a href="javascript:void(0);" title="내정보 수정" onclick="modalOpen($('#modal__edit-myPage'), $('#overlay__edit-myPage'));">
+                                            <span class="bs-fa-icon bs-fa-icon--medium"><i class="fas fa-pencil-alt"></i></span>
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="bs-list-container bs-box-list__items bs-box-list__items--no-scroll">
                                     <div class="list-group list-group--array1">
@@ -135,82 +141,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- <div class="bs-table-wrapper">
-                            <div class="bs-table__top">
-                                <div class="bs-table__top-left">
-                                    <span class="bs-table__title">연결된 업체 정보</span>
-                                </div>
-                            </div>
-            
-                            <div class="bs-table--scroll">
-                                <div class="bs-table__body">
-                                    <div class="bs-table__header">
-                                        <ul class="bs-table__row">
-                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">상태</span></li>
-                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">업체명/사업자번호</span></li>
-                                            <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">총 충전잔액</span></li>
-                                            <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">유상 충전잔액</span></li>
-                                            <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">무상 충전잔액</span></li>
-                                            <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">기타</span></li>
-                                        </ul>
-                                    </div>
-                
-                                    <div class="bs-table__content">
-                                        <ul class="bs-table__row bs-table__row-bar bs-table__row-bar--red">
-                                            <li class="bs-table__cell bs-table__cell--ta-left">
-                                                <span class="bs-table__cell-text">메타마케팅</span>
-                                            </li>
-                                            <li class="bs-table__cell bs-table__cell--ta-left">
-                                                <span class="bs-table__cell-text">메타마케팅</span>
-                                                <span class="bs-text__small bs-text--gray">105-86-88886</span>
-                                            </li>
-                                            <li class="bs-table__cell bs-table__cell--ta-center">
-                                                <span class="bs-table__cell-text">0</span>
-                                            </li>
-                                            <li class="bs-table__cell bs-table__cell--ta-center">
-                                                <span class="bs-table__cell-text">0</span>
-                                            </li>
-                                            <li class="bs-table__cell bs-table__cell--ta-center">
-                                                <span class="bs-table__cell-text">0</span>
-                                            </li>
-                                            <li class="bs-table__cell bs-table__cell--ta-center">
-                                                <a href="#" class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-wallet"></i></a>
-                                                <span class="bs-text__small bs-text--gray">충전</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="bs-table__bottom">
-                                <div class="bs-table__bottom-left">
-                                    <select class="bs-select bs-field bs-field--small">
-                                        <option class="bs-select__option" value="10">10</option>
-                                        <option class="bs-select__option" value="15">15</option>
-                                        <option class="bs-select__option" value="20">20</option>
-                                        <option class="bs-select__option" value="25">25</option>
-                                        <option class="bs-select__option" value="50">50</option>
-                                        <option class="bs-select__option" value="100">100</option>
-                                    </select>
-                                </div>
-                                <div class="bs-table__bottom-right">
-                                    <nav class="bs-pagination">
-                                        <a href="#" class="bs-pagination__previous bs-pagination__link">이전</a>
-            
-                                        <ul class="bs-pagination__list">
-                                            <li><a href="#" class="bs-pagination__link bs-pagination__link--current">1</a></li>
-                                            <li><a href="#" class="bs-pagination__link">2</a></li>
-                                            <li><a href="#" class="bs-pagination__link">3</a></li>
-                                            <li><a href="#" class="bs-pagination__link">4</a></li>
-                                            <li><a href="#" class="bs-pagination__link">5</a></li>
-                                        </ul>
-            
-                                        <a href="#" class="bs-pagination__next bs-pagination__link">다음</a>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div> -->
 
                         <!-- 테이블 : 회원정보 -->
                         <div class="bs-table-wrapper">
@@ -292,6 +222,73 @@
                         </div>
                     </div>
 
+                    <!-- modal : 비밀번호 변경 -->
+                    <div class="overlay" id="overlay__change-password"></div>
+                    <div id="modal__change-password" class="bs-modal">
+                        <div class="bs-modal__inner">
+                            <!-- 모달_TOP -->
+                            <div class="bs-modal__top">
+                                <span class="bs-modal__title">비밀번호 변경</span>
+                                <div class="bs-modal__close-btn" onclick="modalClose($('#modal__change-password'), $('#overlay__change-password'));">
+                                    <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-times"></i></span>
+                                </div>
+                            </div>
+            
+                            <!-- 모달_CONTENT -->
+                            <div class="bs-modal__content change-password__content">
+                                <div class="change-password__first-page">
+                                    <div class="change-password__top-img">
+                                        <img src="./images/changePassword_step_1.jpg" alt="">
+                                    </div>
+                                    <div class="change-password__description txt-align-left mb-1">
+                                        <span class="bs-text bs-text__main bs-text--blue fw-500">8자~30자 이내, 대문자, 소문자, 숫자, 특수문자 4가지 조건 모두 조합하여 변경 바랍니다.</span>
+                                    </div>
+                                    <div class="change-password__inputs">
+                                        <div class="change-password__item">
+                                            <div class="bs-field bs-field--in-icon">
+                                                <div class="bs-field__icon">
+                                                    <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fas fas fa-lock"></i></span>
+                                                </div>
+                                                <input type="text" class="bs-field__text" title="현재 비밀번호 입력" placeholder="현재 비밀번호 입력" autocomplete="new-password" />
+                                            </div>
+                                        </div>
+                                        <div class="change-password__item">
+                                            <div class="bs-field bs-field--in-icon">
+                                                <div class="bs-field__icon">
+                                                    <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fas fas fa-lock"></i></span>
+                                                </div>
+                                                <input type="text" class="bs-field__text" title="새로운 비밀번호 입력" placeholder="새로운 비밀번호 입력" autocomplete="new-password" />
+                                            </div>
+                                        </div>
+                                        <div class="change-password__item">
+                                            <div class="bs-field bs-field--in-icon">
+                                                <div class="bs-field__icon">
+                                                    <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fas fas fa-lock"></i></span>
+                                                </div>
+                                                <input type="text" class="bs-field__text" title="새로운 비밀번호 확인" placeholder="새로운 비밀번호 확인" autocomplete="new-password" />
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <!-- 비밀번호 변경 에러 텍스트 -->
+                                    <div class="change-password--error bs-text bs-text__main bs-text--red fw-500 mt-1">비밀번호는 대문자, 소문자, 특수문자, 숫자를 포함해야 합니다.</div>
+                                </div>
+
+                                <div class="change-password__second-page hidden">
+                                    <div class="icon-checkmark"></div>
+                                    <div class="bs-text bs-text--black fs-20 fw-500 txt-align-center mb-1">비밀번호 변경이 완료되었습니다.</div>
+                                    <div class="bs-text bs-text--black fs-15 fw-400 txt-align-center">변경한 비밀번호로 다시 로그인 해주세요.</div>
+                                </div>
+                            </div>
+                            
+                            <!-- 모달_BOTTOM -->
+                            <div class="bs-modal__bottom">
+                                <button type="button" class="change-password__btn bs-modal__btn bs-modal__btn--save w-100">비밀번호 변경</button>
+                                <button type="button" class="go-to-login__btn bs-modal__btn bs-modal__btn--save w-100 hidden">로그인 화면 바로가기</button>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- modal : 내정보 수정 -->
                     <div class="overlay" id="overlay__edit-myPage"></div>
                     <div id="modal__edit-myPage" class="bs-modal">
@@ -341,10 +338,10 @@
                                             <div class="list-group__item-title">연결된 업체 정보</div>
                                             <span class="bs-text__main bs-text--gray">메타마케팅</span>
                                         </div>
-                                        <div class="list-group__item list-group__item--with-title">
+                                        <!-- <div class="list-group__item list-group__item--with-title">
                                             <div class="list-group__item-title">비밀번호</div>
                                             <a href="#" class="modal-open-btn bs-btn bs-btn--gray w-rem-12" onclick="modalOpen($('#modal1'), $('#overlay1'));"><span class="bs-btn__description">비밀번호 변경</span></a>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -368,6 +365,7 @@
     <!-- Essential CSS // -->
     
     <script src="./js/modal.js"></script>
+    <script src="./js/myPage.js"></script>
     <!-- <script src="./js/boxList.js"></script>
     <script src="./js/tab.js"></script>
     <script src="./js/upload.js"></script>
