@@ -52,33 +52,38 @@ function toggleInputDisable(event) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const menuLinks = document.querySelectorAll('.aside-menu__link'); // 모든 메뉴 링크 선택
+// document.addEventListener("DOMContentLoaded", () => {
+//     const menuLinks = document.querySelectorAll('.aside-menu__link'); // 모든 메뉴 링크 선택
 
-    const updateCurrentClass = (event) => {
-        // 기존 활성화된 클래스 제거
-        document
-            .querySelectorAll('.aside-menu__item--current, .aside-menu__sub-menu-item--current')
-            .forEach(item => item.classList.remove('aside-menu__item--current', 'aside-menu__sub-menu-item--current'));
+//     const updateCurrentClass = (event) => {
+//         // 기존 활성화된 클래스 제거
+//         document
+//             .querySelectorAll('.aside-menu__item--current, .aside-menu__sub-menu-item--current')
+//             .forEach(item => item.classList.remove('aside-menu__item--current', 'aside-menu__sub-menu-item--current'));
 
-        // 클릭된 링크의 부모 요소에 활성화 클래스 추가
-        const clickedLink = event.target.closest('.aside-menu__link'); // 클릭된 a 태그
-        const parentItem = clickedLink.closest('.aside-menu__item'); // 가장 가까운 메뉴 아이템
-        if (parentItem) {
-            parentItem.classList.add('aside-menu__item--current'); // 클래스 추가
-        }
+//         // 클릭된 링크의 부모 요소에 활성화 클래스 추가
+//         const clickedLink = event.target.closest('.aside-menu__link'); // 클릭된 a 태그
+//         const parentItem = clickedLink.closest('.aside-menu__item'); // 가장 가까운 메뉴 아이템
+//         if (parentItem) {
+//             parentItem.classList.add('aside-menu__item--current'); // 클래스 추가
+//         }
 
-        // 서브메뉴일 경우 서브메뉴 클래스도 추가
-        const subMenuItem = clickedLink.closest('.aside-menu__sub-menu-item');
-        if (subMenuItem) {
-            subMenuItem.classList.add('aside-menu__sub-menu-item--current');
-        }
-    };
+//         // 서브메뉴일 경우 서브메뉴 클래스도 추가
+//         const subMenuItem = clickedLink.closest('.aside-menu__sub-menu-item');
+//         if (subMenuItem) {
+//             subMenuItem.classList.add('aside-menu__sub-menu-item--current');
+//         }
+//     };
 
-    // 모든 메뉴 링크에 클릭 이벤트 등록
-    menuLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            updateCurrentClass(event);
-        });
-    });
-});
+//     // 모든 메뉴 링크에 클릭 이벤트 등록
+//     menuLinks.forEach(link => {
+//         link.addEventListener('click', (event) => {
+//             updateCurrentClass(event);
+//             alert('dd');
+//         });
+//     });
+// });
+
+// $('.aside-menu__link').on('click', () => {
+//     alert('test');
+// });
