@@ -387,7 +387,7 @@
 }
 
 .section-gap {
-  gap: 4rem !important;
+  gap: 3rem !important;
 }
 
 .table-gap {
@@ -638,13 +638,13 @@
 }
 
 .main {
-  padding: 7rem 3rem;
+  padding: 7rem 8rem;
   width: 100%;
   overflow-y: scroll;
   background-color: #f8f9fa;
 }
 .main .main-top {
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

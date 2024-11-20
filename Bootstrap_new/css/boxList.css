@@ -35,7 +35,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 2rem;
-  height: 7rem;
+  height: 6rem;
   overflow: hidden;
 }
 .bs-box-list__title-text {
@@ -62,7 +62,7 @@
   padding: 2rem;
 }
 .bs-box-list__item {
-  padding: 1.4em 1.5em;
+  padding: 1.1em 1.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
