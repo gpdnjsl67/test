@@ -1,0 +1,134 @@
+$breakpoint-mobile: 335px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+$font-main: "Noto Sans KR", sans-serif;
+$font-main-size: 1.3rem;
+$font-size-auth-input: 1.5rem;
+
+// width
+$width-field-big: 27rem;
+$width-field-big-medium: 20rem;
+$width-field-medium: 12rem;
+$width-field-medium-small: 9rem;
+$width-field-small: 6rem;
+$width-field-very-small: 4rem;
+
+// height
+$height-header: 4.7rem;
+$height-box-list: 24rem;
+$height-box-top: 6rem;
+$height-preview: 85rem;
+
+// bg
+$bgc-main-gray: #f8f9fa;
+
+// color
+$color-black: #212121;
+$color-white: #fff;
+$color-yellow: yellow;
+$color-sky-blue: #eaf1ff;
+$color-blue: #4271d9;
+$color-red: #c93636;
+$color-orange: #ff6a00;
+$color-light-orange: #e5a247;
+$color-green: green;
+$color-text-gray-bs: #9b98a4;
+$color-border-gray-bs: #e2e6ed;
+$color-placeholder-bs: #c5c5c5;
+$color-bg-button-gray: #f5f5f5;
+$color-bg-disabled: #f5f5f5;
+$color-icon-gray: #7a7a84;
+$color-bg-table-row: #f5f5f5;
+$color-hover: #eaf1ff;
+$color-checked-bg: #eaf1ff;
+$color-submenu-hover: #1e4eb8;
+$color-tab-off-gray: #f5f5f5;
+
+// padding
+$padding-bs: 0.7rem;
+$padding-table: 2rem;
+$padding-box-list: 2rem;
+$padding-auth-input: 1.3rem;
+$padding-auth-box: 4rem 15rem;
+
+// gap
+$gap-bs: 0.5rem;
+$gap-section: 3rem;
+$gap-table: 2rem;
+$gap-list: 2rem 4rem;
+$gap-box: 2rem;
+$gap-pagination: 0.4rem;
+$gap-modal-section: 2rem;
+
+// border
+$border-bs: 0.15rem solid #e2e6ed;
+
+// border-radius
+$border-radius-bs: 0.5rem;
+
+// focus
+$focus-outline-bs: 0.2rem solid $color-blue;
+
+// btn
+$width-btn-bs-1: 8.5rem;
+$width-btn-bs-2: 5rem;
+$width-btn-bs-3: 1.3rem;
+
+// icon
+$icon-small: 1.3rem;
+$icon-medium: 1.5rem;
+$icon-big: 2rem;
+
+// selector
+$selector-size: 1.6rem;
+
+
+
+// ======== mixin ======== //
+@mixin mobile {
+    // @media (max-width: #{$breakpoint-tablet - 1px}) {
+    //     @content;
+    // }
+    @media (max-width: #{$breakpoint-tablet}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    // @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+    //     @content;
+    // }
+    // @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop}) {
+    //     @content;
+    // }
+    @media (max-width: #{$breakpoint-tablet}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop}) {
+        @content;
+    }
+}
+
+// 반응형
+@mixin responsive($break) {
+    @if $break == medium-screens {
+        @media only screen and (max-width: $breakpoint-tablet) {
+            @content;
+        }
+    }
+}
+
+// font-size
+@mixin font-size($size) {
+    font-size: $size / 10 * 1rem;
+}
+
+// 기본 박스 스타일
+@mixin basic-box {
+    border: $border-bs;
+    border-radius: $border-radius-bs;
+}

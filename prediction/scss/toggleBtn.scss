@@ -1,0 +1,22 @@
+@charset "UTF-8";
+@import "style.scss";
+
+.bs-toggle-btn {
+    &__image {
+        width: 4rem;
+        overflow: hidden;
+        cursor: pointer;
+        border: $border-bs;
+        border-radius: 1rem;
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: .5;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}

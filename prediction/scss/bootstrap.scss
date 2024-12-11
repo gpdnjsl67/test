@@ -1,0 +1,669 @@
+// @import "reset.scss";
+@charset "UTF-8";
+@import "style.scss";
+
+// .exp-wrap {margin-top: $height-header; padding: 30px;}
+.exp-wrap .exp-item {margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px dotted #ddd;}
+
+// ========================================= //
+
+
+// width
+.w-auto {width: auto !important;}
+.w-100 {width: 100% !important;}
+.w-rem-50 {width: 50rem !important;}
+.w-rem-40 {width: 40rem !important;}
+.w-rem-35 {width: 35rem !important;}
+.w-rem-30 {width: 30rem !important;}
+.w-rem-27 {width: 27rem !important;}
+.w-rem-20 {width: 20rem !important;}
+.w-rem-17 {width: 17rem !important;}
+.w-rem-12 {width: 12rem !important;}
+.w-rem-9 {width: 9rem !important;}
+.w-rem-8 {width: 8rem !important;}
+.w-rem-6 {width: 6rem !important;}
+.w-rem-5 {width: 5rem !important;}
+.w-rem-4 {width: 4rem !important;}
+
+// height
+.h-auto {height: auto !important;}
+.h-100 {height: 100% !important;}
+
+// margin
+.margin-0 {margin: 0 !important;}
+.margin-0-auto {margin: 0 auto !important;}
+.margin-1 {margin: 1rem !important;}
+.margin-2 {margin: 2rem !important;}
+.margin-3 {margin: 3rem !important;}
+
+.mt-bs {margin-top: $gap-bs !important;}
+.mt-1 {margin-top: 1rem !important;}
+.mt-2 {margin-top: 2rem !important;}
+.mt-3 {margin-top: 3rem !important;}
+.mt-4 {margin-top: 4rem !important;}
+.mt-5 {margin-top: 5rem !important;}
+
+.mr-bs {margin-right: $gap-bs !important;}
+.mr-1 {margin-right: 1rem !important;}
+.mr-2 {margin-right: 2rem !important;}
+.mr-3 {margin-right: 3rem !important;}
+.mr-4 {margin-right: 4rem !important;}
+.mr-5 {margin-right: 5rem !important;}
+
+.mb-bs {margin-bottom: $gap-bs !important;}
+.mb-1 {margin-bottom: 1rem !important;}
+.mb-2 {margin-bottom: 2rem !important;}
+.mb-3 {margin-bottom: 3rem !important;}
+.mb-4 {margin-bottom: 4rem !important;}
+.mb-5 {margin-bottom: 5rem !important;}
+
+.ml-bs {margin-left: $gap-bs !important;}
+.ml-1 {margin-left: 1rem !important;}
+.ml-2 {margin-left: 2rem !important;}
+.ml-3 {margin-left: 3rem !important;}
+.ml-4 {margin-left: 4rem !important;}
+.ml-5 {margin-left: 5rem !important;}
+
+// padding
+.padding-bs {padding: $padding-bs !important;}
+.padding-0 {padding: 0 !important;}
+.padding-1 {padding: 1rem !important;}
+.padding-2 {padding: 2rem !important;}
+.padding-3 {padding: 3rem !important;}
+
+.pt-bs {padding-top: $gap-bs !important;}
+.pt-1 {padding-top: 1rem !important;}
+.pt-2 {padding-top: 2rem !important;}
+.pt-3 {padding-top: 3rem !important;}
+.pt-4 {padding-top: 4rem !important;}
+.pt-5 {padding-top: 5rem !important;}
+
+.pr-bs {padding-right: $gap-bs !important;}
+.pr-1 {padding-right: 1rem !important;}
+.pr-2 {padding-right: 2rem !important;}
+.pr-3 {padding-right: 3rem !important;}
+.pr-4 {padding-right: 4rem !important;}
+.pr-5 {padding-right: 5rem !important;}
+
+.pb-bs {padding-bottom: $gap-bs !important;}
+.pb-1 {padding-bottom: 1rem !important;}
+.pb-2 {padding-bottom: 2rem !important;}
+.pb-3 {padding-bottom: 3rem !important;}
+.pb-4 {padding-bottom: 4rem !important;}
+.pb-5 {padding-bottom: 5rem !important;}
+
+.pl-bs {padding-left: $gap-bs !important;}
+.pl-1 {padding-left: 1rem !important;}
+.pl-2 {padding-left: 2rem !important;}
+.pl-3 {padding-left: 3rem !important;}
+.pl-4 {padding-left: 4rem !important;}
+.pl-5 {padding-left: 5rem !important;}
+
+// position
+.position-static {position: static !important;}
+.position-relative {position: relative !important;}
+.position-absolute {position: absolute !important;}
+.position-fixed {position: fixed !important;}
+
+// display
+.d-block {display: block !important;}
+.d-inline-block {display: inline-block !important;}
+.d-grid {display: grid !important;}
+.d-flex {display: flex !important;}
+.d-none {display: none !important;}
+
+// 정렬 속성
+.array-center {align-items: center !important; justify-content: center !important;}
+.ai-start {align-items: start !important;}
+.ai-center {align-items: center !important;}
+.ai-end {align-items: end !important;}
+.jc-start {justify-content: flex-start !important;}
+.jc-center {justify-content: center !important;}
+.jc-end {justify-content: flex-end !important;}
+.jc-sa {justify-content: space-around !important;}
+.jc-sb {justify-content: space-between !important;}
+
+// gap
+.gap-none {gap: 0 !important;}
+.bs-gap {gap: $gap-bs !important;}
+.box-gap {gap: $gap-box !important;}
+.section-gap {gap: $gap-section !important;}
+.table-gap {gap: $gap-table !important;}
+
+.grid-2 {grid-template-columns: repeat(2, 1fr) !important;}
+.grid-2-1 {grid-template-columns: 2fr 1fr !important;}
+.grid-1-2 {grid-template-columns: 1fr 2fr !important;}
+.grid-3 {grid-template-columns: repeat(3, 1fr) !important;}
+.grid-4 {grid-template-columns: repeat(4, 1fr) !important;}
+
+// text-align
+.txt-align-left {text-align: left !important;}
+.txt-align-center {text-align: center !important;}
+.txt-align-right {text-align: right !important;}
+
+// font-size
+.fs-10 {font-size: 1rem !important;}
+.fs-11 {font-size: 1.1rem !important;}
+.fs-12 {font-size: 1.2rem !important;}
+.fs-13 {font-size: 1.3rem !important;}
+.fs-14 {font-size: 1.4rem !important;}
+.fs-15 {font-size: 1.5rem !important;}
+.fs-16 {font-size: 1.6rem !important;}
+.fs-17 {font-size: 1.7rem !important;}
+.fs-18 {font-size: 1.8rem !important;}
+.fs-19 {font-size: 1.9rem !important;}
+.fs-20 {font-size: 2rem !important;}
+
+// font-weight
+.fw-300 {font-weight: 300 !important;}
+.fw-400 {font-weight: 400 !important;}
+.fw-500 {font-weight: 500 !important;}
+.fw-600 {font-weight: 600 !important;}
+.fw-700 {font-weight: 700 !important;}
+.fw-800 {font-weight: 800 !important;}
+.fw-900 {font-weight: 900 !important;}
+
+// 영역 넘칠 때 줄바꿈
+.white-space-wrap {white-space: wrap !important; word-wrap: break-word !important;}
+.white-space-nowrap {white-space: nowrap !important; word-wrap: normal !important;}
+
+// overflow
+.overflow-auto {overflow: auto !important;}
+.overflow-hidden {overflow: hidden !important;}
+.overflow-x-scroll {overflow-x: scroll !important;}
+.overflow-y-scroll {overflow-y: scroll !important;}
+.overflow-x-hidden {overflow-x: hidden !important;}
+.overflow-y-hidden {overflow-y: hidden !important;}
+
+// cursor
+.cursor-pointer {cursor: pointer !important;}
+
+// border
+.border-bs {border: $border-bs !important;}
+.border-none {border: none !important;}
+.border-top {border-top: $border-bs !important;}
+.border-right {border-right: $border-bs !important;}
+.border-bottom {border-bottom: $border-bs !important;}
+.border-left {border-left: $border-bs !important;}
+
+// border-radius
+.border-radius-bs {border: $border-radius-bs !important;}
+
+// 모달 내 섹션 구분 line
+.bs-section-divider {
+    padding-bottom: $gap-modal-section !important;
+    border-bottom: $border-bs !important;
+}
+
+// color
+.c-gray-txt {color: $color-text-gray-bs !important;}
+.c-black {color: $color-black !important;}
+.c-white {color: $color-white !important;}
+.c-blue {color: $color-blue !important;}
+.c-red {color: $color-red !important;}
+
+// background-color
+.bg-white {background-color: $color-white !important;}
+.bg-sky-blue {background-color: #eaf1ff !important;}
+.bg-blue {background-color: $color-blue !important;}
+.bg-gray-btn {background-color: $color-bg-button-gray !important;}
+.bg-blue-table-cell {background-color: #eaf1ff !important;}
+.bg-sky-blue {background-color: #eaf1ff !important;}
+
+// 체크 마크
+.icon-checkmark {
+    margin: 0 auto 2rem;
+    width: 3rem;
+    height: 5rem;
+    border-right: 0.6rem solid $color-blue;
+    border-bottom: 0.6rem solid $color-blue;
+    transform: rotate(45deg);
+}
+
+
+#wrap {
+    width: 100vw;
+}
+
+#container {
+    padding-top: $height-header;
+    display: grid;
+    grid-template-columns: 22rem auto;
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
+    overflow: hidden;
+    transition: 0.3s grid-template-columns;
+
+    &.active {
+        grid-template-columns: 0 auto;
+
+        .aside-menu__inner {
+            opacity: 0;
+        }
+    }
+}
+
+.main {
+    padding: 7rem 8rem;
+    width: 100%;
+    overflow-y: scroll;
+    background-color: $bgc-main-gray;
+
+    .main-top {
+        margin-bottom: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        // 상단 타이틀
+        &__title {
+            display: flex;
+            align-items: flex-end;
+            gap: $gap-bs;
+
+            .top-title {
+                &__main {
+                    line-height: 1;
+                    font-size: 4rem;
+                    font-weight: 500;
+                    color: $color-blue;
+                }
+        
+                &__sub {
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                }
+            }
+    
+        }
+    }
+}
+
+// 캘린더 버튼바
+.bs-calendar {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    border: $border-bs;
+    background-color: $color-white;
+
+    // 공통
+    &__item {
+        padding: 0.7rem 1rem;
+    }
+
+    &__prev { }
+
+    &__date-range {
+        border-right: $border-bs;
+        border-left: $border-bs;
+
+        span {
+            line-height: 1;
+            font-size: $font-main-size;
+        }
+    }
+
+    &__next { }
+
+    &__range-control {
+        background-color: $color-blue;
+    }
+}
+
+// 텍스트
+.bs-text {
+    &--gray {
+        color: $color-text-gray-bs;
+    }
+
+    &--black {
+        color: $color-black;
+    }
+
+    &--blue {
+        color: $color-blue;
+    }
+
+    &--red {
+        color: $color-red;
+    }
+
+    &__main {
+        font-size: $font-main-size;
+    }
+
+    &__small {
+        display: block;
+        font-size: 1rem;
+    }
+}
+
+// 기본 박스 스타일
+.bs-box {
+    @include basic-box;
+}
+
+// 기본 입력 필드 (input=text, search ...)
+.bs-field {
+    @include basic-box;
+    display: block;
+    padding: $padding-bs;
+    width: 100%;
+    overflow: hidden;
+    font-size: $font-main-size;
+    color: $color-black;
+    background-color: $color-white;
+
+    &::placeholder { color: $color-placeholder-bs; }
+    &:focus { outline: 0; border-color: $color-blue; }
+    &:has(:focus) { border-color: $color-blue; }
+    &:disabled { color: $color-placeholder-bs; background-color: $color-bg-disabled; }
+    &:hover {
+        &:not(:disabled) {
+            border-color: $color-blue;
+        }
+        // &:has(.bs-select:disabled) {
+        //     border-color: $color-white;
+        // }
+    }
+    &:has(.bs-select:disabled) { background-color: $color-bg-disabled; }
+
+    &--big { width: $width-field-big; }
+    &--big-medium { width: $width-field-big-medium; }
+    &--medium { width: $width-field-medium; }
+    &--medium-small { width: $width-field-medium-small; }
+    &--small { width: $width-field-small; }
+    &--very-small { width: $width-field-very-small; }
+    &--auto { width: auto; }
+
+    // 우측에 버튼이 있을 때 정렬 속성
+    &--size1 { grid-template-columns: 1fr $width-btn-bs-1; }
+    &--size2 { grid-template-columns: 1fr $width-btn-bs-2; }
+    &--size-icon-small { grid-template-columns: 1fr $icon-small; }
+    &--size-icon-medium { grid-template-columns: 1fr $icon-medium; }
+    &--size-icon-big { grid-template-columns: 1fr $icon-big; }
+
+    // field 안에 우측 버튼
+    &--in-btn {
+        display: grid;
+        grid-template-columns: 1fr $width-btn-bs-1;
+        // gap: $gap-bs;
+        padding: 0;
+
+        .bs-field {
+            &__text {
+                padding: $padding-bs;
+                font-size: $font-main-size;
+                border: none;
+    
+                &:focus { outline: none; }
+                &::placeholder { color: $color-placeholder-bs;}
+            }
+
+            &__btn {
+                border: none;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+    }
+
+    // field 좌측에 아이콘
+    &--in-icon {
+        display: grid;
+        grid-template-columns: 5rem 1fr;
+        padding: 0;
+
+        .bs-field {
+            &__icon {
+                padding: 1rem 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $color-bg-button-gray;
+            }
+
+            &__text {
+                padding: 1.3rem;
+                font-size: 1.5rem;
+                border: none;
+                background-color: $color-white;
+    
+                &:focus { outline: none; }
+                &::placeholder { color: $color-placeholder-bs;}
+            }
+        }
+    }
+
+    // field 우측 버튼
+    &--with-btn {
+        display: grid;
+        align-items: center;
+        justify-content: space-between;
+        gap: $gap-bs;
+    }
+}
+
+// 공통 기본 버튼
+.bs-btn {
+    @include basic-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $padding-bs;
+
+    &--gray {
+        color: $color-text-gray-bs;
+        background-color: $color-bg-button-gray;
+    }
+
+    &--white {
+        color: $color-text-gray-bs;
+        background-color: $color-white;
+    }
+
+    &--blue {
+        color: $color-white;
+        background-color: $color-blue;
+    }
+
+    &__description {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: $font-main-size;
+    }
+
+    &:hover { opacity: .8; }
+}
+
+// 공통 기본 button 태그 스타일
+.bs-button {
+    @include basic-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.6rem;
+
+    &--gray {
+        color: $color-text-gray-bs;
+        background-color: $color-bg-button-gray;
+    }
+
+    &--blue {
+        color: $color-white;
+        background-color: $color-blue;
+    }
+
+    &--white {
+        color: $color-text-gray-bs;
+        background-color: $color-white;
+    }
+
+    &__description {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 1.6rem;
+    }
+
+    &:hover { opacity: .8; }
+}
+
+// 기본 textarea
+.bs-textarea {
+    width: 100%;
+    overflow-y: scroll;
+    resize: none;
+    // border: 0;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+// selector (radio, checkbox) CSS
+.bs-selector {
+    &--size1 {
+        width: $width-btn-bs-1;
+    }
+
+    &__input {
+        display: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: none;
+
+        &:disabled {
+            opacity: .5;
+        }
+    }
+
+    &__description {
+        font-size: $font-main-size !important;
+    }
+
+    // selector text-style - 기본 텍스트 스타일
+    &--text-style {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: $gap-bs;
+
+        // radio
+        .bs-selector__radio {
+            position: relative;
+            display: block;
+            width: $selector-size;
+            height: $selector-size;
+            border: $border-bs;
+            border-radius: 9999px;
+            background-color: $color-white;
+
+            &:checked {
+                border: none;
+                box-shadow: 0 0 0 0.5rem $color-blue inset;
+            }
+        }
+
+        // checkbox
+        .bs-selector__checkbox {
+            position: relative;
+            display: block;
+            width: $selector-size;
+            height: $selector-size;
+            border: $border-bs;
+            border-radius: 0;
+            background-color: $color-white;
+
+            &:checked {
+                border: none;
+                background-color: $color-blue;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    display: block;
+                    top: 0.3rem;
+                    left: 0.6rem;
+                    width: 0.25rem;
+                    height: 0.55rem;
+                    border-bottom: 0.2rem solid $color-white;
+                    border-right: 0.2rem solid $color-white;
+                    transform: rotate(40deg);
+                }
+            }
+        }
+
+        > .bs-selector__description {
+            display: block;
+            line-height: 1;
+            color: $color-text-gray-bs;
+        }
+    }
+
+    // selector btn-style - 버튼 스타일
+    &--btn-style {
+        display: block;
+        cursor: pointer;
+
+        > .bs-selector__input {
+            &:checked + .bs-selector__description {
+                color: $color-white;
+                background-color: $color-blue;
+            }
+        }
+    }
+}
+
+// select
+.bs-select {
+    font-size: $font-main-size;
+    color: $color-text-gray-bs;
+
+    &:focus { outline: none; }
+
+    &__option {
+        font-size: 1em;
+        color: $color-black;
+    }
+}
+
+.bs-file-upload {
+    display: grid;
+    gap: $gap-bs;
+
+    &__one-btn {
+        grid-template-columns: 1fr $width-btn-bs-1;
+    }
+
+    &__two-btn {
+        grid-template-columns: 1fr $width-btn-bs-1 $width-btn-bs-2;
+    }
+
+    input[type='file'] {
+        display: none;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
+    &__label {
+        cursor: pointer
+    }
+
+    &__description {
+        @include basic-box;
+        padding: $padding-bs;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: $font-main-size;
+        color: $color-placeholder-bs;
+        background-color: $color-white;
+    }
+}

@@ -1,0 +1,78 @@
+@charset "UTF-8";
+@import "style.scss";
+
+// 가로 한 줄로 정렬 시
+.bs-card-container {
+    display: flex;
+    align-items: center;
+    gap: $gap-box;
+}
+
+// 가로 한 줄로 정렬 시 (반응형) - 모바일에선 세로 한 줄
+@include mobile {
+    .bs-card-container {
+        display: grid;
+    }
+}
+
+.bs-card {
+    width: 100%;
+
+    &__inner {
+        @include basic-box;
+        position: relative;
+        padding: 1.8rem 2.5rem;
+        overflow: hidden;
+        background-color: $color-white;
+
+        &::before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: '';
+            display: block;
+            width: 0.5em;
+            height: 100%;
+            background-color: $color-blue;
+        }
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__top {
+        padding-bottom: 1.5rem;
+        border-bottom: $border-bs;
+
+        &__data-title {
+            font-size: 1.8em;
+            font-weight: 500;
+            color: $color-text-gray-bs;
+        }
+
+        &__data-value {
+            word-break: break-all;
+            font-size: 2.8em;
+            font-weight: 500;
+            color: $color-blue;
+        }
+    }
+
+    &__bottom {
+        padding-top: 1.5rem;
+
+        &__data-title {
+            font-size: $font-main-size;
+            color: $color-text-gray-bs;
+        }
+
+        &__data-value {
+            word-break: break-all;
+            font-size: $font-main-size;
+            color: $color-text-gray-bs;
+        }
+    }
+}

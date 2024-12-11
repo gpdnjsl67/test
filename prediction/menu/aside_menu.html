@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/icon.css">
+    <link rel="stylesheet" type="text/css" href="./css/aside_menu.css"> -->
+    <!-- <script src="../js/jquery.min.js"></script> -->
+    <title>aside_menu</title>
+</head>
+<body>
+    <aside class="aside-menu" id="aside-menu">
+        <div class="aside-menu__inner">
+            <a href="./myPage.html" class="aside-menu__logo"><img src="./images/main_logo.png" alt="main-logo"></a>
+    
+            <nav class="aside-menu__gnb" id="gnb">
+                <!-- 현재 열려있는 메뉴 : aside-menu__item--current -->
+                <ul class="aside-menu__list">
+                    <li class="aside-menu__item">
+                        <a href="./advertise.html" class="aside-menu__link">
+                            <div class="aside-menu__item-title">
+                                <span class="bs-fa-icon bs-fa-icon--medium bs-fa-icon--white"><i class="fas fa-folder-plus"></i></span>
+                                <span class="aside-menu__item-title-text">API 광고관리</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="aside-menu__item">
+                        <a href="./customerDB.html" class="aside-menu__link">
+                            <div class="aside-menu__item-title">
+                                <span class="bs-fa-icon bs-fa-icon--medium bs-fa-icon--white"><i class="fas fa-chart-pie"></i></span>
+                                <span class="aside-menu__item-title-text">DB 관리</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="aside-menu__item aside-menu__item--dropdown">
+                        <a href="#" class="aside-menu__link">
+                            <div class="aside-menu__item-title">
+                                <span class="bs-fa-icon bs-fa-icon--medium bs-fa-icon--white"><i class="fas fa-laptop"></i></span>
+                                <span class="aside-menu__item-title-text">관리자 페이지</span>
+                            </div>
+                            <span class="aside-menu__sub-menu-arrow bs-fa-icon bs-fa-icon--medium bs-fa-icon--white"><i class="fas fa-angle-down"></i></span>
+                        </a>
+                        <ul class="aside-menu__sub-menu-list">
+                            <li class="aside-menu__sub-menu-item aside-menu__sub-menu-item--current"> <!-- --current (현재 선택된 탭) -->
+                                <a class="aside-menu__sub-menu-link" href="./event.html">이벤트페이지 관리</a>
+                            </li>
+                            <li class="aside-menu__sub-menu-item">
+                                <a class="aside-menu__sub-menu-link" href="./eventManage.html">신규 이벤트페이지 생성</a>
+                            </li>
+                            <li class="aside-menu__sub-menu-item">
+                                <a class="aside-menu__sub-menu-link" href="./conversion.html">전환 관리</a>
+                            </li>
+                            <li class="aside-menu__sub-menu-item">
+                                <a class="aside-menu__sub-menu-link" href="./media.html">매체 관리</a>
+                            </li>
+                            <li class="aside-menu__sub-menu-item">
+                                <a class="aside-menu__sub-menu-link" href="./advertiser.html">광고주 관리</a>
+                            </li>
+                            <li class="aside-menu__sub-menu-item">
+                                <a class="aside-menu__sub-menu-link" href="./membership.html">회원 관리</a>
+                            </li>
+                            <li class="aside-menu__sub-menu-item">
+                                <a class="aside-menu__sub-menu-link" href="./log.html">로그</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <script src="./menu/js/aside_menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+.bs-list-container {
+  display: grid;
+  gap: 2rem;
+}
+.bs-list-container .list-group {
+  display: grid;
+  gap: 2rem 4rem;
+}
+.bs-list-container .list-group--array2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.bs-list-container .list-group--array3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.bs-list-container .list-group__item--with-title {
+  display: grid;
+  gap: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: 13rem 1fr;
+}
+.bs-list-container .list-group__item-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #9b98a4;
+}

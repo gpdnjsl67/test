@@ -1,0 +1,239 @@
+@charset "UTF-8";
+@import "style.scss";
+
+// 테이블
+/*
+    display 속성 중 table 관련 속성    
+    table -> table
+    table-caption -> caption
+    table-cell -> td
+    table-column -> col
+    table-column-group -> colgroup
+    table-footer-group -> tfoot
+    table-header-group -> thead
+    table-row -> tr
+    table-row-group -> tbody    
+*/
+
+// .flip-scroll {
+//     width: 100%;
+//     overflow-y: scroll;
+//     // border: $border-bs;
+//     // border-radius: $border-radius-bs;
+//     // background-color: $color-white;
+// }
+
+// .bs-table-container {
+    // overflow-x: scroll;
+    // border: $border-bs;
+    // border-radius: $border-radius-bs;
+// }
+
+// .bs-table--scroll {
+//     overflow-x: scroll;
+// }
+
+.table-cell-wrap { white-space: wrap; }
+
+.bs-table-wrapper {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border: $border-bs;
+    border-radius: $border-radius-bs;
+    overflow: hidden;
+    background-color: $color-white;
+
+    // TABLE
+    .bs-table {
+        &--scroll {
+            overflow-x: scroll;
+        }
+
+        &__title {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: $color-text-gray-bs;
+        }
+
+        // TABLE ROW 공통
+        &__row {
+            display: table-row;
+            table-layout: fixed;
+            position: relative;
+            background-color: $color-white;
+
+            &--sub {
+                display: none;
+                background-color: #e9f1fe !important;
+            }
+
+            &--sub-sub {
+                display: none;
+                background-color: #f3f7ff !important;
+            }
+
+            &--active {
+                display: table-row;
+            }
+        }
+
+        // TABLE CELL 공통
+        &__cell {
+            display: table-cell;
+            padding: $padding-table;
+            vertical-align: middle;
+            text-align: left;
+
+            &--ta-center {
+                text-align: center;
+            }
+
+            &--ta-right {
+                text-align: right;
+            }
+
+            &-text {
+                display: block;
+                font-size: $font-main-size;
+            }
+        }
+
+        // ===== TABLE TOP ===== //
+        &__top {
+            width: auto;
+            height: $height-box-top;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 $padding-table;
+            border-bottom: $border-bs;
+        }
+
+        // ===== TABLE BODY ===== //
+        &__body {
+            display: table;
+            width: 100%;
+            white-space: nowrap;
+
+            .bs-table {
+                // TABLE HEAD
+                &__header {
+                    display: table-header-group;
+                    color: $color-text-gray-bs;
+                }
+
+                // TABLE CONTENT
+                &__content {
+                    display: table-row-group;
+
+                    .bs-table__row {
+                        // white-space: wrap;
+
+                        &:hover {
+                            background-color: $color-hover !important;
+                        }
+
+                        &:nth-child(odd) {
+                            background-color: $color-bg-table-row;
+                        }
+
+                        .bs-table__cell {
+                            border-top: $border-bs;
+                        }
+
+                    // TABLE 좌측 row color bar
+                    &-bar {
+                        &::after {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 0.4em;
+                            height: 100%;
+                        }
+                        
+                        &--blue {
+                            &::after {
+                                background-color: $color-blue;
+                            }
+                        }
+                        
+                        &--red {
+                            &::after {
+                                background-color: $color-red;
+                            }
+                        }
+                        
+                        &--orange {
+                            &::after {
+                                background-color: $color-orange;
+                            }
+                        }
+                        
+                        &--light-orange {
+                            &::after {
+                                background-color: $color-light-orange;
+                            }
+                        }
+                        
+                        &--green {
+                            &::after {
+                                background-color: $color-green;
+                            }
+                        }
+                    }
+                    }
+                }
+            }
+        }
+
+        // ===== TABLE BOTTOM ===== //
+        &__bottom {
+            padding: $padding-table;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: $border-bs;
+            background-color: $color-bg-table-row;
+        }
+    }
+
+    // pagination
+    .bs-pagination {
+        display: flex;
+        align-items: center;
+        gap: $gap-pagination;
+
+        &__list {
+            display: flex;
+            align-items: center;
+            gap: $gap-pagination;
+        }
+
+        &__link {
+            @include basic-box;
+            padding: 0.3em 0.5em;
+            width: 2.2em;
+            text-align: center;
+            font-size: $font-main-size;
+            background-color: $color-white;
+
+            &:hover {
+                background-color: $color-hover;
+            }
+
+            &--current {
+                color: $color-white !important;
+                background-color: $color-blue !important;
+            }
+        }
+
+        &__previous, &__next {
+            width: auto;
+        }
+    }
+}

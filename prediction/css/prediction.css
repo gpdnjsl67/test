@@ -1,0 +1,60 @@
+.prediction__calendar-icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#prediction__table .bs-table__content .bs-table__row:nth-child(odd) {
+  background-color: #fff;
+}
+#prediction__table .bs-table__content:nth-child(odd) .bs-table__row {
+  background-color: #f5f5f5;
+}
+
+.prediction-02__chart-container {
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.chart {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.chart__title {
+  padding: 0 0 2rem 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  border-bottom: 0.15rem solid #e2e6ed;
+  color: #9b98a4;
+}
+.chart__item {
+  padding: 0 1rem;
+  border: 0.15rem solid #e2e6ed;
+}
+
+.modal__prediction__campaign {
+  padding: 3rem 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  background-color: #eaf1ff;
+}
+.modal__prediction__campaign__name {
+  line-height: 2;
+  font-size: 1.3rem;
+}
+.modal__prediction .chart {
+  padding: 3rem 2rem;
+}
+
+.prediction-selector > .bs-selector__input:checked + .bs-selector__description {
+  color: #9b98a4;
+  background-color: #eaf1ff;
+}

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'GmarketSans';
+  font-weight: 300;
+  font-style: normal;
+  src: url('https://static.metamarketing.co.kr/libs/fonts/GmarketSans/GmarketSansLight.woff2') format('woff2'),
+       url('https://static.metamarketing.co.kr/libs/fonts/GmarketSans/GmarketSansLight.woff') format('woff');
+  font-display: swap;
+} 
+@font-face {
+  font-family: 'GmarketSans';
+  font-weight: 500;
+  font-style: normal;
+  src: url('https://static.metamarketing.co.kr/libs/fonts/GmarketSans/GmarketSansMedium.woff2') format('woff2'),
+       url('https://static.metamarketing.co.kr/libs/fonts/GmarketSans/GmarketSansMedium.woff') format('woff');
+  font-display: swap;
+} 
+@font-face {
+  font-family: 'GmarketSans';
+  font-weight: 700;
+  font-style: normal;
+  src: url('https://static.metamarketing.co.kr/libs/fonts/GmarketSans/GmarketSansBold.woff2') format('woff2'),
+       url('https://static.metamarketing.co.kr/libs/fonts/GmarketSans/GmarketSansBold.woff') format('woff');
+  font-display: swap;
+} 

@@ -1,0 +1,20 @@
+@import "style.scss";
+
+// fontawesome 아이콘
+.bs-fa-icon {
+    line-height: 1;
+    color: $color-icon-gray;
+
+    &--small { font-size: $icon-small; }
+    &--medium { font-size: $icon-medium; }
+    &--big { font-size: $icon-big; }
+
+    &--black { color: $color-black; }
+    &--white { color: $color-white; }
+    &--blue { color: $color-blue; }
+
+    i, path, svg {
+        font-size: 1em;
+    }
+
+}

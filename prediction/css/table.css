@@ -1,0 +1,180 @@
+@charset "UTF-8";
+/*
+    display 속성 중 table 관련 속성    
+    table -> table
+    table-caption -> caption
+    table-cell -> td
+    table-column -> col
+    table-column-group -> colgroup
+    table-footer-group -> tfoot
+    table-header-group -> thead
+    table-row -> tr
+    table-row-group -> tbody    
+*/
+.table-cell-wrap {
+  white-space: wrap;
+}
+
+.bs-table-wrapper {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  border: 0.15rem solid #e2e6ed;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #fff;
+}
+.bs-table-wrapper .bs-table--scroll {
+  overflow-x: scroll;
+}
+.bs-table-wrapper .bs-table__title {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #9b98a4;
+}
+.bs-table-wrapper .bs-table__row {
+  display: table-row;
+  table-layout: fixed;
+  position: relative;
+  background-color: #fff;
+}
+.bs-table-wrapper .bs-table__row--sub {
+  display: none;
+  background-color: #e9f1fe !important;
+}
+.bs-table-wrapper .bs-table__row--sub-sub {
+  display: none;
+  background-color: #f3f7ff !important;
+}
+.bs-table-wrapper .bs-table__row--active {
+  display: table-row;
+}
+.bs-table-wrapper .bs-table__cell {
+  display: table-cell;
+  padding: 2rem;
+  vertical-align: middle;
+  text-align: left;
+}
+.bs-table-wrapper .bs-table__cell--ta-center {
+  text-align: center;
+}
+.bs-table-wrapper .bs-table__cell--ta-right {
+  text-align: right;
+}
+.bs-table-wrapper .bs-table__cell-text {
+  display: block;
+  font-size: 1.3rem;
+}
+.bs-table-wrapper .bs-table__top {
+  width: auto;
+  height: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 2rem;
+  border-bottom: 0.15rem solid #e2e6ed;
+}
+.bs-table-wrapper .bs-table__body {
+  display: table;
+  width: 100%;
+  white-space: nowrap;
+}
+.bs-table-wrapper .bs-table__body .bs-table__header {
+  display: table-header-group;
+  color: #9b98a4;
+}
+.bs-table-wrapper .bs-table__body .bs-table__content {
+  display: table-row-group;
+}
+.bs-table-wrapper .bs-table__body .bs-table__content .bs-table__row:hover {
+  background-color: #eaf1ff !important;
+}
+.bs-table-wrapper .bs-table__body .bs-table__content .bs-table__row:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+.bs-table-wrapper .bs-table__body .bs-table__content .bs-table__row .bs-table__cell {
+  border-top: 0.15rem solid #e2e6ed;
+}
+.bs-table-wrapper .bs-table__body .bs-table__content .bs-table__row-bar::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.4em;
+  height: 100%;
+}
+.bs-table-wrapper .bs-table__body .bs-table__content .bs-table__row-bar--blue::after {
+  background-color: #4271d9;
+}
+.bs-table-wrapper .bs-table__body .bs-table__content .bs-table__row-bar--red::after {
+  background-color: #c93636;
+}
+.bs-table-wrapper .bs-table__body .bs-table__content .bs-table__row-bar--orange::after {
+  background-color: #ff6a00;
+}
+.bs-table-wrapper .bs-table__body .bs-table__content .bs-table__row-bar--light-orange::after {
+  background-color: #e5a247;
+}
+.bs-table-wrapper .bs-table__body .bs-table__content .bs-table__row-bar--green::after {
+  background-color: green;
+}
+.bs-table-wrapper .bs-table__bottom {
+  padding: 2rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 0.15rem solid #e2e6ed;
+  background-color: #f5f5f5;
+}
+.bs-table-wrapper .bs-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.4rem;
+}
+.bs-table-wrapper .bs-pagination__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.4rem;
+}
+.bs-table-wrapper .bs-pagination__link {
+  border: 0.15rem solid #e2e6ed;
+  border-radius: 0.5rem;
+  padding: 0.3em 0.5em;
+  width: 2.2em;
+  text-align: center;
+  font-size: 1.3rem;
+  background-color: #fff;
+}
+.bs-table-wrapper .bs-pagination__link:hover {
+  background-color: #eaf1ff;
+}
+.bs-table-wrapper .bs-pagination__link--current {
+  color: #fff !important;
+  background-color: #4271d9 !important;
+}
+.bs-table-wrapper .bs-pagination__previous, .bs-table-wrapper .bs-pagination__next {
+  width: auto;
+}

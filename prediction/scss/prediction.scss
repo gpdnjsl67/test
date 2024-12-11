@@ -1,0 +1,73 @@
+@charset "UTF-8";
+@import "style.scss";
+
+.prediction__calendar-icon {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+}
+
+#prediction__table {
+    .bs-table__content .bs-table__row:nth-child(odd) {
+        background-color: $color-white;
+    }
+
+    .bs-table__content:nth-child(odd) .bs-table__row {
+        background-color: $color-bg-table-row;
+    }
+}
+
+.prediction-02__chart-container {
+    padding: 2rem;
+    background-color: $color-white;
+}
+
+.chart {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $gap-box;
+
+    &__box {}
+
+    &__title {
+        padding: 0 0 2rem 2rem;
+        margin-bottom: 1rem;
+        font-size: $font-main-size;
+        border-bottom: $border-bs;
+        color: $color-text-gray-bs;
+    }
+
+    &__item {
+        padding: 0 1rem;
+        border: $border-bs;
+    }
+}
+
+.modal__prediction {
+    &__campaign {
+        padding: 3rem 4rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        background-color: $color-sky-blue;
+
+        &__name {
+            line-height: 2;
+            font-size: $font-main-size;
+        }
+    }
+
+    .chart {
+        padding: 3rem 2rem;
+    }
+}
+
+.prediction-selector {
+    > .bs-selector__input {
+        &:checked + .bs-selector__description {
+            color: $color-text-gray-bs;
+            background-color: $color-sky-blue;
+        }
+    }
+}

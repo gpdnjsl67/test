@@ -1,0 +1,84 @@
+.modal-open-btn {
+  cursor: pointer;
+}
+
+.overlay {
+  display: none;
+  z-index: 88;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.bs-modal {
+  display: none;
+  z-index: 99;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 1000px;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+.bs-modal__inner {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  height: 100%;
+}
+.bs-modal--no-bottom-btn .bs-modal-inner {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  height: 100%;
+}
+.bs-modal__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2em;
+  border-bottom: 0.15rem solid #e2e6ed;
+}
+.bs-modal__top .bs-modal__title {
+  display: block;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.bs-modal__top .bs-modal__close-btn {
+  display: block;
+  cursor: pointer;
+}
+.bs-modal__top .bs-modal__close-btn .bs-fa-icon {
+  color: #4271d9;
+}
+.bs-modal__content {
+  padding: 2.5rem;
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+.bs-modal__bottom {
+  background-color: #4271d9;
+}
+.bs-modal__bottom .bs-modal__btn {
+  padding: 1em;
+  display: block;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #fff;
+}

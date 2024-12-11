@@ -1,0 +1,16 @@
+.bs-toggle-btn__image {
+  width: 4rem;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0.15rem solid #e2e6ed;
+  border-radius: 1rem;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.bs-toggle-btn__image:hover {
+  opacity: 0.5;
+}
+.bs-toggle-btn__image img {
+  display: block;
+  width: 100%;
+}

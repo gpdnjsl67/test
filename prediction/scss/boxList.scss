@@ -1,0 +1,100 @@
+@charset "UTF-8";
+@import "style.scss";
+
+// 가로 한 줄로 정렬 시
+.bs-box-list-container {
+    display: flex;
+    // align-items: center;
+    align-items: baseline;
+    gap: $gap-box;
+}
+
+// 가로 한 줄로 정렬 시 (반응형) - 모바일에선 세로 한 줄
+@include mobile {
+    .bs-box-list-container {
+        display: grid;
+    }
+}
+
+// bs-box-list
+.bs-box-list-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.bs-box-list {
+    @include basic-box;
+    width: 100%;
+    background-color: $color-white;
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 $padding-box-list;
+        height: $height-box-top;
+        overflow: hidden;
+
+        &-text {
+            font-size: 1.5em;
+            font-weight: 500;
+            color: $color-text-gray-bs;
+        }
+
+        &-arrow {
+            padding: 0;
+            cursor: pointer;
+            
+            &.active {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__items {
+        border-top: $border-bs;
+
+        &--scroll {
+            height: $height-box-list;
+            overflow-y: scroll;
+        }
+
+        &--no-scroll {
+            padding: $padding-box-list;
+        }
+    }
+
+    &__item {
+        padding: 1.1em 1.5em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: $font-main-size;
+
+        &--checked {
+            background-color: $color-checked-bg;
+
+            .bs-selector__description {
+                font-weight: 500;
+                color: $color-blue;
+            }
+        }
+
+        &:not(:first-child) {
+            border-top: $border-bs;
+        }
+
+        &:hover {
+            background-color: $color-hover;
+        }
+    }
+
+    &__quantity-label {
+        line-height: 1;
+        padding: 0.4em;
+        font-size: 1.1rem;
+        border-radius: 0.3rem;
+        color: $color-white;
+        background-color: $color-blue;
+    }
+}
