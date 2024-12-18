@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const targetRow = event.target.closest(".bs-table__row--main, .bs-table__row--sub");
 
         // 행 이벤트 제외 요소
-        if (event.target.closest(".bs-selector__checkbox, .bs-toggle-btn__image, .campaign-name")) {
+        if (event.target.closest(".bs-selector__checkbox, .bs-toggle-btn__image")) {
             event.stopPropagation();
             return;
         }
@@ -61,4 +61,25 @@ document.addEventListener("DOMContentLoaded", function () {
             handleSubRowClick(targetRow);
         }
     });
+
+    // 모든 prediction-selector 라벨을 가져오기
+    const selectors = document.querySelectorAll('.prediction-selector input[name="standard"]');
+
+    // prediction-search 요소 가져오기
+    const searchField = document.querySelector('.prediction-search');
+
+    // 라디오 버튼 선택 시 placeholder 업데이트
+    selectors.forEach(selector => {
+        selector.addEventListener('change', () => {
+            if (selector.checked) {
+                searchField.placeholder = `${selector.value} 검색`;
+            }
+        });
+    });
+
+    // 초기 설정: 기본적으로 체크된 라디오의 값을 placeholder로 설정
+    const checkedRadio = document.querySelector('.prediction-selector input[name="standard"]:checked');
+    if (checkedRadio) {
+        searchField.placeholder = `${checkedRadio.value} 검색`;
+    }
 });

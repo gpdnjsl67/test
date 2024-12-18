@@ -50,7 +50,7 @@
                         <!-- <h2 class="top-title__sub">Advertisement List</h2> -->
                     </div>
                     <div class="main-top__right">
-                        <!-- <div class="bs-calendar">
+                        <div class="bs-calendar">
                             <a href="#" class="bs-calendar__item bs-calendar__btn bs-calendar__prev" title="1일 전">
                                 <span class="bs-fa-icon bs-fa-icon--medium bs-fa-icon--black"><i class="fas fa-caret-left"></i></span>
                             </a>
@@ -63,7 +63,7 @@
                             <a href="#" class="bs-calendar__item bs-calendar__range-control">
                                 <span class="bs-fa-icon bs-fa-icon--medium bs-fa-icon--white"><i class="fas fa-calendar-alt"></i></span>
                             </a>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
 
@@ -206,6 +206,7 @@
                             <div class="bs-table__top">
                                 <div class="bs-table__top-left d-flex table-gap ai-center">
                                     <a href="#" class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-pause-circle"></i></a>
+                                    <a href="./index_02.html" class="bs-fa-icon bs-fa-icon--medium"><i class="fas fas fa-pencil-alt"></i></a>
                                     <span class="bs-text bs-text__main bs-text--gray">예측 시간</span>
                                     <div class="d-flex bs-gap ai-center">
                                         <div class="position-relative">
@@ -247,13 +248,13 @@
                                     <span class="bs-text bs-text__main bs-text--gray">노출 기준</span>
                                     <div class="d-flex bs-gap">
                                         <label class="bs-selector bs-selector--size1 bs-selector--btn-style prediction-selector">
-                                            <input type="radio" class="bs-selector__input bs-selector__radio" value="" name="radio_name2" checked />
+                                            <input type="radio" class="bs-selector__input bs-selector__radio" value="캠페인" name="standard" checked />
                                             <div class="bs-btn bs-selector__description">
                                                 <span class="bs-btn__description c-gray-txt">캠페인</span>
                                             </div>
                                         </label>
                                         <label class="bs-selector bs-selector--size1 bs-selector--btn-style prediction-selector">
-                                            <input type="radio" class="bs-selector__input bs-selector__radio" value="" name="radio_name2" checked />
+                                            <input type="radio" class="bs-selector__input bs-selector__radio" value="광고" name="standard" />
                                             <div class="bs-btn bs-selector__description">
                                                 <span class="bs-btn__description c-gray-txt">광고</span>
                                             </div>
@@ -262,7 +263,7 @@
                                 </div>
 
                                 <div class="bs-table__top-center d-flex table-gap ai-center">
-                                    <span class="bs-text bs-text__main bs-text--gray">노출 시간</span>
+                                    <span class="bs-text bs-text__main bs-text--gray">노출 모델</span>
                                     <select class="bs-select bs-field bs-field--medium-small">
                                         <option class="bs-select__option" value="" disabled="" selected="">선택</option>
                                         <option class="bs-select__option" value="">1일 모델</option>
@@ -276,11 +277,11 @@
                                 </div>
 
                                 <div class="bs-table__top-right d-flex bs-gap ai-center">
-                                    <select class="bs-select bs-field bs-field--medium-small">
+                                    <!-- <select class="bs-select bs-field bs-field--medium-small">
                                         <option class="bs-select__option" value="" selected="">캠페인</option>
                                         <option class="bs-select__option" value="">광고</option>
-                                    </select>
-                                    <input type="search" class="bs-field bs-field--big bs-search-bar" placeholder="Search..." />
+                                    </select> -->
+                                    <input type="search" class="bs-field bs-field--big bs-search-bar prediction-search" placeholder="Search..." />
                                 </div>
                             </div>
             
@@ -294,7 +295,7 @@
                                                 </label>
                                             </li>
                                             <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">매체</span></li>
-                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">캠페인 이름</span></li>
+                                            <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">캠페인/그룹/AD</span></li>
                                             <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text"></span></li>
                                             <li class="bs-table__cell bs-table__cell--ta-left">
                                                 <span class="bs-table__cell-text">예측 시간</span>
@@ -321,7 +322,7 @@
                                     </div>
                 
                                     <div class="bs-table__content">
-                                        <ul class="bs-table__row bs-table__row--main bs-table__row-bar bs-table__row-bar--red">
+                                        <ul class="bs-table__row bs-table__row--main">
                                             <li class="bs-table__cell bs-table__cell--ta-left">
                                                 <label class="bs-selector bs-selector--text-style">
                                                     <input type="checkbox" class="bs-selector__input bs-selector__checkbox" value="" name="" />
@@ -333,7 +334,7 @@
                                                 </div>
                                             </li>
                                             <li class="bs-table__cell bs-table__cell--ta-left">
-                                                <a href="./index_02.html" class="bs-table__cell-text w-rem-27 white-space-wrap campaign-name">mainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmain</a>
+                                                <span class="bs-table__cell-text w-rem-27 white-space-wrap campaign-name">mainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmain</span>
                                             </li>
                                             <li class="bs-table__cell bs-table__cell--ta-right">
                                                 <span class="bs-table__cell-text"></span>
@@ -436,7 +437,7 @@
                                         </ul>
                                     </div>
                                     <div class="bs-table__content">
-                                        <ul class="bs-table__row bs-table__row--main bs-table__row-bar bs-table__row-bar--red">
+                                        <ul class="bs-table__row bs-table__row--main">
                                             <li class="bs-table__cell bs-table__cell--ta-left">
                                                 <label class="bs-selector bs-selector--text-style">
                                                     <input type="checkbox" class="bs-selector__input bs-selector__checkbox" value="" name="" />
@@ -448,7 +449,7 @@
                                                 </div>
                                             </li>
                                             <li class="bs-table__cell bs-table__cell--ta-left">
-                                                <a href="./index_02.html" class="bs-table__cell-text w-rem-27 white-space-wrap campaign-name">mainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmain</a>
+                                                <span class="bs-table__cell-text w-rem-27 white-space-wrap campaign-name">mainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmain</span>
                                             </li>
                                             <li class="bs-table__cell bs-table__cell--ta-right">
                                                 <span class="bs-table__cell-text"></span>
@@ -599,7 +600,7 @@
     <script src="./js/upload.js"></script>
     <script src="./js/boxList.js"></script>
     <script src="./js/tab.js"></script>
-    <!-- <script src="./js/toggleBtn.js"></script> -->
+    <script src="./js/toggleBtn.js"></script>
     <script src="./js/prediction.js"></script>
 </body>
 </html>
