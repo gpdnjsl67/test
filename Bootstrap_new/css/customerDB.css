@@ -50,3 +50,7 @@
 .customer-history__textarea::-webkit-scrollbar {
   display: none;
 }
+
+.file-download__content {
+  padding: 4rem 15rem;
+}

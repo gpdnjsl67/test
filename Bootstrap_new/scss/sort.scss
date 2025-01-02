@@ -1,0 +1,13 @@
+@charset "UTF-8";
+@import "style.scss";
+
+.sort {
+    &__item {
+        cursor: pointer;
+
+        &--active {
+            font-weight: 600;
+            color: $color-blue;
+        }
+    }
+}

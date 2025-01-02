@@ -1,0 +1,34 @@
+@charset "UTF-8";
+@import "style.scss";
+
+.adv-area {
+    &__content {
+        display: grid;
+        gap: $gap-bs;
+    }
+
+    &__row {
+        display: grid;
+        gap: $gap-bs;
+
+        &--new {
+            grid-template-columns: auto $width-field-very-small;
+        }
+    }
+}
+
+.adv-age {
+    &__content {
+        display: grid;
+        gap: $gap-bs;
+    }
+
+    &__row {
+        display: grid;
+        gap: $gap-bs;
+
+        &--new {
+            grid-template-columns: auto $width-field-very-small;
+        }
+    }
+}

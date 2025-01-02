@@ -433,7 +433,7 @@
                             </div>
                             <div class="customerDB__btns__right d-flex ai-center bs-gap">
                                 <a href="#" onclick="modalOpen($('#modal__transfer'), $('#overlay__transfer'));" class="bs-field--medium-small bs-field__btn bs-btn bs-btn--white" title="외부전송"><span class="bs-btn__description c-black">외부전송</span></a>
-                                <a href="#" class="bs-field--medium-small bs-field__btn bs-btn bs-btn--white" title="다운로드"><span class="bs-btn__description c-black">다운로드</span></a>
+                                <a href="#" onclick="modalOpen($('#modal__file-download'), $('#overlay__file-download'));" class="bs-field--medium-small bs-field__btn bs-btn bs-btn--white" title="다운로드"><span class="bs-btn__description c-black">다운로드</span></a>
                             </div>
                         </div>
                     </div>
@@ -487,6 +487,37 @@
                             <!-- 모달_BOTTOM -->
                             <div class="bs-modal__bottom">
                                 <button type="button" class="bs-modal__btn bs-modal__btn--save w-100">인증완료</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- modal : 다운로드 -->
+                    <div class="overlay" id="overlay__file-download"></div>
+                    <div id="modal__file-download" class="bs-modal">
+                        <div class="bs-modal__inner">
+                            <!-- 모달_TOP -->
+                            <div class="bs-modal__top">
+                                <span class="bs-modal__title">다운로드 엑셀 파일에 적용할 비밀번호를 입력해 주세요.</span>
+                                <div class="bs-modal__close-btn" onclick="modalClose($('#modal__file-download'), $('#overlay__file-download'));">
+                                    <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-times"></i></span>
+                                </div>
+                            </div>
+            
+                            <!-- 모달_CONTENT -->
+                            <div class="bs-modal__content file-download__content">
+                                <div class="file-download__item">
+                                    <div class="bs-field bs-field--in-icon">
+                                        <div class="bs-field__icon">
+                                            <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fas fas fa-lock"></i></span>
+                                        </div>
+                                        <input type="text" class="bs-field__text" title="비밀번호 입력" placeholder="비밀번호를 입력해 주세요." autocomplete="new-password" />
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 모달_BOTTOM -->
+                            <div class="bs-modal__bottom">
+                                <button type="button" class="bs-modal__btn bs-modal__btn--save w-100">다운받기</button>
                             </div>
                         </div>
                     </div>

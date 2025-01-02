@@ -36,6 +36,22 @@
   background-color: #f5f5f5;
 }
 
+.icon__setting-error {
+  position: relative;
+}
+.icon__setting-error.has-error::before {
+  position: absolute;
+  top: 0.1rem;
+  right: -0.3rem;
+  content: "";
+  display: block;
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 0.1rem solid #fff;
+  border-radius: 9999px;
+  background-color: #c93636;
+}
+
 .adv-schedule {
   position: relative;
 }

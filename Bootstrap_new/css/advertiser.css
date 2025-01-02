@@ -1,0 +1,23 @@
+.adv-area__content {
+  display: grid;
+  gap: 0.5rem;
+}
+.adv-area__row {
+  display: grid;
+  gap: 0.5rem;
+}
+.adv-area__row--new {
+  grid-template-columns: auto 4rem;
+}
+
+.adv-age__content {
+  display: grid;
+  gap: 0.5rem;
+}
+.adv-age__row {
+  display: grid;
+  gap: 0.5rem;
+}
+.adv-age__row--new {
+  grid-template-columns: auto 4rem;
+}

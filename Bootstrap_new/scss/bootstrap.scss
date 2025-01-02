@@ -32,6 +32,9 @@
 // margin
 .margin-0 {margin: 0 !important;}
 .margin-0-auto {margin: 0 auto !important;}
+.margin-1 {margin: 1rem !important;}
+.margin-2 {margin: 2rem !important;}
+.margin-3 {margin: 3rem !important;}
 
 .mt-bs {margin-top: $gap-bs !important;}
 .mt-1 {margin-top: 1rem !important;}
@@ -64,6 +67,9 @@
 // padding
 .padding-bs {padding: $padding-bs !important;}
 .padding-0 {padding: 0 !important;}
+.padding-1 {padding: 1rem !important;}
+.padding-2 {padding: 2rem !important;}
+.padding-3 {padding: 3rem !important;}
 
 .pt-bs {padding-top: $gap-bs !important;}
 .pt-1 {padding-top: 1rem !important;}
@@ -198,9 +204,11 @@
 
 // background-color
 .bg-white {background-color: $color-white !important;}
+.bg-sky-blue {background-color: #eaf1ff !important;}
 .bg-blue {background-color: $color-blue !important;}
 .bg-gray-btn {background-color: $color-bg-button-gray !important;}
 .bg-blue-table-cell {background-color: #eaf1ff !important;}
+.bg-sky-blue {background-color: #eaf1ff !important;}
 
 // 체크 마크
 .icon-checkmark {

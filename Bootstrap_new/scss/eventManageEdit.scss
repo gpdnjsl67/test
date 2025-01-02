@@ -9,11 +9,12 @@
     &__preview-links {
         position: absolute;
         top: 1rem;
-        left: 1rem;
+        right: 0;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        width: 32rem;
+        justify-content: right;
+        gap: 1.5rem;
+        width: 20rem;
     }
 
     &__preview-link {

@@ -4,17 +4,18 @@
 .event-edit__preview-links {
   position: absolute;
   top: 1rem;
-  left: 1rem;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 32rem;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  gap: 1.5rem;
+  width: 20rem;
 }
 .event-edit__preview-link {
   display: block;

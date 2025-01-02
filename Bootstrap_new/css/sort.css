@@ -1,0 +1,7 @@
+.sort__item {
+  cursor: pointer;
+}
+.sort__item--active {
+  font-weight: 600;
+  color: #4271d9;
+}

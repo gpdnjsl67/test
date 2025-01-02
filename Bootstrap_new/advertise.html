@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="./css/scroll.css">
     <link rel="stylesheet" type="text/css" href="./css/tab.css">
     <link rel="stylesheet" type="text/css" href="./css/toggleBtn.css">
+    <link rel="stylesheet" type="text/css" href="./css/sort.css">
     <!-- End CSS // -->
 
     <link rel="stylesheet" type="text/css" href="./css/advertise.css">
@@ -266,6 +267,10 @@
                                     <a href="javascript:void(0);" id="btn-chart-advertise" title="데이터 차트" onclick="modalOpen($('#modal__chart-advertise'), $('#overlay__chart-advertise'));">
                                         <span class="bs-fa-icon bs-fa-icon--medium"><i class="fas fa-table"></i></span>
                                     </a>
+                                    <!-- icon__setting-error 에러가 있는 경우 has-error class 추가, 에러 없는 경우 has-error class 제거 -->
+                                    <a href="javascript:void(0);" id="btn-setting-error" title="셋팅 오류" onclick="modalOpen($('#modal__setting-error'), $('#overlay__setting-error'));">
+                                        <span class="bs-fa-icon bs-fa-icon--medium icon__setting-error has-error"><i class="fas fas fa-bell"></i></span>
+                                    </a>
                                 </div>
 
                                 <div class="bs-table__top-right d-flex bs-gap ai-center">
@@ -289,35 +294,41 @@
                                             <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">매체</span></li>
                                             <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">캠페인 이름</span></li>
                                             <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text"></span></li>
-                                            <li class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">
-                                                <span>지출액</span> / <span>예산</span>
-                                                </span>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <div class="bs-table__cell-text">
+                                                    <span>지출액</span> / <span>예산</span>
+                                                </div>
                                             </li>
-                                            <li class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">
-                                                <span>DB단가</span> / <span>수익율</span>
-                                                </span>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <div class="bs-table__cell-text">
+                                                    <span class="sort__item">DB단가</span> / <span class="sort__item">수익율</span>
+                                                </div>
                                             </li>
-                                            <li class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">
-                                                <span>DB수</span> / <span>DB전환율</span>
-                                                </span>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <div class="bs-table__cell-text">
+                                                    <span>DB수</span> / <span>DB전환율</span>
+                                                </div>
                                             </li>
-                                            <li class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">
-                                                <span>수익</span> / <span>매출</span>
-                                                </span>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <div class="bs-table__cell-text">
+                                                    <span>수익</span> / <span>매출</span>
+                                                </div>
                                             </li>
-                                            <li class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">
-                                                <span>노출수</span> / <span>클릭수</span>
-                                                </span>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <div class="bs-table__cell-text">
+                                                    <span>노출수</span> / <span>클릭수</span>
+                                                </div>
                                             </li>
-                                            <li class="bs-table__cell bs-table__cell--ta-right"><span class="bs-table__cell-text">
-                                                <span>CPC</span> / <span>클릭율</span>
-                                                </span>
+                                            <li class="bs-table__cell bs-table__cell--ta-right">
+                                                <div class="bs-table__cell-text">
+                                                    <span>CPC</span> / <span>클릭율</span>
+                                                </div>
                                             </li>
                                         </ul>
                                     </div>
                 
                                     <div class="bs-table__content">
-                                        <ul class="bs-table__row bs-table__row--main">
+                                        <ul class="bs-table__row bs-table__row--main bs-table__row-bar bs-table__row-bar--blue">
                                             <li class="bs-table__cell bs-table__cell--ta-left">
                                                 <label class="bs-selector bs-selector--text-style">
                                                     <input type="checkbox" class="bs-selector__input bs-selector__checkbox" value="" name="" />
@@ -359,7 +370,7 @@
                                                 <span class="bs-text__small bs-text--gray">360,771</span>
                                             </li>
                                         </ul>
-                                        <ul class="bs-table__row bs-table__row--sub">
+                                        <ul class="bs-table__row bs-table__row--sub bs-table__row-bar bs-table__row-bar--blue">
                                             <li class="bs-table__cell bs-table__cell--ta-left">
                                                 <label class="bs-selector bs-selector--text-style">
                                                     <input type="checkbox" class="bs-selector__input bs-selector__checkbox" value="" name="" />
@@ -401,7 +412,7 @@
                                                 <span class="bs-text__small bs-text--gray">360,771</span>
                                             </li>
                                         </ul>
-                                        <ul class="bs-table__row bs-table__row--sub-sub">
+                                        <ul class="bs-table__row bs-table__row--sub-sub bs-table__row-bar bs-table__row-bar--blue">
                                             <li class="bs-table__cell bs-table__cell--ta-left">
                                                 <label class="bs-selector bs-selector--text-style">
                                                     <input type="checkbox" class="bs-selector__input bs-selector__checkbox" value="" name="" />
@@ -1503,6 +1514,67 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- modal : 셋팅 오류 -->
+                    <div class="overlay" id="overlay__setting-error"></div>
+                    <div id="modal__setting-error" class="bs-modal">
+                        <div class="bs-modal__inner">
+                            <!-- 모달_TOP -->
+                            <div class="bs-modal__top">
+                                <span class="bs-modal__title">셋팅 오류</span>
+                                <div class="bs-modal__close-btn" onclick="modalClose($('#modal__setting-error'), $('#overlay__setting-error'));">
+                                    <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-times"></i></span>
+                                </div>
+                            </div>
+            
+                            <!-- 모달_CONTENT -->
+                            <div class="bs-modal__content">
+                                <div class="bs-table-wrapper border-none">
+                                    <div class="bs-table--scroll">
+                                        <div class="bs-table__body">
+                                            <ul class="bs-table__header">
+                                                <div class="bs-table__row">
+                                                    <li class="bs-table__cell bs-table__cell--ta-center"><span class="bs-table__cell-text">번호</span></li>
+                                                    <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">캠페인명</span></li>
+                                                    <li class="bs-table__cell bs-table__cell--ta-left"><span class="bs-table__cell-text">셋팅 오류</span></li>
+                                                </div>
+                                            </ul>
+                        
+                                            <div class="bs-table__content">
+                                                <ul class="bs-table__row">
+                                                    <li class="bs-table__cell bs-table__cell--ta-center">
+                                                        <span class="bs-table__cell-text">2</span>
+                                                    </li>
+                                                    <li class="bs-table__cell bs-table__cell--ta-left">
+                                                        <span class="bs-table__cell-text w-rem-50 white-space-wrap">[12.26] [쁨강남2_피코토닝_mm_A+SC_부담없이_재세팅_jh] evt_5610 12.31재라</span>
+                                                    </li>
+                                                    <li class="bs-table__cell bs-table__cell--ta-left">
+                                                        <span class="bs-table__cell-text">지역 : 서울<br>성별 : 남</span>
+                                                    </li>
+                                                </ul>
+                                                <ul class="bs-table__row">
+                                                    <li class="bs-table__cell bs-table__cell--ta-center">
+                                                        <span class="bs-table__cell-text">1</span>
+                                                    </li>
+                                                    <li class="bs-table__cell bs-table__cell--ta-left">
+                                                        <span class="bs-table__cell-text w-rem-50 white-space-wrap">[09.24] [T2모모대구1_연령대_살짝만심어드립니다] evt_4955 12/27재라이브</span>
+                                                    </li>
+                                                    <li class="bs-table__cell bs-table__cell--ta-left">
+                                                        <span class="bs-table__cell-text">연령 : 20~45</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 모달_BOTTOM -->
+                            <!-- <div class="bs-modal__bottom">
+                                <button type="button" class="bs-modal__btn bs-modal__btn--save w-100">완료</button>
+                            </div> -->
+                        </div>
+                    </div>
                 </div>
                 <!--  main contents // -->
             </main>
@@ -1520,6 +1592,7 @@
     <script src="./js/boxList.js"></script>
     <script src="./js/tab.js"></script>
     <script src="./js/toggleBtn.js"></script>
+    <script src="./js/sort.js"></script>
     <script src="./js/advertise.js"></script>
 </body>
 </html>
