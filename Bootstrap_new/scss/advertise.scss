@@ -140,3 +140,12 @@
         padding: 1rem;
     }
 }
+
+// 셋팅오류 모달창
+#modal__setting-error {
+    .bs-table-wrapper {
+        border-radius: 0;
+        border-right: none;
+        border-left: none;
+    }
+}

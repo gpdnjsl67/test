@@ -105,3 +105,9 @@
 #hourly-data-list .bs-table__cell {
   padding: 1rem;
 }
+
+#modal__setting-error .bs-table-wrapper {
+  border-radius: 0;
+  border-right: none;
+  border-left: none;
+}

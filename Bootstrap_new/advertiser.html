@@ -26,11 +26,12 @@
     <link rel="stylesheet" type="text/css" href="./css/modal.css">
     <link rel="stylesheet" type="text/css" href="./css/table.css">
     <link rel="stylesheet" type="text/css" href="./css/list.css">
+    <link rel="stylesheet" type="text/css" href="./css/boxList.css">
+    <link rel="stylesheet" type="text/css" href="./css/tab.css">
     <link rel="stylesheet" type="text/css" href="./css/advertiser.css">
-    <!-- <link rel="stylesheet" type="text/css" href="./css/boxList.css">
+    <!--
     <link rel="stylesheet" type="text/css" href="./css/card.css">
     <link rel="stylesheet" type="text/css" href="./css/scroll.css">
-    <link rel="stylesheet" type="text/css" href="./css/tab.css">
     <link rel="stylesheet" type="text/css" href="./css/toggleBtn.css"> -->
     <!-- End CSS // -->
 </head>
@@ -87,7 +88,7 @@
                                                 <span class="bs-table__cell-text">1</span>
                                             </li>
                                             <li class="bs-table__cell bs-table__cell--ta-left">
-                                                <span class="bs-table__cell-text">리팅성형외과의원</span>
+                                                <a href="#" class="bs-table__cell-text" onclick="modalOpen($('#modal__edit-policy'), $('#overlay__edit-policy'));">리팅성형외과의원</a>
                                             </li>
                                             <li class="bs-table__cell bs-table__cell--ta-right">
                                                 <span class="bs-table__cell-text">0</span>
@@ -461,6 +462,65 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- modal : 업체 별 개인정보 처리방침 -->
+                    <div class="overlay" id="overlay__edit-policy"></div>
+                    <div id="modal__edit-policy" class="bs-modal">
+                        <div class="bs-modal__inner">
+                            <!-- 모달_TOP -->
+                            <div class="bs-modal__top">
+                                <span class="bs-modal__title">[리팅성형외과의원] 개인정보 처리방침</span>
+                                <div class="bs-modal__close-btn" onclick="modalClose($('#modal__edit-policy'), $('#overlay__edit-policy'));">
+                                    <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-times"></i></span>
+                                </div>
+                            </div>
+
+                            <!-- 모달_CONTENT -->
+                            <div class="bs-modal__content">
+                                <a href="javascript:void(0);" class="edit-policy__add-btn d-block mb-2" title="탭 추가">
+                                    <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-plus-circle"></i></span>
+                                </a>
+                                <div class="bs-box-list-wrapper d-grid bs-gap h-auto">
+                                    <div class="bs-box-list">
+                                        <div class="bs-box-list__title">
+                                            <div class="bs-box-list__title-text d-flex ai-center box-gap">
+                                                <span>01</span>
+                                                <span>메모메모</span>
+                                            </div>
+                                            <div class="d-flex bs-gap ai-center jc-sb w-rem-17">
+                                                <div class="edit-policy__saved-date c-gray-txt fs-12">25-01-02</div>
+                                                <div class="d-flex ai-center jc-end bs-gap">
+                                                    <!-- <span class="edit-policy__del-btn bs-field__btn bs-btn bs-btn--gray bs-box-list__title-arrow w-rem-4 padding-bs">
+                                                        <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-times"></i></span>
+                                                    </span> -->
+                                                    <span class="bs-field__btn bs-btn bs-btn--gray bs-box-list__title-arrow w-rem-4 padding-bs">
+                                                        <span class="bs-fa-icon bs-fa-icon--big"><i class="fas fa-angle-down"></i></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bs-list-container bs-box-list__items bs-box-list__items--no-scroll">
+                                            <div class="list-group list-group--array1">
+                                                <label class="list-group__item list-group__item--with-title">
+                                                    <div class="list-group__item-title">메모</div>
+                                                    <input type="text" class="bs-field bs-field__text" value="메모메모" placeholder="메모를 입력해 주세요." />
+                                                </label>
+                                                <label class="list-group__item list-group__item--with-title ai-start">
+                                                    <div class="list-group__item-title">개인정보<br>처리방침</div>
+                                                    <textarea class="bs-textarea bs-field" name="" id="" rows="13" placeholder="내용을 입력해 주세요."></textarea>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 모달_BOTTOM -->
+                            <div class="bs-modal__bottom">
+                                <button type="button" class="bs-modal__btn bs-modal__btn--save w-100">저장</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!--  main contents // -->
             </main>
@@ -475,6 +535,7 @@
     
     <script src="./js/modal.js"></script>
     <script src="./js/upload.js"></script>
+    <script src="./js/boxList.js"></script>
     <script src="./js/advertiser.js"></script>
 
     <!-- <script src="./js/boxList.js"></script>
