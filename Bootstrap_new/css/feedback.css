@@ -17,6 +17,35 @@
   height: 100%;
   font-size: 1.3rem;
 }
+.feedback-comment__list {
+  margin-top: 2rem;
+  border-top: 0.15rem solid #e2e6ed;
+}
+.feedback-comment__row {
+  padding: 2.5rem 1rem;
+  border-bottom: 0.15rem solid #e2e6ed;
+}
+.feedback-comment__info {
+  margin-bottom: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.3rem;
+}
+.feedback-comment__user-name {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #4271d9;
+}
+.feedback-comment__date {
+  color: #9b98a4;
+}
+.feedback-comment__text {
+  font-size: 1.3rem;
+}
 
 .feedback-file-preview {
   margin-top: 1rem;

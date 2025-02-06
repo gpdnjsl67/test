@@ -3,6 +3,7 @@
 
 .feedback-comment {
     @include basic-box;
+
     padding: 1rem;
     background-color: #f5f5f5;
 
@@ -15,6 +16,37 @@
 
     &__submit-btn {
         height: 100%;
+        font-size: $font-main-size;
+    }
+
+    &__list {
+        margin-top: 2rem;
+        border-top: $border-bs;
+    }
+
+    &__row {
+        padding: 2.5rem 1rem;
+        border-bottom: $border-bs;
+    }
+
+    &__info {
+        margin-bottom: 2.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1.3rem;
+    }
+
+    &__user-name {
+        font-size: $font-main-size;
+        font-weight: 500;
+        color: $color-blue;
+    }
+
+    &__date {
+        color: $color-text-gray-bs;
+    }
+
+    &__text {
         font-size: $font-main-size;
     }
 }

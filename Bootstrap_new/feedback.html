@@ -222,8 +222,8 @@
                     </div>
 
                     <!-- modal : 1:1 문의 뷰페이지 -->
-                    <div class="overlay" id="overlay__view-feedback"></div>
-                    <div id="modal__view-feedback" class="bs-modal">
+                    <div class="overlay" id="overlay__view-feedback" style="display: block !important;"></div>
+                    <div id="modal__view-feedback" class="bs-modal" style="display: block !important;">
                         <div class="bs-modal__inner">
                             <!-- 모달_TOP -->
                             <div class="bs-modal__top">
@@ -256,7 +256,7 @@
                                             <span class="bs-text__main bs-text--gray">홍길동</span>
                                         </div>
                                     </div>
-                                    <div class="list-group list-group--array1">
+                                    <div class="list-group list-group--array1 bs-section-divider">
                                         <label class="list-group__item list-group__item--with-title">
                                             <div class="list-group__item-title">제목</div>
                                             <span class="bs-text__main bs-text--gray">제목제목</span>
@@ -274,6 +274,51 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+
+                                    <div class="feedback-comment-wrap">
+                                        <div class="feedback-comment d-grid bs-gap">
+                                            <div class="feedback-comment__title">
+                                                <span class="bs-fa-icon bs-fa-icon--blue bs-fa-icon--small"><i class="fas fas fa-check"></i></span>
+                                                <span class="bs-text bs-text__main">댓글달기</span>
+                                            </div>
+                                            <div class="feedback-comment__add-area">
+                                                <textarea class="bs-textarea bs-field" name="" id="" rows="5" placeholder="내용을 입력해 주세요."></textarea>
+                                                <button class="feedback-comment__submit-btn bs-btn bs-btn--blue">댓글달기</button>
+                                            </div>
+                                        </div>
+                                        <ul class="feedback-comment__list">
+                                            <li class="feedback-comment__row">
+                                                <div class="feedback-comment__info">
+                                                    <span class="feedback-comment__user-name">username</span>
+                                                    <span class="feedback-comment__date">2025-02-06 20:00</span>
+                                                    <a href="javascript:void(0);" class="feedback-comment__edit" title="댓글 수정">
+                                                        <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
+                                                    </a>
+                                                    <a href="javascript:void(0);" class="feedback-comment__delete" title="댓글 삭제">
+                                                        <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-times"></i></span>
+                                                    </a>
+                                                </div>
+                                                <div class="feedback-comment__text">
+                                                    댓글 텍스트
+                                                </div>
+                                            </li>
+                                            <li class="feedback-comment__row">
+                                                <div class="feedback-comment__info">
+                                                    <span class="feedback-comment__user-name">username</span>
+                                                    <span class="feedback-comment__date">2025-02-06 20:00</span>
+                                                    <a href="javascript:void(0);" class="feedback-comment__edit" title="댓글 수정">
+                                                        <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-pencil-alt"></i></span>
+                                                    </a>
+                                                    <a href="javascript:void(0);" class="feedback-comment__delete" title="댓글 삭제">
+                                                        <span class="bs-fa-icon bs-fa-icon--small"><i class="fas fa-times"></i></span>
+                                                    </a>
+                                                </div>
+                                                <div class="feedback-comment__text">
+                                                    댓글 텍스트
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -348,7 +393,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="feedback-comment d-grid bs-gap">
+                                    <!-- <div class="feedback-comment d-grid bs-gap">
                                         <div class="feedback-comment__title">
                                             <span class="bs-fa-icon bs-fa-icon--blue bs-fa-icon--small"><i class="fas fas fa-check"></i></span>
                                             <span class="bs-text bs-text__main">댓글달기</span>
@@ -357,7 +402,7 @@
                                             <textarea class="bs-textarea bs-field" name="" id="" rows="5" placeholder="내용을 입력해 주세요."></textarea>
                                             <button class="feedback-comment__submit-btn bs-btn bs-btn--blue">댓글달기</button>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
