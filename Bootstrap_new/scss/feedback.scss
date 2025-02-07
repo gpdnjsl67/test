@@ -48,13 +48,42 @@
 
     &__text {
         font-size: $font-main-size;
+
+        &__input {
+            width: 100%;
+            border: none;
+            resize: none;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:disabled {
+                color: $color-black;
+                background-color: $color-white;
+            }
+
+            &--active {
+                padding: 1rem;
+                border: $border-bs;
+                border-radius: $border-radius-bs;
+            }
+        }
+    }
+
+    &__btns {
+        display: none;
+        margin-top: $gap-bs;
+
+        &--active {
+            display: block;
+        }
     }
 }
 
 .feedback-file-preview {
     margin-top: 1rem;
     position: relative;
-    // width: auto;
     height: 20rem;
 
     // &::before {

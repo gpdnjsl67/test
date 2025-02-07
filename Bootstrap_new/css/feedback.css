@@ -45,6 +45,30 @@
 .feedback-comment__text {
   font-size: 1.3rem;
 }
+.feedback-comment__text__input {
+  width: 100%;
+  border: none;
+  resize: none;
+}
+.feedback-comment__text__input:focus {
+  outline: none;
+}
+.feedback-comment__text__input:disabled {
+  color: #212121;
+  background-color: #fff;
+}
+.feedback-comment__text__input--active {
+  padding: 1rem;
+  border: 0.15rem solid #e2e6ed;
+  border-radius: 0.5rem;
+}
+.feedback-comment__btns {
+  display: none;
+  margin-top: 0.5rem;
+}
+.feedback-comment__btns--active {
+  display: block;
+}
 
 .feedback-file-preview {
   margin-top: 1rem;
