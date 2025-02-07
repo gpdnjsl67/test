@@ -54,18 +54,19 @@
 .feedback-file-preview {
     margin-top: 1rem;
     position: relative;
+    // width: auto;
     height: 20rem;
 
-    &::before {
-        z-index: 0;
-        content: '미리보기';
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: $color-text-gray-bs;
-    }
+    // &::before {
+    //     z-index: 0;
+    //     content: '미리보기';
+    //     display: block;
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     color: $color-text-gray-bs;
+    // }
 
     &__img {
         z-index: 1;
